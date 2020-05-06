@@ -121,7 +121,7 @@
           <configuration>
             <archive>
               <manifest>
-                <mainClass>com.qa.App</mainClass>
+                <mainClass>com.qa.hwa.App</mainClass>
               </manifest>
             </archive>
           </configuration>
@@ -141,7 +141,7 @@
                 <archive>
                   <manifest>
                     <mainClass>
-                      com.qa.App
+                      com.qa.hwa.App
                     </mainClass>
                   </manifest>
                 </archive>

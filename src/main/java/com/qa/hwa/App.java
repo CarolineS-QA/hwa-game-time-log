@@ -1,4 +1,4 @@
-package com.qa;
+package com.qa.hwa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
