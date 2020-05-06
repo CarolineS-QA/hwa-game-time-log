@@ -26,20 +26,6 @@
   </parent>
 
   <dependencies>
-    <!-- Testing with JUnit and mockito -->
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-core</artifactId>
-      <version>3.2.4</version>
-      <scope>test</scope>
-    </dependency>
     <!--For mySQL database connection-->
     <dependency>
       <groupId>mysql</groupId>
@@ -57,7 +43,7 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
-
+    <!--Testing with JUnit and Mockito provided with this dependency-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
