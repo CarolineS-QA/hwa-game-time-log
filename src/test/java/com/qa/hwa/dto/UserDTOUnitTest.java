@@ -72,4 +72,132 @@ public class UserDTOUnitTest {
         assertNotNull(userWithoutId.getFreeTime());
         assertNotNull(userWithoutId.getTimeRemaining());
     }
+
+    @Test
+    public void notEqualsWithNull() {
+        assertNotEquals(null, userWithId);
+    }
+
+    @Test
+    public void notEqualsWithDifferentObject() {
+        assertNotEquals(userWithId, new Object());
+    }
+
+    @Test
+    public void checkEquality() {
+        assertEquals(userWithId, userWithId);
+    }
+
+    @Test
+    public void checkEqualityBetweenDifferentObjects() {
+        assertEquals(userWithId, otherWithId);
+    }
+
+    @Test
+    public void usernameNullButOtherNameNotNull() {
+        userWithId.setUsername(null);
+        assertNotEquals(userWithId, otherWithId);
+    }
+
+    @Test
+    public void usernameNotEqual() {
+        otherWithId.setUsername("Not Today");
+        assertNotEquals(userWithId, otherWithId);
+    }
+
+    @Test
+    public void checkEqualityBetweenDifferentObjectsNullUsername() {
+        userWithId.setUsername(null);
+        otherWithId.setUsername(null);
+        assertEquals(userWithId, otherWithId);
+    }
+
+    @Test
+    public void nullId() {
+        userWithId.setUserId(null);
+        assertNotEquals(userWithId, otherWithId);
+    }
+
+    @Test
+    public void nullIdOnBoth() {
+        userWithId.setUserId(null);
+        otherWithId.setUserId(null);
+        assertEquals(userWithId, otherWithId);
+    }
+
+    @Test
+    public void otherIdDifferent() {
+        otherWithId.setUserId(2L);
+        assertNotEquals(userWithId, otherWithId);
+    }
+
+    @Test
+    public void nullTotalTimePlayed() {
+        userWithId.setTotalTimePlayed(null);
+        assertNotEquals(userWithId, otherWithId);
+    }
+
+    @Test
+    public void nullTotalTimePlayedOnBoth() {
+        userWithId.setTotalTimePlayed(null);
+        otherWithId.setTotalTimePlayed(null);
+        assertEquals(userWithId, otherWithId);
+    }
+
+    @Test
+    public void otherTotalTimePlayedDifferent() {
+        otherWithId.setTotalTimePlayed(Duration.ofHours(2));
+        assertNotEquals(userWithId, otherWithId);
+    }
+
+    @Test
+    public void nullFreeTime() {
+        userWithId.setFreeTime(null);
+        assertNotEquals(userWithId, otherWithId);
+    }
+
+    @Test
+    public void nullFreeTimeOnBoth() {
+        userWithId.setFreeTime(null);
+        otherWithId.setFreeTime(null);
+        assertEquals(userWithId, otherWithId);
+    }
+
+    @Test
+    public void otherFreeTimeDifferent() {
+        otherWithId.setFreeTime(Duration.ofHours(2));
+        assertNotEquals(userWithId, otherWithId);
+    }
+
+    @Test
+    public void nullTimeRemaining() {
+        userWithId.setTimeRemaining(null);
+        assertNotEquals(userWithId, otherWithId);
+    }
+
+    @Test
+    public void nullTimeRemainingOnBoth() {
+        userWithId.setTimeRemaining(null);
+        otherWithId.setTimeRemaining(null);
+        assertEquals(userWithId, otherWithId);
+    }
+
+    @Test
+    public void otherTimeRemainingDifferent() {
+        otherWithId.setTimeRemaining(Duration.ofHours(2));
+        assertNotEquals(userWithId, otherWithId);
+    }
+
+
+    @Test
+    public void hashCodeTest() {
+        assertEquals(userWithId.hashCode(), otherWithId.hashCode());
+    }
+
+    @Test
+    public void hashCodeTestWithNull() {
+        User user = new User(null, null, null, null);
+        User other = new User(null, null, null, null);
+        assertEquals(user.hashCode(), other.hashCode());
+    }
 }
