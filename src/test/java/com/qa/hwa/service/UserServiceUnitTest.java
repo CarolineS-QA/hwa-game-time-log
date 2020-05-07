@@ -15,6 +15,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.mockito.Mockito.*;
 
@@ -22,7 +23,7 @@ import static org.mockito.Mockito.*;
 public class UserServiceUnitTest {
 
     @InjectMocks
-    private UserService userService;
+    private UserService service;
 
     @Mock
     private UsersRepository repo;
@@ -55,7 +56,15 @@ public class UserServiceUnitTest {
     public void readAllUsersTest(){
         when(repo.findAll()).thenReturn(this.userList);
         when(this.mapper.map(testUserWithId, UserDTO.class)).thenReturn(userDTO);
-        assertFalse("Service returned no Users", this.userService.readAllUsers().isEmpty());
+        assertFalse("Service returned no Users", this.service.readAllUsers().isEmpty());
         verify(repo, times(1)).findAll();
+    }
+
+    @Test
+    public void createUserTest(){
+        when(repo.save(testUser)).thenReturn(this.testUserWithId);
+        when(this.mapper.map(testUserWithId, UserDTO.class)).thenReturn(userDTO);
+        assertEquals(this.service.createUser(testUser), this.userDTO);
+        verify(repo, times(1)).save(this.testUser);
     }
 }
