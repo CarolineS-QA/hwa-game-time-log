@@ -87,4 +87,32 @@ public class UserControllerIntegrationTest {
                 .getContentAsString();
         assertEquals(result, this.objectMapper.writeValueAsString(userDTO));
     }
+
+    @Test
+    public void getUserByIdTest() throws Exception {
+        String content = this.mock.perform(
+                request(HttpMethod.GET, "/getUserById/" + this.userId)
+                        .accept(MediaType.APPLICATION_JSON)
+        )
+                .andExpect(status().isOk())
+                .andReturn()
+                .getResponse()
+                .getContentAsString();
+        assertEquals(content, this.objectMapper.writeValueAsString(userDTO));
+    }
+
+    @Test
+    public void updateUserTest() throws Exception {
+        String content = this.mock.perform(
+                request(HttpMethod.PUT, "/updateUser/" + this.userId)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(this.objectMapper.writeValueAsString(testUser))
+                        .accept(MediaType.APPLICATION_JSON)
+        )
+                .andExpect(status().isOk())
+                .andReturn()
+                .getResponse()
+                .getContentAsString();
+        assertEquals(content, this.objectMapper.writeValueAsString(userDTO));
+    }
 }

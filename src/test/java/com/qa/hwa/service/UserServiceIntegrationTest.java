@@ -58,4 +58,18 @@ public class UserServiceIntegrationTest {
     public void createUserTest(){
         assertEquals(this.mapToDTO(this.testUserWithId), this.service.createUser(testUser));
     }
+
+    @Test
+    public void findUserByIdTest(){
+        assertThat(this.service.findUserById(this.testUserWithId.getUserId())).isEqualTo(this.mapToDTO(this.testUserWithId));
+    }
+
+    @Test
+    public void updateUserTest(){
+        User newUser = new User("newTestUser", zeroTime, zeroTime, zeroTime);
+        User updateUser = new User(newUser.getUsername(), newUser.getTotalTimePlayed(), newUser.getFreeTime(), newUser.getTimeRemaining());
+        updateUser.setUserId(testUserWithId.getUserId());
+        assertThat(this.service.updateUser(this.testUserWithId.getUserId(),newUser))
+                .isEqualTo(this.mapToDTO(updateUser));
+    }
 }

@@ -6,10 +6,7 @@ import com.qa.hwa.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -31,5 +28,15 @@ public class UserController {
     @PostMapping("/createUser")
     public ResponseEntity<UserDTO> createUser(@RequestBody User user){
         return new ResponseEntity<>(this.service.createUser(user), HttpStatus.CREATED);
+    }
+
+    @GetMapping("/getUserById/{id}")
+    public ResponseEntity<UserDTO> getUserById(@PathVariable Long id){
+        return ResponseEntity.ok(this.service.findUserById(id));
+    }
+
+    @PutMapping("/updateUser/{id}")
+    public ResponseEntity<UserDTO> updateUser(@PathVariable Long id, @RequestBody User user){
+    return ResponseEntity.ok(this.service.updateUser(id, user));
     }
 }
