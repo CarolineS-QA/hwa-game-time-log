@@ -2,6 +2,7 @@ package com.qa.hwa.service;
 
 import com.qa.hwa.domain.User;
 import com.qa.hwa.dto.UserDTO;
+import com.qa.hwa.exceptions.UserNotFoundException;
 import com.qa.hwa.repo.UsersRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +33,21 @@ public class UserService {
     }
 
     public UserDTO createUser(User user){
+        User tempUser = this.repo.save(user);
+        return this.mapToDTO(tempUser);
+    }
+
+    public UserDTO findUserById(Long id){
+        return this.mapToDTO(this.repo.findById(id)
+                .orElseThrow(UserNotFoundException::new));
+    }
+
+    public UserDTO updateUser(Long id, User user){
+        User update = this.repo.findById(id).orElseThrow(UserNotFoundException::new);
+        update.setUsername(user.getUsername());
+        update.setTotalTimePlayed(user.getTotalTimePlayed());
+        update.setFreeTime(user.getFreeTime());
+        update.setTimeRemaining(user.getTimeRemaining());
         User tempUser = this.repo.save(user);
         return this.mapToDTO(tempUser);
     }
