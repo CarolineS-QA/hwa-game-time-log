@@ -2,6 +2,7 @@ package com.qa.hwa.service;
 
 import com.qa.hwa.domain.User;
 import com.qa.hwa.dto.UserDTO;
+import com.qa.hwa.exceptions.UserNotFoundException;
 import com.qa.hwa.repo.UsersRepository;
 import org.junit.Before;
 import org.junit.Test;
@@ -92,6 +93,21 @@ public class UserServiceUnitTest {
         assertEquals(updateNoteDTO, this.service.updateUser(userId, newUser));
         verify(this.repo, times(1)).findById(userId);
         verify(this.repo, times(1)).save(updateUser);
+    }
+
+    @Test
+    public void deleteUserByExistingId(){
+        when(this.repo.existsById(userId)).thenReturn(true, false);
+        assertFalse(service.deleteUser(userId));
+        verify(repo, times(1)).deleteById(userId);
+        verify(repo, times(2)).existsById(userId);
+    }
+
+    @Test(expected = UserNotFoundException.class)
+    public void deleteUserByNonExistingId(){
+        when(this.repo.existsById(userId)).thenReturn(false);
+        service.deleteUser(userId);
+        verify(repo, times(1)).existsById(userId);
     }
 }
 

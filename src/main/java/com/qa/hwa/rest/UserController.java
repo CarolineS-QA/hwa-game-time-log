@@ -39,4 +39,11 @@ public class UserController {
     public ResponseEntity<UserDTO> updateUser(@PathVariable Long id, @RequestBody User user){
     return ResponseEntity.ok(this.service.updateUser(id, user));
     }
+
+    @DeleteMapping("/deleteUser/{id}")
+    public ResponseEntity<?> deleteUser(@PathVariable Long id){
+        return this.service.deleteUser(id)
+                ? ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build()
+                : ResponseEntity.noContent().build();
+    }
 }
