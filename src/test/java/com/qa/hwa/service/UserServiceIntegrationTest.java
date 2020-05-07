@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -31,7 +32,7 @@ public class UserServiceIntegrationTest {
     private ModelMapper mapper;
 
     private User testUser;
-    private User testUserWithID;
+    private User testUserWithId;
     private Duration zeroTime;
 
     private UserDTO mapToDTO(User user){
@@ -43,13 +44,18 @@ public class UserServiceIntegrationTest {
         zeroTime = Duration.ofHours(0);
         this.testUser = new User("testUser", zeroTime, zeroTime, zeroTime);
         this.repo.deleteAll();
-        this.testUserWithID = this.repo.save(this.testUser);
+        this.testUserWithId = this.repo.save(this.testUser);
     }
 
     @Test
     public void readAllUsersTest(){
         assertThat(this.service.readAllUsers()).isEqualTo(
-                Stream.of(this.mapToDTO(testUserWithID)).collect(Collectors.toList())
+                Stream.of(this.mapToDTO(testUserWithId)).collect(Collectors.toList())
         );
+    }
+
+    @Test
+    public void createNoteTest(){
+        assertEquals(this.mapToDTO(this.testUserWithId), this.service.createUser(testUser));
     }
 }
