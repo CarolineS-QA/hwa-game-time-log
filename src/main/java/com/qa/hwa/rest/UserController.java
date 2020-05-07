@@ -31,12 +31,12 @@ public class UserController {
     }
 
     @GetMapping("/getUserById/{id}")
-    public ResponseEntity<UserDTO> getNoteById(@PathVariable Long id){
+    public ResponseEntity<UserDTO> getUserById(@PathVariable Long id){
         return ResponseEntity.ok(this.service.findUserById(id));
     }
 
     @PutMapping("/updateUser/{id}")
-    public ResponseEntity<UserDTO> updateNote(@PathVariable Long id, @RequestBody User user){
+    public ResponseEntity<UserDTO> updateUser(@PathVariable Long id, @RequestBody User user){
     return ResponseEntity.ok(this.service.updateUser(id, user));
     }
 }
