@@ -1,6 +1,7 @@
 package com.qa.hwa.dto;
 
 import java.time.Duration;
+import java.util.Objects;
 
 public class UserDTO {
     private Long userId;
@@ -64,5 +65,22 @@ public class UserDTO {
 
     public void setTimeRemaining(Duration timeRemaining) {
         this.timeRemaining = timeRemaining;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        UserDTO userDTO = (UserDTO) o;
+        return Objects.equals(getUserId(), userDTO.getUserId()) &&
+                Objects.equals(getUsername(), userDTO.getUsername()) &&
+                Objects.equals(getTotalTimePlayed(), userDTO.getTotalTimePlayed()) &&
+                Objects.equals(getFreeTime(), userDTO.getFreeTime()) &&
+                Objects.equals(getTimeRemaining(), userDTO.getTimeRemaining());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getUserId(), getUsername(), getTotalTimePlayed(), getFreeTime(), getTimeRemaining());
     }
 }

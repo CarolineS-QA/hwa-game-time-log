@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.time.Duration;
+import java.util.Objects;
 
 
 @Entity
@@ -74,5 +75,22 @@ public class User {
 
     public void setTimeRemaining(Duration timeRemaining) {
         this.timeRemaining = timeRemaining;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(getUserId(), user.getUserId()) &&
+                Objects.equals(getUsername(), user.getUsername()) &&
+                Objects.equals(getTotalTimePlayed(), user.getTotalTimePlayed()) &&
+                Objects.equals(getFreeTime(), user.getFreeTime()) &&
+                Objects.equals(getTimeRemaining(), user.getTimeRemaining());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getUserId(), getUsername(), getTotalTimePlayed(), getFreeTime(), getTimeRemaining());
     }
 }
