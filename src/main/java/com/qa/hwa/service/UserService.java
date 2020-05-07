@@ -48,7 +48,7 @@ public class UserService {
         update.setTotalTimePlayed(user.getTotalTimePlayed());
         update.setFreeTime(user.getFreeTime());
         update.setTimeRemaining(user.getTimeRemaining());
-        User tempUser = this.repo.save(user);
+        User tempUser = this.repo.save(update);
         return this.mapToDTO(tempUser);
     }
 }
