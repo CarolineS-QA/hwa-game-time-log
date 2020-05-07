@@ -8,7 +8,7 @@ It involves Java source code & Spring libraries, JDBC and a SQL database hosted 
 
 Presentation about the project: [on google slides](https://docs.google.com/presentation/d/1wznZu-mg9XHuvzp51Q3ZPYwYu3qjcSRW8Uu_N3bzJ_g/edit?usp=sharing).
 
-**Test Coverage:** For src/main/java: 0% // Sonarqube: 0% // Overall: 0%
+**Test Coverage:** For src/main/java: 100% // Sonarqube: 0% // Overall: 100%
 
 For test reports and other documentation please see the project_docs folder.
 
