@@ -56,7 +56,6 @@ public class UserControllerUnitTest {
         this.userDTO = this.mapToDTO(testUserWithId);
     }
 
-    //this test doesn't actually increase coverage?
     @Test
     public void getAllUsersTest() {
         when(service.readAllUsers()).thenReturn(this.usersList.stream().map(this::mapToDTO).collect(Collectors.toList()));
