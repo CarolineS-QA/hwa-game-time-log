@@ -9,55 +9,67 @@ import static org.junit.Assert.*;
 
 public class UserUnitTest {
 
-    private User user;
-    private User other;
+    private User userWithId;
+    private User userWithoutId;
+    private User emptyUser;
+    private User otherWithId;
     private Duration zeroDuration;
 
     @Before
     public void SetUp()
     {
         zeroDuration = Duration.ofDays(0);
-        user = new User(1L, "testUser", zeroDuration, zeroDuration, zeroDuration);
-        other = new User(1L, "testUser", zeroDuration, zeroDuration, zeroDuration);
+        userWithId = new User(1L, "testUser", zeroDuration, zeroDuration, zeroDuration);
+        otherWithId = new User(1L, "testUser", zeroDuration, zeroDuration, zeroDuration);
+        userWithoutId = new User("testUser", zeroDuration, zeroDuration, zeroDuration);
+        emptyUser = new User();
     }
 
     @Test
     public void gettersAndSettersTest() {
-        assertNotNull(user.getUserId());
-        assertNotNull(user.getUsername());
-        assertNotNull(user.getTotalTimePlayed());
-        assertNotNull(user.getFreeTime());
-        assertNotNull(user.getTimeRemaining());
+        assertNotNull(userWithId.getUserId());
+        assertNotNull(userWithId.getUsername());
+        assertNotNull(userWithId.getTotalTimePlayed());
+        assertNotNull(userWithId.getFreeTime());
+        assertNotNull(userWithId.getTimeRemaining());
 
-        user.setUserId(null);
-        assertNull(user.getUserId());
-        user.setUsername(null);
-        assertNull(user.getUsername());
-        user.setTotalTimePlayed(null);
-        assertNull(user.getTotalTimePlayed());
-        user.setFreeTime(null);
-        assertNull(user.getFreeTime());
-        user.setTimeRemaining(null);
-        assertNull(user.getTimeRemaining());
+        userWithId.setUserId(null);
+        assertNull(userWithId.getUserId());
+        userWithId.setUsername(null);
+        assertNull(userWithId.getUsername());
+        userWithId.setTotalTimePlayed(null);
+        assertNull(userWithId.getTotalTimePlayed());
+        userWithId.setFreeTime(null);
+        assertNull(userWithId.getFreeTime());
+        userWithId.setTimeRemaining(null);
+        assertNull(userWithId.getTimeRemaining());
     }
 
     @Test
+    public void emptyConstructor(){
+        assertNotNull(emptyUser);
+        assertNull(emptyUser.getUserId());
+        assertNull(emptyUser.getUsername());
+        assertNull(emptyUser.getTotalTimePlayed());
+        assertNull(emptyUser.getFreeTime());
+        assertNull(emptyUser.getTimeRemaining());
+    }
+    @Test
     public void constructorUserWithId() {
-        assertEquals(1L, user.getUserId(), 0);
-        assertEquals("testUser", user.getUsername());
-        assertEquals(Duration.ofDays(0), user.getTotalTimePlayed());
-        assertEquals(Duration.ofDays(0), user.getFreeTime());
-        assertEquals(Duration.ofDays(0), user.getTimeRemaining());
+        assertEquals(1L, userWithId.getUserId(), 0);
+        assertEquals("testUser", userWithId.getUsername());
+        assertEquals(Duration.ofDays(0), userWithId.getTotalTimePlayed());
+        assertEquals(Duration.ofDays(0), userWithId.getFreeTime());
+        assertEquals(Duration.ofDays(0), userWithId.getTimeRemaining());
     }
 
     @Test
     public void constructorWithoutId() {
-        User user = new User("testUser", zeroDuration, zeroDuration, zeroDuration);
-        assertNull(user.getUserId());
-        assertNotNull(user.getUsername());
-        assertNotNull(user.getTotalTimePlayed());
-        assertNotNull(user.getFreeTime());
-        assertNotNull(user.getTimeRemaining());
+        assertNull(userWithoutId.getUserId());
+        assertNotNull(userWithoutId.getUsername());
+        assertNotNull(userWithoutId.getTotalTimePlayed());
+        assertNotNull(userWithoutId.getFreeTime());
+        assertNotNull(userWithoutId.getTimeRemaining());
     }
 
 }
