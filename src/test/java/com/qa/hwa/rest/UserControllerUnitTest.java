@@ -69,5 +69,19 @@ public class UserControllerUnitTest {
         assertEquals(this.userController.createUser(testUser), new ResponseEntity<>(this.userDTO, HttpStatus.CREATED));
         verify(this.service, times(1)).createUser(testUser);
     }
+
+    @Test
+    public void getUserByIdTest(){
+        when(this.service.findUserById(userId)).thenReturn(this.userDTO);
+        assertEquals(this.userController.getUserById(userId), new ResponseEntity<>(this.userDTO, HttpStatus.OK));
+        verify(service, times(1)).findUserById(userId);
+    }
+
+    @Test
+    public void updateUserTest(){
+        when(this.service.updateUser(userId, testUser)).thenReturn(this.userDTO);
+        assertEquals(this.userController.updateUser(userId, testUser), new ResponseEntity<>(this.userDTO, HttpStatus.OK));
+        verify(service, times(1)).updateUser(userId, testUser);
+    }
 }
 
