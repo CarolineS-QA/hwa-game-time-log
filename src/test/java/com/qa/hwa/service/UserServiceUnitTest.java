@@ -37,12 +37,13 @@ public class UserServiceUnitTest {
     private User testUserWithId;
     private UserDTO userDTO;
     private Duration time;
-    private UserDTO mapToDTO(User user){
+
+    private UserDTO mapToDTO(User user) {
         return this.mapper.map(user, UserDTO.class);
     }
 
     @Before
-    public void setUp(){
+    public void setUp() {
         this.userList = new ArrayList<>();
         time = Duration.ofHours(0);
         this.testUser = new User("testUser", time, time, time);
@@ -53,7 +54,7 @@ public class UserServiceUnitTest {
     }
 
     @Test
-    public void readAllUsersTest(){
+    public void readAllUsersTest() {
         when(repo.findAll()).thenReturn(this.userList);
         when(this.mapper.map(testUserWithId, UserDTO.class)).thenReturn(userDTO);
         assertFalse("Service returned no Users", this.service.readAllUsers().isEmpty());
@@ -61,10 +62,36 @@ public class UserServiceUnitTest {
     }
 
     @Test
-    public void createUserTest(){
+    public void createUserTest() {
         when(repo.save(testUser)).thenReturn(this.testUserWithId);
         when(this.mapper.map(testUserWithId, UserDTO.class)).thenReturn(userDTO);
         assertEquals(this.service.createUser(testUser), this.userDTO);
         verify(repo, times(1)).save(this.testUser);
     }
+
+    @Test
+    public void findUserByIdTest() {
+        when(this.repo.findById(userId)).thenReturn(java.util.Optional.ofNullable(testUserWithId));
+        when(this.mapper.map(testUserWithId, UserDTO.class)).thenReturn(userDTO);
+        assertEquals(this.service.findUserById(this.userId), userDTO);
+        verify(repo, times(1)).findById(userId);
+    }
+
+    @Test
+    public void updateUserTest() {
+        User newUser = new User("newTestUser", time, time, time);
+        User updateUser = new User(newUser.getUsername(), newUser.getTotalTimePlayed(), newUser.getFreeTime(), newUser.getTimeRemaining());
+        updateUser.setUserId(userId);
+
+        UserDTO updateNoteDTO = new ModelMapper().map(updateUser, UserDTO.class);
+
+        when(this.repo.findById(userId)).thenReturn(java.util.Optional.ofNullable(testUserWithId));
+        when(this.repo.save(updateUser)).thenReturn(updateUser);
+        when(this.mapper.map(updateUser, UserDTO.class)).thenReturn(updateNoteDTO);
+
+        assertEquals(updateNoteDTO, this.service.updateUser(userId, newUser));
+        verify(this.repo, times(1)).findById(userId);
+        verify(this.repo, times(1)).save(updateUser);
+    }
 }
+
