@@ -5,8 +5,7 @@ import org.junit.Test;
 
 import java.time.Duration;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 public class UserUnitTest {
 
@@ -41,4 +40,24 @@ public class UserUnitTest {
         user.setTimeRemaining(null);
         assertNull(user.getTimeRemaining());
     }
+
+    @Test
+    public void constructorUserWithId() {
+        assertEquals(1L, user.getUserId(), 0);
+        assertEquals("testUser", user.getUsername());
+        assertEquals(Duration.ofDays(0), user.getTotalTimePlayed());
+        assertEquals(Duration.ofDays(0), user.getFreeTime());
+        assertEquals(Duration.ofDays(0), user.getTimeRemaining());
+    }
+
+    @Test
+    public void constructorWithoutId() {
+        User user = new User("testUser", zeroDuration, zeroDuration, zeroDuration);
+        assertNull(user.getUserId());
+        assertNotNull(user.getUsername());
+        assertNotNull(user.getTotalTimePlayed());
+        assertNotNull(user.getFreeTime());
+        assertNotNull(user.getTimeRemaining());
+    }
+
 }
