@@ -72,4 +72,9 @@ public class UserServiceIntegrationTest {
         assertThat(this.service.updateUser(this.testUserWithId.getUserId(),newUser))
                 .isEqualTo(this.mapToDTO(updateUser));
     }
+
+    @Test
+    public void deleteUserTest(){
+        assertThat(this.service.deleteUser(this.testUserWithId.getUserId())).isFalse();
+    }
 }
