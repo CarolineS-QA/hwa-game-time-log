@@ -30,4 +30,9 @@ public class UserService {
     public List<UserDTO> readAllUsers(){
         return this.repo.findAll().stream().map(this::mapToDTO).collect(Collectors.toList());
     }
+
+    public UserDTO createUser(User user){
+        User tempUser = this.repo.save(user);
+        return this.mapToDTO(tempUser);
+    }
 }
