@@ -83,5 +83,19 @@ public class UserControllerUnitTest {
         assertEquals(this.userController.updateUser(userId, testUser), new ResponseEntity<>(this.userDTO, HttpStatus.OK));
         verify(service, times(1)).updateUser(userId, testUser);
     }
+
+    @Test
+    public void deleteUserTestFalse(){
+        this.userController.deleteUser(userId);
+        verify(service, times(1)).deleteUser(userId);
+    }
+
+
+    @Test
+    public void deleteUserTestTrue(){
+        when(service.deleteUser(3L)).thenReturn(true);
+        this.userController.deleteUser(3L);
+        verify(service, times(1)).deleteUser(3L);
+    }
 }
 
