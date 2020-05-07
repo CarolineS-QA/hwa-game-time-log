@@ -59,7 +59,7 @@ public class UserControllerIntegrationTest {
     }
 
     @Test
-    public void getAllNotesTest() throws Exception {
+    public void getAllUsersTest() throws Exception {
         List<UserDTO> noteDTOList = new ArrayList<>();
         noteDTOList.add(userDTO);
         String content = this.mock.perform(
@@ -71,5 +71,20 @@ public class UserControllerIntegrationTest {
                 .getResponse()
                 .getContentAsString();
         assertEquals(content, this.objectMapper.writeValueAsString(noteDTOList));
+    }
+
+    @Test
+    public void createUsersTest() throws Exception {
+        String result = this.mock.perform(
+                request(HttpMethod.POST, "/createUser")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(this.objectMapper.writeValueAsString(testUser))
+                        .accept(MediaType.APPLICATION_JSON)
+        )
+                .andExpect(status().isCreated())
+                .andReturn()
+                .getResponse()
+                .getContentAsString();
+        assertEquals(result, this.objectMapper.writeValueAsString(userDTO));
     }
 }

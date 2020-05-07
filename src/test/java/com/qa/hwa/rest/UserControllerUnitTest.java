@@ -11,6 +11,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.modelmapper.ModelMapper;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import java.time.Duration;
@@ -21,8 +22,7 @@ import java.util.stream.Collectors;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class UserControllerUnitTest {
@@ -60,7 +60,14 @@ public class UserControllerUnitTest {
     public void getAllUsersTest() {
         when(service.readAllUsers()).thenReturn(this.usersList.stream().map(this::mapToDTO).collect(Collectors.toList()));
         assertFalse("No users found", Objects.requireNonNull(this.userController.getAllUsers().getBody()).isEmpty());
-        verify(service, Mockito.times(1)).readAllUsers();
+        verify(service, times(1)).readAllUsers();
+    }
+
+    @Test
+    public void createUserTest() {
+        when(this.service.createUser(testUser)).thenReturn(this.userDTO);
+        assertEquals(this.userController.createUser(testUser), new ResponseEntity<>(this.userDTO, HttpStatus.CREATED));
+        verify(this.service, times(1)).createUser(testUser);
     }
 }
 

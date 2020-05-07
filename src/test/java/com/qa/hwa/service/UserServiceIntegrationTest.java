@@ -55,7 +55,7 @@ public class UserServiceIntegrationTest {
     }
 
     @Test
-    public void createNoteTest(){
+    public void createUserTest(){
         assertEquals(this.mapToDTO(this.testUserWithId), this.service.createUser(testUser));
     }
 }
