@@ -1,11 +1,6 @@
 package com.qa.hwa.domain;
 
-import org.springframework.data.auditing.DateTimeProvider;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.Objects;
@@ -16,25 +11,26 @@ public class GameSession {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long sessionId;
-    private String username;
+    @ManyToOne (targetEntity = User.class, fetch = FetchType.LAZY)
+    private User username;
     private String gameName;
-    private Duration TimePlayed;
+    private Duration timePlayed;
     private LocalDateTime timeOfSession;
 
     public GameSession(){}
 
-    public GameSession(String username, String gameName, Duration timePlayed, LocalDateTime timeOfSession) {
+    public GameSession(User username, String gameName, Duration timePlayed, LocalDateTime timeOfSession) {
         this.username = username;
         this.gameName = gameName;
-        TimePlayed = timePlayed;
+        this.timePlayed = timePlayed;
         this.timeOfSession = timeOfSession;
     }
 
-    public GameSession(Long sessionId, String username, String gameName, Duration timePlayed, LocalDateTime timeOfSession) {
+    public GameSession(Long sessionId, User username, String gameName, Duration timePlayed, LocalDateTime timeOfSession) {
         this.sessionId = sessionId;
         this.username = username;
         this.gameName = gameName;
-        TimePlayed = timePlayed;
+        this.timePlayed = timePlayed;
         this.timeOfSession = timeOfSession;
     }
 
@@ -46,11 +42,11 @@ public class GameSession {
         this.sessionId = sessionId;
     }
 
-    public String getUsername() {
+    public User getUsername() {
         return username;
     }
 
-    public void setUsername(String username) {
+    public void setUsername(User username) {
         this.username = username;
     }
 
@@ -63,11 +59,11 @@ public class GameSession {
     }
 
     public Duration getTimePlayed() {
-        return TimePlayed;
+        return timePlayed;
     }
 
     public void setTimePlayed(Duration timePlayed) {
-        TimePlayed = timePlayed;
+        this.timePlayed = timePlayed;
     }
 
     public LocalDateTime getTimeOfSession() {
