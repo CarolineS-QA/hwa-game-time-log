@@ -1,10 +1,13 @@
 package com.qa.hwa.dto;
 
+import com.qa.hwa.domain.GameSession;
 import com.qa.hwa.domain.User;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertNotNull;
@@ -15,14 +18,16 @@ public class UserDTOUnitTest {
     private UserDTO emptyUser;
     private UserDTO otherWithId;
     private Duration zeroDuration;
+    private List<GameSessionDTO> sessionDTOs;
 
     @Before
     public void SetUp()
     {
+        sessionDTOs = new ArrayList<>();
         zeroDuration = Duration.ofDays(0);
-        userWithId = new UserDTO(1L, "testUser", zeroDuration, zeroDuration, zeroDuration);
-        otherWithId = new UserDTO(1L, "testUser", zeroDuration, zeroDuration, zeroDuration);
-        userWithoutId = new UserDTO("testUser", zeroDuration, zeroDuration, zeroDuration);
+        userWithId = new UserDTO(1L, "testUser", zeroDuration, zeroDuration, zeroDuration, sessionDTOs);
+        otherWithId = new UserDTO(1L, "testUser", zeroDuration, zeroDuration, zeroDuration, sessionDTOs);
+        userWithoutId = new UserDTO("testUser", zeroDuration, zeroDuration, zeroDuration, sessionDTOs);
         emptyUser = new UserDTO();
     }
 
@@ -33,6 +38,7 @@ public class UserDTOUnitTest {
         assertNotNull(userWithId.getTotalTimePlayed());
         assertNotNull(userWithId.getFreeTime());
         assertNotNull(userWithId.getTimeRemaining());
+        assertNotNull(userWithId.getGameSessions());
 
         userWithId.setUserId(null);
         assertNull(userWithId.getUserId());
@@ -44,6 +50,8 @@ public class UserDTOUnitTest {
         assertNull(userWithId.getFreeTime());
         userWithId.setTimeRemaining(null);
         assertNull(userWithId.getTimeRemaining());
+        userWithId.setGameSessions(null);
+        assertNull(userWithId.getGameSessions());
     }
 
     @Test
@@ -196,8 +204,8 @@ public class UserDTOUnitTest {
 
     @Test
     public void hashCodeTestWithNull() {
-        User user = new User(null, null, null, null);
-        User other = new User(null, null, null, null);
+        User user = new User(null, null, null, null, null);
+        User other = new User(null, null, null, null, null);
         assertEquals(user.hashCode(), other.hashCode());
     }
 }

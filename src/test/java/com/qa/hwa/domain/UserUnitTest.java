@@ -4,6 +4,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -14,14 +16,16 @@ public class UserUnitTest {
     private User emptyUser;
     private User otherWithId;
     private Duration zeroDuration;
+    private List<GameSession> sessionsList;
 
     @Before
     public void SetUp()
     {
+        sessionsList = new ArrayList<>();
         zeroDuration = Duration.ofDays(0);
-        userWithId = new User(1L, "testUser", zeroDuration, zeroDuration, zeroDuration);
-        otherWithId = new User(1L, "testUser", zeroDuration, zeroDuration, zeroDuration);
-        userWithoutId = new User("testUser", zeroDuration, zeroDuration, zeroDuration);
+        userWithId = new User(1L, "testUser", zeroDuration, zeroDuration, zeroDuration, sessionsList);
+        otherWithId = new User(1L, "testUser", zeroDuration, zeroDuration, zeroDuration, sessionsList);
+        userWithoutId = new User("testUser", zeroDuration, zeroDuration, zeroDuration, sessionsList);
         emptyUser = new User();
     }
 
@@ -32,6 +36,7 @@ public class UserUnitTest {
         assertNotNull(userWithId.getTotalTimePlayed());
         assertNotNull(userWithId.getFreeTime());
         assertNotNull(userWithId.getTimeRemaining());
+        assertNotNull(userWithId.getGameSessions());
 
         userWithId.setUserId(null);
         assertNull(userWithId.getUserId());
@@ -43,6 +48,8 @@ public class UserUnitTest {
         assertNull(userWithId.getFreeTime());
         userWithId.setTimeRemaining(null);
         assertNull(userWithId.getTimeRemaining());
+        userWithId.setGameSessions(null);
+        assertNull(userWithId.getGameSessions());
     }
 
     @Test
@@ -195,8 +202,8 @@ public class UserUnitTest {
 
     @Test
     public void hashCodeTestWithNull() {
-        User user = new User(null, null, null, null);
-        User other = new User(null, null, null, null);
+        User user = new User(null, null, null, null, null);
+        User other = new User(null, null, null, null, null);
         assertEquals(user.hashCode(), other.hashCode());
     }
 

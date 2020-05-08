@@ -202,8 +202,8 @@ public class GameSessionUnitTest {
 
     @Test
     public void hashCodeTestWithNull() {
-        GameSession session = new GameSession(null, null, null, null, null);
-        GameSession other = new GameSession(null, null, null, null, null);
+        GameSession session = new GameSession( null, null, null, null);
+        GameSession other = new GameSession(null, null, null, null);
         assertEquals(session.hashCode(), other.hashCode());
     }
 }
