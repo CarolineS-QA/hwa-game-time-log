@@ -1,6 +1,7 @@
 package com.qa.hwa.rest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.qa.hwa.domain.GameSession;
 import com.qa.hwa.domain.User;
 import com.qa.hwa.dto.UserDTO;
 import com.qa.hwa.repo.UsersRepository;
@@ -44,6 +45,7 @@ public class UserControllerIntegrationTest {
     private Long userId;
     private UserDTO userDTO;
     private Duration time;
+    private List<GameSession> sessionsList;
 
     private UserDTO mapToDTO(User user){
         return this.mapper.map(user, UserDTO.class);
@@ -51,8 +53,9 @@ public class UserControllerIntegrationTest {
 
     @Before
     public void setUp(){
+        sessionsList = new ArrayList<>();
         this.repo.deleteAll();
-        this.testUser = new User("testUser", time, time, time);
+        this.testUser = new User("testUser", time, time, time, sessionsList);
         this.testUserWithId = this.repo.save(testUser);
         this.userId = testUserWithId.getUserId();
         this.userDTO = this.mapToDTO(testUserWithId);

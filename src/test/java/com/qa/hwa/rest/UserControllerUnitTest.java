@@ -1,5 +1,6 @@
 package com.qa.hwa.rest;
 
+import com.qa.hwa.domain.GameSession;
 import com.qa.hwa.domain.User;
 import com.qa.hwa.dto.UserDTO;
 import com.qa.hwa.service.UserService;
@@ -39,6 +40,7 @@ public class UserControllerUnitTest {
     private long userId = 1L;
     private Duration time;
     private UserDTO userDTO;
+    private List<GameSession> sessionsList;
 
     private final ModelMapper mapper = new ModelMapper();
 
@@ -48,10 +50,11 @@ public class UserControllerUnitTest {
 
     @Before
     public void setUp(){
+        sessionsList = new ArrayList<>();
         this.usersList = new ArrayList<>();
-        this.testUser = new User("testUser", time, time, time);
+        this.testUser = new User("testUser", time, time, time, sessionsList);
         this.usersList.add(testUser);
-        this.testUserWithId = new User(testUser.getUsername(), testUser.getTotalTimePlayed(), testUser.getFreeTime(), testUser.getTimeRemaining());
+        this.testUserWithId = new User(testUser.getUsername(), testUser.getTotalTimePlayed(), testUser.getFreeTime(), testUser.getTimeRemaining(), testUser.getGameSessions());
         this.testUserWithId.setUserId(this.userId);
         this.userDTO = this.mapToDTO(testUserWithId);
     }
