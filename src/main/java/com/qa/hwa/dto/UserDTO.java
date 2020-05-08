@@ -12,11 +12,11 @@ public class UserDTO {
     private Duration totalTimePlayed;
     private Duration freeTime;
     private Duration timeRemaining;
-    private List<GameSession> gameSessions;
+    private List<GameSessionDTO> gameSessions;
 
     public UserDTO(){}
 
-    public UserDTO(String username, Duration totalTimePlayed, Duration freeTime, Duration timeRemaining, List<GameSession> gameSessions) {
+    public UserDTO(String username, Duration totalTimePlayed, Duration freeTime, Duration timeRemaining, List<GameSessionDTO> gameSessions) {
         this.username = username;
         this.totalTimePlayed = totalTimePlayed;
         this.freeTime = freeTime;
@@ -24,7 +24,7 @@ public class UserDTO {
         this.gameSessions = gameSessions;
     }
 
-    public UserDTO(Long userId, String username, Duration totalTimePlayed, Duration freeTime, Duration timeRemaining, List<GameSession> gameSessions) {
+    public UserDTO(Long userId, String username, Duration totalTimePlayed, Duration freeTime, Duration timeRemaining, List<GameSessionDTO> gameSessions) {
         this.userId = userId;
         this.username = username;
         this.totalTimePlayed = totalTimePlayed;
@@ -73,11 +73,11 @@ public class UserDTO {
         this.timeRemaining = timeRemaining;
     }
 
-    public List<GameSession> getGameSessions() {
+    public List<GameSessionDTO> getGameSessions() {
         return gameSessions;
     }
 
-    public void setGameSessions(List<GameSession> gameSessions) {
+    public void setGameSessions(List<GameSessionDTO> gameSessions) {
         this.gameSessions = gameSessions;
     }
 
