@@ -21,13 +21,13 @@ public class GameSessionController {
         this.service = service;
     }
 
-    @GetMapping("/readAllGameSessionsByTime")
-    public ResponseEntity<List<GameSessionDTO>> readAllGameSessionsOrderedByTime(){
+    @GetMapping("/getAllGameSessionsByTime")
+    public ResponseEntity<List<GameSessionDTO>> getAllGameSessionsOrderedByTime(){
         return ResponseEntity.ok(this.service.readAllSessionsByTimeOfSession());
     }
 
-    @GetMapping("/readYourGameSessions/{user.username}")
-    public ResponseEntity<List<GameSessionDTO>> readAUsersGameSessions(@PathVariable User user){
+    @GetMapping("/getYourGameSessions/{user.username}")
+    public ResponseEntity<List<GameSessionDTO>> getAUsersGameSessions(@PathVariable User user){
         return ResponseEntity.ok(this.service.readAUsersGameSessions(user));
     }
 
