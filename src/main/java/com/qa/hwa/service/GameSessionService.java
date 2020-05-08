@@ -23,4 +23,11 @@ public class GameSessionService {
     private GameSessionDTO mapToDTO(GameSession session){
         return this.mapper.map(session, GameSessionDTO.class);
     }
+
+
+
+    public GameSessionDTO createGameSession(GameSession session){
+        GameSession tempGameSession = this.repo.save(session);
+        return this.mapToDTO(tempGameSession);
+    }
 }
