@@ -34,12 +34,13 @@ public class GameSessionService {
         return this.mapper.map(session, GameSessionDTO.class);
     }
 
-    public List<GameSessionDTO> readAllSessionsByTimeOfSession(LocalDateTime time){
+    public List<GameSessionDTO> readAllSessionsByTimeOfSession(){
+        LocalDateTime time = LocalDateTime.now();
         return this.sessionsRepo.findAllByTimeOfSessionOrderByTimeOfSessionDesc(time).stream().map(this::mapToDTO).collect(Collectors.toList());
     }
 
-    public List<GameSessionDTO> readAUsersGameSessions(User username){
-        return this.sessionsRepo.findAllByUsernameOrderByTimeOfSessionDesc(username).stream().map(this::mapToDTO).collect(Collectors.toList());
+    public List<GameSessionDTO> readAUsersGameSessions(User user){
+        return this.sessionsRepo.findAllByUsernameOrderByTimeOfSessionDesc(user).stream().map(this::mapToDTO).collect(Collectors.toList());
     }
 
     public GameSessionDTO createGameSession(GameSession session){
