@@ -1,6 +1,7 @@
 package com.qa.hwa.dto;
 
 import com.qa.hwa.domain.GameSession;
+import com.qa.hwa.domain.User;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
@@ -8,21 +9,21 @@ import java.util.Objects;
 
 public class GameSessionDTO {
     private Long sessionId;
-    private String username;
+    private User username;
     private String gameName;
     private Duration TimePlayed;
     private LocalDateTime timeOfSession;
 
     public GameSessionDTO(){}
 
-    public GameSessionDTO(String username, String gameName, Duration timePlayed, LocalDateTime timeOfSession) {
+    public GameSessionDTO(User username, String gameName, Duration timePlayed, LocalDateTime timeOfSession) {
         this.username = username;
         this.gameName = gameName;
         TimePlayed = timePlayed;
         this.timeOfSession = timeOfSession;
     }
 
-    public GameSessionDTO(Long sessionId, String username, String gameName, Duration timePlayed, LocalDateTime timeOfSession) {
+    public GameSessionDTO(Long sessionId, User username, String gameName, Duration timePlayed, LocalDateTime timeOfSession) {
         this.sessionId = sessionId;
         this.username = username;
         this.gameName = gameName;
@@ -38,11 +39,11 @@ public class GameSessionDTO {
         this.sessionId = sessionId;
     }
 
-    public String getUsername() {
+    public User getUsername() {
         return username;
     }
 
-    public void setUsername(String username) {
+    public void setUsername(User username) {
         this.username = username;
     }
 
