@@ -10,9 +10,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class GameSessionService {
 
-    public final GameSessionsRepository repo;
+    private final GameSessionsRepository repo;
 
-    public final ModelMapper mapper;
+    private final ModelMapper mapper;
 
     @Autowired
     public GameSessionService(GameSessionsRepository repo, ModelMapper mapper) {
