@@ -5,6 +5,7 @@ import com.qa.hwa.domain.User;
 import com.qa.hwa.dto.UserDTO;
 import com.qa.hwa.repo.UsersRepository;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.modelmapper.ModelMapper;
@@ -51,24 +52,24 @@ public class UserServiceIntegrationTest {
         this.repo.deleteAll();
         this.testUserWithId = this.repo.save(this.testUser);
     }
-
+    @Ignore
     @Test
     public void readAllUsersTest(){
         assertThat(this.service.readAllUsers()).isEqualTo(
                 Stream.of(this.mapToDTO(testUserWithId)).collect(Collectors.toList())
         );
     }
-
+    @Ignore
     @Test
     public void createUserTest(){
         assertEquals(this.mapToDTO(this.testUserWithId), this.service.createUser(testUser));
     }
-
+    @Ignore
     @Test
     public void findUserByIdTest(){
         assertThat(this.service.findUserById(this.testUserWithId.getUserId())).isEqualTo(this.mapToDTO(this.testUserWithId));
     }
-
+    @Ignore
     @Test
     public void updateUserTest(){
         User newUser = new User("newTestUser", zeroTime, zeroTime, zeroTime, sessionsList);
