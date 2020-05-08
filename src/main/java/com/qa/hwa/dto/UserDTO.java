@@ -1,6 +1,9 @@
 package com.qa.hwa.dto;
 
+import com.qa.hwa.domain.GameSession;
+
 import java.time.Duration;
+import java.util.List;
 import java.util.Objects;
 
 public class UserDTO {
@@ -9,22 +12,25 @@ public class UserDTO {
     private Duration totalTimePlayed;
     private Duration freeTime;
     private Duration timeRemaining;
+    private List<GameSessionDTO> gameSessions;
 
     public UserDTO(){}
 
-    public UserDTO(String username, Duration totalTimePlayed, Duration freeTime, Duration timeRemaining) {
+    public UserDTO(String username, Duration totalTimePlayed, Duration freeTime, Duration timeRemaining, List<GameSessionDTO> gameSessions) {
         this.username = username;
         this.totalTimePlayed = totalTimePlayed;
         this.freeTime = freeTime;
         this.timeRemaining = timeRemaining;
+        this.gameSessions = gameSessions;
     }
 
-    public UserDTO(Long userId, String username, Duration totalTimePlayed, Duration freeTime, Duration timeRemaining) {
+    public UserDTO(Long userId, String username, Duration totalTimePlayed, Duration freeTime, Duration timeRemaining, List<GameSessionDTO> gameSessions) {
         this.userId = userId;
         this.username = username;
         this.totalTimePlayed = totalTimePlayed;
         this.freeTime = freeTime;
         this.timeRemaining = timeRemaining;
+        this.gameSessions = gameSessions;
     }
 
     public Long getUserId() {
@@ -67,6 +73,14 @@ public class UserDTO {
         this.timeRemaining = timeRemaining;
     }
 
+    public List<GameSessionDTO> getGameSessions() {
+        return gameSessions;
+    }
+
+    public void setGameSessions(List<GameSessionDTO> gameSessions) {
+        this.gameSessions = gameSessions;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -76,11 +90,12 @@ public class UserDTO {
                 Objects.equals(getUsername(), userDTO.getUsername()) &&
                 Objects.equals(getTotalTimePlayed(), userDTO.getTotalTimePlayed()) &&
                 Objects.equals(getFreeTime(), userDTO.getFreeTime()) &&
-                Objects.equals(getTimeRemaining(), userDTO.getTimeRemaining());
+                Objects.equals(getTimeRemaining(), userDTO.getTimeRemaining()) &&
+                Objects.equals(getGameSessions(), userDTO.getGameSessions());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getUserId(), getUsername(), getTotalTimePlayed(), getFreeTime(), getTimeRemaining());
+        return Objects.hash(getUserId(), getUsername(), getTotalTimePlayed(), getFreeTime(), getTimeRemaining(), getGameSessions());
     }
 }

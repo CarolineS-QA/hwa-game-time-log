@@ -1,10 +1,8 @@
 package com.qa.hwa.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.Duration;
+import java.util.List;
 import java.util.Objects;
 
 
@@ -18,23 +16,26 @@ public class User {
     private Duration totalTimePlayed;
     private Duration freeTime;
     private Duration timeRemaining;
+    @OneToMany(mappedBy = "username")
+    private List<GameSession> gameSessions;
 
     public User(){}
 
-    public User(String username, Duration totalTimePlayed, Duration freeTime, Duration timeRemaining) {
+    public User(String username, Duration totalTimePlayed, Duration freeTime, Duration timeRemaining, List<GameSession> gameSessions) {
         this.username = username;
         this.totalTimePlayed = totalTimePlayed;
         this.freeTime = freeTime;
         this.timeRemaining = timeRemaining;
+        this.gameSessions = gameSessions;
     }
 
-    public User(Long userId, String username, Duration totalTimePlayed, Duration freeTime, Duration timeRemaining) {
+    public User(Long userId, String username, Duration totalTimePlayed, Duration freeTime, Duration timeRemaining, List<GameSession> gameSessions) {
         this.userId = userId;
-        // @ManytoOne? @OnetoOne (target entity = GameSession.class)
         this.username = username;
         this.totalTimePlayed = totalTimePlayed;
         this.freeTime = freeTime;
         this.timeRemaining = timeRemaining;
+        this.gameSessions = gameSessions;
     }
 
     public Long getUserId() {
@@ -77,6 +78,14 @@ public class User {
         this.timeRemaining = timeRemaining;
     }
 
+    public List<GameSession> getGameSessions() {
+        return gameSessions;
+    }
+
+    public void setGameSessions(List<GameSession> gameSessions) {
+        this.gameSessions = gameSessions;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -86,11 +95,12 @@ public class User {
                 Objects.equals(getUsername(), user.getUsername()) &&
                 Objects.equals(getTotalTimePlayed(), user.getTotalTimePlayed()) &&
                 Objects.equals(getFreeTime(), user.getFreeTime()) &&
-                Objects.equals(getTimeRemaining(), user.getTimeRemaining());
+                Objects.equals(getTimeRemaining(), user.getTimeRemaining()) &&
+                Objects.equals(getGameSessions(), user.getGameSessions());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getUserId(), getUsername(), getTotalTimePlayed(), getFreeTime(), getTimeRemaining());
+        return Objects.hash(getUserId(), getUsername(), getTotalTimePlayed(), getFreeTime(), getTimeRemaining(), getGameSessions());
     }
 }

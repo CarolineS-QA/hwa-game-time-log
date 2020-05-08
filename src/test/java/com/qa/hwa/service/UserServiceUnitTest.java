@@ -1,5 +1,6 @@
 package com.qa.hwa.service;
 
+import com.qa.hwa.domain.GameSession;
 import com.qa.hwa.domain.User;
 import com.qa.hwa.dto.UserDTO;
 import com.qa.hwa.exceptions.UserNotFoundException;
@@ -38,6 +39,7 @@ public class UserServiceUnitTest {
     private User testUserWithId;
     private UserDTO userDTO;
     private Duration time;
+    private List<GameSession> sessionsList;
 
     private UserDTO mapToDTO(User user) {
         return this.mapper.map(user, UserDTO.class);
@@ -45,11 +47,12 @@ public class UserServiceUnitTest {
 
     @Before
     public void setUp() {
+        sessionsList = new ArrayList<>();
         this.userList = new ArrayList<>();
         time = Duration.ofHours(0);
-        this.testUser = new User("testUser", time, time, time);
+        this.testUser = new User("testUser", time, time, time, sessionsList);
         this.userList.add(testUser);
-        this.testUserWithId = new User(testUser.getUsername(), testUser.getTotalTimePlayed(), testUser.getFreeTime(), testUser.getTimeRemaining());
+        this.testUserWithId = new User(testUser.getUsername(), testUser.getTotalTimePlayed(), testUser.getFreeTime(), testUser.getTimeRemaining(), testUser.getGameSessions());
         this.testUserWithId.setUserId(userId);
         this.userDTO = this.mapToDTO(testUserWithId);
     }
@@ -80,8 +83,8 @@ public class UserServiceUnitTest {
 
     @Test
     public void updateUserTest() {
-        User newUser = new User("newTestUser", time, time, time);
-        User updateUser = new User(newUser.getUsername(), newUser.getTotalTimePlayed(), newUser.getFreeTime(), newUser.getTimeRemaining());
+        User newUser = new User("newTestUser", time, time, time, sessionsList);
+        User updateUser = new User(newUser.getUsername(), newUser.getTotalTimePlayed(), newUser.getFreeTime(), newUser.getTimeRemaining(), newUser.getGameSessions());
         updateUser.setUserId(userId);
 
         UserDTO updateNoteDTO = new ModelMapper().map(updateUser, UserDTO.class);
