@@ -37,8 +37,7 @@ public class UserService {
     }
 
     public UserDTO readUserByUsername(String username){
-        User tempUser = this.usersRepo.findUserByUsername(username);
-        return this.mapToDTO(tempUser);
+        return this.mapToDTO(this.usersRepo.findUserByUsername(username));
     }
 
     public UserDTO createUser(User user){
