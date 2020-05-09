@@ -2,9 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/gtl.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon_io/site.webmanifest">
     <title>GTL - Users</title>
 </head>
 <body>
+ <!-- Nav bar -->
+ <nav class="sticky">
+    <a href="../index.html"><img id="GameTimeLogFullLogo" src="../img/logo-via-logohub.png" alt="Game Time Log Logo"></a>
+    <a href="../index.html">HOME</a>
+    <a href="./Users.html">USERS</a>
+    <a href="./GameSessions.html">GAME SESSIONS</a>
+    <a href="./AboutTheApp.html">ABOUT THIS APP</a>
+    <a href="https://github.com/CarolineS-QA">CONTACT ME</a>
+    <a href="https://github.com/CarolineS-QA/hwa-game-time-log">Check out the source code on <img id="GitHubLogoTxt" src="../img/GitHub_Logo.png" alt="Git Hub Logo"><img id="GitHubLogoIcon" src="../img/GitHub-Mark-64px.png" alt="Git Hub Mark"></a>
+ </nav>
+<br><br><br><br><br>
+ <!-- Start of main page content -->
+ <header>
+    <noscript>If you have no JS enabled you will see this!</noscript>
+    <h1>GameTimeLog - User Landing</h1>
+ </header>
+ <main>
+    <section>
+        <div id="Intro">
+            <p>Welcome!</p>
+            <p>If you don't have a user yet, create one <a href="./UserCreation.html">here</a></p>
+        </div>
+        <form id="UserForm" method="GET" action="Users.html">
+            <fieldset>
+                <ul>
+                    <li>
+                        <label for="username">Please enter your Username: </label>
+                        <input id="username" name="username" type ="text" />
+                    </li>
+                </ul>
+                <button id='bSubmit' type='submit'>Submit</button>
+            </fieldset>
+        </form>
+        <div id="readYourUserResponse"></div>
+        <div id="updateYourUserResponse"></div>
+        <div id="ToYourGameSessions">
+            <p>Track your game sessions!</p>
+            <!--Have a list of your game sessions here? Top 3? Or just link to Game Sessions Page-->
+        </div>
+        <!--Warning!-->
+        <div id="deleteUserSection">
+            <h3>Warning! Deleting your user will remove all your game sessions.</h3>
+        <form id="DeleteForm" method="POST" action="Users.html">
+            <fieldset>
+                <legend>Delete your User Account</legend>
+                <ul>
+                    <li>
+                        <label for="userId">Please enter your UserId: </label>
+                        <input id="userId" name="userId" type ="text" />
+                    </li>
+                </ul>
+                <button id='bDeleteSubmit' type='submit'>Delete</button>
+            </fieldset>
+        </form>
+        <div id="deleteUserResponse"></div>
+        </div>
 
-</body>
+    </section>
+     <section>
+         <a href="./html/AllGameSessions.html">See what has been played</a><!-- recently, All game sessions -->
+         <a href="html/AllUsers.html">See who else is using GameTimeLog!</a>
+     </section>
+ </main>
+<!--Footer-->
+ <footer></footer>
+<!--Scripts-->
+ <script src="./js/bootstrap.min.js"></script>
+ </body>
 </html>
