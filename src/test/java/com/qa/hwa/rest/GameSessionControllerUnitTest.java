@@ -71,9 +71,9 @@ public class GameSessionControllerUnitTest {
 
     @Test
     public void getAUsersGameSessionsTest(){
-        when(this.service.readAUsersGameSessions(player1)).thenReturn(this.gameSessionDTOList);
-        assertEquals(this.sessionController.getAUsersGameSessions(player1), new ResponseEntity<>(this.gameSessionDTOList, HttpStatus.OK));
-        verify(this.service, times(1)).readAUsersGameSessions(player1);
+        when(this.service.readAUsersGameSessions(player1.getUsername())).thenReturn(this.gameSessionDTOList);
+        assertEquals(this.sessionController.getAUsersGameSessions(player1.getUsername()), new ResponseEntity<>(this.gameSessionDTOList, HttpStatus.OK));
+        verify(this.service, times(1)).readAUsersGameSessions(player1.getUsername());
     }
 
     @Test

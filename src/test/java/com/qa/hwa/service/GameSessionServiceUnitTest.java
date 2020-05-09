@@ -34,6 +34,9 @@ public class GameSessionServiceUnitTest {
     private GameSessionsRepository repo;
 
     @Mock
+    private UsersRepository usersRepo;
+
+    @Mock
     private ModelMapper mapper;
 
     private List<GameSession> gameSessionList;
@@ -78,10 +81,17 @@ public class GameSessionServiceUnitTest {
     }
 
     @Test
+    public void readUserByUsernameTest() {
+        when(this.usersRepo.findUserByUsername(player1.getUsername())).thenReturn(player1);
+        assertEquals(this.service.readUserByUsername(player1.getUsername()), player1);
+        verify(usersRepo, times(1)).findUserByUsername(player1.getUsername());
+    }
+
+    @Test
     public void readAUsersGameSessionsTest() {
         when(this.repo.findAllByUsernameOrderByTimeOfSessionDesc(player1)).thenReturn(this.gameSessionList);
         when(this.mapper.map(testSessionWithId, GameSessionDTO.class)).thenReturn(sessionDTO);
-        assertEquals(this.service.readAUsersGameSessions(player1), gameSessionDTOList);
+        assertEquals(this.service.readAUsersGameSessions(player1.getUsername()), gameSessionDTOList);
         verify(repo, times(1)).findAllByUsernameOrderByTimeOfSessionDesc(player1);
     }
 
