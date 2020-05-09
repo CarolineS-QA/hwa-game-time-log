@@ -75,6 +75,7 @@ public class GameSessionControllerIntegrationTest {
         this.sessionDTO = this.mapToDTO(testSessionWithId);
     }
 
+    @Ignore
     @Test
     public void getAllGameSessionsOrderedByTimeTest() throws Exception {
         String content = this.mock.perform(
