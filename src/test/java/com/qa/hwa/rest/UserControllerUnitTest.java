@@ -41,6 +41,7 @@ public class UserControllerUnitTest {
     private Duration time;
     private UserDTO userDTO;
     private List<GameSession> sessionsList;
+    private String username;
 
     private final ModelMapper mapper = new ModelMapper();
 
@@ -53,6 +54,7 @@ public class UserControllerUnitTest {
         sessionsList = new ArrayList<>();
         this.usersList = new ArrayList<>();
         this.testUser = new User("testUser", time, time, time, sessionsList);
+        username = testUser.getUsername();
         this.usersList.add(testUser);
         this.testUserWithId = new User(testUser.getUsername(), testUser.getTotalTimePlayed(), testUser.getFreeTime(), testUser.getTimeRemaining(), testUser.getGameSessions());
         this.testUserWithId.setUserId(this.userId);
@@ -64,6 +66,13 @@ public class UserControllerUnitTest {
         when(service.readAllUsers()).thenReturn(this.usersList.stream().map(this::mapToDTO).collect(Collectors.toList()));
         assertFalse("No users found", Objects.requireNonNull(this.userController.getAllUsers().getBody()).isEmpty());
         verify(service, times(1)).readAllUsers();
+    }
+
+    @Test
+    public void getUserByUsernameTest(){
+        when(this.service.readUserByUsername(username)).thenReturn(this.userDTO);
+        assertEquals(this.userController.getUserByUsername(username), new ResponseEntity<>(this.userDTO, HttpStatus.OK));
+        verify(service, times(1)).readUserByUsername(username);
     }
 
     @Test

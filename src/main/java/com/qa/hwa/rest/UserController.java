@@ -25,6 +25,11 @@ public class UserController {
         return ResponseEntity.ok(this.service.readAllUsers());
     }
 
+    @GetMapping("/getUserByUsername/{username}")
+    public ResponseEntity<UserDTO> getUserByUsername(@PathVariable String username){
+        return ResponseEntity.ok(this.service.readUserByUsername(username));
+    }
+
     @PostMapping("/createUser")
     public ResponseEntity<UserDTO> createUser(@RequestBody User user){
         return new ResponseEntity<>(this.service.createUser(user), HttpStatus.CREATED);
