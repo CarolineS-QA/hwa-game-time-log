@@ -82,4 +82,11 @@ public class GameSessionControllerUnitTest {
         assertEquals(this.sessionController.createGameSession(testSession), new ResponseEntity<>(this.sessionDTO, HttpStatus.CREATED));
         verify(this.service, times(1)).createGameSession(testSession);
     }
+
+    @Test
+    public void updateGameSessionTest(){
+        when(this.service.updateGameSession(sessionId, testSession)).thenReturn(this.sessionDTO);
+        assertEquals(this.sessionController.updateGameSession(sessionId, testSession), new ResponseEntity<>(this.sessionDTO, HttpStatus.OK));
+        verify(service, times(1)).updateGameSession(sessionId, testSession);
+    }
 }

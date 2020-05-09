@@ -20,6 +20,7 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -109,5 +110,22 @@ public class GameSessionServiceUnitTest {
         when(this.mapper.map(testSessionWithId, GameSessionDTO.class)).thenReturn(sessionDTO);
         assertEquals(this.service.createGameSession(testSession), this.sessionDTO);
         verify(repo, times(1)).save(this.testSession);
+    }
+
+    @Test
+    public void updateGameSessionTest() {
+        GameSession newSession = new GameSession(player1, "new game plus", zeroTime, date);
+        GameSession updateSession = new GameSession(newSession.getUsername(), newSession.getGameName(), newSession.getTimePlayed(), newSession.getTimeOfSession());
+        updateSession.setSessionId(sessionId);
+
+        GameSessionDTO updateSessionDTO = new ModelMapper().map(updateSession, GameSessionDTO.class);
+
+        when(this.repo.findById(sessionId)).thenReturn(Optional.ofNullable(testSessionWithId));
+        when(this.repo.save(updateSession)).thenReturn(updateSession);
+        when(this.mapper.map(updateSession, GameSessionDTO.class)).thenReturn(updateSessionDTO);
+
+        assertEquals(updateSessionDTO, this.service.updateGameSession(sessionId, newSession));
+        verify(this.repo, times(1)).findById(sessionId);
+        verify(this.repo, times(2)).save(updateSession); //two times because save is called in SetUp for read tests
     }
 }
