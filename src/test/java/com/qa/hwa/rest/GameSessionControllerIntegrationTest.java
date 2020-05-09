@@ -48,7 +48,8 @@ public class GameSessionControllerIntegrationTest {
 
     private ObjectMapper objectMapper = new ObjectMapper();
     private User player1;
-    private List<GameSession> gameSessionsList;
+    private List<GameSession> sessionsList;
+    private List<GameSessionDTO> sessionDTOList;
     private GameSession testSession;
     private Long sessionId = 1L;
     private GameSession testSessionWithId;
@@ -62,7 +63,8 @@ public class GameSessionControllerIntegrationTest {
 
     @Before
     public void setUp(){
-        gameSessionsList = new ArrayList<>();
+        sessionsList = new ArrayList<>();
+        sessionDTOList = new ArrayList<>();
         this.sessionsRepo.deleteAll();
         this.usersRepo.deleteAll();
         this.player1 = new User("testUser", zeroTime, zeroTime, zeroTime, null);
@@ -73,6 +75,33 @@ public class GameSessionControllerIntegrationTest {
         this.sessionDTO = this.mapToDTO(testSessionWithId);
     }
 
+    @Test
+    public void getAllGameSessionsOrderedByTimeTest() throws Exception {
+        String content = this.mock.perform(
+                request(HttpMethod.GET, "/getAllGameSessionsOrderedByTime")
+                        .accept(MediaType.APPLICATION_JSON)
+        )
+                .andExpect(status().isOk())
+                .andReturn()
+                .getResponse()
+                .getContentAsString();
+        assertEquals(content, this.objectMapper.writeValueAsString(sessionDTOList));
+    }
+
+    //Nested Exception - due to link between a user and game sessions...
+    @Ignore
+    @Test
+    public void getAUsersGameSessionsTest() throws Exception {
+        String content = this.mock.perform(
+                request(HttpMethod.GET, "/getYourGameSessions/" + this.player1.getUsername())
+                        .accept(MediaType.APPLICATION_JSON)
+        )
+                .andExpect(status().isOk())
+                .andReturn()
+                .getResponse()
+                .getContentAsString();
+        assertEquals(content, this.objectMapper.writeValueAsString(sessionDTOList));
+    }
 
 //org.springframework.web.util.NestedServletException:
 // Request processing failed; nested exception is org.springframework.http.converter.HttpMessageNotWritableException:
@@ -80,7 +109,7 @@ public class GameSessionControllerIntegrationTest {
 // Infinite recursion (StackOverflowError) (through reference chain: com.qa.hwa.domain.GameSession["username"]->com.qa.hwa.domain.User["gameSessions"]->org.hibernate.collection.internal.PersistentBag[0]
 // ->com.qa.hwa.domain.GameSession["username"]->com.qa.hwa.domain.User["gameSessions"]->org.hibernate.collection.internal.PersistentBag[0]
     //continuously calling each other.
-    @Ignore
+   @Ignore
    @Test
     public void createSessionsTest() throws Exception {
         String result = this.mock.perform(

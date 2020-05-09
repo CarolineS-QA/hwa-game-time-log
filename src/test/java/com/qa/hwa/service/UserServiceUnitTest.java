@@ -40,6 +40,7 @@ public class UserServiceUnitTest {
     private UserDTO userDTO;
     private Duration time;
     private List<GameSession> sessionsList;
+    private String username;
 
     private UserDTO mapToDTO(User user) {
         return this.mapper.map(user, UserDTO.class);
@@ -51,6 +52,7 @@ public class UserServiceUnitTest {
         this.userList = new ArrayList<>();
         time = Duration.ofHours(0);
         this.testUser = new User("testUser", time, time, time, sessionsList);
+        username = testUser.getUsername();
         this.userList.add(testUser);
         this.testUserWithId = new User(testUser.getUsername(), testUser.getTotalTimePlayed(), testUser.getFreeTime(), testUser.getTimeRemaining(), testUser.getGameSessions());
         this.testUserWithId.setUserId(userId);
@@ -63,6 +65,14 @@ public class UserServiceUnitTest {
         when(this.mapper.map(testUserWithId, UserDTO.class)).thenReturn(userDTO);
         assertFalse("Service returned no Users", this.service.readAllUsers().isEmpty());
         verify(repo, times(1)).findAll();
+    }
+
+    @Test
+    public void readUserByUsernameTest() {
+        when(this.repo.findUserByUsername(username)).thenReturn(testUserWithId);
+        when(this.mapper.map(testUserWithId, UserDTO.class)).thenReturn(userDTO);
+        assertEquals(this.service.readUserByUsername(this.username), userDTO);
+        verify(repo, times(1)).findUserByUsername(username);
     }
 
     @Test
