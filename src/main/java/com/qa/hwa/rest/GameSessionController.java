@@ -41,4 +41,11 @@ public class GameSessionController {
     public ResponseEntity<GameSessionDTO> updateGameSession(@PathVariable Long id, @RequestBody GameSession session){
         return ResponseEntity.ok(this.service.updateGameSession(id, session));
     }
+
+    @DeleteMapping("/deleteGameSession/{id}")
+    public ResponseEntity<?> deleteGameSession(@PathVariable Long id){
+        return this.service.deleteGameSession(id)
+                ? ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build()
+                : ResponseEntity.noContent().build();
+    }
 }

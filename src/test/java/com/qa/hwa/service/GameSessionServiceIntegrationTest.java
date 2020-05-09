@@ -107,4 +107,9 @@ public class GameSessionServiceIntegrationTest {
         assertThat(this.service.updateGameSession(this.testSessionWithId.getSessionId(),newSession))
                 .isEqualTo(this.mapToDTO(updateSession));
     }
+
+    @Test
+    public void deleteGameSessionTest(){
+        assertThat(this.service.deleteGameSession(this.testSessionWithId.getSessionId())).isFalse();
+    }
 }

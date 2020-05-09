@@ -65,4 +65,12 @@ public class GameSessionService {
         GameSession tempGameSession = this.sessionsRepo.save(update);
         return this.mapToDTO(tempGameSession);
     }
+
+    public boolean deleteGameSession(Long id){
+        if(!this.sessionsRepo.existsById(id)){
+            throw new GameSessionNotFoundException();
+        }
+        this.sessionsRepo.deleteById(id);
+        return this.sessionsRepo.existsById(id);
+    }
 }
