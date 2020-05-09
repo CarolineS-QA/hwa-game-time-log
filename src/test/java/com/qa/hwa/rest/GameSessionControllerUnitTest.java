@@ -89,4 +89,17 @@ public class GameSessionControllerUnitTest {
         assertEquals(this.sessionController.updateGameSession(sessionId, testSession), new ResponseEntity<>(this.sessionDTO, HttpStatus.OK));
         verify(service, times(1)).updateGameSession(sessionId, testSession);
     }
+
+    @Test
+    public void deleteUserTestFalse(){
+        this.sessionController.deleteGameSession(sessionId);
+        verify(service, times(1)).deleteGameSession(sessionId);
+    }
+
+    @Test
+    public void deleteUserTestTrue(){
+        when(service.deleteGameSession(3L)).thenReturn(true);
+        this.sessionController.deleteGameSession(3L);
+        verify(service, times(1)).deleteGameSession(3L);
+    }
 }

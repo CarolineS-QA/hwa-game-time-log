@@ -4,6 +4,8 @@ import com.qa.hwa.domain.GameSession;
 import com.qa.hwa.domain.User;
 import com.qa.hwa.dto.GameSessionDTO;
 import com.qa.hwa.dto.UserDTO;
+import com.qa.hwa.exceptions.GameSessionNotFoundException;
+import com.qa.hwa.exceptions.UserNotFoundException;
 import com.qa.hwa.repo.GameSessionsRepository;
 import com.qa.hwa.repo.UsersRepository;
 import org.junit.Before;
@@ -127,5 +129,20 @@ public class GameSessionServiceUnitTest {
         assertEquals(updateSessionDTO, this.service.updateGameSession(sessionId, newSession));
         verify(this.repo, times(1)).findById(sessionId);
         verify(this.repo, times(2)).save(updateSession); //two times because save is called in SetUp for read tests
+    }
+
+    @Test
+    public void deleteSessionByExistingId(){
+        when(this.repo.existsById(sessionId)).thenReturn(true, false);
+        assertFalse(service.deleteGameSession(sessionId));
+        verify(repo, times(1)).deleteById(sessionId);
+        verify(repo, times(2)).existsById(sessionId);
+    }
+
+    @Test(expected = GameSessionNotFoundException.class)
+    public void deleteSessionByNonExistingId(){
+        when(this.repo.existsById(sessionId)).thenReturn(false);
+        service.deleteGameSession(sessionId);
+        verify(repo, times(1)).existsById(sessionId);
     }
 }
