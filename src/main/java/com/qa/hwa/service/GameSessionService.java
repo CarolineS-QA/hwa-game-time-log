@@ -39,7 +39,12 @@ public class GameSessionService {
         return this.sessionsRepo.findAllByTimeOfSessionOrderByTimeOfSessionDesc(time).stream().map(this::mapToDTO).collect(Collectors.toList());
     }
 
-    public List<GameSessionDTO> readAUsersGameSessions(User user){
+    public User readUserByUsername(String username){
+        return this.usersRepo.findUserByUsername(username);
+    }
+
+    public List<GameSessionDTO> readAUsersGameSessions(String username){
+        User user = readUserByUsername(username);
         return this.sessionsRepo.findAllByUsernameOrderByTimeOfSessionDesc(user).stream().map(this::mapToDTO).collect(Collectors.toList());
     }
 
