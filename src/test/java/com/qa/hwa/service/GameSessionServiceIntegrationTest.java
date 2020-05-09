@@ -48,6 +48,7 @@ public class GameSessionServiceIntegrationTest {
     private User player1WithId;
     private GameSession testSession;
     private GameSession testSessionWithId;
+    private Long sessionId = 1L;
 
     private GameSessionDTO mapToDTO(GameSession session){
         return this.mapper.map(session, GameSessionDTO.class);
@@ -95,5 +96,15 @@ public class GameSessionServiceIntegrationTest {
     @Test
     public void createGameSessionTest(){
         assertEquals(this.mapToDTO(this.testSessionWithId), this.service.createGameSession(testSession));
+    }
+
+    @Ignore
+    @Test
+    public void updateGameSessionTest(){
+        GameSession newSession = new GameSession(player1, "new game plus", zeroTime, date);
+        GameSession updateSession = new GameSession(newSession.getUsername(), newSession.getGameName(), newSession.getTimePlayed(), newSession.getTimeOfSession());
+        updateSession.setSessionId(sessionId);
+        assertThat(this.service.updateGameSession(this.testSessionWithId.getSessionId(),newSession))
+                .isEqualTo(this.mapToDTO(updateSession));
     }
 }
