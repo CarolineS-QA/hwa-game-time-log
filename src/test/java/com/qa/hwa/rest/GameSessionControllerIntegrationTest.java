@@ -140,4 +140,11 @@ public class GameSessionControllerIntegrationTest {
                 .getContentAsString();
         assertEquals(content, this.objectMapper.writeValueAsString(sessionDTO));
     }
+
+    @Test
+    public void deleteGameSessionTest() throws Exception {
+        this.mock.perform(
+                request(HttpMethod.DELETE, "/deleteGameSession/" + this.sessionId)
+        ).andExpect(status().isNoContent());
+    }
 }
