@@ -13,6 +13,7 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.modelmapper.ModelMapper;
+import org.springframework.data.domain.Sort;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.time.Duration;
@@ -48,6 +49,7 @@ public class GameSessionServiceUnitTest {
     private Duration zeroTime;
     private LocalDateTime date;
     private User player1;
+    private Sort sort;
 
     private GameSessionDTO mapToDTO(GameSession session){
         return this.mapper.map(session, GameSessionDTO.class);
@@ -63,21 +65,27 @@ public class GameSessionServiceUnitTest {
         this.gameSessionList.add(testSession);
         this.testSessionWithId = new GameSession(testSession.getUsername(), testSession.getGameName(), testSession.getTimePlayed(), testSession.getTimeOfSession());
         this.testSessionWithId.setSessionId(sessionId);
+        this.repo.save(testSessionWithId);
         this.sessionDTO = this.mapToDTO(testSessionWithId);
         this.gameSessionDTOList.add(sessionDTO);
+        Sort sort = Sort.by(Sort.Direction.DESC, "TIME_OF_SESSION");
     }
 
     // doesn't return anything because it findsByTimeOfSession before sorting
     // -> looking for the exact time - so nothing gets picked up to sort!
     // modify GameSessionRepo's FinaAll(), then GameSessionService - add the sorting in Service.
     // - Controller should be the same as long a method name doesn't change
+    //java.lang.AssertionError:
+    //Expected :[]
+    //Actual   :[null]
+    // could "Time_Of_Session" actually be "TIME_OF_SESSION"?
     @Ignore
     @Test
     public void readAllSessionsByTimeOfSessionTest() {
-        when(repo.findAllByTimeOfSessionOrderByTimeOfSessionDesc(date)).thenReturn(this.gameSessionList);
+        when(repo.findAll(sort)).thenReturn(gameSessionList);
         when(this.mapper.map(testSessionWithId, GameSessionDTO.class)).thenReturn(sessionDTO);
-        assertEquals(this.service.readAllSessionsByTimeOfSession(), gameSessionDTOList);
-        verify(repo, times(1)).findAllByTimeOfSessionOrderByTimeOfSessionDesc(date);
+        assertEquals(this.service.readAllSessionsOrderedByTimeOfSession(), gameSessionDTOList);
+        verify(repo, times(1)).findAll(sort);
     }
 
     @Test

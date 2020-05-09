@@ -64,9 +64,9 @@ public class GameSessionControllerUnitTest {
 
     @Test
     public void getAllGameSessionsOrderedByTimeTest(){
-        when(this.service.readAllSessionsByTimeOfSession()).thenReturn(this.gameSessionDTOList);
+        when(this.service.readAllSessionsOrderedByTimeOfSession()).thenReturn(this.gameSessionDTOList);
         assertEquals(this.sessionController.getAllGameSessionsOrderedByTime(), new ResponseEntity<>(this.gameSessionDTOList, HttpStatus.OK));
-        verify(this.service, times(1)).readAllSessionsByTimeOfSession();
+        verify(this.service, times(1)).readAllSessionsOrderedByTimeOfSession();
     }
 
     @Test

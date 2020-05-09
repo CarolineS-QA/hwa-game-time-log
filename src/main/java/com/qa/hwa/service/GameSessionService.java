@@ -8,9 +8,9 @@ import com.qa.hwa.repo.GameSessionsRepository;
 import com.qa.hwa.repo.UsersRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -34,9 +34,8 @@ public class GameSessionService {
         return this.mapper.map(session, GameSessionDTO.class);
     }
 
-    public List<GameSessionDTO> readAllSessionsByTimeOfSession(){
-        LocalDateTime time = LocalDateTime.now();
-        return this.sessionsRepo.findAllByTimeOfSessionOrderByTimeOfSessionDesc(time).stream().map(this::mapToDTO).collect(Collectors.toList());
+    public List<GameSessionDTO> readAllSessionsOrderedByTimeOfSession(){
+        return this.sessionsRepo.findAll(Sort.by(Sort.Direction.DESC, "TIME_OF_SESSION")).stream().map(this::mapToDTO).collect(Collectors.toList());
     }
 
     public User readUserByUsername(String username){

@@ -81,7 +81,7 @@ public class GameSessionServiceIntegrationTest {
     @Ignore //expected is hashcode, actual is empty []
     @Test
     public void readAllGameSessionsOrderedByTimeTest(){
-        assertThat(this.service.readAllSessionsByTimeOfSession()).isEqualTo(
+        assertThat(this.service.readAllSessionsOrderedByTimeOfSession()).isEqualTo(
                 Stream.of(this.mapToDTO(testSessionWithId)).collect(Collectors.toList())
         );
     }
