@@ -124,4 +124,20 @@ public class GameSessionControllerIntegrationTest {
                 .getContentAsString();
         assertEquals(result, this.objectMapper.writeValueAsString(sessionDTO));
     }
+
+    @Ignore //fails to load application context
+    @Test
+    public void updateGameSessionTest() throws Exception {
+        String content = this.mock.perform(
+                request(HttpMethod.PUT, "/updateGameSession/" + this.sessionId)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(this.objectMapper.writeValueAsString(testSession))
+                        .accept(MediaType.APPLICATION_JSON)
+        )
+                .andExpect(status().isOk())
+                .andReturn()
+                .getResponse()
+                .getContentAsString();
+        assertEquals(content, this.objectMapper.writeValueAsString(sessionDTO));
+    }
 }
