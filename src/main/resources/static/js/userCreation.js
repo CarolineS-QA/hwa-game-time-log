@@ -6,7 +6,7 @@ function postNewUser() {
     let freeTimeHours = document.getElementById("freeTimeHours").valueAsNumber;
     let freeTimeMinutes = document.getElementById("freeTimeMinutes").valueAsNumber;
 
-    let freeTime = freeTimeMinutes + (freeTimeHours * 60);
+    let freeTime = Number(freeTimeMinutes) + (Number(freeTimeHours) * 60);
 
     let jsonString = JSON.stringify(
         {
