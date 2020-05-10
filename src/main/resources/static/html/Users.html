@@ -39,6 +39,7 @@
      <section id="readYourUser">
         <form id="UserForm" method="GET" action="Users.html">
             <fieldset>
+                <legend>See Your User Details</legend>
                 <ul>
                     <li>
                         <label for="username">Please enter your Username: </label>
@@ -54,6 +55,7 @@
      <section id="updateYourUser">
          <form id="UpdateUserForm" method="GET" action="Users.html">
              <fieldset>
+                 <legend>Update your User's Free Time</legend>
                  <ul>
                      <!--I don't want users changing their usernames just yet - until I'm sure it doesn't break anything!
                      Time Remaining ( is = to free time when there are no game sessions)
@@ -72,13 +74,14 @@
          </form>
         <div id="updateYourUserResponse"></div>
         <div id="ToYourGameSessions">
-            <p>Track your game sessions!</p>
-            <!--Have a list of your game sessions here? Top 3? Or just link to Game Sessions Page-->
+            <h5>Track your game sessions!</h5>
+            <p>Head over to the <a href="./GameSessions.html">Game Sessions</a> Page to manage them.</p>
         </div>
      </section>
         <!--Warning!-->
      <section id="deleteUserSection">
-         <h3>Warning! Deleting your user will remove all your game sessions.</h3>
+         <h4>Warning! </h4>
+         <p>Deleting your user will remove all your game sessions.</p>
         <form id="DeleteForm" method="POST" action="Users.html">
             <fieldset>
                 <legend>Delete your User Account</legend>
