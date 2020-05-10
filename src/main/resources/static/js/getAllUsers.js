@@ -9,9 +9,6 @@ function getAllUsers() {
         if (REQ.status === 200 && REQ.readyState === 4) {
             console.log(REQ);
             console.log(REQ.response);
-            // QUICK WAY TO INSERT INTO HTML
-            // document.querySelector('#response').innerHTML = REQ.response.title;
-            // FUNCTION TO INSERT INTO HTML
             buildDisplay(display, REQ.response);
             console.log("The request for data has been sent.");
         } else {
@@ -21,7 +18,7 @@ function getAllUsers() {
             window.alert("Oops! Something went wrong...")
         }
     }
-    REQ.open('GET', '/getAllUsers'); //will I need the full address?
+    REQ.open('GET', '/getAllUsers');
     REQ.setRequestHeader('Content-Type', 'Application/json');
     REQ.setRequestHeader('Access-Control-Allow-Origin', '*');
     REQ.responseType = 'json';
