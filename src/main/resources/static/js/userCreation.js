@@ -8,7 +8,8 @@ function postNewUser() {
 
     let freeTime = freeTimeMinutes + (freeTimeHours * 60);
 
-    let jsonString = JSON.stringify({
+    let jsonString = JSON.stringify(
+        {
         "username": username,
         "totalTimePlayed": 0,
         "freeTime": freeTime,
@@ -35,4 +36,9 @@ function postNewUser() {
 }
 
 
-submitCreateUser.addEventListener('click', postNewUser)
+submitCreateUser.addEventListener('click', function (event){
+    event.preventDefault();
+    postNewUser()
+    let form = document.getElementById("userDetails")
+    document.body.removeChild(form)
+})
