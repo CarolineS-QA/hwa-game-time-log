@@ -63,10 +63,10 @@ public class GameSessionControllerUnitTest {
     }
 
     @Test
-    public void getAllGameSessionsOrderedByTimeTest(){
-        when(this.service.readAllSessionsOrderedByTimeOfSession()).thenReturn(this.gameSessionDTOList);
-        assertEquals(this.sessionController.getAllGameSessionsOrderedByTime(), new ResponseEntity<>(this.gameSessionDTOList, HttpStatus.OK));
-        verify(this.service, times(1)).readAllSessionsOrderedByTimeOfSession();
+    public void getAllGameSessionsTest(){
+        when(this.service.readAllSessions()).thenReturn(this.gameSessionDTOList);
+        assertEquals(this.sessionController.getAllGameSessions(), new ResponseEntity<>(this.gameSessionDTOList, HttpStatus.OK));
+        verify(this.service, times(1)).readAllSessions();
     }
 
     @Test

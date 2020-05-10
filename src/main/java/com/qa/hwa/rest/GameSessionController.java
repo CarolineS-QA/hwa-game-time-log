@@ -22,9 +22,9 @@ public class GameSessionController {
         this.service = service;
     }
 
-    @GetMapping("/getAllGameSessionsOrderedByTime")
-    public ResponseEntity<List<GameSessionDTO>> getAllGameSessionsOrderedByTime(){
-        return ResponseEntity.ok(this.service.readAllSessionsOrderedByTimeOfSession());
+    @GetMapping("/getAllGameSessions")
+    public ResponseEntity<List<GameSessionDTO>> getAllGameSessions(){
+        return ResponseEntity.ok(this.service.readAllSessions());
     }
 
     @GetMapping("/getYourGameSessions/{username}")

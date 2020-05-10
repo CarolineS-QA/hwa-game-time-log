@@ -37,8 +37,8 @@ public class GameSessionService {
         return this.mapper.map(session, GameSessionDTO.class);
     }
 
-    public List<GameSessionDTO> readAllSessionsOrderedByTimeOfSession(){
-        return this.sessionsRepo.findAll(Sort.by(Sort.Direction.DESC, "TIME_OF_SESSION")).stream().map(this::mapToDTO).collect(Collectors.toList());
+    public List<GameSessionDTO> readAllSessions/*OrderedByTimeOfSession*/(){
+        return this.sessionsRepo.findAll(/*Sort.by(Sort.Direction.DESC, "TIME_OF_SESSION")*/).stream().map(this::mapToDTO).collect(Collectors.toList());
     }
 
     public User readUserByUsername(String username){
@@ -47,7 +47,7 @@ public class GameSessionService {
 
     public List<GameSessionDTO> readAUsersGameSessions(String username){
         User user = readUserByUsername(username);
-        return this.sessionsRepo.findAllByUsernameOrderByTimeOfSessionDesc(user).stream().map(this::mapToDTO).collect(Collectors.toList());
+        return this.sessionsRepo.findAllByUsername(user).stream().map(this::mapToDTO).collect(Collectors.toList());
     }
 
     public GameSessionDTO createGameSession(GameSession session){

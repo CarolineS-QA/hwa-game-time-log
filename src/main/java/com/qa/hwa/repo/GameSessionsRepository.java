@@ -10,6 +10,7 @@ import java.util.List;
 
 @Repository
 public interface GameSessionsRepository extends JpaRepository<GameSession, Long> {
-    List<GameSession> findAllByUsernameOrderByTimeOfSessionDesc(User username);
+    //List<GameSession> findAllByUsernameOrderByTimeOfSessionDesc(User username);
+    List<GameSession> findAllByUsername(User username);
     List<GameSession> findAll(Sort sort);
 }

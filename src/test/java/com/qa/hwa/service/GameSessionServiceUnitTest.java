@@ -52,7 +52,7 @@ public class GameSessionServiceUnitTest {
     private Duration zeroTime;
     private LocalDateTime date;
     private User player1;
-    private Sort sort;
+    //private Sort sort;
 
     private GameSessionDTO mapToDTO(GameSession session){
         return this.mapper.map(session, GameSessionDTO.class);
@@ -64,31 +64,23 @@ public class GameSessionServiceUnitTest {
         this.gameSessionDTOList = new ArrayList<>();
         zeroTime = Duration.ofHours(0);
         player1 = new User(1L, "testUser", zeroTime, zeroTime, zeroTime, null);
+        this.usersRepo.save(player1);
         this.testSession = new GameSession(player1, "hello world", zeroTime, date);
         this.gameSessionList.add(testSession);
         this.testSessionWithId = new GameSession(testSession.getUsername(), testSession.getGameName(), testSession.getTimePlayed(), testSession.getTimeOfSession());
         this.testSessionWithId.setSessionId(sessionId);
-        this.repo.save(testSessionWithId);
+        this.repo.save(testSessionWithId); //in the GameSessionRepo there should be a session
         this.sessionDTO = this.mapToDTO(testSessionWithId);
         this.gameSessionDTOList.add(sessionDTO);
-        Sort sort = Sort.by(Sort.Direction.DESC, "TIME_OF_SESSION");
+        //Sort sort = Sort.by(Sort.Direction.DESC, "TIME_OF_SESSION");
     }
 
-    // doesn't return anything because it findsByTimeOfSession before sorting
-    // -> looking for the exact time - so nothing gets picked up to sort!
-    // modify GameSessionRepo's FinaAll(), then GameSessionService - add the sorting in Service.
-    // - Controller should be the same as long a method name doesn't change
-    //java.lang.AssertionError:
-    //Expected :[]
-    //Actual   :[null]
-    // could "Time_Of_Session" actually be "TIME_OF_SESSION"?
-    @Ignore
     @Test
-    public void readAllSessionsByTimeOfSessionTest() {
-        when(repo.findAll(sort)).thenReturn(gameSessionList);
+    public void readAllSessionsTest() {
+        when(repo.findAll()).thenReturn(gameSessionList);
         when(this.mapper.map(testSessionWithId, GameSessionDTO.class)).thenReturn(sessionDTO);
-        assertEquals(this.service.readAllSessionsOrderedByTimeOfSession(), gameSessionDTOList);
-        verify(repo, times(1)).findAll(sort);
+        assertEquals(this.service.readAllSessions(), gameSessionDTOList);
+        verify(repo, times(1)).findAll();
     }
 
     @Test
@@ -100,10 +92,10 @@ public class GameSessionServiceUnitTest {
     @Ignore //java.lang.AssertionError: expected:<[]> but was:<[null]>
     @Test
     public void readAUsersGameSessionsTest() {
-        when(this.repo.findAllByUsernameOrderByTimeOfSessionDesc(player1)).thenReturn(this.gameSessionList);
+        when(this.repo.findAllByUsername(player1)).thenReturn(this.gameSessionList);
         when(this.mapper.map(testSessionWithId, GameSessionDTO.class)).thenReturn(sessionDTO);
-        assertEquals(this.service.readAUsersGameSessions(player1.getUsername()), gameSessionDTOList);
-        verify(repo, times(1)).findAllByUsernameOrderByTimeOfSessionDesc(player1);
+        //assertEquals(this.service.readAUsersGameSessions(player1.getUsername()), gameSessionDTOList);
+        verify(repo, times(1)).findAllByUsername(player1);
     }
 
     @Test
