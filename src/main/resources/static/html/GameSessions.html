@@ -2,9 +2,151 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/gtl.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon_io/site.webmanifest">
     <title>GTL - Game Sessions</title>
 </head>
 <body>
+<!-- Nav bar -->
+<nav class="sticky">
+    <a href="../index.html"><img id="GameTimeLogFullLogo" src="../img/logo-via-logohub.png" alt="Game Time Log Logo"></a>
+    <a href="../index.html">HOME</a>
+    <a href="./Users.html">USERS</a>
+    <a href="./GameSessions.html">GAME SESSIONS</a>
+    <a href="./AboutTheApp.html">ABOUT THIS APP</a>
+    <a href="https://github.com/CarolineS-QA">CONTACT ME</a>
+    <a href="https://github.com/CarolineS-QA/hwa-game-time-log">Check out the source code on <img id="GitHubLogoTxt" src="../img/GitHub_Logo.png" alt="Git Hub Logo"><img id="GitHubLogoIcon" src="../img/GitHub-Mark-64px.png" alt="Git Hub Mark"></a>
+</nav>
+<br><br><br><br><br>
+<!-- Start of main page content -->
+<header>
+    <noscript>If you have no JS enabled you will see this!</noscript>
+    <h1>GameTimeLog - Game Sessions</h1>
+</header>
+<main>
+    <section id="ToCreateAUser">
+        <div id="Intro">
+            <p>Welcome!</p>
+            <p>If you don't have a user yet, create one <a href="./UserCreation.html">here</a></p>
+        </div>
+        <!--Have top 5 most recent game sessions here-->
+    </section>
 
+    <section id="readGameSessions">
+        <form id="GameSessionLogin" method="GET" action="GameSessions.html">
+            <fieldset>
+                <legend>See Your Game Sessions</legend>
+                <ul>
+                    <li>
+                        <label for="username">Please enter your Username: </label>
+                        <input id="username" name="username" type ="text" />
+                    </li>
+                    <!-- For future use... also a password.
+                       <li>
+                           <label for="password">Password: </label>
+                           <input id:"password" name="password" type="password" />
+                       </li>
+                       -->
+                </ul>
+                <button id='bSubmitUsername' type='submit'>Submit</button>
+                <button id='bResetUsername' type='reset'>Reset</button>
+            </fieldset>
+        </form>
+        <div id="readYourGameSessionsResponse"></div>
+    </section>
+
+    <section id="CreateAGameSession">
+        <p>Add a game session to start tracking!</p>
+            <form id="GameSessionDetails" method="POST" action="GameSessions.html">
+                <fieldset>
+                    <legend>Add a new Game Session</legend>
+                    <ul>
+                        <li>
+                            <label for="gamerId">Confirm your username: </label>
+                            <input id="gamerId" name="username" type ="text" />
+                        </li>
+                        <li>
+                            <label for="gameName">Name of game played: </label>
+                            <input id="gameName" name="gameName" type ="text" />
+                        </li>
+                        <li>
+                            <label for="timePlayedHours">Time played (hours): </label>
+                            <input id="timePlayedHours" value="timePlayedHours" type="number" />
+                        </li>
+                        <li>
+                            <label for="timePlayedMinutes">Time played (minutes): </label>
+                            <input id="timePlayedMinutes" value="timePlayedMinutes" type="number" />
+                        </li>
+                    </ul>
+                    <button id='bSubmitGameSession' type='submit'>Submit</button>
+                    <button id='bResetGameSession' type='reset'>Reset</button>
+                </fieldset>
+            </form>
+        <div id="CreatedGameSessionResponse"></div>
+    </section>
+
+    <section id="UpdateAGameSession">
+        <form id="updateGSessionDetails" method="POST" action="GameSessions.html">
+            <fieldset>
+                <legend>Update an existing Game Session</legend>
+                <ul>
+                    <li>
+                        <label for="updateSessionId">Please enter the SessionId: </label>
+                        <input id="updateSessionId" name="sessionId" type ="text" />
+                    </li>
+                    <!--Add checkbox for what you would like to update - have form response to checked options -->
+                    <li>
+                        <label for="updateGameName">Name of game played: </label>
+                        <input id="updateGameName" name="gameName" type ="text" />
+                    </li>
+                    <li>
+                        <label for="uTimePlayedHours">Time played (hours): </label>
+                        <input id="uTimePlayedHours" value="timePlayedHours" type="number" />
+                    </li>
+                    <li>
+                        <label for="uTimePlayedMinutes">Time played (minutes): </label>
+                        <input id="uTimePlayedMinutes" value="timePlayedMinutes" type="number" />
+                    </li>
+                </ul>
+                <button id='bSubmitUpdateGS' type='submit'>Submit</button>
+                <button id='bResetUpdateGS' type='reset'>Reset</button>
+            </fieldset>
+        </form>
+        <div id="updateYourGameSessionResponse"></div>
+    </section>
+
+        <!--Warning!-->
+    <section id="deleteGameSessionSection">
+        <h3>Warning! Once you delete a game session you cannot recover it.</h3>
+        <form id="DeleteGameSessionForm" method="POST" action="/deleteGameSession/{id}">
+            <fieldset>
+                <legend>Delete a Game Session</legend>
+                <ul>
+                    <li>
+                        <label for="sessionId">Please enter the SessionId: </label>
+                        <input id="sessionId" name="sessionId" type ="text" />
+                    </li>
+                </ul>
+                <button id='bSubmitDeleteGS' type='submit'>Delete</button>
+            </fieldset>
+        </form>
+        <div id="deleteGameSessionResponse"></div>
+    </section>
+
+    <section>
+        <a href="./html/AllGameSessions.html">See what has been played</a><!-- recently, All game sessions -->
+        <a href="html/AllUsers.html">See who else is using GameTimeLog!</a>
+    </section>
+</main>
+<!--Footer-->
+<footer></footer>
+<!--Scripts-->
+<script src="./js/bootstrap.min.js"></script>
 </body>
 </html>
