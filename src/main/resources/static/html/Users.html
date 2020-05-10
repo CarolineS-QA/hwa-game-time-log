@@ -30,11 +30,13 @@
     <h1>GameTimeLog - User Landing</h1>
  </header>
  <main>
-    <section>
+    <section id="ToCreateAUser">
         <div id="Intro">
             <p>Welcome!</p>
             <p>If you don't have a user yet, create one <a href="./UserCreation.html">here</a></p>
         </div>
+    </section>
+     <section id="readYourUser">
         <form id="UserForm" method="GET" action="Users.html">
             <fieldset>
                 <ul>
@@ -43,18 +45,40 @@
                         <input id="username" name="username" type ="text" />
                     </li>
                 </ul>
-                <button id='bSubmit' type='submit'>Submit</button>
+                <button id='bSubmitUsername' type='submit'>Submit</button>
             </fieldset>
         </form>
         <div id="readYourUserResponse"></div>
+     </section>
+
+     <section id="updateYourUser">
+         <form id="UpdateUserForm" method="GET" action="Users.html">
+             <fieldset>
+                 <ul>
+                     <!--I don't want users changing their usernames just yet - until I'm sure it doesn't break anything!
+                     Time Remaining ( is = to free time when there are no game sessions)
+                     Total time played should be calculated based off of game sessions-->
+                     <li>
+                         <label for="freeTimeHours">Free Time (hours): </label>
+                         <input id="freeTimeHours" value="freeTimeHours" type="number" />
+                     </li>
+                     <li>
+                         <label for="freeTimeMinutes">Free Time (minutes): </label>
+                         <input id="freeTimeMinutes" value="freeTimeMinutes" type="number" />
+                     </li>
+                 </ul>
+                 <button id='bSubmitUpdate' type='submit'>Submit</button>
+             </fieldset>
+         </form>
         <div id="updateYourUserResponse"></div>
         <div id="ToYourGameSessions">
             <p>Track your game sessions!</p>
             <!--Have a list of your game sessions here? Top 3? Or just link to Game Sessions Page-->
         </div>
+     </section>
         <!--Warning!-->
-        <div id="deleteUserSection">
-            <h3>Warning! Deleting your user will remove all your game sessions.</h3>
+     <section id="deleteUserSection">
+         <h3>Warning! Deleting your user will remove all your game sessions.</h3>
         <form id="DeleteForm" method="POST" action="Users.html">
             <fieldset>
                 <legend>Delete your User Account</legend>
@@ -68,9 +92,8 @@
             </fieldset>
         </form>
         <div id="deleteUserResponse"></div>
-        </div>
+     </section>
 
-    </section>
      <section>
          <a href="./html/AllGameSessions.html">See what has been played</a><!-- recently, All game sessions -->
          <a href="html/AllUsers.html">See who else is using GameTimeLog!</a>
@@ -80,5 +103,6 @@
  <footer></footer>
 <!--Scripts-->
  <script src="./js/bootstrap.min.js"></script>
+<script src="./js/userRUD.js"></script>
  </body>
 </html>
