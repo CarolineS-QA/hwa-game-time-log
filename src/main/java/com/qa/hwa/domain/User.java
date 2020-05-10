@@ -12,6 +12,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long userId;
+    @Column (unique = true)
     private String username;
     private Duration totalTimePlayed;
     private Duration freeTime;
