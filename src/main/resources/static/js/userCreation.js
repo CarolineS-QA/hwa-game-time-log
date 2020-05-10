@@ -6,6 +6,7 @@ function postNewUser() {
     let freeTimeHours = document.getElementById("freeTimeHours").value;
     let freeTimeMinutes = document.getElementById("freeTimeMinutes").value;
 
+
     let freeTime = freeTimeMinutes + (freeTimeHours * 60);
 
     let jsonString = JSON.stringify(
@@ -30,6 +31,11 @@ function postNewUser() {
             console.log(REQ.response);
             console.log(`Oh no! You should handle the Error(s)!`);
             window.alert("Oops! Something went wrong...")
+            console.log(freeTimeMinutes);
+            console.log(freeTimeHours);
+            console.log(freeTime);
+            console.log(jsonString);
+
         }
     }
     REQ.send(jsonString);
@@ -38,7 +44,8 @@ function postNewUser() {
 
 submitCreateUser.addEventListener('click', function (event){
     event.preventDefault();
-    postNewUser()
-    let form = document.getElementById("userDetails")
-    document.body.removeChild(form)
+    postNewUser();
+    let form = document.getElementById("userDetails");
+    let section = document.getElementsByTagName("section");
+    section.removeChild(form);
 })
