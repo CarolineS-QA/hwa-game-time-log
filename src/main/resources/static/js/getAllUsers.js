@@ -32,33 +32,34 @@ function buildDisplay(placeholder, data){
         const card = document.createElement('div');
         card.setAttribute('user', 'card');
 
-        const h1 = document.createElement('h1');
-        h1.textContent = user.username;
+        const h4 = document.createElement('h4');
+        h4.textContent = user.username;
 
         const userIdText = document.createElement('p');
         userIdText.textContent = `User Id: ${user.userId}`;
 
-        // const totalTimePlayed = document.createElement('p');
-        // totalTimePlayed.textContent = `Total Time Played: ${user.totalTimePlayed}`;
-        //
-        // const freeTime = document.createElement('p');
-        // freeTime.textContent = `Free time for games: ${user.freeTime}`;
-        //
-        // const timeRemaining = document.createElement('p');
-        // timeRemaining.textContent = `Time left available to play games: ${user.timeRemaining}`;
+        const totalTimePlayedText = document.createElement('p');
+        totalTimePlayedText.textContent = `Total Time Played: ${user.totalTimePlayed}`;
 
-        const sessionList = document.createElement('p');
-        user.gameSessions = user.gameSessions.substring(0, 300);
-        sessionList.textContent = `Games played: ${user.gameSessions}...`;
+        const freeTimeText = document.createElement('p');
+        freeTimeText.textContent = `Free time for games: ${user.freeTime}`;
+
+        const timeRemainingText = document.createElement('p');
+        timeRemainingText.textContent = `Time left available to play games: ${user.timeRemaining}`;
+
+        // const sessionListText = document.createElement('p');
+        // console.log(user.gameSessions);
+        // let gameSessionArray = user.gameSessions.toArray();
+        // sessionListText.textContent = `Games played: ${gameSessionArray} ...`;
 
         placeholder.appendChild(container)
         container.appendChild(card);
-        card.appendChild(h1);
+        card.appendChild(h4);
         card.appendChild(userIdText);
-        card.appendChild(sessionList);
-        // card.appendChild(totalTimePlayed);
-        // card.appendChild(freeTime);
-        // card.appendChild(timeRemaining);
+        //card.appendChild(sessionListText);
+        card.appendChild(totalTimePlayedText);
+        card.appendChild(freeTimeText);
+        card.appendChild(timeRemainingText);
     })
 }
 
