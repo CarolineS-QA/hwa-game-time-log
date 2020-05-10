@@ -77,7 +77,7 @@ public class GameSessionControllerIntegrationTest {
 
     @Ignore
     @Test
-    public void getAllGameSessionsOrderedByTimeTest() throws Exception {
+    public void getAllGameSessionsTest() throws Exception {
         String content = this.mock.perform(
                 request(HttpMethod.GET, "/getAllGameSessionsOrderedByTime")
                         .accept(MediaType.APPLICATION_JSON)

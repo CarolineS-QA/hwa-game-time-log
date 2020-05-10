@@ -78,11 +78,10 @@ public class GameSessionServiceIntegrationTest {
                 Stream.of(this.mapToDTO(testSessionWithId)).collect(Collectors.toList())
         );
     }
-
-    @Ignore //expected is hashcode, actual is empty []
+    @Ignore//different hash codes
     @Test
-    public void readAllGameSessionsOrderedByTimeTest(){
-        assertThat(this.service.readAllSessionsOrderedByTimeOfSession()).isEqualTo(
+    public void readAllGameSessionsTest(){
+        assertThat(this.service.readAllSessions()).isEqualTo(
                 Stream.of(this.mapToDTO(testSessionWithId)).collect(Collectors.toList())
         );
     }
