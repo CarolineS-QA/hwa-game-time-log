@@ -39,13 +39,13 @@ function buildDisplay(placeholder, data){
         userIdText.textContent = `User Id: ${user.userId}`;
 
         const totalTimePlayedText = document.createElement('p');
-        totalTimePlayedText.textContent = `Total Time Played: ${user.totalTimePlayed}`;
+        totalTimePlayedText.textContent = `Total Time Played (mins): ${user.totalTimePlayed}`;
 
         const freeTimeText = document.createElement('p');
-        freeTimeText.textContent = `Free time for games: ${user.freeTime}`;
+        freeTimeText.textContent = `Free time for games (mins): ${user.freeTime}`;
 
         const timeRemainingText = document.createElement('p');
-        timeRemainingText.textContent = `Time left available to play games: ${user.timeRemaining}`;
+        timeRemainingText.textContent = `Time left available to play games (mins): ${user.timeRemaining}`;
 
         // const sessionListText = document.createElement('p');
         // console.log(user.gameSessions);
