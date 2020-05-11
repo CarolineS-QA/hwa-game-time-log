@@ -24,6 +24,7 @@ function postNewUser() {
             console.log(REQ);
             console.log(REQ.response);
             console.log("The data has been sent.");
+            console.log(jsonString);
             window.alert("A User has been created!")
             window.location.replace("./Users.html");
         } else {
@@ -31,14 +32,10 @@ function postNewUser() {
             console.log(REQ.response);
             console.log(`Oh no! You should handle the Error(s)!`);
             window.alert("Oops! Something went wrong...")
-            console.log(freeTimeMinutes);
-            console.log(freeTimeMinutes.data_type);
-            console.log(freeTimeHours);
-            console.log(freeTimeHours.data_type);
             console.log(freeTime);
             console.log(freeTime.data_type);
+            console.log("You tried to end the following JSON");
             console.log(jsonString);
-
         }
     }
     REQ.send(jsonString);
