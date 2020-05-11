@@ -77,6 +77,12 @@ public class UserServiceUnitTest {
         verify(repo, times(2)).findUserByUsername(username);
     }
 
+    @Test(expected = UserNotFoundException.class)
+    public void readUserByNonExistingUsernameTest(){
+        when(this.repo.findUserByUsername(notUsername)).thenReturn(null);
+        service.readUserByUsername(notUsername);
+        verify(repo, times(1)).findUserByUsername(notUsername);
+    }
     @Test
     public void createUserTest() {
         when(repo.save(testUser)).thenReturn(this.testUserWithId);
