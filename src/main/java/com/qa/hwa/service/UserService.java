@@ -37,6 +37,9 @@ public class UserService {
     }
 
     public UserDTO readUserByUsername(String username){
+        if (this.usersRepo.findUserByUsername(username) == null){
+            throw new UserNotFoundException();
+        }
         return this.mapToDTO(this.usersRepo.findUserByUsername(username));
     }
 
