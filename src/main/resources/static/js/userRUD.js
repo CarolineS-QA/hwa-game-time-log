@@ -80,6 +80,27 @@ updateUserbutt.addEventListener('click', function (event) {
     updateUser();
 })
 
+function deleteUser() {
+    let userId = document.getElementById("userIdDelete").value;
+    REQ.onload = () => {
+        if (REQ.status === 200 && REQ.readyState === 4) {
+            console.log(REQ.response);
+            buildDisplay(deleteDisplay, REQ.response);
+            console.log("The request to delete data has been sent.");
+        } else {
+            console.log(REQ);
+            console.log(REQ.response);
+            console.log(`Oh no! You should handle the Error(s)!`);
+            window.alert("Oops! Something went wrong...")
+        }
+    }
+    REQ.open('DELETE', `/deleteUser/${userId}`);
+    REQ.setRequestHeader('Content-Type', 'Application/json');
+    REQ.setRequestHeader('Access-Control-Allow-Origin', '*');
+    REQ.responseType = 'json';
+    REQ.send();
+}
+
 deleteUserbutt.addEventListener('click', function (event) {
     event.preventDefault();
     deleteUser();
