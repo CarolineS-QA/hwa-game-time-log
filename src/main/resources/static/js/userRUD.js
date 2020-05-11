@@ -6,16 +6,16 @@ let updateUserbutt = document.querySelector("#bSubmitUpdate");
 let deleteUserbutt = document.querySelector("#bSubmitDelete");
 const container = document.createElement(`div`)
 container.setAttribute('class', 'container')
-let username = document.getElementById("username").value;
+
 const REQ = new XMLHttpRequest();
 
 function getYourUser() {
-
+    let username = document.getElementById("username").value;
     REQ.onload = () => {
         if (REQ.status === 200 && REQ.readyState === 4) {
             console.log(REQ);
             console.log(REQ.response);
-            buildDisplay(readDisplay, REQ.response);
+            buildUserDisplay(readDisplay, REQ.response);
             console.log("The request for data has been sent.");
         } else {
             console.log(REQ);
@@ -45,7 +45,7 @@ function updateUser() {
 
     let jsonString = JSON.stringify(
         {
-            "username": username,
+            //"username": username, //username should rename unchanged
             "totalTimePlayed": 90001, //should be calculated based off of game sessions
             "freeTime": freeTime,
             "timeRemaining": 1 //should be calculated based off of game sessions
@@ -60,7 +60,7 @@ function updateUser() {
             console.log("The data has been sent.");
             console.log(jsonString);
             window.alert("Your User has been updated!")
-            buildDisplay(updateDisplay, REQ.response);
+            messageDisplay(updateDisplay);
         } else {
             console.log(REQ.response);
             console.log(`Oh no! You should handle the Error(s)!`);
@@ -84,7 +84,7 @@ function deleteUser() {
     let userId = document.getElementById("userIdDelete").value;
     REQ.onload = () => {
         if (REQ.status === 204 && REQ.readyState === 4) {
-            buildDisplay(deleteDisplay, REQ.response);
+            messageDisplay(deleteDisplay);
             console.log("The request to delete data has been sent.");
             window.alert("Your user has been successfully deleted. Thanks for using Game Time Log!");
         } else {
@@ -104,7 +104,19 @@ deleteUserbutt.addEventListener('click', function (event) {
     deleteUser();
 })
 
-function buildDisplay(placeholder, data){
+function messageDisplay(messageDisplay){
+    if (messageDisplay === updateDisplay){
+        const updateMessage = document.createElement('h4');
+        updateMessage.textContent = `Your user has been updated.`
+        messageDisplay.appendChild(updateMessage);
+    } else if (messageDisplay === deleteDisplay){
+        const deleteMessage = document.createElement('h4');
+        deleteMessage.textContent = `You have deleted your user. Thanks for using GameTimeLog!`
+        messageDisplay.appendChild(deleteMessage);
+    }
+}
+
+function buildUserDisplay(placeholder, data){
     data.forEach(user => {
         const card = document.createElement('div');
         card.setAttribute('user', 'card');
@@ -131,15 +143,6 @@ function buildDisplay(placeholder, data){
 
         placeholder.appendChild(container)
         container.appendChild(card);
-        if (placeholder === updateDisplay){
-            const updateMessage = document.createElement('h4');
-            updateMessage.textContent = `Your new user details: `
-            card.appendChild(updateMessage);
-        } else if (placeholder === deleteDisplay){
-            const deleteMessage = document.createElement('h4');
-            deleteMessage.textContent = `You have deleted your user. Thanks for using GameTimeLog!`
-            card.appendChild(deleteMessage);
-        }
         card.appendChild(h4);
         card.appendChild(userIdText);
         //card.appendChild(sessionListText);
