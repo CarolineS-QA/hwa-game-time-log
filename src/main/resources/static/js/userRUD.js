@@ -4,8 +4,7 @@ let deleteDisplay = document.querySelector("#deleteUserResponse");
 let readUserbutt = document.querySelector("#bSubmitUsername");
 let updateUserbutt = document.querySelector("#bSubmitUpdate");
 let deleteUserbutt = document.querySelector("#bSubmitDelete");
-const container = document.createElement(`div`)
-container.setAttribute('class', 'container')
+
 
 const REQ = new XMLHttpRequest();
 
@@ -17,6 +16,8 @@ function getYourUser() {
             console.log(REQ.response);
             buildUserDisplay(readDisplay, REQ.response);
             console.log("The request for data has been sent.");
+        } else if (REQ.status === 404) {
+            window.alert("Your user wasn't found! Error 404.")
         } else {
             console.log(REQ);
             console.log(REQ.response);
@@ -24,7 +25,7 @@ function getYourUser() {
             window.alert("Oops! Something went wrong...")
         }
     }
-    REQ.open('GET', `/getUsersByUsername/${username}`);
+    REQ.open('GET', `/getUserByUsername/${username}`);
     REQ.setRequestHeader('Content-Type', 'Application/json');
     REQ.setRequestHeader('Access-Control-Allow-Origin', '*');
     REQ.responseType = 'json';
@@ -45,7 +46,7 @@ function updateUser() {
 
     let jsonString = JSON.stringify(
         {
-            //"username": username, //username should rename unchanged
+            //"username": username,
             "totalTimePlayed": 90001, //should be calculated based off of game sessions
             "freeTime": freeTime,
             "timeRemaining": 1 //should be calculated based off of game sessions
@@ -59,8 +60,9 @@ function updateUser() {
             console.log(REQ.response);
             console.log("The data has been sent.");
             console.log(jsonString);
-            window.alert("Your User has been updated!")
+            window.alert("Your User has been updated!");
             messageDisplay(updateDisplay);
+            window.location.reload();
         } else {
             console.log(REQ.response);
             console.log(`Oh no! You should handle the Error(s)!`);
@@ -87,6 +89,7 @@ function deleteUser() {
             messageDisplay(deleteDisplay);
             console.log("The request to delete data has been sent.");
             window.alert("Your user has been successfully deleted. Thanks for using Game Time Log!");
+            window.location.reload();
         } else {
             console.log(REQ);
             console.log(`Oh no! You should handle the Error(s)!`);
@@ -116,8 +119,16 @@ function messageDisplay(messageDisplay){
     }
 }
 
-function buildUserDisplay(placeholder, data){
-    data.forEach(user => {
+//for getAllUsers.js
+//data.forEach(user => {
+// buildUserDisplay(display, user)
+// }
+
+// container contains all the users
+const container = document.createElement(`div`)
+container.setAttribute('class', 'container')
+
+function buildUserDisplay(placeholder, user){
         const card = document.createElement('div');
         card.setAttribute('user', 'card');
 
@@ -149,5 +160,4 @@ function buildUserDisplay(placeholder, data){
         card.appendChild(totalTimePlayedText);
         card.appendChild(freeTimeText);
         card.appendChild(timeRemainingText);
-    })
-}
+    }
