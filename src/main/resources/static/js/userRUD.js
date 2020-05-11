@@ -40,11 +40,11 @@ function updateUser() {
     let freeTimeHours = document.getElementById("freeTimeHours").valueAsNumber;
     let freeTimeMinutes = document.getElementById("freeTimeMinutes").valueAsNumber;
 
-    if(freeTimeHours == null){
-        freeTimeHours = 0;
-    } else if(freeTimeMinutes == null){
-        freeTimeMinutes = 0;
-    }
+    // if(freeTimeHours.value.length === 0){
+    //     freeTimeHours = 0;
+    // } else if(freeTimeMinutes.value === undefined ){
+    //     freeTimeMinutes = 0;
+    // }
 
     let freeTime = Number(freeTimeMinutes) + (Number(freeTimeHours) * 60);
 
