@@ -4,8 +4,6 @@ let deleteDisplay = document.querySelector("#deleteUserResponse");
 let readUserbutt = document.querySelector("#bSubmitUsername");
 let updateUserbutt = document.querySelector("#bSubmitUpdate");
 let deleteUserbutt = document.querySelector("#bSubmitDelete");
-
-
 const REQ = new XMLHttpRequest();
 
 function getYourUser() {
@@ -119,14 +117,14 @@ function messageDisplay(messageDisplay){
     }
 }
 
+// container contains all the users
+const container = document.createElement(`div`)
+container.setAttribute('class', 'container')
+
 //for getAllUsers.js
 //data.forEach(user => {
 // buildUserDisplay(display, user)
 // }
-
-// container contains all the users
-const container = document.createElement(`div`)
-container.setAttribute('class', 'container')
 
 function buildUserDisplay(placeholder, user){
         const card = document.createElement('div');
