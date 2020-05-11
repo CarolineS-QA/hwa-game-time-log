@@ -83,21 +83,19 @@ updateUserbutt.addEventListener('click', function (event) {
 function deleteUser() {
     let userId = document.getElementById("userIdDelete").value;
     REQ.onload = () => {
-        if (REQ.status === 200 && REQ.readyState === 4) {
-            console.log(REQ.response);
+        if (REQ.status === 204 && REQ.readyState === 4) {
             buildDisplay(deleteDisplay, REQ.response);
             console.log("The request to delete data has been sent.");
+            window.alert("Your user has been successfully deleted. Thanks for using Game Time Log!");
         } else {
             console.log(REQ);
-            console.log(REQ.response);
             console.log(`Oh no! You should handle the Error(s)!`);
             window.alert("Oops! Something went wrong...")
+            console.log(REQ.status);
         }
     }
     REQ.open('DELETE', `/deleteUser/${userId}`);
-    REQ.setRequestHeader('Content-Type', 'Application/json');
     REQ.setRequestHeader('Access-Control-Allow-Origin', '*');
-    REQ.responseType = 'json';
     REQ.send();
 }
 
