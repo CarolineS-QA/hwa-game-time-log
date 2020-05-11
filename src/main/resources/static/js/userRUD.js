@@ -40,13 +40,19 @@ function updateUser() {
     let freeTimeHours = document.getElementById("freeTimeHours").valueAsNumber;
     let freeTimeMinutes = document.getElementById("freeTimeMinutes").valueAsNumber;
 
+    if(freeTimeHours == null){
+        freeTimeHours = 0;
+    } else if(freeTimeMinutes == null){
+        freeTimeMinutes = 0;
+    }
+
     let freeTime = Number(freeTimeMinutes) + (Number(freeTimeHours) * 60);
 
     let jsonString = JSON.stringify(
         {
             //"username": username,
             "totalTimePlayed": 90001, //should be calculated based off of game sessions
-            "freeTime": freeTime,
+            "freeTime": freeTime, // if no input then null is returned
             "timeRemaining": 1 //should be calculated based off of game sessions
         });
 
