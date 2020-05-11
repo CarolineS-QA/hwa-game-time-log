@@ -41,6 +41,7 @@ public class UserServiceUnitTest {
     private Duration time;
     private List<GameSession> sessionsList;
     private String username;
+    private String notUsername;
 
     private UserDTO mapToDTO(User user) {
         return this.mapper.map(user, UserDTO.class);
@@ -57,6 +58,7 @@ public class UserServiceUnitTest {
         this.testUserWithId = new User(testUser.getUsername(), testUser.getTotalTimePlayed(), testUser.getFreeTime(), testUser.getTimeRemaining(), testUser.getGameSessions());
         this.testUserWithId.setUserId(userId);
         this.userDTO = this.mapToDTO(testUserWithId);
+        this.notUsername = "notHERE";
     }
 
     @Test
@@ -72,7 +74,7 @@ public class UserServiceUnitTest {
         when(this.repo.findUserByUsername(username)).thenReturn(testUserWithId);
         when(this.mapper.map(testUserWithId, UserDTO.class)).thenReturn(userDTO);
         assertEquals(this.service.readUserByUsername(this.username), userDTO);
-        verify(repo, times(1)).findUserByUsername(username);
+        verify(repo, times(2)).findUserByUsername(username);
     }
 
     @Test
@@ -93,7 +95,7 @@ public class UserServiceUnitTest {
 
     @Test
     public void updateUserTest() {
-        User newUser = new User("newTestUser", time, time, time, sessionsList);
+        User newUser = new User("testUser", time, time, time, sessionsList);
         User updateUser = new User(newUser.getUsername(), newUser.getTotalTimePlayed(), newUser.getFreeTime(), newUser.getTimeRemaining(), newUser.getGameSessions());
         updateUser.setUserId(userId);
 
