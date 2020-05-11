@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon_io/site.webmanifest">
+    <link rel="manifest" href="../img/favicon_io/site.webmanifest">
     <title>GTL - Users</title>
 </head>
 <body>
@@ -61,12 +61,16 @@
                      Time Remaining ( is = to free time when there are no game sessions)
                      Total time played should be calculated based off of game sessions-->
                      <li>
+                         <label for="userIdUpdate">Please confirm your userId: </label>
+                         <input id="userIdUpdate" name="userIdUpdate" type="number" />
+                     </li>
+                     <li>
                          <label for="freeTimeHours">Free Time (hours): </label>
-                         <input id="freeTimeHours" value="freeTimeHours" type="number" />
+                         <input id="freeTimeHours" name="freeTimeHours" type="number" />
                      </li>
                      <li>
                          <label for="freeTimeMinutes">Free Time (minutes): </label>
-                         <input id="freeTimeMinutes" value="freeTimeMinutes" type="number" />
+                         <input id="freeTimeMinutes" name="freeTimeMinutes" type="number" />
                      </li>
                  </ul>
                  <button id='bSubmitUpdate' type='submit'>Submit</button>
@@ -87,25 +91,25 @@
                 <legend>Delete your User Account</legend>
                 <ul>
                     <li>
-                        <label for="userId">Please enter your UserId: </label>
-                        <input id="userId" name="userId" type ="text" />
+                        <label for="userIdDelete">Please enter your UserId: </label>
+                        <input id="userIdDelete" name="userIdDelete" type ="number" />
                     </li>
                 </ul>
-                <button id='bDeleteSubmit' type='submit'>Delete</button>
+                <button id='bSubmitDelete' type='submit'>Delete</button>
             </fieldset>
         </form>
         <div id="deleteUserResponse"></div>
      </section>
 
      <section>
-         <a href="./html/AllGameSessions.html">See what has been played</a><!-- recently, All game sessions -->
-         <a href="html/AllUsers.html">See who else is using GameTimeLog!</a>
+         <a href="./AllGameSessions.html">See what has been played</a><!-- recently, All game sessions -->
+         <a href="./AllUsers.html">See who else is using GameTimeLog!</a>
      </section>
  </main>
 <!--Footer-->
  <footer></footer>
 <!--Scripts-->
- <script src="./js/bootstrap.min.js"></script>
-<script src="./js/userRUD.js"></script>
+ <script src="../js/bootstrap.min.js"></script>
+<script src="../js/userRUD.js"></script>
  </body>
 </html>

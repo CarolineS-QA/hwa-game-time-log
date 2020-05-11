@@ -37,6 +37,9 @@ public class UserService {
     }
 
     public UserDTO readUserByUsername(String username){
+        if (this.usersRepo.findUserByUsername(username) == null){
+            throw new UserNotFoundException();
+        }
         return this.mapToDTO(this.usersRepo.findUserByUsername(username));
     }
 
@@ -52,7 +55,7 @@ public class UserService {
 
     public UserDTO updateUser(Long id, User user){
         User update = this.usersRepo.findById(id).orElseThrow(UserNotFoundException::new);
-        update.setUsername(user.getUsername());
+        //update.setUsername(user.getUsername());
         update.setTotalTimePlayed(user.getTotalTimePlayed());
         update.setFreeTime(user.getFreeTime());
         update.setTimeRemaining(user.getTimeRemaining());
