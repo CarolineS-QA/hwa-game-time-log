@@ -19,7 +19,6 @@ public class User {
     private Duration freeTime;
     private Duration timeRemaining;
     @OneToMany(mappedBy = "user")
-    @JoinColumn
     private List<GameSession> gameSessions = new ArrayList<>();
 
     public User(){}
