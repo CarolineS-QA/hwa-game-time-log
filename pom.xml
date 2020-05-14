@@ -32,12 +32,13 @@
       <artifactId>mysql-connector-java</artifactId>
       <scope>runtime</scope>
     </dependency>
-    <!--For initial development of database-->
+    <!--For initial development of database (H2)
     <dependency>
       <groupId>com.h2database</groupId>
       <artifactId>h2</artifactId>
       <scope>runtime</scope>
     </dependency>
+    -->
     <!--Spring boot dependencies-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
