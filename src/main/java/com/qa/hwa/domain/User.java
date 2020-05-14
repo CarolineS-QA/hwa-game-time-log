@@ -18,7 +18,7 @@ public class User {
     private Duration totalTimePlayed;
     private Duration freeTime;
     private Duration timeRemaining;
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user"/*, cascade = CascadeType.PERSIST*/)
     private List<GameSession> gameSessions = new ArrayList<>();
 
     public User(){}
