@@ -15,7 +15,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.time.Duration;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -55,7 +57,7 @@ public class GameSessionServiceIntegrationTest {
 
     @Before
     public void setUp(){
-        date = LocalDateTime.MIN;
+        date = LocalDateTime.of(LocalDate.ofEpochDay(2007-12-3), LocalTime.MIN);
         zeroTime = Duration.ofHours(0);
         sessionsList = new ArrayList<>();
         this.player1 = new User("player1", zeroTime, zeroTime, zeroTime, sessionsList);
