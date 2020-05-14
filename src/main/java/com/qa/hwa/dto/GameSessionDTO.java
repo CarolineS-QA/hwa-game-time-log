@@ -38,8 +38,8 @@ public class GameSessionDTO {
         this.sessionId = sessionId;
     }
 
-    public User getUser() {
-        return user;
+    public String getUser() {
+        return user.getUsername();
     }
 
     public void setUser(User user) {
