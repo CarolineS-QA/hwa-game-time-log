@@ -1,6 +1,5 @@
 package com.qa.hwa.dto;
 
-import com.qa.hwa.domain.GameSession;
 import com.qa.hwa.domain.User;
 
 import java.time.Duration;
@@ -9,23 +8,23 @@ import java.util.Objects;
 
 public class GameSessionDTO {
     private Long sessionId;
-    private User username;
+    private User user;
     private String gameName;
     private Duration TimePlayed;
     private LocalDateTime timeOfSession;
 
     public GameSessionDTO(){}
 
-    public GameSessionDTO(User username, String gameName, Duration timePlayed, LocalDateTime timeOfSession) {
-        this.username = username;
+    public GameSessionDTO(User user, String gameName, Duration timePlayed, LocalDateTime timeOfSession) {
+        this.user = user;
         this.gameName = gameName;
         TimePlayed = timePlayed;
         this.timeOfSession = timeOfSession;
     }
 
-    public GameSessionDTO(Long sessionId, User username, String gameName, Duration timePlayed, LocalDateTime timeOfSession) {
+    public GameSessionDTO(Long sessionId, User user, String gameName, Duration timePlayed, LocalDateTime timeOfSession) {
         this.sessionId = sessionId;
-        this.username = username;
+        this.user = user;
         this.gameName = gameName;
         TimePlayed = timePlayed;
         this.timeOfSession = timeOfSession;
@@ -39,12 +38,12 @@ public class GameSessionDTO {
         this.sessionId = sessionId;
     }
 
-    public User getUsername() {
-        return username;
+    public User getUser() {
+        return user;
     }
 
-    public void setUsername(User username) {
-        this.username = username;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public String getGameName() {
@@ -77,7 +76,7 @@ public class GameSessionDTO {
         if (o == null || getClass() != o.getClass()) return false;
         GameSessionDTO that = (GameSessionDTO) o;
         return Objects.equals(getSessionId(), that.getSessionId()) &&
-                Objects.equals(getUsername(), that.getUsername()) &&
+                Objects.equals(getUser(), that.getUser()) &&
                 Objects.equals(getGameName(), that.getGameName()) &&
                 Objects.equals(getTimePlayed(), that.getTimePlayed()) &&
                 Objects.equals(getTimeOfSession(), that.getTimeOfSession());
@@ -85,6 +84,6 @@ public class GameSessionDTO {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getSessionId(), getUsername(), getGameName(), getTimePlayed(), getTimeOfSession());
+        return Objects.hash(getSessionId(), getUser(), getGameName(), getTimePlayed(), getTimeOfSession());
     }
 }

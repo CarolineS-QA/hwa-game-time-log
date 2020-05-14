@@ -17,7 +17,7 @@ public class User {
     private Duration totalTimePlayed;
     private Duration freeTime;
     private Duration timeRemaining;
-    @OneToMany(mappedBy = "username")
+    @OneToMany(mappedBy = "user")
     private List<GameSession> gameSessions;
 
     public User(){}
