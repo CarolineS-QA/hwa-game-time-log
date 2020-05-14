@@ -9,7 +9,7 @@ import java.util.Objects;
 public class GameSession {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long sessionId;
     @ManyToOne (targetEntity = User.class/*, fetch = FetchType.LAZY*/)
     private User user;
