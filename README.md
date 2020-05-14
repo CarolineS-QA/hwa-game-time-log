@@ -1,12 +1,26 @@
 # Hobby Web App: GameTimeLog
 
-My second individual project.
+My second individual project with QA, started as an Academy Trainee.
 
-MVP: A functional ‘front-end’ web app (and integrated APIs) which connect to a back-end.
+Summary: This application aims to be a "Game Time Log" where users can perform CRUD functions on themselves and records of their game sessions.
 
-It involves Java source code & Spring libraries, JDBC and a SQL database hosted on Google Cloud Platform. The front end uses html, css and javascript. To manage the project I have used Git source control with IntelliJ Ultimate as my IDE. Testing with. Maven to build and Jenkins as part of my CI Pipeline to send to Sonarqube (hosted on a Google Cloud VM) and to an artifact repository (Nexus).
+MVP: A functional ‘front-end’ web app (and integrated APIs) which connect to a back-end written in Java.
+<details>
+<summary>Technology used in the project...</summary>
+- Back-end: Java source code using Spring libraries
+- Database: SQL database hosted on Google Cloud Platform
+- Front-end: html, css and javascript
+- Source Control: Git
+- IDE: IntelliJ Ultimate
+- Testing: using a combination of Junit, Mockito and Selenium
+- Maven to build and integrate with...
+- Jenkins as part of my CI Pipeline to send to...
+- Sonarqube (hosted on a Google Cloud VM) and...
+- Nexus (artifact repository).
+</details>
+Kanban Board for Project: [github boards](https://github.com/CarolineS-QA/hwa-game-time-log/projects/1)
 
-Presentation about the project: [on google slides](https://docs.google.com/presentation/d/1wznZu-mg9XHuvzp51Q3ZPYwYu3qjcSRW8Uu_N3bzJ_g/edit?usp=sharing).
+Presentation about the project: [on google slides](https://docs.google.com/presentation/d/1wznZu-mg9XHuvzp51Q3ZPYwYu3qjcSRW8Uu_N3bzJ_g/edit?usp=sharing)
 
 **Test Coverage:** For src/main/java: 100% // Sonarqube: 0% // Overall: 100%
 
