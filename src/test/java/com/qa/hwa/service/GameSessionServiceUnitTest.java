@@ -89,10 +89,10 @@ public class GameSessionServiceUnitTest {
     @Ignore //java.lang.AssertionError: expected:<[]> but was:<[null]>
     @Test
     public void readAUsersGameSessionsTest() {
-        when(this.repo.findAllByUsername(player1)).thenReturn(this.gameSessionList);
+        when(this.repo.findAllByUser(player1)).thenReturn(this.gameSessionList);
         when(this.mapper.map(testSessionWithId, GameSessionDTO.class)).thenReturn(sessionDTO);
         //assertEquals(this.service.readAUsersGameSessions(player1.getUsername()), gameSessionDTOList);
-        verify(repo, times(1)).findAllByUsername(player1);
+        verify(repo, times(1)).findAllByUser(player1);
     }
 
     @Test
