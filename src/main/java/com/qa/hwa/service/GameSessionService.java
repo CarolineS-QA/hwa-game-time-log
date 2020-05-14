@@ -4,6 +4,7 @@ import com.qa.hwa.domain.GameSession;
 import com.qa.hwa.domain.User;
 import com.qa.hwa.dto.GameSessionDTO;
 import com.qa.hwa.exceptions.GameSessionNotFoundException;
+import com.qa.hwa.exceptions.UserNotFoundException;
 import com.qa.hwa.repo.GameSessionsRepository;
 import com.qa.hwa.repo.UsersRepository;
 import org.modelmapper.ModelMapper;
@@ -39,6 +40,9 @@ public class GameSessionService {
     }
 
     public User readUserByUsername(String username){
+        if (this.usersRepo.findUserByUsername(username) == null){
+            throw new UserNotFoundException();
+        }
         return this.usersRepo.findUserByUsername(username);
     }
 
