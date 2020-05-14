@@ -48,7 +48,7 @@ public class GameSessionService {
     }
 
     public GameSessionDTO createGameSession(GameSession session){
-        GameSession tempGameSession = this.sessionsRepo.save(session);
+        GameSession tempGameSession = this.sessionsRepo.saveAndFlush(session);
         return this.mapToDTO(tempGameSession);
     }
 

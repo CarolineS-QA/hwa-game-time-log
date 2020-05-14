@@ -18,7 +18,7 @@ public class User {
     private Duration totalTimePlayed;
     private Duration freeTime;
     private Duration timeRemaining;
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user", orphanRemoval = true, cascade = CascadeType.PERSIST)
     private List<GameSession> gameSessions = new ArrayList<>();
 
     public User(){}
@@ -86,6 +86,16 @@ public class User {
 
     public void setGameSessions(List<GameSession> gameSessions) {
         this.gameSessions = gameSessions;
+    }
+
+    public void addGameSession(GameSession session) {
+        gameSessions.add(session);
+        session.setUser(this);
+    }
+
+    public void removeGameSession(GameSession session) {
+        gameSessions.remove(session);
+        session.setUser(null);
     }
 
     @Override
