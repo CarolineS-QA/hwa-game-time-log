@@ -3,7 +3,6 @@ package com.qa.hwa.service;
 import com.qa.hwa.domain.GameSession;
 import com.qa.hwa.domain.User;
 import com.qa.hwa.dto.GameSessionDTO;
-import com.qa.hwa.dto.UserDTO;
 import com.qa.hwa.repo.GameSessionsRepository;
 import com.qa.hwa.repo.UsersRepository;
 import org.junit.Before;
@@ -101,7 +100,7 @@ public class GameSessionServiceIntegrationTest {
     @Test
     public void updateGameSessionTest(){
         GameSession newSession = new GameSession(player1, "new game plus", zeroTime, date);
-        GameSession updateSession = new GameSession(newSession.getUsername(), newSession.getGameName(), newSession.getTimePlayed(), newSession.getTimeOfSession());
+        GameSession updateSession = new GameSession(newSession.getUser(), newSession.getGameName(), newSession.getTimePlayed(), newSession.getTimeOfSession());
         updateSession.setSessionId(sessionId);
         assertThat(this.service.updateGameSession(this.testSessionWithId.getSessionId(),newSession))
                 .isEqualTo(this.mapToDTO(updateSession));

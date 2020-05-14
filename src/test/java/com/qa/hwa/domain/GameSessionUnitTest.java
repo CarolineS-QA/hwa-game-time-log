@@ -35,15 +35,15 @@ public class GameSessionUnitTest {
     @Test
     public void gettersAndSettersTest() {
         assertNotNull(sessionWithId.getSessionId());
-        assertNotNull(sessionWithId.getUsername());
+        assertNotNull(sessionWithId.getUser());
         assertNotNull(sessionWithId.getGameName());
         assertNotNull(sessionWithId.getTimePlayed());
         assertNotNull(sessionWithId.getTimeOfSession());
 
         sessionWithId.setSessionId(null);
         assertNull(sessionWithId.getSessionId());
-        sessionWithId.setUsername(null);
-        assertNull(sessionWithId.getUsername());
+        sessionWithId.setUser(null);
+        assertNull(sessionWithId.getUser());
         sessionWithId.setGameName(null);
         assertNull(sessionWithId.getGameName());
         sessionWithId.setTimePlayed(null);
@@ -56,7 +56,7 @@ public class GameSessionUnitTest {
     public void emptyConstructor(){
         assertNotNull(emptySession);
         assertNull(emptySession.getSessionId());
-        assertNull(emptySession.getUsername());
+        assertNull(emptySession.getUser());
         assertNull(emptySession.getGameName());
         assertNull(emptySession.getTimePlayed());
         assertNull(emptySession.getTimeOfSession());
@@ -64,7 +64,7 @@ public class GameSessionUnitTest {
     @Test
     public void constructorUserWithId() {
         assertEquals(1L, sessionWithId.getSessionId(), 0);
-        assertEquals(player1, sessionWithId.getUsername());
+        assertEquals(player1, sessionWithId.getUser());
         assertEquals("hello world", sessionWithId.getGameName());
         assertEquals(zeroTime, sessionWithId.getTimePlayed());
         assertEquals(date, sessionWithId.getTimeOfSession());
@@ -73,7 +73,7 @@ public class GameSessionUnitTest {
     @Test
     public void constructorWithoutId() {
         assertNull(sessionWithoutId.getSessionId());
-        assertNotNull(sessionWithoutId.getUsername());
+        assertNotNull(sessionWithoutId.getUser());
         assertNotNull(sessionWithoutId.getGameName());
         assertNotNull(sessionWithoutId.getTimePlayed());
         assertNotNull(sessionWithoutId.getTimeOfSession());
@@ -101,20 +101,20 @@ public class GameSessionUnitTest {
 
     @Test
     public void usernameNullButOtherNameNotNull() {
-        sessionWithId.setUsername(null);
+        sessionWithId.setUser(null);
         assertNotEquals(sessionWithId, otherWithId);
     }
 
     @Test
     public void usernameNotEqual() {
-        otherWithId.setUsername(player2);
+        otherWithId.setUser(player2);
         assertNotEquals(sessionWithId, otherWithId);
     }
 
     @Test
     public void checkEqualityBetweenDifferentObjectsNullUsername() {
-        sessionWithId.setUsername(null);
-        otherWithId.setUsername(null);
+        sessionWithId.setUser(null);
+        otherWithId.setUser(null);
         assertEquals(sessionWithId, otherWithId);
     }
 

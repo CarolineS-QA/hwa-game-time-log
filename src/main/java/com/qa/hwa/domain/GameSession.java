@@ -9,26 +9,26 @@ import java.util.Objects;
 public class GameSession {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long sessionId;
     @ManyToOne (targetEntity = User.class/*, fetch = FetchType.LAZY*/)
-    private User username;
+    private User user;
     private String gameName;
     private Duration timePlayed;
     private LocalDateTime timeOfSession;
 
     public GameSession(){}
 
-    public GameSession(User username, String gameName, Duration timePlayed, LocalDateTime timeOfSession) {
-        this.username = username;
+    public GameSession(User user, String gameName, Duration timePlayed, LocalDateTime timeOfSession) {
+        this.user = user;
         this.gameName = gameName;
         this.timePlayed = timePlayed;
         this.timeOfSession = timeOfSession;
     }
 
-    public GameSession(Long sessionId, User username, String gameName, Duration timePlayed, LocalDateTime timeOfSession) {
+    public GameSession(Long sessionId, User user, String gameName, Duration timePlayed, LocalDateTime timeOfSession) {
         this.sessionId = sessionId;
-        this.username = username;
+        this.user = user;
         this.gameName = gameName;
         this.timePlayed = timePlayed;
         this.timeOfSession = timeOfSession;
@@ -42,12 +42,12 @@ public class GameSession {
         this.sessionId = sessionId;
     }
 
-    public User getUsername() {
-        return username;
+    public User getUser() {
+        return user;
     }
 
-    public void setUsername(User username) {
-        this.username = username;
+    public void setUser(User username) {
+        this.user = username;
     }
 
     public String getGameName() {
@@ -80,7 +80,7 @@ public class GameSession {
         if (o == null || getClass() != o.getClass()) return false;
         GameSession that = (GameSession) o;
         return Objects.equals(getSessionId(), that.getSessionId()) &&
-                Objects.equals(getUsername(), that.getUsername()) &&
+                Objects.equals(getUser(), that.getUser()) &&
                 Objects.equals(getGameName(), that.getGameName()) &&
                 Objects.equals(getTimePlayed(), that.getTimePlayed()) &&
                 Objects.equals(getTimeOfSession(), that.getTimeOfSession());
@@ -88,6 +88,6 @@ public class GameSession {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getSessionId(), getUsername(), getGameName(), getTimePlayed(), getTimeOfSession());
+        return Objects.hash(getSessionId(), getUser(), getGameName(), getTimePlayed(), getTimeOfSession());
     }
 }

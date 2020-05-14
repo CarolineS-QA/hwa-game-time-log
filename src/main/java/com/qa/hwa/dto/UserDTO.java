@@ -3,6 +3,7 @@ package com.qa.hwa.dto;
 import com.qa.hwa.domain.GameSession;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -12,7 +13,7 @@ public class UserDTO {
     private Duration totalTimePlayed;
     private Duration freeTime;
     private Duration timeRemaining;
-    private List<GameSessionDTO> gameSessions;
+    private List<GameSessionDTO> gameSessions = new ArrayList<>();
 
     public UserDTO(){}
 

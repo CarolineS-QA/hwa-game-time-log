@@ -2,6 +2,7 @@ package com.qa.hwa.domain;
 
 import javax.persistence.*;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -10,15 +11,15 @@ import java.util.Objects;
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
     @Column (unique = true)
     private String username;
     private Duration totalTimePlayed;
     private Duration freeTime;
     private Duration timeRemaining;
-    @OneToMany(mappedBy = "username")
-    private List<GameSession> gameSessions;
+    @OneToMany(mappedBy = "user")
+    private List<GameSession> gameSessions = new ArrayList<>();
 
     public User(){}
 
