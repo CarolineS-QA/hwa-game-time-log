@@ -11,7 +11,7 @@ function postNewGameSession() {
     let timePlayedMinutes = document.getElementById("timePlayedMinutes").valueAsNumber;
 
     let timePlayed = Number(timePlayedMinutes) + (Number(timePlayedHours) * 60);
-    let timeOfSession = Date.now().toString(); //"2007-12-03T10:15:30"
+    let timeOfSession = "2007-12-03T10:15:30" //Date.now().toString();
 
     let jsonString = JSON.stringify(
         {
@@ -30,8 +30,9 @@ function postNewGameSession() {
             console.log(REQ.response);
             console.log("The data has been sent.");
             console.log(jsonString);
-            window.alert("A Game Session has been created!")
-            window.location.replace("./GameSession.html");
+            window.alert("A Game Session has been created!");
+            console.log(Date.now().toString())
+            window.location.reload();
         } else {
             console.log(REQ);
             console.log(REQ.response);
@@ -39,7 +40,6 @@ function postNewGameSession() {
             window.alert("Oops! Something went wrong...")
             console.log(`User ${user}`);
             console.log(`Time of Session is ${timeOfSession}`);
-            console.log(timeOfSession.data_type);
             console.log("You tried to send the following JSON");
             console.log(jsonString);
         }
@@ -73,5 +73,5 @@ function getYourUser() {
 submitCreateGameSession.addEventListener('click', function (event) {
     event.preventDefault();
     getYourUser();
-    postNewGameSession();
+    //postNewGameSession();
 })
