@@ -32,7 +32,7 @@ function buildDisplayForGameSessions(placeholder, data){
     container.setAttribute('class', 'container')
     data.forEach(session => {
         const card = document.createElement('div');
-        card.setAttribute('user', 'card');
+        card.setAttribute('session', 'card');
 
         const h4GameName = document.createElement('h4');
         h4GameName.textContent = session.gameName;
