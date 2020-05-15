@@ -68,8 +68,12 @@
                     <legend>Add a new Game Session</legend>
                     <ul>
                         <li>
-                            <label for="gamerId">Confirm your username: </label>
-                            <input id="gamerId" name="username" type ="text" />
+                            <label for="gamerId">Confirm your user Id: </label>
+                            <input id="gamerId" name="user" type ="number" />
+                        </li>
+                        <li>
+                            <label for="gamerName">Confirm your username: </label>
+                            <input id="gamerName" name="user" type ="text" />
                         </li>
                         <li>
                             <label for="gameName">Name of game played: </label>
@@ -140,13 +144,14 @@
     </section>
 
     <section>
-        <a href="./html/AllGameSessions.html">See what has been played</a><!-- recently, All game sessions -->
-        <a href="html/AllUsers.html">See who else is using GameTimeLog!</a>
+        <a href="./AllGameSessions.html">See what has been played</a><!-- recently, All game sessions -->
+        <a href="./AllUsers.html">See who else is using GameTimeLog!</a>
     </section>
 </main>
 <!--Footer-->
 <footer></footer>
 <!--Scripts-->
 <script src="../js/bootstrap.min.js"></script>
+<script src="../js/gameSessionCRUD.js"></script>
 </body>
 </html>

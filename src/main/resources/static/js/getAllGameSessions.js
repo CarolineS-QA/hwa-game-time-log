@@ -38,7 +38,7 @@ function buildDisplayForGameSessions(placeholder, data){
         h4GameName.textContent = session.gameName;
 
         const idAndPlayerText = document.createElement('p');
-        idAndPlayerText.textContent = `Session Id: ${session.sessionId}  //  Player: ${session.user}`;
+        idAndPlayerText.textContent = `Player: ${session.user}     //    Session Id: ${session.sessionId}`;
 
         const timePlayedText = document.createElement('p');
         timePlayedText.textContent = `Time Played (mins): ${session.timePlayed}`;
