@@ -2,6 +2,12 @@
 const REQ = new XMLHttpRequest();
 
 let submitCreateGameSession = document.querySelector("#bSubmitGameSession");
+let submitReadGameSession = document.querySelector("#bSubmitUsername");
+let readSessionsDisplay = document.querySelector("#readYourGameSessionResponse");
+let createSessionsDisplay = document.querySelector("#createdGameSessionResponse");
+let updateSessionDisplay = document.querySelector("#updateYourGameSessionResponse");
+let deleteSessionDisplay = document.querySelector("#deleteGameSessionResponse");
+
 
 function postNewGameSession() {
     let gamerId = document.getElementById("gamerId").valueAsNumber;
@@ -57,3 +63,62 @@ submitCreateGameSession.addEventListener('click', function (event) {
     event.preventDefault();
     postNewGameSession();
 })
+
+function getYourGameSession() {
+    let usernameForGameSessions = document.getElementById("username").value;
+    REQ.onload = () => {
+        if (REQ.status === 200 && REQ.readyState === 4) {
+            console.log(REQ);
+            console.log(REQ.response);
+            buildUserSessionsDisplay(readSessionsDisplay, REQ.response);
+            console.log("The request for data has been sent.");
+        } else if (REQ.status === 404) {
+            window.alert("Your user wasn't found! Error 404.")
+        } else {
+            console.log(REQ);
+            console.log(REQ.response);
+            console.log(`Oh no! You should handle the Error(s)!`);
+            window.alert("Oops! Something went wrong...")
+        }
+    }
+    REQ.open('GET', `/getYourGameSessions/${usernameForGameSessions}`);
+    REQ.setRequestHeader('Content-Type', 'Application/json');
+    REQ.setRequestHeader('Access-Control-Allow-Origin', '*');
+    REQ.responseType = 'json';
+    REQ.send();
+}
+
+submitReadGameSession.addEventListener('click', function (event) {
+    event.preventDefault();
+    getYourGameSession();
+})
+
+function buildUserSessionsDisplay(placeholder, data){
+    const h4PlayerName = document.createElement('h4');
+    h4PlayerName.textContent = `${data[0].user}'s game sessions`;
+
+    const container = document.createElement('div')
+    container.setAttribute('class', 'container')
+    placeholder.appendChild(container);
+    container.appendChild(h4PlayerName);
+
+    data.forEach(session => {
+        const card = document.createElement('div');
+        card.setAttribute('session', 'card');
+
+        const idAndGameText = document.createElement('p');
+        idAndGameText.textContent = `Game: ${session.gameName}     //    Session Id: ${session.sessionId}`;
+
+        const timePlayedText = document.createElement('p');
+        timePlayedText.textContent = `Time Played (mins): ${session.timePlayed}`;
+
+        const timeOfSessionText = document.createElement('p');
+        timeOfSessionText.textContent = `Time of session: ${session.timeOfSession}`;
+
+        container.appendChild(card);
+        card.appendChild(idAndGameText);
+        card.appendChild(timePlayedText);
+        card.appendChild(timeOfSessionText);
+    })
+}
+
