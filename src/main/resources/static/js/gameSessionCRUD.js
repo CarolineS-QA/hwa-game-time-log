@@ -3,7 +3,7 @@ const REQ = new XMLHttpRequest();
 
 let submitCreateGameSession = document.querySelector("#bSubmitGameSession");
 let submitReadGameSession = document.querySelector("#bSubmitUsername");
-let readSessionsDisplay = document.querySelector("#readYourGameSessionResponse");
+let readSessionsDisplay = document.querySelector("#readYourGameSessionsResponse");
 let createSessionsDisplay = document.querySelector("#createdGameSessionResponse");
 let updateSessionDisplay = document.querySelector("#updateYourGameSessionResponse");
 let deleteSessionDisplay = document.querySelector("#deleteGameSessionResponse");
