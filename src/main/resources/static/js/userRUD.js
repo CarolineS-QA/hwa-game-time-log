@@ -166,8 +166,8 @@ function buildUserDisplay(placeholder, user){
         container.appendChild(card);
         card.appendChild(h4);
         card.appendChild(userIdText);
-        card.appendChild(sessionListText);
         card.appendChild(totalTimePlayedText);
         card.appendChild(freeTimeText);
         card.appendChild(timeRemainingText);
+        card.appendChild(sessionListText);
     }

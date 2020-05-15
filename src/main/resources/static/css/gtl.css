@@ -38,6 +38,8 @@ from: https://github.com/taniarascia/sandbox/tree/master/ghibli */
 
 .card {
     margin: 1rem;
+    padding: 10px;
+    border-color: #111144;
     background: white;
     box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
     border-radius: 12px;
