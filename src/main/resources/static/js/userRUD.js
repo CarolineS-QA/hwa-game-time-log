@@ -151,16 +151,22 @@ function buildUserDisplay(placeholder, user){
         const timeRemainingText = document.createElement('p');
         timeRemainingText.textContent = `Time left available to play games (mins): ${user.timeRemaining}`;
 
-        // const sessionListText = document.createElement('p');
-        // console.log(user.gameSessions);
-        // let gameSessionArray = user.gameSessions.toArray();
-        // sessionListText.textContent = `Games played: ${gameSessionArray} ...`;
+        const sessionListText = document.createElement('p');
+        sessionListText.textContent = `Games played: `;
+        if (user.gameSessions.length === 0){
+            sessionListText.textContent += `None`;
+        }
+        console.log(user.gameSessions);
+        user.gameSessions.forEach(session =>{
+            sessionListText.textContent += `${session.gameName}, `
+        });
+        sessionListText.textContent += `...that's it!`
 
         placeholder.appendChild(container)
         container.appendChild(card);
         card.appendChild(h4);
         card.appendChild(userIdText);
-        //card.appendChild(sessionListText);
+        card.appendChild(sessionListText);
         card.appendChild(totalTimePlayedText);
         card.appendChild(freeTimeText);
         card.appendChild(timeRemainingText);
