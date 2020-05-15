@@ -1,6 +1,4 @@
 let display = document.querySelector("#getAllUsersResponse");
-const container = document.createElement('div')
-container.setAttribute('class', 'container')
 
 const REQ = new XMLHttpRequest();
 
@@ -28,6 +26,8 @@ function getAllUsers() {
 window.addEventListener('load', getAllUsers);
 
 function buildDisplay(placeholder, data){
+    const container = document.createElement('div')
+    container.setAttribute('class', 'container')
     data.forEach(user => {
         const card = document.createElement('div');
         card.setAttribute('user', 'card');
