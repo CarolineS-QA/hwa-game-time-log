@@ -36,10 +36,7 @@ function postNewGameSession() {
     REQ.setRequestHeader('Access-Control-Allow-Origin', '*');
     REQ.onload = () => {
         if (REQ.status === 201 && REQ.readyState === 4) {
-            console.log(REQ);
-            console.log(REQ.response);
             console.log("The data has been sent.");
-            console.log(jsonString);
             window.alert("A Game Session has been created!");
             console.log(Date.now().toString())
             window.location.reload();
@@ -50,7 +47,6 @@ function postNewGameSession() {
             console.log(REQ.response);
             console.log(`Oh no! You should handle the Error(s)!`);
             window.alert("Oops! Something went wrong...")
-            console.log(`User ${user}`);
             console.log(`Time of Session is ${timeOfSession}`);
             console.log("You tried to send the following JSON");
             console.log(jsonString);
@@ -68,8 +64,6 @@ function getYourGameSession() {
     let usernameForGameSessions = document.getElementById("username").value;
     REQ.onload = () => {
         if (REQ.status === 200 && REQ.readyState === 4) {
-            console.log(REQ);
-            console.log(REQ.response);
             buildUserSessionsDisplay(readSessionsDisplay, REQ.response);
             console.log("The request for data has been sent.");
         } else if (REQ.status === 404) {
