@@ -105,7 +105,13 @@ function deleteUser() {
 
 deleteUserbutt.addEventListener('click', function (event) {
     event.preventDefault();
-    deleteUser();
+    let confirmUserDelete = window.prompt("Are you sure? This action cannot be reversed and will delete ALL your game sessions saved. Type 'DELETE' in FULL CAPS to confirm:");
+    if (confirmUserDelete === "DELETE") {
+        deleteUser();
+    } else {
+        window.alert("Your user has not been deleted.");
+    }
+
 })
 
 function messageDisplay(messageDisplay){
