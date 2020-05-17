@@ -65,13 +65,11 @@ function getYourGameSessions() {
     let usernameForGameSessions = document.getElementById("username").value;
     REQ.onload = () => {
         if (REQ.status === 200 && REQ.readyState === 4) {
-            if (REQ.response === []){
-                const h3PlayerNoSessions = document.createElement('h3');
-                h3PlayerNoSessions.textContent = `${usernameForGameSessions} has no game sessions...`;
-                readSessionsDisplay.appendChild(h3PlayerNoSessions);
+            if (REQ.response.length === 0){
+                const h5PlayerNoSessions = document.createElement('h5');
+                h5PlayerNoSessions.textContent = `${usernameForGameSessions} has no game sessions yet...`;
+                readSessionsDisplay.appendChild(h5PlayerNoSessions);
             } else {
-                console.log(REQ.response);
-                console.log(REQ.responseText);
                 buildUserSessionsDisplay(readSessionsDisplay, REQ.response);
                 console.log("The request for data has been sent.");
             }
