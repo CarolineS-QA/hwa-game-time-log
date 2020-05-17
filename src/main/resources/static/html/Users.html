@@ -55,11 +55,10 @@
      <section id="updateYourUser">
          <form id="UpdateUserForm" method="GET" action="Users.html">
              <fieldset>
-                 <legend>Update your User's Free Time</legend>
+                 <legend>Manage your User's Time</legend>
                  <ul>
-                     <!--I don't want users changing their usernames just yet - until I'm sure it doesn't break anything!
-                     Time Remaining ( is = to free time when there are no game sessions)
-                     Total time played should be calculated based off of game sessions-->
+                     <!-- I don't want users changing their usernames. -->
+
                      <li>
                          <label for="userIdUpdate">Please confirm your userId: </label>
                          <input id="userIdUpdate" name="userIdUpdate" type="number" />
@@ -71,6 +70,20 @@
                      <li>
                          <label for="freeTimeMinutes">Free Time (minutes): </label>
                          <input id="freeTimeMinutes" name="freeTimeMinutes" type="number" />
+                     </li>
+                     <!-- Until time calculating functionality is implemented in the back-end I will allow full manual data entry.
+                     Time Remaining ( is = to free time when there are no game sessions)
+                     Total time played should be calculated based off of game sessions-->
+                     <li>
+                         <p>Note:</p><em> I am looking to add a time calculation function, but until then you will have to calculate your information manually.</em>
+                     </li>
+                     <li>
+                         <label for="timeRemainingMinutes">Your Time Remaining (minutes): </label>
+                         <input id="timeRemainingMinutes" type="number" />
+                     </li>
+                     <li>
+                         <label for="totalTimePlayedMinutes">Your Total Time played (minutes): </label>
+                         <input id="totalTimePlayedMinutes" type="number" />
                      </li>
                  </ul>
                  <button id='bSubmitUpdate' type='submit'>Submit</button>

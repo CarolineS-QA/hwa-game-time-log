@@ -38,6 +38,8 @@ function updateUser() {
     let freeTimeHours = document.getElementById("freeTimeHours").valueAsNumber;
     let freeTimeMinutes = document.getElementById("freeTimeMinutes").valueAsNumber;
 
+    let timeRemaining = document.getElementById("timeRemainingMinutes").valueAsNumber;
+    let totalTimePlayed = document.getElementById("totalTimePlayedMinutes").valueAsNumber;
     // if(freeTimeHours.value.length === 0){
     //     freeTimeHours = 0;
     // } else if(freeTimeMinutes.value === undefined ){
@@ -49,9 +51,9 @@ function updateUser() {
     let jsonString = JSON.stringify(
         {
             //"username": username,
-            "totalTimePlayed": 90001, //should be calculated based off of game sessions
+            "totalTimePlayed": totalTimePlayed, //should be calculated based off of game sessions
             "freeTime": freeTime, // if no input then null is returned
-            "timeRemaining": 1 //should be calculated based off of game sessions
+            "timeRemaining": timeRemaining //should be calculated based off of game sessions
         });
 
     REQ.open('PUT', `/updateUser/${userId}`);
