@@ -10,8 +10,6 @@ function getYourUser() {
     let username = document.getElementById("username").value;
     REQ.onload = () => {
         if (REQ.status === 200 && REQ.readyState === 4) {
-            console.log(REQ);
-            console.log(REQ.response);
             buildUserDisplay(readDisplay, REQ.response);
             console.log("The request for data has been sent.");
         } else if (REQ.status === 404) {
@@ -61,7 +59,6 @@ function updateUser() {
     REQ.setRequestHeader('Access-Control-Allow-Origin', '*');
     REQ.onload = () => {
         if (REQ.status === 200 && REQ.readyState === 4) {
-            console.log(REQ.response);
             console.log("The data has been sent.");
             console.log(jsonString);
             window.alert("Your User has been updated!");
