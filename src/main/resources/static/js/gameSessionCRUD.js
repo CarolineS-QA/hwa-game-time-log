@@ -4,6 +4,7 @@ const REQ = new XMLHttpRequest();
 let submitCreateGameSession = document.querySelector("#bSubmitGameSession");
 let submitReadGameSession = document.querySelector("#bSubmitUsername");
 let submitUpdateGameSession = document.querySelector("#bSubmitUpdateGS");
+let submitDeleteGameSession = document.querySelector("#bSubmitDeleteGS");
 let readSessionsDisplay = document.querySelector("#readYourGameSessionsResponse");
 let createSessionsDisplay = document.querySelector("#createdGameSessionResponse");
 let updateSessionDisplay = document.querySelector("#updateYourGameSessionResponse");
@@ -166,4 +167,29 @@ function updateGameSession() {
 submitUpdateGameSession.addEventListener('click', function (event) {
     event.preventDefault();
     updateGameSession();
+})
+
+function deleteGameSession() {
+    let sessionId = document.getElementById("sessionId").value;
+    REQ.onload = () => {
+        if (REQ.status === 204 && REQ.readyState === 4) {
+            messageDisplay(deleteDisplay);
+            console.log("The request to delete data has been sent.");
+            window.alert("Your game session has been successfully deleted.");
+            window.location.reload();
+        } else {
+            console.log(REQ);
+            console.log(`Oh no! You should handle the Error(s)!`);
+            window.alert("Oops! Something went wrong...")
+            console.log(REQ.status);
+        }
+    }
+    REQ.open('DELETE', `/deleteGameSession/${sessionId}`);
+    REQ.setRequestHeader('Access-Control-Allow-Origin', '*');
+    REQ.send();
+}
+
+submitDeleteGameSession.addEventListener('click', function (event) {
+    event.preventDefault();
+    deleteGameSession();
 })
