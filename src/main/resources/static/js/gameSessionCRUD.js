@@ -173,7 +173,6 @@ function deleteGameSession() {
     let sessionId = document.getElementById("sessionId").value;
     REQ.onload = () => {
         if (REQ.status === 204 && REQ.readyState === 4) {
-            messageDisplay(deleteDisplay);
             console.log("The request to delete data has been sent.");
             window.alert("Your game session has been successfully deleted.");
             window.location.reload();
@@ -191,5 +190,11 @@ function deleteGameSession() {
 
 submitDeleteGameSession.addEventListener('click', function (event) {
     event.preventDefault();
-    deleteGameSession();
+    let confirm = window.confirm("Are you sure you want to delete this game session?");
+    if (confirm === true) {
+        deleteGameSession();
+    } else {
+        window.alert("Your session has not been deleted.");
+    }
+
 })
