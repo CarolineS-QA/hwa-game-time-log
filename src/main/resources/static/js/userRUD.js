@@ -154,20 +154,20 @@ function buildUserDisplay(placeholder, user){
         const sessionListText = document.createElement('p');
         sessionListText.textContent = `Games played: `;
         if (user.gameSessions.length === 0){
-            sessionListText.textContent += `None`;
+            sessionListText.textContent += `Nothing... `;
         }
         console.log(user.gameSessions);
         user.gameSessions.forEach(session =>{
             sessionListText.textContent += `${session.gameName}, `
         });
-        sessionListText.textContent += `...that's it!`
+        sessionListText.textContent += `that's all for now!`
 
         placeholder.appendChild(container)
         container.appendChild(card);
         card.appendChild(h4);
         card.appendChild(userIdText);
-        card.appendChild(sessionListText);
         card.appendChild(totalTimePlayedText);
         card.appendChild(freeTimeText);
         card.appendChild(timeRemainingText);
+        card.appendChild(sessionListText);
     }
