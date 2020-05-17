@@ -68,8 +68,12 @@
                     <legend>Add a new Game Session</legend>
                     <ul>
                         <li>
-                            <label for="gamerId">Confirm your username: </label>
-                            <input id="gamerId" name="username" type ="text" />
+                            <label for="gamerId">Confirm your user Id: </label>
+                            <input id="gamerId" name="user" type ="number" />
+                        </li>
+                        <li>
+                            <label for="gamerName">Confirm your username: </label>
+                            <input id="gamerName" name="user" type ="text" />
                         </li>
                         <li>
                             <label for="gameName">Name of game played: </label>
@@ -77,18 +81,18 @@
                         </li>
                         <li>
                             <label for="timePlayedHours">Time played (hours): </label>
-                            <input id="timePlayedHours" value="timePlayedHours" type="number" />
+                            <input id="timePlayedHours" name="timePlayedHours" type="number" />
                         </li>
                         <li>
                             <label for="timePlayedMinutes">Time played (minutes): </label>
-                            <input id="timePlayedMinutes" value="timePlayedMinutes" type="number" />
+                            <input id="timePlayedMinutes" name="timePlayedMinutes" type="number" />
                         </li>
                     </ul>
                     <button id='bSubmitGameSession' type='submit'>Submit</button>
                     <button id='bResetGameSession' type='reset'>Reset</button>
                 </fieldset>
             </form>
-        <div id="CreatedGameSessionResponse"></div>
+        <div id="createdGameSessionResponse"></div>
     </section>
 
     <section id="UpdateAGameSession">
@@ -98,7 +102,7 @@
                 <ul>
                     <li>
                         <label for="updateSessionId">Please enter the SessionId: </label>
-                        <input id="updateSessionId" name="sessionId" type ="text" />
+                        <input id="updateSessionId" name="sessionId" type ="number" />
                     </li>
                     <!--Add checkbox for what you would like to update - have form response to checked options -->
                     <li>
@@ -107,11 +111,11 @@
                     </li>
                     <li>
                         <label for="uTimePlayedHours">Time played (hours): </label>
-                        <input id="uTimePlayedHours" value="timePlayedHours" type="number" />
+                        <input id="uTimePlayedHours" name="timePlayedHours" type="number" />
                     </li>
                     <li>
                         <label for="uTimePlayedMinutes">Time played (minutes): </label>
-                        <input id="uTimePlayedMinutes" value="timePlayedMinutes" type="number" />
+                        <input id="uTimePlayedMinutes" name="timePlayedMinutes" type="number" />
                     </li>
                 </ul>
                 <button id='bSubmitUpdateGS' type='submit'>Submit</button>
@@ -130,7 +134,7 @@
                 <ul>
                     <li>
                         <label for="sessionId">Please enter the SessionId: </label>
-                        <input id="sessionId" name="sessionId" type ="text" />
+                        <input id="sessionId" name="sessionId" type ="number" />
                     </li>
                 </ul>
                 <button id='bSubmitDeleteGS' type='submit'>Delete</button>
@@ -140,13 +144,14 @@
     </section>
 
     <section>
-        <a href="./html/AllGameSessions.html">See what has been played</a><!-- recently, All game sessions -->
-        <a href="html/AllUsers.html">See who else is using GameTimeLog!</a>
+        <a href="./AllGameSessions.html">See what has been played</a><!-- recently, All game sessions -->
+        <a href="./AllUsers.html">See who else is using GameTimeLog!</a>
     </section>
 </main>
 <!--Footer-->
 <footer></footer>
 <!--Scripts-->
 <script src="../js/bootstrap.min.js"></script>
+<script src="../js/gameSessionCRUD.js"></script>
 </body>
 </html>

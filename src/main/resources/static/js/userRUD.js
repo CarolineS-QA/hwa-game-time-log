@@ -10,8 +10,6 @@ function getYourUser() {
     let username = document.getElementById("username").value;
     REQ.onload = () => {
         if (REQ.status === 200 && REQ.readyState === 4) {
-            console.log(REQ);
-            console.log(REQ.response);
             buildUserDisplay(readDisplay, REQ.response);
             console.log("The request for data has been sent.");
         } else if (REQ.status === 404) {
@@ -61,7 +59,6 @@ function updateUser() {
     REQ.setRequestHeader('Access-Control-Allow-Origin', '*');
     REQ.onload = () => {
         if (REQ.status === 200 && REQ.readyState === 4) {
-            console.log(REQ.response);
             console.log("The data has been sent.");
             console.log(jsonString);
             window.alert("Your User has been updated!");
@@ -108,7 +105,13 @@ function deleteUser() {
 
 deleteUserbutt.addEventListener('click', function (event) {
     event.preventDefault();
-    deleteUser();
+    let confirmUserDelete = window.prompt("Are you sure? This action cannot be reversed and will delete ALL your game sessions saved. Type 'DELETE' in FULL CAPS to confirm:");
+    if (confirmUserDelete === "DELETE") {
+        deleteUser();
+    } else {
+        window.alert("Your user has not been deleted.");
+    }
+
 })
 
 function messageDisplay(messageDisplay){
@@ -151,17 +154,23 @@ function buildUserDisplay(placeholder, user){
         const timeRemainingText = document.createElement('p');
         timeRemainingText.textContent = `Time left available to play games (mins): ${user.timeRemaining}`;
 
-        // const sessionListText = document.createElement('p');
-        // console.log(user.gameSessions);
-        // let gameSessionArray = user.gameSessions.toArray();
-        // sessionListText.textContent = `Games played: ${gameSessionArray} ...`;
+        const sessionListText = document.createElement('p');
+        sessionListText.textContent = `Games played: `;
+        if (user.gameSessions.length === 0){
+            sessionListText.textContent += `Nothing... `;
+        }
+        console.log(user.gameSessions);
+        user.gameSessions.forEach(session =>{
+            sessionListText.textContent += `${session.gameName}, `
+        });
+        sessionListText.textContent += `that's all for now!`
 
         placeholder.appendChild(container)
         container.appendChild(card);
         card.appendChild(h4);
         card.appendChild(userIdText);
-        //card.appendChild(sessionListText);
         card.appendChild(totalTimePlayedText);
         card.appendChild(freeTimeText);
         card.appendChild(timeRemainingText);
+        card.appendChild(sessionListText);
     }
