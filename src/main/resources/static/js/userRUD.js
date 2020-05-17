@@ -154,7 +154,7 @@ function buildUserDisplay(placeholder, user){
         const sessionListText = document.createElement('p');
         sessionListText.textContent = `Games played: `;
         if (user.gameSessions.length === 0){
-            sessionListText.textContent += `None`;
+            sessionListText.textContent += `Nothing yet`;
         }
         console.log(user.gameSessions);
         user.gameSessions.forEach(session =>{
