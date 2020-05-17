@@ -3,6 +3,7 @@ const REQ = new XMLHttpRequest();
 
 let submitCreateGameSession = document.querySelector("#bSubmitGameSession");
 let submitReadGameSession = document.querySelector("#bSubmitUsername");
+let submitUpdateGameSession = document.querySelector("#bSubmitUpdateGS");
 let readSessionsDisplay = document.querySelector("#readYourGameSessionsResponse");
 let createSessionsDisplay = document.querySelector("#createdGameSessionResponse");
 let updateSessionDisplay = document.querySelector("#updateYourGameSessionResponse");
@@ -60,12 +61,20 @@ submitCreateGameSession.addEventListener('click', function (event) {
     postNewGameSession();
 })
 
-function getYourGameSession() {
+function getYourGameSessions() {
     let usernameForGameSessions = document.getElementById("username").value;
     REQ.onload = () => {
         if (REQ.status === 200 && REQ.readyState === 4) {
-            buildUserSessionsDisplay(readSessionsDisplay, REQ.response);
-            console.log("The request for data has been sent.");
+            if (REQ.response === []){
+                const h3PlayerNoSessions = document.createElement('h3');
+                h3PlayerNoSessions.textContent = `${usernameForGameSessions} has no game sessions...`;
+                readSessionsDisplay.appendChild(h3PlayerNoSessions);
+            } else {
+                console.log(REQ.response);
+                console.log(REQ.responseText);
+                buildUserSessionsDisplay(readSessionsDisplay, REQ.response);
+                console.log("The request for data has been sent.");
+            }
         } else if (REQ.status === 404) {
             window.alert("Your user wasn't found! Error 404.")
         } else {
@@ -84,7 +93,7 @@ function getYourGameSession() {
 
 submitReadGameSession.addEventListener('click', function (event) {
     event.preventDefault();
-    getYourGameSession();
+    getYourGameSessions();
 })
 
 function buildUserSessionsDisplay(placeholder, data){
@@ -116,3 +125,47 @@ function buildUserSessionsDisplay(placeholder, data){
     })
 }
 
+function updateGameSession() {
+    let sessionId = document.getElementById("updateSessionId").value;
+    let updateGameName = document.getElementById("updateGameName").value;
+    let updateTimePlayedHours = document.getElementById("uTimePlayedHours").valueAsNumber;
+    let updateTimePlayedMinutes = document.getElementById("uTimePlayedMinutes").valueAsNumber;
+
+    let updateTimePlayed = Number(updateTimePlayedMinutes) + (Number(updateTimePlayedHours) * 60);
+    let timeOfSession = "2020-05-17T10:15:30" //Date.now().toString();
+
+    // these are the only values that change in the update
+    // even you change user details they don't update because it's not coded to change in the backend
+    let jsonString = JSON.stringify(
+        {
+            "gameName": updateGameName,
+            "timePlayed": updateTimePlayed,
+            "timeOfSession": timeOfSession,
+        });
+
+    REQ.open('PUT', `/updateGameSession/${sessionId}`);
+    REQ.setRequestHeader('Content-Type', 'Application/json');
+    REQ.setRequestHeader('Access-Control-Allow-Origin', '*');
+    REQ.onload = () => {
+        if (REQ.status === 200 && REQ.readyState === 4) {
+            console.log("The update data has been sent.");
+            window.alert("Your Game Session has been updated!");
+            window.location.reload();
+        } else {
+            console.log(REQ.response);
+            console.log(`Oh no! You should handle the Error(s)!`);
+            window.alert("Oops! Something went wrong...")
+            console.log(REQ.status);
+            console.log(updateTimePlayed);
+            console.log(updateTimePlayed.data_type);
+            console.log("You tried to send the following JSON");
+            console.log(jsonString);
+        }
+    }
+    REQ.send(jsonString);
+}
+
+submitUpdateGameSession.addEventListener('click', function (event) {
+    event.preventDefault();
+    updateGameSession();
+})
