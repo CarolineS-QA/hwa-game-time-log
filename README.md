@@ -50,9 +50,9 @@ Please see the `docs` folder for other documentation.
 **[Back to top](#table-of-contents)**
 
 ## Project Status 
-Current release: v0.1.0 - in development
+Current release: v0.2.0 - in development
 
-**Test Coverage:** For src/main/java: 100% // Sonarqube: 0% // Overall: 100%
+**Test Coverage:** For src/main/java: 97% // Sonarqube: 0% // Overall: 98%%
 
 For test reports please see the `docs` folder.
 
