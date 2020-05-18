@@ -2,7 +2,7 @@
 nav.a {
     background-color: #111144;
     color: white;
-    text-align: center;
+    text-align: right;
     padding: 10px;
     float: right;
     display: block;
@@ -45,4 +45,14 @@ from: https://github.com/taniarascia/sandbox/tree/master/ghibli */
     border-radius: 12px;
     overflow: hidden;
     transition: all .2s linear;
+}
+
+#ToYourGameSessions.card:hover {
+    box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+    transform: translate3D(0, 0px, 0);
+}
+
+footer {
+    text-align: center;
+    align-content: center;
 }
