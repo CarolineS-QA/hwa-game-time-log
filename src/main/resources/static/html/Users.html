@@ -23,7 +23,7 @@
     <a href="https://github.com/CarolineS-QA">CONTACT ME</a>
     <a href="https://github.com/CarolineS-QA/hwa-game-time-log">Check out the source code on <img id="GitHubLogoTxt" src="../img/GitHub_Logo.png" alt="Git Hub Logo"><img id="GitHubLogoIcon" src="../img/GitHub-Mark-64px.png" alt="Git Hub Mark"></a>
  </nav>
-<br><br><br><br><br>
+<br><br>
  <!-- Start of main page content -->
  <header>
     <noscript>If you have no JS enabled you will see this!</noscript>
@@ -46,7 +46,7 @@
                         <input id="username" name="username" type ="text" />
                     </li>
                 </ul>
-                <button id='bSubmitUsername' type='submit'>Submit</button>
+                <button id='bSubmitUsername' type='submit' class="btn btn-outline-success">Read</button>
             </fieldset>
         </form>
         <div id="readYourUserResponse"></div>
@@ -86,7 +86,8 @@
                          <input id="totalTimePlayedMinutes" type="number" />
                      </li>
                  </ul>
-                 <button id='bSubmitUpdate' type='submit'>Submit</button>
+                 <button id='bResetUpdateUser' type='reset' class="btn btn-secondary">Reset</button>
+                 <button id='bSubmitUpdate' type='submit' class="btn btn-outline-success">Update</button>
              </fieldset>
          </form>
         <div id="updateYourUserResponse"></div>
@@ -102,13 +103,9 @@
         <form id="DeleteForm" method="POST" action="Users.html">
             <fieldset>
                 <legend>Delete your User Account</legend>
-                <ul>
-                    <li>
-                        <label for="userIdDelete">Please enter your UserId: </label>
-                        <input id="userIdDelete" name="userIdDelete" type ="number" />
-                    </li>
-                </ul>
-                <button id='bSubmitDelete' type='submit'>Delete</button>
+                    <label for="userIdDelete">Please enter your UserId: </label>
+                    <input id="userIdDelete" name="userIdDelete" type ="number" />
+                <button id='bSubmitDelete' type='submit' class="btn btn-outline-danger">Delete</button>
             </fieldset>
         </form>
         <div id="deleteUserResponse"></div>

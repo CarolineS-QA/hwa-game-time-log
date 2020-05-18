@@ -23,7 +23,7 @@
     <a href="https://github.com/CarolineS-QA">CONTACT ME</a>
     <a href="https://github.com/CarolineS-QA/hwa-game-time-log">Check out the source code on <img id="GitHubLogoTxt" src="../img/GitHub_Logo.png" alt="Git Hub Logo"><img id="GitHubLogoIcon" src="../img/GitHub-Mark-64px.png" alt="Git Hub Mark"></a>
 </nav>
-<br><br><br><br><br>
+<br><br>
 <!-- Start of main page content -->
 <header>
     <noscript>If you have no JS enabled you will see this!</noscript>
@@ -54,8 +54,7 @@
                        </li>
                        -->
                 </ul>
-                <button id='bSubmitUsername' type='submit'>Submit</button>
-                <button id='bResetUsername' type='reset'>Reset</button>
+                <button id='bSubmitUsername' type='submit' class="btn btn-outline-success">Read</button>
             </fieldset>
         </form>
         <div id="readYourGameSessionsResponse"></div>
@@ -88,8 +87,8 @@
                             <input id="timePlayedMinutes" name="timePlayedMinutes" type="number" />
                         </li>
                     </ul>
-                    <button id='bSubmitGameSession' type='submit'>Submit</button>
-                    <button id='bResetGameSession' type='reset'>Reset</button>
+                    <button id='bResetGameSession' type='reset' class="btn btn-secondary">Reset</button>
+                    <button id='bSubmitGameSession' type='submit' class="btn btn-outline-success">Add session</button>
                 </fieldset>
             </form>
         <div id="createdGameSessionResponse"></div>
@@ -118,8 +117,8 @@
                         <input id="uTimePlayedMinutes" name="timePlayedMinutes" type="number" />
                     </li>
                 </ul>
-                <button id='bSubmitUpdateGS' type='submit'>Submit</button>
-                <button id='bResetUpdateGS' type='reset'>Reset</button>
+                <button id='bResetUpdateGS' type='reset' class="btn btn-secondary">Reset</button>
+                <button id='bSubmitUpdateGS' type='submit' class="btn btn-outline-success">Update</button>
             </fieldset>
         </form>
         <div id="updateYourGameSessionResponse"></div>
@@ -131,13 +130,9 @@
         <form id="DeleteGameSessionForm" method="POST" action="/deleteGameSession/{id}">
             <fieldset>
                 <legend>Delete a Game Session</legend>
-                <ul>
-                    <li>
-                        <label for="sessionId">Please enter the SessionId: </label>
-                        <input id="sessionId" name="sessionId" type ="number" />
-                    </li>
-                </ul>
-                <button id='bSubmitDeleteGS' type='submit'>Delete</button>
+                    <label for="sessionId">Please enter the SessionId: </label>
+                    <input id="sessionId" name="sessionId" type ="number" />
+                <button id='bSubmitDeleteGS' type='submit' class="btn btn-outline-warning">Delete</button>
             </fieldset>
         </form>
         <div id="deleteGameSessionResponse"></div>
