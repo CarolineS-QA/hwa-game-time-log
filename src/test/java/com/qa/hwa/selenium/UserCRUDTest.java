@@ -3,15 +3,17 @@ package com.qa.hwa.selenium;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-import org.openqa.selenium.WebDriver;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 
 import java.io.File;
+import java.io.IOException;
+
+import static java.lang.Thread.sleep;
+import static org.testng.Assert.assertEquals;
 
 public class UserCRUDTest {
     WebDriver driver;
@@ -33,6 +35,25 @@ public class UserCRUDTest {
     @BeforeMethod
     public void setUp(){
         driver = new ChromeDriver();
+    }
+
+    @Test
+    public void CreateUserPageTest() throws InterruptedException, IOException {
+        test = report.startTest("Verifying Navigation to Create User Page");
+        driver.manage().window().maximize();
+        test.log(LogStatus.INFO, "Started chrome browser and made it fullscreen");
+        driver.get("localhost:8181");
+        test.log(LogStatus.INFO, "Navigating to the application web interface");
+        WebElement createUserLink = driver.findElement(By.id("userCreation"));
+        createUserLink.click();
+        test.log(LogStatus.INFO, "Click on the userCreation link");
+        sleep(2000);
+        WebElement pageHeader = driver.findElement(By.id("pageHeader"));
+        assertEquals(pageHeader.getText(), "GameTimeLog - Create a User");
+        File userCreationPic = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(userCreationPic, new File(System.getProperty("user.dir") + "/test-output/userCreationPgae.jpg"));
+        test.log(LogStatus.PASS, "'GameTimeLog - Create a User' is shown in the header", "<img src=userCreationPage.jpg>");
+        sleep(2000);
     }
 
     @AfterMethod
