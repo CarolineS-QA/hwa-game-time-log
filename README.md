@@ -136,11 +136,10 @@ Note: You will need a GCP instance or mySQL on your machine set up to connect to
 
 The easiest way to run all my existing tests is to right click on `test/java/com.qa.hwq` in your IDE and select `Run tests in 'com.qa.hwa'` or `Run tests in 'com.qa.hwa' with Coverage`
 
+![Run All Tests](https://i.imgur.com/0YNyoqs.png)
 
 #### Unit Tests 
 JUnit is used for unit tests. A unit test will test individual methods within a class for functionality. Below is a simple Unit Test for my UserDTO class:
-
-![Run All Tests](https://i.imgur.com/0YNyoqs.png)
 
 ```
     @Before
