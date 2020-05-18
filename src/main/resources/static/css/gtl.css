@@ -8,6 +8,10 @@ nav.a {
     display: block;
 }
 
+li.nav-item{
+    margin-left: 15px;
+}
+
 img#GitHubLogoTxt {
      width: 156px;
      height: 64px;
@@ -25,11 +29,14 @@ from: https://github.com/taniarascia/sandbox/tree/master/ghibli */
         flex: 1 1 calc(33% - 2rem);
     }
 }
+
+/*
 @media screen and (min-width: 600px) {
     .card {
         flex: 1 1 calc(50% - 2rem);
     }
 }
+*/
 
 .card:hover {
     box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
@@ -47,12 +54,17 @@ from: https://github.com/taniarascia/sandbox/tree/master/ghibli */
     transition: all .2s linear;
 }
 
+#ToYourGameSessions.card {
+    text-align: center;
+    max-width: 500px;
+    
+}
 #ToYourGameSessions.card:hover {
     box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
     transform: translate3D(0, 0px, 0);
 }
 
-footer {
+footer, header {
     text-align: center;
     align-content: center;
 }
