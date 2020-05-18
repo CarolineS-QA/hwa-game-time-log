@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/gtl.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="../img/favicon_io/site.webmanifest">
+    <title>GTL - Create a User</title>
+</head>
+<body>
+<!-- Nav bar -->
+<nav class="sticky">
+    <a href="../index.html"><img id="GameTimeLogFullLogo" src="../img/logo-via-logohub.png" alt="Game Time Log Logo"></a>
+    <a href="../index.html">HOME</a>
+    <a href="./Users.html">USERS</a>
+    <a href="./GameSessions.html">GAME SESSIONS</a>
+    <a href="./AboutTheApp.html">ABOUT THIS APP</a>
+    <a href="https://github.com/CarolineS-QA">CONTACT ME</a>
+    <a href="https://github.com/CarolineS-QA/hwa-game-time-log">Check out the source code on <img id="GitHubLogoTxt" src="../img/GitHub_Logo.png" alt="Git Hub Logo"><img id="GitHubLogoIcon" src="../img/GitHub-Mark-64px.png" alt="Git Hub Mark"></a>
+</nav>
+<br><br><br><br><br>
+<!-- Start of main page content -->
+<header>
+    <noscript>If you have no JS enabled you will see this!</noscript>
+    <h1>GameTimeLog - Create a User</h1>
+</header>
+<main>
+    <section>
+        <div id="Intro">
+            <p>Hello!</p>
+            <p>Once you've created a user you should be redirected to the <a href="./Users.html">Users Page</a></p>
+            <p>If you have more than 24 hours of free time, lucky you! However if you have more than 60 mins, that's 1 hour friend.</p>
+        </div>
+        <form id="userDetails" method="POST" action="./Users.html">
+            <fieldset>
+                <legend>Create a new User</legend>
+                <ul>
+                    <li>
+                        <label for="username">Username: </label>
+                        <input id="username" name="username" type ="text" />
+                    </li>
+                    <li>
+                        <label for="freeTimeHours">Free Time (hours): </label>
+                        <input id="freeTimeHours" name="freeTimeHours" type="number" />
+                    </li>
+                    <li>
+                        <label for="freeTimeMinutes">Free Time (minutes): </label>
+                        <input id="freeTimeMinutes" name="freeTimeMinutes" type="number" />
+                    </li>
+
+                    <!-- For future use... also a password.
+                    <li>
+                        <label for="email">Email: </label>
+                        <input id="email" name="email" type ="email" />
+                    </li>
+                    <li>
+                        <label for="password">Password: </label>
+                        <input id:"password" name="password" type="password" />
+                    </li>
+                    -->
+                </ul>
+            </fieldset>
+            <p>Disclaimer: below is just for fun, we are not accepting any donated souls.</p>
+            <fieldset>
+                <legend>Like & Subscribe</legend>
+                <ol>
+                    <li>
+                        <label for="like">Like: </label>
+                        <input id="like" value="like" type="checkbox" name="subs"/>
+                    </li>
+                    <li>
+                        <label for="donate">Donate your soul: </label>
+                        <input id="donate" value="donate" type="checkbox" name="subs"/>
+                    </li>
+                    <!--
+                    <li>
+                        <label for="spam">Subscribe to Spam: </label>
+                        <input id="spam" value="spam" type="checkbox" name="subs"/>
+                    </li>
+                    -->
+                </ol>
+                <button id='bSubmit' type='submit'>Submit</button>
+                <button id='bReset' type='reset'>Reset to default</button>
+            </fieldset>
+        </form>
+    </section>
+</main>
+<!--Footer-->
+<footer></footer>
+<!--Scripts
+<script src="../js/bootstrap.min.js"></script>-->
+<script src="../js/userCreation.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/gtl.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="../img/favicon_io/site.webmanifest">
+    <title>GTL - Users</title>
+</head>
+<body>
+ <!-- Nav bar -->
+ <nav class="sticky">
+    <a href="../index.html"><img id="GameTimeLogFullLogo" src="../img/logo-via-logohub.png" alt="Game Time Log Logo"></a>
+    <a href="../index.html">HOME</a>
+    <a href="./Users.html">USERS</a>
+    <a href="./GameSessions.html">GAME SESSIONS</a>
+    <a href="./AboutTheApp.html">ABOUT THIS APP</a>
+    <a href="https://github.com/CarolineS-QA">CONTACT ME</a>
+    <a href="https://github.com/CarolineS-QA/hwa-game-time-log">Check out the source code on <img id="GitHubLogoTxt" src="../img/GitHub_Logo.png" alt="Git Hub Logo"><img id="GitHubLogoIcon" src="../img/GitHub-Mark-64px.png" alt="Git Hub Mark"></a>
+ </nav>
+<br><br><br><br><br>
+ <!-- Start of main page content -->
+ <header>
+    <noscript>If you have no JS enabled you will see this!</noscript>
+    <h1>GameTimeLog - User Landing</h1>
+ </header>
+ <main>
+    <section id="ToCreateAUser">
+        <div id="Intro">
+            <p>Welcome!</p>
+            <p>If you don't have a user yet, create one <a href="./UserCreation.html">here</a></p>
+        </div>
+    </section>
+     <section id="readYourUser">
+        <form id="UserForm" method="GET" action="Users.html">
+            <fieldset>
+                <legend>See Your User Details</legend>
+                <ul>
+                    <li>
+                        <label for="username">Please enter your Username: </label>
+                        <input id="username" name="username" type ="text" />
+                    </li>
+                </ul>
+                <button id='bSubmitUsername' type='submit'>Submit</button>
+            </fieldset>
+        </form>
+        <div id="readYourUserResponse"></div>
+     </section>
+
+     <section id="updateYourUser">
+         <form id="UpdateUserForm" method="GET" action="Users.html">
+             <fieldset>
+                 <legend>Manage your User's Time</legend>
+                 <ul>
+                     <!-- I don't want users changing their usernames. -->
+
+                     <li>
+                         <label for="userIdUpdate">Please confirm your userId: </label>
+                         <input id="userIdUpdate" name="userIdUpdate" type="number" />
+                     </li>
+                     <li>
+                         <label for="freeTimeHours">Free Time (hours): </label>
+                         <input id="freeTimeHours" name="freeTimeHours" type="number" />
+                     </li>
+                     <li>
+                         <label for="freeTimeMinutes">Free Time (minutes): </label>
+                         <input id="freeTimeMinutes" name="freeTimeMinutes" type="number" />
+                     </li>
+                     <!-- Until time calculating functionality is implemented in the back-end I will allow full manual data entry.
+                     Time Remaining ( is = to free time when there are no game sessions)
+                     Total time played should be calculated based off of game sessions-->
+                     <li>
+                         <p>Note:</p><em> I am looking to add a time calculation function, but until then you will have to calculate your information manually.</em>
+                     </li>
+                     <li>
+                         <label for="timeRemainingMinutes">Your Time Remaining (minutes): </label>
+                         <input id="timeRemainingMinutes" type="number" />
+                     </li>
+                     <li>
+                         <label for="totalTimePlayedMinutes">Your Total Time played (minutes): </label>
+                         <input id="totalTimePlayedMinutes" type="number" />
+                     </li>
+                 </ul>
+                 <button id='bSubmitUpdate' type='submit'>Submit</button>
+             </fieldset>
+         </form>
+        <div id="updateYourUserResponse"></div>
+        <div id="ToYourGameSessions">
+            <h5>Track your game sessions!</h5>
+            <p>Head over to the <a href="./GameSessions.html">Game Sessions</a> Page to manage them.</p>
+        </div>
+     </section>
+        <!--Warning!-->
+     <section id="deleteUserSection">
+         <h4>Warning! </h4>
+         <p>Deleting your user will remove all your game sessions.</p>
+        <form id="DeleteForm" method="POST" action="Users.html">
+            <fieldset>
+                <legend>Delete your User Account</legend>
+                <ul>
+                    <li>
+                        <label for="userIdDelete">Please enter your UserId: </label>
+                        <input id="userIdDelete" name="userIdDelete" type ="number" />
+                    </li>
+                </ul>
+                <button id='bSubmitDelete' type='submit'>Delete</button>
+            </fieldset>
+        </form>
+        <div id="deleteUserResponse"></div>
+     </section>
+
+     <section>
+         <a href="./AllGameSessions.html">See what has been played</a><!-- recently, All game sessions -->
+         <a href="./AllUsers.html">See who else is using GameTimeLog!</a>
+     </section>
+ </main>
+<!--Footer-->
+ <footer></footer>
+<!--Scripts-->
+ <script src="../js/bootstrap.min.js"></script>
+<script src="../js/userRUD.js"></script>
+ </body>
+</html>

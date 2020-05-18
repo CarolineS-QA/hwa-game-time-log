@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css" href="./css/gtl.css">
+     <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon_io/apple-touch-icon.png">
+     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon_io/favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon_io/favicon-16x16.png">
+     <link rel="manifest" href="img/favicon_io/site.webmanifest">
+     <title>GTL - Home</title>
+ </head>
+ <body>
+ <!-- Nav bar -->
+ <nav class="sticky">
+     <a href="index.html"><img id="GameTimeLogFullLogo" src="./img/logo-via-logohub.png" alt="Game Time Log Logo"></a>
+     <a href="index.html">HOME</a>
+     <a href="./html/Users.html">USERS</a>
+     <a href="./html/GameSessions.html">GAME SESSIONS</a>
+     <a href="html/AboutTheApp.html">ABOUT THIS APP</a>
+     <a href="https://github.com/CarolineS-QA">CONTACT ME</a>
+     <a href="https://github.com/CarolineS-QA/hwa-game-time-log">Check out the source code on <img id="GitHubLogoTxt" src="./img/GitHub_Logo.png" alt="Git Hub Logo"><img id="GitHubLogoIcon" src="./img/GitHub-Mark-64px.png" alt="Git Hub Mark"></a>
+ </nav>
+ <br><br><br><br><br>
+ <!-- Start of main page content -->
+    <header>
+        <noscript>If you have no JS enabled you will see this!</noscript>
+        <h1>This is the GameTimeLog Home</h1>
+    </header>
+    <main>
+        <section>
+        <a href="./html/UserCreation.html">Create a user</a>
+        <a href="html/AllUsers.html">See who is using GameTimeLog!</a>
+        <a href="./html/AllGameSessions.html">See what has been played</a><!-- recently, All game sessions -->
+        </section>
+        <section>
+            <h2>App shutdown</h2>
+            <p>The button will stop the jar running by triggering the Spring shutdown sequence, so the program will reach the end of the main method and finish with exit code 0.</p>
+            <p>Once this is triggered, this web interface will be inaccessible until you restart the app.</p>
+            <button id="appShutDown" type="button" class="btn btn-danger">Stop App</button>
+        </section>
+    </main>
+ <!--Footer-->
+    <footer></footer>
+ <!--Scripts-->
+ <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ <script src="./js/bootstrap.min.js"></script>
+ <script src="./js/shutdown.js"></script>
+ </body>
+</html>
