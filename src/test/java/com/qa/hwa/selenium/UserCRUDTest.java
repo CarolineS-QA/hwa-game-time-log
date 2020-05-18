@@ -4,6 +4,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import org.apache.commons.io.FileUtils;
+import org.junit.Ignore;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
@@ -32,12 +33,14 @@ public class UserCRUDTest {
         report.loadConfig(new File(System.getProperty("user.dir") + "\\extent-report.xml"));
     }
 
+    @Ignore
     @BeforeMethod
     public void setUp(){
         //System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
         driver = new ChromeDriver();
     }
 
+    @Ignore
     @Test
     public void CreateUserPageTest() throws InterruptedException, IOException {
         test = report.startTest("Verifying Navigation to Create User Page");
