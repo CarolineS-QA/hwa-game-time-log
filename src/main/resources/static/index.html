@@ -35,6 +35,12 @@
         <a href="html/AllUsers.html">See who is using GameTimeLog!</a>
         <a href="./html/AllGameSessions.html">See what has been played</a><!-- recently, All game sessions -->
         </section>
+        <section>
+            <h2>App shutdown</h2>
+            <p>The button will stop the jar running by triggering the Spring shutdown sequence, so the program will reach the end of the main method and finish with exit code 0.</p>
+            <p>Once this is triggered, this web interface will be inaccessible until you restart the app.</p>
+            <button id="appShutDown" type="button" class="btn btn-danger">Stop App</button>
+        </section>
     </main>
  <!--Footer-->
     <footer></footer>
@@ -42,5 +48,6 @@
  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
  <script src="./js/bootstrap.min.js"></script>
+ <script src="./js/shutdown.js"></script>
  </body>
 </html>
