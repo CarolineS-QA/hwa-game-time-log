@@ -42,15 +42,16 @@
     <br>
 </header>
 <main>
-    <section id="ToCreateAUser">
+    <section id="ToCreateAUser" class="jumbotron">
         <div id="Intro">
-            <p>Welcome!</p>
-            <p>If you don't have a user yet, create one <a href="./UserCreation.html">here</a></p>
+            <p class="display-4">Welcome!</p>
+            <hr class="my-4">
+            <p>If you don't have a user yet, create one <a href="./UserCreation.html">here</a>.</p>
         </div>
         <!--Have top 5 most recent game sessions here-->
     </section>
 
-    <section id="readGameSessions">
+    <section id="readGameSessions" class="container">
         <form id="GameSessionLogin" method="GET" action="GameSessions.html">
             <fieldset>
                 <legend>See Your Game Sessions</legend>
@@ -72,7 +73,7 @@
         <div id="readYourGameSessionsResponse"></div>
     </section>
 
-    <section id="CreateAGameSession">
+    <section id="CreateAGameSession" class="container">
         <p>Add a game session to start tracking!</p>
             <form id="GameSessionDetails" method="POST" action="GameSessions.html">
                 <fieldset>
@@ -106,7 +107,7 @@
         <div id="createdGameSessionResponse"></div>
     </section>
 
-    <section id="UpdateAGameSession">
+    <section id="UpdateAGameSession" class="container">
         <form id="updateGSessionDetails" method="POST" action="GameSessions.html">
             <fieldset>
                 <legend>Update an existing Game Session</legend>
@@ -137,7 +138,7 @@
     </section>
 
         <!--Warning!-->
-    <section id="deleteGameSessionSection">
+    <section id="deleteGameSessionSection" class="container">
         <h3>Warning! Once you delete a game session you cannot recover it.</h3>
         <form id="DeleteGameSessionForm" method="POST" action="/deleteGameSession/{id}">
             <fieldset>
@@ -150,7 +151,7 @@
         <div id="deleteGameSessionResponse"></div>
     </section>
     <br>
-    <section>
+    <section class="container">
         <a href="./AllGameSessions.html"><button type="button" class="btn btn-secondary">See recent Game Sessions</button></a><!-- recently, All game sessions -->
         <a href="./AllUsers.html"><button type="button" class="btn btn-secondary">See who else is using GameTimeLog!</button></a>
     </section>

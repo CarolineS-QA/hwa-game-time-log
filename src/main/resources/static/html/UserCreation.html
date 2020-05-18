@@ -42,16 +42,18 @@
     <br>
 </header>
 <main>
-    <section>
+    <section class="jumbotron">
         <div id="Intro">
-            <p>Hello!</p>
-            <p>Once you've created a user you should be redirected to the <a href="./Users.html">Users Page</a></p>
+            <h3 class="display-4">Hello!</h3>
+            <p class="lead">Once you've created a user you should be redirected to the <a href="./Users.html">Users Page</a></p>
+            <hr class="my-4">
             <p>If you have more than 24 hours of free time, lucky you! However if you have more than 60 mins, that's 1 hour friend.</p>
         </div>
+    </section>
+    <section>
         <form id="userDetails" method="POST" action="./Users.html">
             <fieldset>
                 <legend>Create a new User</legend>
-                <ul>
                     <div class="form-group">
                         <label for="username">Username: </label>
                         <input id="username" name="username" type ="text" />
@@ -66,36 +68,27 @@
                     </div>
 
                     <!-- For future use... also a password.
-                    <li>
+                    <div>
                         <label for="email">Email: </label>
                         <input id="email" name="email" type ="email" />
-                    </li>
-                    <li>
+                    </div>
+                    <div>
                         <label for="password">Password: </label>
                         <input id:"password" name="password" type="password" />
-                    </li>
+                    </div>
                     -->
-                </ul>
             </fieldset>
-            <p>Disclaimer: below is just for fun, we are not accepting any donated souls.</p>
+            <p>Disclaimer: <em>Below is just for fun, we are not accepting any donated souls.</em></p>
             <fieldset>
                 <legend>Like & Subscribe</legend>
-                <ol>
-                    <li class="form-check">
+                    <div class="form-check">
                         <label for="like">Like: </label>
                         <input id="like" value="like" type="checkbox" name="subs"/>
-                    </li>
-                    <li class="form-check">
+                    </div>
+                    <div class="form-check">
                         <label for="donate">Donate your soul: </label>
                         <input id="donate" value="donate" type="checkbox" name="subs"/>
-                    </li>
-                    <!--
-                    <li>
-                        <label for="spam">Subscribe to Spam: </label>
-                        <input id="spam" value="spam" type="checkbox" name="subs"/>
-                    </li>
-                    -->
-                </ol>
+                    </div>
                 <button id='bSubmit' type='submit'class="btn btn-outline-success">Submit</button>
                 <button id='bReset' type='reset' class="btn btn-outline-secondary">Reset to default</button>
             </fieldset>

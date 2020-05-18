@@ -43,6 +43,8 @@
     </header>
     <main>
         <section class="jumbotron">
+            <p class="display-4">Welcome!</p>
+            <hr class="my-4">
             <div class="ruleOfThree">
                <a href="./html/UserCreation.html"><button type="button" class="btn btn-secondary">Create a User</button></a>
                <a href="html/AllUsers.html"><button type="button" class="btn btn-secondary">See who is using Game Time Log</button></a>
@@ -50,7 +52,7 @@
             </div>
         </section>
         <br><br><br>
-        <section>
+        <section class="container" id="closeAppSection">
             <h2>App shutdown</h2>
             <p>The button will stop the jar running by triggering the Spring shutdown sequence, so the program will reach the end of the main method and finish with exit code 0.</p>
             <p>Once this is triggered, this web interface will be inaccessible until you restart the app.</p>

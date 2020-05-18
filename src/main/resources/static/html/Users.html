@@ -42,13 +42,14 @@
     <br>
  </header>
  <main>
-    <section id="ToCreateAUser">
+    <section id="ToCreateAUser" class="jumbotron">
         <div id="Intro">
-            <p>Welcome!</p>
-            <p>If you don't have a user yet, create one <a href="./UserCreation.html">here</a></p>
+            <p class="display-4">Welcome!</p>
+            <hr class="my-4">
+            <p>If you don't have a user yet, create one <a href="./UserCreation.html">here</a>.</p>
         </div>
     </section>
-     <section id="readYourUser">
+     <section id="readYourUser" class="container">
         <form id="UserForm" method="GET" action="Users.html">
             <fieldset>
                 <legend>See Your User Details</legend>
@@ -64,7 +65,7 @@
         <div id="readYourUserResponse"></div>
      </section>
 
-     <section id="updateYourUser">
+     <section id="updateYourUser" class="container">
          <form id="UpdateUserForm" method="GET" action="Users.html">
              <fieldset>
                  <legend>Manage your User's Time</legend>
@@ -113,7 +114,7 @@
 
      </section>
         <!--Warning!-->
-     <section id="deleteUserSection">
+     <section id="deleteUserSection" class="container">
          <h4>Warning! </h4>
          <p>Deleting your user will remove all your game sessions.</p>
         <form id="DeleteForm" method="POST" action="Users.html">
@@ -127,7 +128,7 @@
         <div id="deleteUserResponse"></div>
      </section>
     <br>
-     <section>
+     <section class="container">
          <a href="./AllGameSessions.html"><button type="button" class="btn btn-secondary">See recent Game Sessions</button></a><!-- recently, All game sessions -->
          <a href="./AllUsers.html"><button type="button" class="btn btn-secondary">See who else is using GameTimeLog!</button></a>
      </section>
