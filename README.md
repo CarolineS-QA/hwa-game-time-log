@@ -140,7 +140,7 @@ The easiest way to run all my existing tests is to right click on `test/java/com
 #### Unit Tests 
 JUnit is used for unit tests. A unit test will test individual methods within a class for functionality. Below is a simple Unit Test for my UserDTO class:
 
-![Run All Tests](https://imgur.com/a/otUrQYr)
+![Run All Tests](https://i.imgur.com/0YNyoqs.png)
 
 ```
     @Before
@@ -158,8 +158,9 @@ JUnit is used for unit tests. A unit test will test individual methods within a 
 ```
 
 In IntelliJ, as you write tests annotated with @Test, it gives you the option to run tests in a class, or individual Tests. Just look for the green arrows in the margins.
-![Run All Unit Tests in a class](https://imgur.com/a/Natgyli)
-![Run a specific Unit Test](https://imgur.com/a/y0laJO8)
+
+![Run All Unit Tests in a class](https://i.imgur.com/B6wd2Pu.png)
+![Run a specific Unit Test](https://i.imgur.com/dbfsorJ.png)
 
 #### Integration Tests 
 Mockito is used for intergration testing, but can also be applied to certain unit tests. It tests how different classes interact with each other. By 'mocking' the functions that a method/class relies on we can see how the code we are testing works by assuming the parts it relies on work too.
@@ -181,8 +182,9 @@ Mockito is used for intergration testing, but can also be applied to certain uni
     }
 ```
 In IntelliJ, as you write tests annotated with @Test, it gives you the option to run tests in a class, or individual Tests. Just look for the green arrows in the margins.
-![Run all integration Tests](https://imgur.com/a/5gRFeKG)
-![Run a single integration Test](https://imgur.com/a/HuVNXGA)
+
+![Run all integration Tests](https://i.imgur.com/WrgkrWh.png)
+![Run a single integration Test](https://i.imgur.com/pljXWW1.png)
 
 #### Other tests (static analysis)
 Sonarqube is used for static analysis. I used it to see how well my code conformed to an industry standard, the amount of coverage for my tests, and also highlighting bugs and security warnings.
@@ -190,7 +192,7 @@ Sonarqube is used for static analysis. I used it to see how well my code conform
 ```
 mvn clean package sonar:sonar -Dsonar.host.url=http://YourVMForSonarQubeIP:PORT/ -Dsonar.login.admin=admin -Dsonar.password=admin
 ```
-![SonarQube example](https://imgur.com/a/BByO6im)
+![SonarQube example](https://i.imgur.com/f7agBSC.png)
 
 **[Back to top](#table-of-contents)**
 ## Installation
@@ -207,9 +209,12 @@ How to get a development environment running:
 * There should be an option to `run` the application
 * When the application is running, you can open your browser to `localhost:PORT` or test the API calls in postman.
 
-![Postman createUser](https://imgur.com/a/nK5phdH)
+Example of getting some data out of the system or using it for a little demo:
 
-Example of getting some data out of the system or using it for a little demo
+![Postman createUser](https://i.imgur.com/FKdR2Rf.png)
+![Development web interface](https://i.imgur.com/vZhjC1V.png)
+
+Remember you can `Ctrl + Shift + I` to inspect and reach the developer's console.
 
 **[Back to top](#table-of-contents)**
 
