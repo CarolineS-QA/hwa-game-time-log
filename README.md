@@ -56,7 +56,8 @@ Current release: v0.2.0 - in development
 
 For test reports please see the `docs` folder.
 
-[![Build Status](http://localhost:8080/hwa-gtl-sonar-nexus/badge/icon)](http://localhost:8080/hwa-gtl-sonar-nexus/http://your-server:12345/job/badge/icon/)
+Trainer's Nexus&Sonar (master) [![Build Status](http://localhost:8080/buildStatus/icon?job=hwa-gtl-sonar-nexus)](http://localhost:8080/job/hwa-gtl-sonar-nexus/)
+My Sonar (dev) [![Build Status](http://localhost:8080/buildStatus/icon?job=hwa-gtl-sonar)](http://localhost:8080/job/hwa-gtl-sonar/)
 
 Not currently built successfully on CI Pipeline.
 
