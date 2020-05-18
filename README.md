@@ -77,12 +77,17 @@ One of the following:
 2. the IP and login details for my GCP instance,
 3. or your own GCP instance with SQL set up.
 
-You can use the command line to run the program but git & git bash are nice to have.
+You can use the command line to run the jar file program but git & git bash are nice to have.
+
+For the front end it's preferred that you use a Chrome browser.
 ```
 **To Develop**
 
+When you open the project in an IDE to develop, the pom.xml file should allow your IDE to automatically download the required dependencies (libraries).
+
 ```
 The main IDE that I used for this project was IntelliJ Ultimate
+Postman was used to test my API calls before writing them in JavaScript
 In addition I used Visual Studio Code for the front-end.
 As part of the CI pipeline for this project I used Jenkins.
 ```
@@ -95,6 +100,8 @@ Git & Git Bash [here](https://git-scm.com/downloads),
 IntelliJ Ultimate [here](https://www.jetbrains.com/idea/download/#section=windows),
 Visual Studio Code [here](https://code.visualstudio.com/Download),
 Jenkins [here](https://jenkins.io/download/)
+Postman [here](https://www.postman.com/downloads/)
+Google Chrome [here](https://www.google.com/chrome/)
 
 ### Getting the Source
 
@@ -118,7 +125,7 @@ How to build my project:
 
 ``` mvn clean package ```
 
-``` java -jar target/CarolineStrasenburgh-SoftwareMarch16-0.1.0-SNAPSHOT-jar-with-dependencies.jar ```
+``` java -jar target/CarolineStrasenburgh-SoftwareMarch16-HWA-GTL.jar ```
 
 You can double check the file name (you want the jar-with-dependencies) with ``` ls target/ ```
 
@@ -126,59 +133,88 @@ Note: You will need a GCP instance or mySQL on your machine set up to connect to
 
 ### Running the tests
 
+The easiest way to run all my existing tests is to right click on `test/java/com.qa.hwq` in your IDE and select `Run tests in 'com.qa.hwa'` or `Run tests in 'com.qa.hwa' with Coverage`
+
+
 #### Unit Tests 
-JUnit is used for unit tests. A unit test will test individual methods within a class for functionality.
+JUnit is used for unit tests. A unit test will test individual methods within a class for functionality. Below is a simple Unit Test for my UserDTO class:
+
+![Run All Tests](https://imgur.com/a/otUrQYr)
 
 ```
-Give an example of why and how to run them
+    @Before
+    public void SetUp()
+    {
+        sessionDTOs = new ArrayList<>();
+        zeroDuration = Duration.ofDays(0);
+        userWithId = new UserDTO(1L, "testUser", zeroDuration, zeroDuration, zeroDuration, sessionDTOs);
+    }
+
+    @Test
+    public void notEqualsWithNull() {
+        assertNotEquals(null, userWithId);
+    }
 ```
+
+In IntelliJ, as you write tests annotated with @Test, it gives you the option to run tests in a class, or individual Tests. Just look for the green arrows in the margins.
+![Run All Unit Tests in a class](https://imgur.com/a/Natgyli)
+![Run a specific Unit Test](https://imgur.com/a/y0laJO8)
 
 #### Integration Tests 
-Mockito is used for intergration testing. It tests how different classes interact with each other. By 'mocking' the functions that a method/class relies on we can see how the code we are testing works by assuming the parts it relies on work too.
+Mockito is used for intergration testing, but can also be applied to certain unit tests. It tests how different classes interact with each other. By 'mocking' the functions that a method/class relies on we can see how the code we are testing works by assuming the parts it relies on work too.
 
 ```
-Give an example of why and how to run them
+//Mockito Unit Test
+    @Test
+    public void readAllSessionsTest() {
+        when(repo.findAll()).thenReturn(gameSessionList);
+        when(this.mapper.map(testSessionWithId, GameSessionDTO.class)).thenReturn(sessionDTO);
+        assertEquals(this.service.readAllSessions(), gameSessionDTOList);
+        verify(repo, times(1)).findAll();
+    }
+
+//Integration Test
+@Test
+    public void deleteGameSessionTest(){
+        assertThat(this.service.deleteGameSession(this.testSessionWithId.getSessionId())).isFalse();
+    }
 ```
+In IntelliJ, as you write tests annotated with @Test, it gives you the option to run tests in a class, or individual Tests. Just look for the green arrows in the margins.
+![Run all integration Tests](https://imgur.com/a/5gRFeKG)
+![Run a single integration Test](https://imgur.com/a/HuVNXGA)
 
 #### Other tests (static analysis)
 Sonarqube is used for static analysis. I used it to see how well my code conformed to an industry standard, the amount of coverage for my tests, and also highlighting bugs and security warnings.
 
 ```
-Give an example of why and how to run them
+mvn clean package sonar:sonar -Dsonar.host.url=http://YourVMForSonarQubeIP:PORT/ -Dsonar.login.admin=admin -Dsonar.password=admin
 ```
+![SonarQube example](https://imgur.com/a/BByO6im)
 
 **[Back to top](#table-of-contents)**
 ## Installation
 
 Installing Demo
 
-A step by step series of examples that tell you how to get a development env running
+How to get a development environment running:
 
-Say what the step will be
+* Clone the repo to your machine.
+* Open as an existing project in the IDE of your choice
+* You'll probably want to check the **application.properties** file in `src/main/resources`
+* You can change the database connection details and port the web app is hosted on here
+* Find the `App` file in `src/main/java/com.qa.hwa`
+* There should be an option to `run` the application
+* When the application is running, you can open your browser to `localhost:PORT` or test the API calls in postman.
 
-```
-Give the example
-```
+![Postman createUser](https://imgur.com/a/nK5phdH)
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+Example of getting some data out of the system or using it for a little demo
 
 **[Back to top](#table-of-contents)**
 
 ## Usage
 
-Instructions for using your project. Ways to run the program, how to include it in another project, etc.
-
-```
-Examples should be included
-```
-
-If your project provides an API, either provide details for usage in this document or link to the appropriate API reference documents
+This project is a demo for using the Spring library & API calls.
 
 **[Back to top](#table-of-contents)**
 
