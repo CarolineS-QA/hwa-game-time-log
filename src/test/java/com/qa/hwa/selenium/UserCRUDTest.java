@@ -46,7 +46,7 @@ public class UserCRUDTest {
         test = report.startTest("Verifying Navigation to Create User Page");
         driver.manage().window().maximize();
         test.log(LogStatus.INFO, "Started chrome browser and made it fullscreen");
-        driver.get("http://localhost:8181");
+        driver.get("http://localhost:8181/");
         test.log(LogStatus.INFO, "Navigating to the application web interface");
         WebElement createUserLink = driver.findElement(By.id("userCreation"));
         createUserLink.click();
