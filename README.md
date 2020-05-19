@@ -50,17 +50,15 @@ Please see the `docs` folder for the other documentation that is not linked in t
 **[Back to top](#table-of-contents)**
 
 ## Project Status 
-Current release: v0.2.0 - in development
+Current release: v0.2.1 - in development
 
 **Test Coverage:** For src/main/java: 97% // Sonarqube: 0% // Overall: 98%%
 
 For test reports please see the `docs` folder.
 
-Jenkins Status (CI Pipeline):
+**Jenkins Status (CI Pipeline):**
 
-Trainer's Nexus&Sonar (master): [![Build Status](http://localhost:8080/buildStatus/icon?job=hwa-gtl-sonar-nexus)](http://localhost:8080/job/hwa-gtl-sonar-nexus/)
-
-My Sonar (dev): [![Build Status](http://localhost:8080/buildStatus/icon?job=hwa-gtl-sonar)](http://localhost:8080/job/hwa-gtl-sonar/)
+Trainer's Nexus&Sonar (master): [![Build Status](http://localhost:8080/buildStatus/icon?job=hwa-gtl-sonar-nexus)](http://localhost:8080/job/hwa-gtl-sonar-nexus/) // My Sonar (dev): [![Build Status](http://localhost:8080/buildStatus/icon?job=hwa-gtl-sonar)](http://localhost:8080/job/hwa-gtl-sonar/)
 
 
 
@@ -133,7 +131,7 @@ How to build my project:
 
 You can double check the file name (you want the jar-with-dependencies) with ``` ls target/ ```
 
-Note: You will need a GCP instance or mySQL on your machine set up to connect to, and configured before running the above commands. When you execute the jar the program will run, which will launch the Spring boot application. You can then navigate to `localhost:8181` to reach the home page of the web interface. The app will run until you trigger the `/shutdown` API call.
+Note: You will need a GCP instance or mySQL on your machine set up to connect to, and configured before running the above commands. When you execute the jar the program will run, which will launch the Spring boot application. You can then navigate to `localhost:8181` to reach the home page of the web interface. The app will run until you trigger the `/shutdown` API call (button on the home page).
 
 ### Running the tests
 
