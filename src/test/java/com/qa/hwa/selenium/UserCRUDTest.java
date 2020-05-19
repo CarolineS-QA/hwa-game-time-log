@@ -33,14 +33,12 @@ public class UserCRUDTest {
         report.loadConfig(new File(System.getProperty("user.dir") + "\\extent-report.xml"));
     }
 
-    @Ignore
     @BeforeMethod
     public void setUp(){
         //System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
         driver = new ChromeDriver();
     }
 
-    @Ignore
     @Test
     public void CreateUserPageTest() throws InterruptedException, IOException {
         test = report.startTest("Verifying Navigation to Create User Page");
@@ -55,7 +53,7 @@ public class UserCRUDTest {
         WebElement pageHeader = driver.findElement(By.id("pageHeader"));
         assertEquals(pageHeader.getText(), "GameTimeLog - Create a User");
         File userCreationPic = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(userCreationPic, new File(System.getProperty("user.dir") + "/test-output/userCreationPgae.jpg"));
+        FileUtils.copyFile(userCreationPic, new File(System.getProperty("user.dir") + "/test-output/userCreationPage.jpg"));
         test.log(LogStatus.PASS, "'GameTimeLog - Create a User' is shown in the header", "<img src=userCreationPage.jpg>");
         sleep(2000);
     }
