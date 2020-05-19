@@ -8,6 +8,7 @@ import org.apache.commons.io.FileUtils;
 import org.junit.Ignore;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.springframework.boot.SpringApplication;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
@@ -21,7 +22,6 @@ public class UserCRUDTest {
     WebDriver driver;
     ExtentReports report;
     ExtentTest test;
-    App app;
 
     @BeforeTest
     public void startReport(){
@@ -37,6 +37,7 @@ public class UserCRUDTest {
 
     @BeforeMethod
     public void setUp(){
+        SpringApplication.run(App.class);
         driver = new ChromeDriver();
     }
 
@@ -45,7 +46,8 @@ public class UserCRUDTest {
         test = report.startTest("Verifying Navigation to Create User Page");
         driver.manage().window().maximize();
         test.log(LogStatus.INFO, "Started chrome browser and made it fullscreen");
-        driver.get("http://localhost:8181/");
+        sleep(5000);
+        driver.get("http://localhost:8180/");
         test.log(LogStatus.INFO, "Navigating to the application web interface");
         File webAppPic = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(webAppPic, new File(System.getProperty("user.dir") + "/test-output/webAppHome.jpg"));
