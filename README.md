@@ -301,6 +301,11 @@ We use [SemVer](http://semver.org/) for versioning. For a list of available vers
 
 ## Further Reading
 
+Spring:
+- [https://spring.io/guides/gs/accessing-data-mysql/](https://spring.io/guides/gs/accessing-data-mysql/)
+- [https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-documentation](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-documentation)
+- [https://vladmihalcea.com/jpa-hibernate-synchronize-bidirectional-entity-associations/](https://vladmihalcea.com/jpa-hibernate-synchronize-bidirectional-entity-associations/)
+
 **[Back to top](#table-of-contents)**
 ## Contributing
 
@@ -332,7 +337,7 @@ for his help with Spring during the project.
 for his initial introduction of Spring and Selenium testing.
 * Nick [[nickstewarttds](https://github.com/nickrstewarttds)]
 as my main trainer and moral support.
-* Embedded Artistry [[embeddedartistry](https://github.com/embeddedartistry)]for their documentation templates [embedded-resources/docs](https://github.com/embeddedartistry/embedded-resources/tree/master/docs)
+* Embedded Artistry [[embeddedartistry](https://github.com/embeddedartistry)] for their documentation templates [embedded-resources/docs](https://github.com/embeddedartistry/embedded-resources/tree/master/docs)
 
 
 **[Back to top](#table-of-contents)**
