@@ -1,9 +1,7 @@
 package com.qa.hwa.rest;
 
 import com.qa.hwa.domain.GameSession;
-import com.qa.hwa.domain.User;
 import com.qa.hwa.dto.GameSessionDTO;
-import com.qa.hwa.dto.UserDTO;
 import com.qa.hwa.service.GameSessionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

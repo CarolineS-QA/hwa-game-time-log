@@ -1,7 +1,5 @@
 package com.qa.hwa.dto;
 
-import com.qa.hwa.domain.GameSession;
-
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;

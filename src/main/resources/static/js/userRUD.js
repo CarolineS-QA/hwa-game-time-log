@@ -139,9 +139,10 @@ container.setAttribute('class', 'container')
 
 function buildUserDisplay(placeholder, user){
         const card = document.createElement('div');
-        card.setAttribute('user', 'card');
+        card.setAttribute('class', 'card');
 
         const h4 = document.createElement('h4');
+        h4.setAttribute('class', 'card-title')
         h4.textContent = user.username;
 
         const userIdText = document.createElement('p');

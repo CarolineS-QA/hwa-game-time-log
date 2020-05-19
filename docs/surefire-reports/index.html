@@ -1,0 +1,3424 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
+              <span class="suite-name border-skipped">Surefire suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Surefire_suite" class="navigator-link ">
+                    <span>[unset file name]</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Surefire_suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Surefire_suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Surefire_suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Surefire_suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Surefire_suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Surefire_suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">151 methods,  21 skipped,  130 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods skipped suite-Surefire_suite"> (hide)</a> <!-- hide-methods skipped suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods skipped suite-Surefire_suite"> (show)</a> <!-- show-methods skipped suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Surefire_suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.GameSessionDTOUnitTest" class="method navigator-link" hash-for-method="checkEqualityBetweenDifferentObjectsNullUsername">checkEqualityBetweenDifferentObjectsNullUsername</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.GameSessionServiceIntegrationTest" class="method navigator-link" hash-for-method="createGameSessionTest">createGameSessionTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.rest.GameSessionControllerIntegrationTest" class="method navigator-link" hash-for-method="createSessionsTest">createSessionsTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.UserServiceIntegrationTest" class="method navigator-link" hash-for-method="createUserTest">createUserTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.rest.UserControllerIntegrationTest" class="method navigator-link" hash-for-method="createUsersTest">createUsersTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.rest.UserControllerIntegrationTest" class="method navigator-link" hash-for-method="deleteUserTest">deleteUserTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.UserServiceIntegrationTest" class="method navigator-link" hash-for-method="findUserByIdTest">findUserByIdTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.GameSessionServiceIntegrationTest" class="method navigator-link" hash-for-method="findUserByUsernameTest">findUserByUsernameTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.rest.GameSessionControllerIntegrationTest" class="method navigator-link" hash-for-method="getAUsersGameSessionsTest">getAUsersGameSessionsTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.rest.GameSessionControllerIntegrationTest" class="method navigator-link" hash-for-method="getAllGameSessionsTest">getAllGameSessionsTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.rest.UserControllerIntegrationTest" class="method navigator-link" hash-for-method="getAllUsersTest">getAllUsersTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.rest.UserControllerIntegrationTest" class="method navigator-link" hash-for-method="getUserByIdTest">getUserByIdTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.GameSessionServiceUnitTest" class="method navigator-link" hash-for-method="readAUsersGameSessionsTest">readAUsersGameSessionsTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.GameSessionServiceIntegrationTest" class="method navigator-link" hash-for-method="readAUsersGameSessionsTest">readAUsersGameSessionsTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.GameSessionServiceIntegrationTest" class="method navigator-link" hash-for-method="readAllGameSessionsTest">readAllGameSessionsTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.UserServiceIntegrationTest" class="method navigator-link" hash-for-method="readAllUsersTest">readAllUsersTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.GameSessionServiceIntegrationTest" class="method navigator-link" hash-for-method="updateGameSessionTest">updateGameSessionTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.rest.GameSessionControllerIntegrationTest" class="method navigator-link" hash-for-method="updateGameSessionTest">updateGameSessionTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.rest.UserControllerIntegrationTest" class="method navigator-link" hash-for-method="updateUserTest">updateUserTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.UserServiceIntegrationTest" class="method navigator-link" hash-for-method="updateUserTest">updateUserTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.GameSessionDTOUnitTest" class="method navigator-link" hash-for-method="usernameNullButOtherNameNotNull">usernameNullButOtherNameNotNull</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Surefire_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods passed suite-Surefire_suite"> (hide)</a> <!-- hide-methods passed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Surefire_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.GameSessionDTOUnitTest" class="method navigator-link" hash-for-method="checkEquality">checkEquality</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.GameSessionUnitTest" class="method navigator-link" hash-for-method="checkEquality">checkEquality</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.UserUnitTest" class="method navigator-link" hash-for-method="checkEquality">checkEquality</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.UserDTOUnitTest" class="method navigator-link" hash-for-method="checkEquality">checkEquality</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.GameSessionDTOUnitTest" class="method navigator-link" hash-for-method="checkEqualityBetweenDifferentObjects">checkEqualityBetweenDifferentObjects</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.UserUnitTest" class="method navigator-link" hash-for-method="checkEqualityBetweenDifferentObjects">checkEqualityBetweenDifferentObjects</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.UserDTOUnitTest" class="method navigator-link" hash-for-method="checkEqualityBetweenDifferentObjects">checkEqualityBetweenDifferentObjects</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.GameSessionUnitTest" class="method navigator-link" hash-for-method="checkEqualityBetweenDifferentObjects">checkEqualityBetweenDifferentObjects</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.UserUnitTest" class="method navigator-link" hash-for-method="checkEqualityBetweenDifferentObjectsNullUsername">checkEqualityBetweenDifferentObjectsNullUsername</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.GameSessionUnitTest" class="method navigator-link" hash-for-method="checkEqualityBetweenDifferentObjectsNullUsername">checkEqualityBetweenDifferentObjectsNullUsername</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.UserDTOUnitTest" class="method navigator-link" hash-for-method="checkEqualityBetweenDifferentObjectsNullUsername">checkEqualityBetweenDifferentObjectsNullUsername</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.UserDTOUnitTest" class="method navigator-link" hash-for-method="constructorUserWithId">constructorUserWithId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.UserUnitTest" class="method navigator-link" hash-for-method="constructorUserWithId">constructorUserWithId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.GameSessionDTOUnitTest" class="method navigator-link" hash-for-method="constructorUserWithId">constructorUserWithId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.GameSessionUnitTest" class="method navigator-link" hash-for-method="constructorUserWithId">constructorUserWithId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.UserDTOUnitTest" class="method navigator-link" hash-for-method="constructorWithoutId">constructorWithoutId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.GameSessionDTOUnitTest" class="method navigator-link" hash-for-method="constructorWithoutId">constructorWithoutId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.GameSessionUnitTest" class="method navigator-link" hash-for-method="constructorWithoutId">constructorWithoutId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.UserUnitTest" class="method navigator-link" hash-for-method="constructorWithoutId">constructorWithoutId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.rest.GameSessionControllerUnitTest" class="method navigator-link" hash-for-method="createGameSessionTest">createGameSessionTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.GameSessionServiceUnitTest" class="method navigator-link" hash-for-method="createGameSessionTest">createGameSessionTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.rest.UserControllerUnitTest" class="method navigator-link" hash-for-method="createUserTest">createUserTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.UserServiceUnitTest" class="method navigator-link" hash-for-method="createUserTest">createUserTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.rest.GameSessionControllerIntegrationTest" class="method navigator-link" hash-for-method="deleteGameSessionTest">deleteGameSessionTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.GameSessionServiceIntegrationTest" class="method navigator-link" hash-for-method="deleteGameSessionTest">deleteGameSessionTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.GameSessionServiceUnitTest" class="method navigator-link" hash-for-method="deleteSessionByExistingId">deleteSessionByExistingId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.GameSessionServiceUnitTest" class="method navigator-link" hash-for-method="deleteSessionByNonExistingId">deleteSessionByNonExistingId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.UserServiceUnitTest" class="method navigator-link" hash-for-method="deleteUserByExistingId">deleteUserByExistingId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.UserServiceUnitTest" class="method navigator-link" hash-for-method="deleteUserByNonExistingId">deleteUserByNonExistingId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.UserServiceIntegrationTest" class="method navigator-link" hash-for-method="deleteUserTest">deleteUserTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.rest.UserControllerUnitTest" class="method navigator-link" hash-for-method="deleteUserTestFalse">deleteUserTestFalse</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.rest.GameSessionControllerUnitTest" class="method navigator-link" hash-for-method="deleteUserTestFalse">deleteUserTestFalse</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.rest.GameSessionControllerUnitTest" class="method navigator-link" hash-for-method="deleteUserTestTrue">deleteUserTestTrue</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.rest.UserControllerUnitTest" class="method navigator-link" hash-for-method="deleteUserTestTrue">deleteUserTestTrue</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.UserDTOUnitTest" class="method navigator-link" hash-for-method="emptyConstructor">emptyConstructor</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.GameSessionUnitTest" class="method navigator-link" hash-for-method="emptyConstructor">emptyConstructor</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.UserUnitTest" class="method navigator-link" hash-for-method="emptyConstructor">emptyConstructor</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.GameSessionDTOUnitTest" class="method navigator-link" hash-for-method="emptyConstructor">emptyConstructor</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.UserServiceUnitTest" class="method navigator-link" hash-for-method="findUserByIdTest">findUserByIdTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.rest.GameSessionControllerUnitTest" class="method navigator-link" hash-for-method="getAUsersGameSessionsTest">getAUsersGameSessionsTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.rest.GameSessionControllerUnitTest" class="method navigator-link" hash-for-method="getAllGameSessionsTest">getAllGameSessionsTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.rest.UserControllerUnitTest" class="method navigator-link" hash-for-method="getAllUsersTest">getAllUsersTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.rest.UserControllerUnitTest" class="method navigator-link" hash-for-method="getUserByIdTest">getUserByIdTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.rest.UserControllerUnitTest" class="method navigator-link" hash-for-method="getUserByUsernameTest">getUserByUsernameTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.UserDTOUnitTest" class="method navigator-link" hash-for-method="gettersAndSettersTest">gettersAndSettersTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.GameSessionUnitTest" class="method navigator-link" hash-for-method="gettersAndSettersTest">gettersAndSettersTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.UserUnitTest" class="method navigator-link" hash-for-method="gettersAndSettersTest">gettersAndSettersTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.GameSessionDTOUnitTest" class="method navigator-link" hash-for-method="gettersAndSettersTest">gettersAndSettersTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.UserUnitTest" class="method navigator-link" hash-for-method="hashCodeTest">hashCodeTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.GameSessionDTOUnitTest" class="method navigator-link" hash-for-method="hashCodeTest">hashCodeTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.GameSessionUnitTest" class="method navigator-link" hash-for-method="hashCodeTest">hashCodeTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.UserDTOUnitTest" class="method navigator-link" hash-for-method="hashCodeTest">hashCodeTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.GameSessionUnitTest" class="method navigator-link" hash-for-method="hashCodeTestWithNull">hashCodeTestWithNull</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.GameSessionDTOUnitTest" class="method navigator-link" hash-for-method="hashCodeTestWithNull">hashCodeTestWithNull</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.UserDTOUnitTest" class="method navigator-link" hash-for-method="hashCodeTestWithNull">hashCodeTestWithNull</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.UserUnitTest" class="method navigator-link" hash-for-method="hashCodeTestWithNull">hashCodeTestWithNull</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.UserDTOUnitTest" class="method navigator-link" hash-for-method="notEqualsWithDifferentObject">notEqualsWithDifferentObject</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.GameSessionUnitTest" class="method navigator-link" hash-for-method="notEqualsWithDifferentObject">notEqualsWithDifferentObject</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.GameSessionDTOUnitTest" class="method navigator-link" hash-for-method="notEqualsWithDifferentObject">notEqualsWithDifferentObject</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.UserUnitTest" class="method navigator-link" hash-for-method="notEqualsWithDifferentObject">notEqualsWithDifferentObject</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.GameSessionDTOUnitTest" class="method navigator-link" hash-for-method="notEqualsWithNull">notEqualsWithNull</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.UserUnitTest" class="method navigator-link" hash-for-method="notEqualsWithNull">notEqualsWithNull</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.UserDTOUnitTest" class="method navigator-link" hash-for-method="notEqualsWithNull">notEqualsWithNull</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.GameSessionUnitTest" class="method navigator-link" hash-for-method="notEqualsWithNull">notEqualsWithNull</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.UserUnitTest" class="method navigator-link" hash-for-method="nullFreeTime">nullFreeTime</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.UserDTOUnitTest" class="method navigator-link" hash-for-method="nullFreeTime">nullFreeTime</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.UserDTOUnitTest" class="method navigator-link" hash-for-method="nullFreeTimeOnBoth">nullFreeTimeOnBoth</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.UserUnitTest" class="method navigator-link" hash-for-method="nullFreeTimeOnBoth">nullFreeTimeOnBoth</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.GameSessionUnitTest" class="method navigator-link" hash-for-method="nullGameName">nullGameName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.GameSessionDTOUnitTest" class="method navigator-link" hash-for-method="nullGameName">nullGameName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.GameSessionUnitTest" class="method navigator-link" hash-for-method="nullGameNameOnBoth">nullGameNameOnBoth</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.GameSessionDTOUnitTest" class="method navigator-link" hash-for-method="nullGameNameOnBoth">nullGameNameOnBoth</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.UserUnitTest" class="method navigator-link" hash-for-method="nullId">nullId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.UserDTOUnitTest" class="method navigator-link" hash-for-method="nullId">nullId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.GameSessionDTOUnitTest" class="method navigator-link" hash-for-method="nullId">nullId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.GameSessionUnitTest" class="method navigator-link" hash-for-method="nullId">nullId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.GameSessionDTOUnitTest" class="method navigator-link" hash-for-method="nullIdOnBoth">nullIdOnBoth</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.GameSessionUnitTest" class="method navigator-link" hash-for-method="nullIdOnBoth">nullIdOnBoth</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.UserDTOUnitTest" class="method navigator-link" hash-for-method="nullIdOnBoth">nullIdOnBoth</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.UserUnitTest" class="method navigator-link" hash-for-method="nullIdOnBoth">nullIdOnBoth</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.GameSessionUnitTest" class="method navigator-link" hash-for-method="nullTimeOfSession">nullTimeOfSession</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.GameSessionDTOUnitTest" class="method navigator-link" hash-for-method="nullTimeOfSession">nullTimeOfSession</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.GameSessionUnitTest" class="method navigator-link" hash-for-method="nullTimeOfSessionBoth">nullTimeOfSessionBoth</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.GameSessionDTOUnitTest" class="method navigator-link" hash-for-method="nullTimeOfSessionBoth">nullTimeOfSessionBoth</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.GameSessionUnitTest" class="method navigator-link" hash-for-method="nullTimePlayed">nullTimePlayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.GameSessionDTOUnitTest" class="method navigator-link" hash-for-method="nullTimePlayed">nullTimePlayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.GameSessionUnitTest" class="method navigator-link" hash-for-method="nullTimePlayedOnBoth">nullTimePlayedOnBoth</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.GameSessionDTOUnitTest" class="method navigator-link" hash-for-method="nullTimePlayedOnBoth">nullTimePlayedOnBoth</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.UserUnitTest" class="method navigator-link" hash-for-method="nullTimeRemaining">nullTimeRemaining</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.UserDTOUnitTest" class="method navigator-link" hash-for-method="nullTimeRemaining">nullTimeRemaining</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.UserUnitTest" class="method navigator-link" hash-for-method="nullTimeRemainingOnBoth">nullTimeRemainingOnBoth</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.UserDTOUnitTest" class="method navigator-link" hash-for-method="nullTimeRemainingOnBoth">nullTimeRemainingOnBoth</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.UserDTOUnitTest" class="method navigator-link" hash-for-method="nullTotalTimePlayed">nullTotalTimePlayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.UserUnitTest" class="method navigator-link" hash-for-method="nullTotalTimePlayed">nullTotalTimePlayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.UserUnitTest" class="method navigator-link" hash-for-method="nullTotalTimePlayedOnBoth">nullTotalTimePlayedOnBoth</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.UserDTOUnitTest" class="method navigator-link" hash-for-method="nullTotalTimePlayedOnBoth">nullTotalTimePlayedOnBoth</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.UserUnitTest" class="method navigator-link" hash-for-method="otherFreeTimeDifferent">otherFreeTimeDifferent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.UserDTOUnitTest" class="method navigator-link" hash-for-method="otherFreeTimeDifferent">otherFreeTimeDifferent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.GameSessionDTOUnitTest" class="method navigator-link" hash-for-method="otherGameNameDifferent">otherGameNameDifferent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.GameSessionUnitTest" class="method navigator-link" hash-for-method="otherGameNameDifferent">otherGameNameDifferent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.GameSessionDTOUnitTest" class="method navigator-link" hash-for-method="otherIdDifferent">otherIdDifferent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.GameSessionUnitTest" class="method navigator-link" hash-for-method="otherIdDifferent">otherIdDifferent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.UserDTOUnitTest" class="method navigator-link" hash-for-method="otherIdDifferent">otherIdDifferent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.UserUnitTest" class="method navigator-link" hash-for-method="otherIdDifferent">otherIdDifferent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.GameSessionDTOUnitTest" class="method navigator-link" hash-for-method="otherTimeOfSessionDifferent">otherTimeOfSessionDifferent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.GameSessionUnitTest" class="method navigator-link" hash-for-method="otherTimeOfSessionDifferent">otherTimeOfSessionDifferent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.GameSessionDTOUnitTest" class="method navigator-link" hash-for-method="otherTimePlayedDifferent">otherTimePlayedDifferent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.GameSessionUnitTest" class="method navigator-link" hash-for-method="otherTimePlayedDifferent">otherTimePlayedDifferent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.UserUnitTest" class="method navigator-link" hash-for-method="otherTimeRemainingDifferent">otherTimeRemainingDifferent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.UserDTOUnitTest" class="method navigator-link" hash-for-method="otherTimeRemainingDifferent">otherTimeRemainingDifferent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.UserDTOUnitTest" class="method navigator-link" hash-for-method="otherTotalTimePlayedDifferent">otherTotalTimePlayedDifferent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.UserUnitTest" class="method navigator-link" hash-for-method="otherTotalTimePlayedDifferent">otherTotalTimePlayedDifferent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.GameSessionServiceUnitTest" class="method navigator-link" hash-for-method="readAllSessionsTest">readAllSessionsTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.UserServiceUnitTest" class="method navigator-link" hash-for-method="readAllUsersTest">readAllUsersTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.GameSessionServiceUnitTest" class="method navigator-link" hash-for-method="readUserByNonExistingUsernameTest">readUserByNonExistingUsernameTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.UserServiceUnitTest" class="method navigator-link" hash-for-method="readUserByNonExistingUsernameTest">readUserByNonExistingUsernameTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.UserServiceUnitTest" class="method navigator-link" hash-for-method="readUserByUsernameTest">readUserByUsernameTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.GameSessionServiceUnitTest" class="method navigator-link" hash-for-method="readUserByUsernameTest">readUserByUsernameTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.AppTest" class="method navigator-link" hash-for-method="shouldAnswerWithTrue">shouldAnswerWithTrue</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.rest.GameSessionControllerUnitTest" class="method navigator-link" hash-for-method="updateGameSessionTest">updateGameSessionTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.GameSessionServiceUnitTest" class="method navigator-link" hash-for-method="updateGameSessionTest">updateGameSessionTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.service.UserServiceUnitTest" class="method navigator-link" hash-for-method="updateUserTest">updateUserTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.rest.UserControllerUnitTest" class="method navigator-link" hash-for-method="updateUserTest">updateUserTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.UserUnitTest" class="method navigator-link" hash-for-method="usernameNotEqual">usernameNotEqual</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.GameSessionDTOUnitTest" class="method navigator-link" hash-for-method="usernameNotEqual">usernameNotEqual</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.UserDTOUnitTest" class="method navigator-link" hash-for-method="usernameNotEqual">usernameNotEqual</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.GameSessionUnitTest" class="method navigator-link" hash-for-method="usernameNotEqual">usernameNotEqual</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.UserUnitTest" class="method navigator-link" hash-for-method="usernameNullButOtherNameNotNull">usernameNullButOtherNameNotNull</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.dto.UserDTOUnitTest" class="method navigator-link" hash-for-method="usernameNullButOtherNameNotNull">usernameNullButOtherNameNotNull</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.qa.hwa.domain.GameSessionUnitTest" class="method navigator-link" hash-for-method="usernameNullButOtherNameNotNull">usernameNullButOtherNameNotNull</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Surefire_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
+          <div class="suite-Surefire_suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.qa.hwa.service.GameSessionServiceUnitTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="readAUsersGameSessionsTest">
+                  </a> <!-- readAUsersGameSessionsTest -->
+                  <span class="method-name">readAUsersGameSessionsTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-skipped -->
+          <div class="suite-Surefire_suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.qa.hwa.dto.GameSessionDTOUnitTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEqualityBetweenDifferentObjectsNullUsername">
+                  </a> <!-- checkEqualityBetweenDifferentObjectsNullUsername -->
+                  <span class="method-name">checkEqualityBetweenDifferentObjectsNullUsername</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="usernameNullButOtherNameNotNull">
+                  </a> <!-- usernameNullButOtherNameNotNull -->
+                  <span class="method-name">usernameNullButOtherNameNotNull</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-skipped -->
+          <div class="suite-Surefire_suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.qa.hwa.rest.GameSessionControllerIntegrationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createSessionsTest">
+                  </a> <!-- createSessionsTest -->
+                  <span class="method-name">createSessionsTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getAUsersGameSessionsTest">
+                  </a> <!-- getAUsersGameSessionsTest -->
+                  <span class="method-name">getAUsersGameSessionsTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getAllGameSessionsTest">
+                  </a> <!-- getAllGameSessionsTest -->
+                  <span class="method-name">getAllGameSessionsTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateGameSessionTest">
+                  </a> <!-- updateGameSessionTest -->
+                  <span class="method-name">updateGameSessionTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-skipped -->
+          <div class="suite-Surefire_suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.qa.hwa.service.GameSessionServiceIntegrationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createGameSessionTest">
+                  </a> <!-- createGameSessionTest -->
+                  <span class="method-name">createGameSessionTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="findUserByUsernameTest">
+                  </a> <!-- findUserByUsernameTest -->
+                  <span class="method-name">findUserByUsernameTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="readAUsersGameSessionsTest">
+                  </a> <!-- readAUsersGameSessionsTest -->
+                  <span class="method-name">readAUsersGameSessionsTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="readAllGameSessionsTest">
+                  </a> <!-- readAllGameSessionsTest -->
+                  <span class="method-name">readAllGameSessionsTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateGameSessionTest">
+                  </a> <!-- updateGameSessionTest -->
+                  <span class="method-name">updateGameSessionTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-skipped -->
+          <div class="suite-Surefire_suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.qa.hwa.rest.UserControllerIntegrationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createUsersTest">
+                  </a> <!-- createUsersTest -->
+                  <span class="method-name">createUsersTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteUserTest">
+                  </a> <!-- deleteUserTest -->
+                  <span class="method-name">deleteUserTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getAllUsersTest">
+                  </a> <!-- getAllUsersTest -->
+                  <span class="method-name">getAllUsersTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getUserByIdTest">
+                  </a> <!-- getUserByIdTest -->
+                  <span class="method-name">getUserByIdTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateUserTest">
+                  </a> <!-- updateUserTest -->
+                  <span class="method-name">updateUserTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-skipped -->
+          <div class="suite-Surefire_suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.qa.hwa.service.UserServiceIntegrationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createUserTest">
+                  </a> <!-- createUserTest -->
+                  <span class="method-name">createUserTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="findUserByIdTest">
+                  </a> <!-- findUserByIdTest -->
+                  <span class="method-name">findUserByIdTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="readAllUsersTest">
+                  </a> <!-- readAllUsersTest -->
+                  <span class="method-name">readAllUsersTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateUserTest">
+                  </a> <!-- updateUserTest -->
+                  <span class="method-name">updateUserTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-skipped -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qa.hwa.service.GameSessionServiceUnitTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createGameSessionTest">
+                  </a> <!-- createGameSessionTest -->
+                  <span class="method-name">createGameSessionTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteSessionByExistingId">
+                  </a> <!-- deleteSessionByExistingId -->
+                  <span class="method-name">deleteSessionByExistingId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteSessionByNonExistingId">
+                  </a> <!-- deleteSessionByNonExistingId -->
+                  <span class="method-name">deleteSessionByNonExistingId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="readAllSessionsTest">
+                  </a> <!-- readAllSessionsTest -->
+                  <span class="method-name">readAllSessionsTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="readUserByNonExistingUsernameTest">
+                  </a> <!-- readUserByNonExistingUsernameTest -->
+                  <span class="method-name">readUserByNonExistingUsernameTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="readUserByUsernameTest">
+                  </a> <!-- readUserByUsernameTest -->
+                  <span class="method-name">readUserByUsernameTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateGameSessionTest">
+                  </a> <!-- updateGameSessionTest -->
+                  <span class="method-name">updateGameSessionTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qa.hwa.domain.GameSessionUnitTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEquality">
+                  </a> <!-- checkEquality -->
+                  <span class="method-name">checkEquality</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEqualityBetweenDifferentObjects">
+                  </a> <!-- checkEqualityBetweenDifferentObjects -->
+                  <span class="method-name">checkEqualityBetweenDifferentObjects</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEqualityBetweenDifferentObjectsNullUsername">
+                  </a> <!-- checkEqualityBetweenDifferentObjectsNullUsername -->
+                  <span class="method-name">checkEqualityBetweenDifferentObjectsNullUsername</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="constructorUserWithId">
+                  </a> <!-- constructorUserWithId -->
+                  <span class="method-name">constructorUserWithId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="constructorWithoutId">
+                  </a> <!-- constructorWithoutId -->
+                  <span class="method-name">constructorWithoutId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="emptyConstructor">
+                  </a> <!-- emptyConstructor -->
+                  <span class="method-name">emptyConstructor</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="gettersAndSettersTest">
+                  </a> <!-- gettersAndSettersTest -->
+                  <span class="method-name">gettersAndSettersTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="hashCodeTest">
+                  </a> <!-- hashCodeTest -->
+                  <span class="method-name">hashCodeTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="hashCodeTestWithNull">
+                  </a> <!-- hashCodeTestWithNull -->
+                  <span class="method-name">hashCodeTestWithNull</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="notEqualsWithDifferentObject">
+                  </a> <!-- notEqualsWithDifferentObject -->
+                  <span class="method-name">notEqualsWithDifferentObject</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="notEqualsWithNull">
+                  </a> <!-- notEqualsWithNull -->
+                  <span class="method-name">notEqualsWithNull</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullGameName">
+                  </a> <!-- nullGameName -->
+                  <span class="method-name">nullGameName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullGameNameOnBoth">
+                  </a> <!-- nullGameNameOnBoth -->
+                  <span class="method-name">nullGameNameOnBoth</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullId">
+                  </a> <!-- nullId -->
+                  <span class="method-name">nullId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullIdOnBoth">
+                  </a> <!-- nullIdOnBoth -->
+                  <span class="method-name">nullIdOnBoth</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullTimeOfSession">
+                  </a> <!-- nullTimeOfSession -->
+                  <span class="method-name">nullTimeOfSession</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullTimeOfSessionBoth">
+                  </a> <!-- nullTimeOfSessionBoth -->
+                  <span class="method-name">nullTimeOfSessionBoth</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullTimePlayed">
+                  </a> <!-- nullTimePlayed -->
+                  <span class="method-name">nullTimePlayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullTimePlayedOnBoth">
+                  </a> <!-- nullTimePlayedOnBoth -->
+                  <span class="method-name">nullTimePlayedOnBoth</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="otherGameNameDifferent">
+                  </a> <!-- otherGameNameDifferent -->
+                  <span class="method-name">otherGameNameDifferent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="otherIdDifferent">
+                  </a> <!-- otherIdDifferent -->
+                  <span class="method-name">otherIdDifferent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="otherTimeOfSessionDifferent">
+                  </a> <!-- otherTimeOfSessionDifferent -->
+                  <span class="method-name">otherTimeOfSessionDifferent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="otherTimePlayedDifferent">
+                  </a> <!-- otherTimePlayedDifferent -->
+                  <span class="method-name">otherTimePlayedDifferent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="usernameNotEqual">
+                  </a> <!-- usernameNotEqual -->
+                  <span class="method-name">usernameNotEqual</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="usernameNullButOtherNameNotNull">
+                  </a> <!-- usernameNullButOtherNameNotNull -->
+                  <span class="method-name">usernameNullButOtherNameNotNull</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qa.hwa.dto.GameSessionDTOUnitTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEquality">
+                  </a> <!-- checkEquality -->
+                  <span class="method-name">checkEquality</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEqualityBetweenDifferentObjects">
+                  </a> <!-- checkEqualityBetweenDifferentObjects -->
+                  <span class="method-name">checkEqualityBetweenDifferentObjects</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="constructorUserWithId">
+                  </a> <!-- constructorUserWithId -->
+                  <span class="method-name">constructorUserWithId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="constructorWithoutId">
+                  </a> <!-- constructorWithoutId -->
+                  <span class="method-name">constructorWithoutId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="emptyConstructor">
+                  </a> <!-- emptyConstructor -->
+                  <span class="method-name">emptyConstructor</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="gettersAndSettersTest">
+                  </a> <!-- gettersAndSettersTest -->
+                  <span class="method-name">gettersAndSettersTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="hashCodeTest">
+                  </a> <!-- hashCodeTest -->
+                  <span class="method-name">hashCodeTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="hashCodeTestWithNull">
+                  </a> <!-- hashCodeTestWithNull -->
+                  <span class="method-name">hashCodeTestWithNull</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="notEqualsWithDifferentObject">
+                  </a> <!-- notEqualsWithDifferentObject -->
+                  <span class="method-name">notEqualsWithDifferentObject</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="notEqualsWithNull">
+                  </a> <!-- notEqualsWithNull -->
+                  <span class="method-name">notEqualsWithNull</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullGameName">
+                  </a> <!-- nullGameName -->
+                  <span class="method-name">nullGameName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullGameNameOnBoth">
+                  </a> <!-- nullGameNameOnBoth -->
+                  <span class="method-name">nullGameNameOnBoth</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullId">
+                  </a> <!-- nullId -->
+                  <span class="method-name">nullId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullIdOnBoth">
+                  </a> <!-- nullIdOnBoth -->
+                  <span class="method-name">nullIdOnBoth</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullTimeOfSession">
+                  </a> <!-- nullTimeOfSession -->
+                  <span class="method-name">nullTimeOfSession</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullTimeOfSessionBoth">
+                  </a> <!-- nullTimeOfSessionBoth -->
+                  <span class="method-name">nullTimeOfSessionBoth</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullTimePlayed">
+                  </a> <!-- nullTimePlayed -->
+                  <span class="method-name">nullTimePlayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullTimePlayedOnBoth">
+                  </a> <!-- nullTimePlayedOnBoth -->
+                  <span class="method-name">nullTimePlayedOnBoth</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="otherGameNameDifferent">
+                  </a> <!-- otherGameNameDifferent -->
+                  <span class="method-name">otherGameNameDifferent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="otherIdDifferent">
+                  </a> <!-- otherIdDifferent -->
+                  <span class="method-name">otherIdDifferent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="otherTimeOfSessionDifferent">
+                  </a> <!-- otherTimeOfSessionDifferent -->
+                  <span class="method-name">otherTimeOfSessionDifferent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="otherTimePlayedDifferent">
+                  </a> <!-- otherTimePlayedDifferent -->
+                  <span class="method-name">otherTimePlayedDifferent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="usernameNotEqual">
+                  </a> <!-- usernameNotEqual -->
+                  <span class="method-name">usernameNotEqual</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qa.hwa.rest.GameSessionControllerUnitTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createGameSessionTest">
+                  </a> <!-- createGameSessionTest -->
+                  <span class="method-name">createGameSessionTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteUserTestFalse">
+                  </a> <!-- deleteUserTestFalse -->
+                  <span class="method-name">deleteUserTestFalse</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteUserTestTrue">
+                  </a> <!-- deleteUserTestTrue -->
+                  <span class="method-name">deleteUserTestTrue</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getAUsersGameSessionsTest">
+                  </a> <!-- getAUsersGameSessionsTest -->
+                  <span class="method-name">getAUsersGameSessionsTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getAllGameSessionsTest">
+                  </a> <!-- getAllGameSessionsTest -->
+                  <span class="method-name">getAllGameSessionsTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateGameSessionTest">
+                  </a> <!-- updateGameSessionTest -->
+                  <span class="method-name">updateGameSessionTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qa.hwa.rest.GameSessionControllerIntegrationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteGameSessionTest">
+                  </a> <!-- deleteGameSessionTest -->
+                  <span class="method-name">deleteGameSessionTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qa.hwa.domain.UserUnitTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEquality">
+                  </a> <!-- checkEquality -->
+                  <span class="method-name">checkEquality</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEqualityBetweenDifferentObjects">
+                  </a> <!-- checkEqualityBetweenDifferentObjects -->
+                  <span class="method-name">checkEqualityBetweenDifferentObjects</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEqualityBetweenDifferentObjectsNullUsername">
+                  </a> <!-- checkEqualityBetweenDifferentObjectsNullUsername -->
+                  <span class="method-name">checkEqualityBetweenDifferentObjectsNullUsername</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="constructorUserWithId">
+                  </a> <!-- constructorUserWithId -->
+                  <span class="method-name">constructorUserWithId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="constructorWithoutId">
+                  </a> <!-- constructorWithoutId -->
+                  <span class="method-name">constructorWithoutId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="emptyConstructor">
+                  </a> <!-- emptyConstructor -->
+                  <span class="method-name">emptyConstructor</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="gettersAndSettersTest">
+                  </a> <!-- gettersAndSettersTest -->
+                  <span class="method-name">gettersAndSettersTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="hashCodeTest">
+                  </a> <!-- hashCodeTest -->
+                  <span class="method-name">hashCodeTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="hashCodeTestWithNull">
+                  </a> <!-- hashCodeTestWithNull -->
+                  <span class="method-name">hashCodeTestWithNull</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="notEqualsWithDifferentObject">
+                  </a> <!-- notEqualsWithDifferentObject -->
+                  <span class="method-name">notEqualsWithDifferentObject</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="notEqualsWithNull">
+                  </a> <!-- notEqualsWithNull -->
+                  <span class="method-name">notEqualsWithNull</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullFreeTime">
+                  </a> <!-- nullFreeTime -->
+                  <span class="method-name">nullFreeTime</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullFreeTimeOnBoth">
+                  </a> <!-- nullFreeTimeOnBoth -->
+                  <span class="method-name">nullFreeTimeOnBoth</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullId">
+                  </a> <!-- nullId -->
+                  <span class="method-name">nullId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullIdOnBoth">
+                  </a> <!-- nullIdOnBoth -->
+                  <span class="method-name">nullIdOnBoth</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullTimeRemaining">
+                  </a> <!-- nullTimeRemaining -->
+                  <span class="method-name">nullTimeRemaining</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullTimeRemainingOnBoth">
+                  </a> <!-- nullTimeRemainingOnBoth -->
+                  <span class="method-name">nullTimeRemainingOnBoth</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullTotalTimePlayed">
+                  </a> <!-- nullTotalTimePlayed -->
+                  <span class="method-name">nullTotalTimePlayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullTotalTimePlayedOnBoth">
+                  </a> <!-- nullTotalTimePlayedOnBoth -->
+                  <span class="method-name">nullTotalTimePlayedOnBoth</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="otherFreeTimeDifferent">
+                  </a> <!-- otherFreeTimeDifferent -->
+                  <span class="method-name">otherFreeTimeDifferent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="otherIdDifferent">
+                  </a> <!-- otherIdDifferent -->
+                  <span class="method-name">otherIdDifferent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="otherTimeRemainingDifferent">
+                  </a> <!-- otherTimeRemainingDifferent -->
+                  <span class="method-name">otherTimeRemainingDifferent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="otherTotalTimePlayedDifferent">
+                  </a> <!-- otherTotalTimePlayedDifferent -->
+                  <span class="method-name">otherTotalTimePlayedDifferent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="usernameNotEqual">
+                  </a> <!-- usernameNotEqual -->
+                  <span class="method-name">usernameNotEqual</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="usernameNullButOtherNameNotNull">
+                  </a> <!-- usernameNullButOtherNameNotNull -->
+                  <span class="method-name">usernameNullButOtherNameNotNull</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qa.hwa.rest.UserControllerUnitTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createUserTest">
+                  </a> <!-- createUserTest -->
+                  <span class="method-name">createUserTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteUserTestFalse">
+                  </a> <!-- deleteUserTestFalse -->
+                  <span class="method-name">deleteUserTestFalse</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteUserTestTrue">
+                  </a> <!-- deleteUserTestTrue -->
+                  <span class="method-name">deleteUserTestTrue</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getAllUsersTest">
+                  </a> <!-- getAllUsersTest -->
+                  <span class="method-name">getAllUsersTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getUserByIdTest">
+                  </a> <!-- getUserByIdTest -->
+                  <span class="method-name">getUserByIdTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getUserByUsernameTest">
+                  </a> <!-- getUserByUsernameTest -->
+                  <span class="method-name">getUserByUsernameTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateUserTest">
+                  </a> <!-- updateUserTest -->
+                  <span class="method-name">updateUserTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qa.hwa.service.GameSessionServiceIntegrationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteGameSessionTest">
+                  </a> <!-- deleteGameSessionTest -->
+                  <span class="method-name">deleteGameSessionTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qa.hwa.service.UserServiceIntegrationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteUserTest">
+                  </a> <!-- deleteUserTest -->
+                  <span class="method-name">deleteUserTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qa.hwa.AppTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldAnswerWithTrue">
+                  </a> <!-- shouldAnswerWithTrue -->
+                  <span class="method-name">shouldAnswerWithTrue</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qa.hwa.dto.UserDTOUnitTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEquality">
+                  </a> <!-- checkEquality -->
+                  <span class="method-name">checkEquality</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEqualityBetweenDifferentObjects">
+                  </a> <!-- checkEqualityBetweenDifferentObjects -->
+                  <span class="method-name">checkEqualityBetweenDifferentObjects</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEqualityBetweenDifferentObjectsNullUsername">
+                  </a> <!-- checkEqualityBetweenDifferentObjectsNullUsername -->
+                  <span class="method-name">checkEqualityBetweenDifferentObjectsNullUsername</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="constructorUserWithId">
+                  </a> <!-- constructorUserWithId -->
+                  <span class="method-name">constructorUserWithId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="constructorWithoutId">
+                  </a> <!-- constructorWithoutId -->
+                  <span class="method-name">constructorWithoutId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="emptyConstructor">
+                  </a> <!-- emptyConstructor -->
+                  <span class="method-name">emptyConstructor</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="gettersAndSettersTest">
+                  </a> <!-- gettersAndSettersTest -->
+                  <span class="method-name">gettersAndSettersTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="hashCodeTest">
+                  </a> <!-- hashCodeTest -->
+                  <span class="method-name">hashCodeTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="hashCodeTestWithNull">
+                  </a> <!-- hashCodeTestWithNull -->
+                  <span class="method-name">hashCodeTestWithNull</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="notEqualsWithDifferentObject">
+                  </a> <!-- notEqualsWithDifferentObject -->
+                  <span class="method-name">notEqualsWithDifferentObject</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="notEqualsWithNull">
+                  </a> <!-- notEqualsWithNull -->
+                  <span class="method-name">notEqualsWithNull</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullFreeTime">
+                  </a> <!-- nullFreeTime -->
+                  <span class="method-name">nullFreeTime</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullFreeTimeOnBoth">
+                  </a> <!-- nullFreeTimeOnBoth -->
+                  <span class="method-name">nullFreeTimeOnBoth</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullId">
+                  </a> <!-- nullId -->
+                  <span class="method-name">nullId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullIdOnBoth">
+                  </a> <!-- nullIdOnBoth -->
+                  <span class="method-name">nullIdOnBoth</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullTimeRemaining">
+                  </a> <!-- nullTimeRemaining -->
+                  <span class="method-name">nullTimeRemaining</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullTimeRemainingOnBoth">
+                  </a> <!-- nullTimeRemainingOnBoth -->
+                  <span class="method-name">nullTimeRemainingOnBoth</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullTotalTimePlayed">
+                  </a> <!-- nullTotalTimePlayed -->
+                  <span class="method-name">nullTotalTimePlayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="nullTotalTimePlayedOnBoth">
+                  </a> <!-- nullTotalTimePlayedOnBoth -->
+                  <span class="method-name">nullTotalTimePlayedOnBoth</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="otherFreeTimeDifferent">
+                  </a> <!-- otherFreeTimeDifferent -->
+                  <span class="method-name">otherFreeTimeDifferent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="otherIdDifferent">
+                  </a> <!-- otherIdDifferent -->
+                  <span class="method-name">otherIdDifferent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="otherTimeRemainingDifferent">
+                  </a> <!-- otherTimeRemainingDifferent -->
+                  <span class="method-name">otherTimeRemainingDifferent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="otherTotalTimePlayedDifferent">
+                  </a> <!-- otherTotalTimePlayedDifferent -->
+                  <span class="method-name">otherTotalTimePlayedDifferent</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="usernameNotEqual">
+                  </a> <!-- usernameNotEqual -->
+                  <span class="method-name">usernameNotEqual</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="usernameNullButOtherNameNotNull">
+                  </a> <!-- usernameNullButOtherNameNotNull -->
+                  <span class="method-name">usernameNullButOtherNameNotNull</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qa.hwa.service.UserServiceUnitTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createUserTest">
+                  </a> <!-- createUserTest -->
+                  <span class="method-name">createUserTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteUserByExistingId">
+                  </a> <!-- deleteUserByExistingId -->
+                  <span class="method-name">deleteUserByExistingId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteUserByNonExistingId">
+                  </a> <!-- deleteUserByNonExistingId -->
+                  <span class="method-name">deleteUserByNonExistingId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="findUserByIdTest">
+                  </a> <!-- findUserByIdTest -->
+                  <span class="method-name">findUserByIdTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="readAllUsersTest">
+                  </a> <!-- readAllUsersTest -->
+                  <span class="method-name">readAllUsersTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="readUserByNonExistingUsernameTest">
+                  </a> <!-- readUserByNonExistingUsernameTest -->
+                  <span class="method-name">readUserByNonExistingUsernameTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="readUserByUsernameTest">
+                  </a> <!-- readUserByUsernameTest -->
+                  <span class="method-name">readUserByUsernameTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateUserTest">
+                  </a> <!-- updateUserTest -->
+                  <span class="method-name">updateUserTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+        </div> <!-- panel Surefire_suite -->
+        <div panel-name="test-xml-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;1&quot; junit=&quot;true&quot; name=&quot;Surefire suite&quot; verbose=&quot;0&quot;&gt;
+  &lt;test name=&quot;Surefire test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.qa.hwa.AppTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.hwa.domain.GameSessionUnitTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.hwa.domain.UserUnitTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.hwa.dto.GameSessionDTOUnitTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.hwa.dto.UserDTOUnitTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.hwa.rest.GameSessionControllerIntegrationTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.hwa.rest.GameSessionControllerUnitTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.hwa.rest.UserControllerIntegrationTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.hwa.rest.UserControllerUnitTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.hwa.service.GameSessionServiceIntegrationTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.hwa.service.GameSessionServiceUnitTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.hwa.service.UserServiceIntegrationTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.hwa.service.UserServiceUnitTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Surefire test --&gt;
+&lt;/suite&gt; &lt;!-- Surefire suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Surefire test (13 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Surefire_suite');
+function tableData_Surefire_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(151);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'shouldAnswerWithTrue')
+data.setCell(0, 2, 'com.qa.hwa.AppTest')
+data.setCell(0, 3, 9711);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'deleteGameSessionTest')
+data.setCell(1, 2, 'com.qa.hwa.rest.GameSessionControllerIntegrationTest')
+data.setCell(1, 3, 3913);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'deleteGameSessionTest')
+data.setCell(2, 2, 'com.qa.hwa.service.GameSessionServiceIntegrationTest')
+data.setCell(2, 3, 3231);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'deleteUserTest')
+data.setCell(3, 2, 'com.qa.hwa.service.UserServiceIntegrationTest')
+data.setCell(3, 3, 475);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'deleteSessionByExistingId')
+data.setCell(4, 2, 'com.qa.hwa.service.GameSessionServiceUnitTest')
+data.setCell(4, 3, 294);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'readAllSessionsTest')
+data.setCell(5, 2, 'com.qa.hwa.service.GameSessionServiceUnitTest')
+data.setCell(5, 3, 289);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'deleteSessionByNonExistingId')
+data.setCell(6, 2, 'com.qa.hwa.service.GameSessionServiceUnitTest')
+data.setCell(6, 3, 282);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'updateGameSessionTest')
+data.setCell(7, 2, 'com.qa.hwa.service.GameSessionServiceUnitTest')
+data.setCell(7, 3, 279);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'getAUsersGameSessionsTest')
+data.setCell(8, 2, 'com.qa.hwa.rest.GameSessionControllerUnitTest')
+data.setCell(8, 3, 275);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'readUserByNonExistingUsernameTest')
+data.setCell(9, 2, 'com.qa.hwa.service.GameSessionServiceUnitTest')
+data.setCell(9, 3, 269);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'readUserByUsernameTest')
+data.setCell(10, 2, 'com.qa.hwa.service.GameSessionServiceUnitTest')
+data.setCell(10, 3, 265);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'deleteUserTestTrue')
+data.setCell(11, 2, 'com.qa.hwa.rest.GameSessionControllerUnitTest')
+data.setCell(11, 3, 264);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'createGameSessionTest')
+data.setCell(12, 2, 'com.qa.hwa.service.GameSessionServiceUnitTest')
+data.setCell(12, 3, 259);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'deleteUserTestFalse')
+data.setCell(13, 2, 'com.qa.hwa.rest.GameSessionControllerUnitTest')
+data.setCell(13, 3, 258);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'getAllGameSessionsTest')
+data.setCell(14, 2, 'com.qa.hwa.rest.GameSessionControllerUnitTest')
+data.setCell(14, 3, 251);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'updateGameSessionTest')
+data.setCell(15, 2, 'com.qa.hwa.rest.GameSessionControllerUnitTest')
+data.setCell(15, 3, 244);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'createGameSessionTest')
+data.setCell(16, 2, 'com.qa.hwa.rest.GameSessionControllerUnitTest')
+data.setCell(16, 3, 232);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'getUserByIdTest')
+data.setCell(17, 2, 'com.qa.hwa.rest.UserControllerUnitTest')
+data.setCell(17, 3, 122);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'getUserByUsernameTest')
+data.setCell(18, 2, 'com.qa.hwa.rest.UserControllerUnitTest')
+data.setCell(18, 3, 111);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'deleteUserTestTrue')
+data.setCell(19, 2, 'com.qa.hwa.rest.UserControllerUnitTest')
+data.setCell(19, 3, 102);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'createUserTest')
+data.setCell(20, 2, 'com.qa.hwa.rest.UserControllerUnitTest')
+data.setCell(20, 3, 97);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'updateUserTest')
+data.setCell(21, 2, 'com.qa.hwa.rest.UserControllerUnitTest')
+data.setCell(21, 3, 93);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'deleteUserTestFalse')
+data.setCell(22, 2, 'com.qa.hwa.rest.UserControllerUnitTest')
+data.setCell(22, 3, 84);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'getAllUsersTest')
+data.setCell(23, 2, 'com.qa.hwa.rest.UserControllerUnitTest')
+data.setCell(23, 3, 80);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'createUserTest')
+data.setCell(24, 2, 'com.qa.hwa.service.UserServiceUnitTest')
+data.setCell(24, 3, 50);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'updateUserTest')
+data.setCell(25, 2, 'com.qa.hwa.service.UserServiceUnitTest')
+data.setCell(25, 3, 39);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'findUserByIdTest')
+data.setCell(26, 2, 'com.qa.hwa.service.UserServiceUnitTest')
+data.setCell(26, 3, 32);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'readAllUsersTest')
+data.setCell(27, 2, 'com.qa.hwa.service.UserServiceUnitTest')
+data.setCell(27, 3, 25);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'readUserByNonExistingUsernameTest')
+data.setCell(28, 2, 'com.qa.hwa.service.UserServiceUnitTest')
+data.setCell(28, 3, 20);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'deleteUserByNonExistingId')
+data.setCell(29, 2, 'com.qa.hwa.service.UserServiceUnitTest')
+data.setCell(29, 3, 16);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'hashCodeTestWithNull')
+data.setCell(30, 2, 'com.qa.hwa.domain.GameSessionUnitTest')
+data.setCell(30, 3, 13);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'otherTimePlayedDifferent')
+data.setCell(31, 2, 'com.qa.hwa.domain.GameSessionUnitTest')
+data.setCell(31, 3, 13);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'nullTimeOfSessionBoth')
+data.setCell(32, 2, 'com.qa.hwa.domain.GameSessionUnitTest')
+data.setCell(32, 3, 12);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'otherIdDifferent')
+data.setCell(33, 2, 'com.qa.hwa.domain.GameSessionUnitTest')
+data.setCell(33, 3, 12);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'usernameNotEqual')
+data.setCell(34, 2, 'com.qa.hwa.domain.GameSessionUnitTest')
+data.setCell(34, 3, 12);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'nullTimeOfSession')
+data.setCell(35, 2, 'com.qa.hwa.domain.GameSessionUnitTest')
+data.setCell(35, 3, 11);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'hashCodeTest')
+data.setCell(36, 2, 'com.qa.hwa.domain.GameSessionUnitTest')
+data.setCell(36, 3, 11);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'readUserByUsernameTest')
+data.setCell(37, 2, 'com.qa.hwa.service.UserServiceUnitTest')
+data.setCell(37, 3, 11);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'otherGameNameDifferent')
+data.setCell(38, 2, 'com.qa.hwa.domain.GameSessionUnitTest')
+data.setCell(38, 3, 11);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'otherTimeOfSessionDifferent')
+data.setCell(39, 2, 'com.qa.hwa.domain.GameSessionUnitTest')
+data.setCell(39, 3, 11);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'nullGameName')
+data.setCell(40, 2, 'com.qa.hwa.dto.GameSessionDTOUnitTest')
+data.setCell(40, 3, 10);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'constructorWithoutId')
+data.setCell(41, 2, 'com.qa.hwa.dto.GameSessionDTOUnitTest')
+data.setCell(41, 3, 10);
+data.setCell(42, 0, 42)
+data.setCell(42, 1, 'constructorUserWithId')
+data.setCell(42, 2, 'com.qa.hwa.domain.GameSessionUnitTest')
+data.setCell(42, 3, 10);
+data.setCell(43, 0, 43)
+data.setCell(43, 1, 'checkEqualityBetweenDifferentObjects')
+data.setCell(43, 2, 'com.qa.hwa.dto.GameSessionDTOUnitTest')
+data.setCell(43, 3, 9);
+data.setCell(44, 0, 44)
+data.setCell(44, 1, 'notEqualsWithNull')
+data.setCell(44, 2, 'com.qa.hwa.dto.GameSessionDTOUnitTest')
+data.setCell(44, 3, 9);
+data.setCell(45, 0, 45)
+data.setCell(45, 1, 'nullTimePlayed')
+data.setCell(45, 2, 'com.qa.hwa.domain.GameSessionUnitTest')
+data.setCell(45, 3, 9);
+data.setCell(46, 0, 46)
+data.setCell(46, 1, 'usernameNotEqual')
+data.setCell(46, 2, 'com.qa.hwa.domain.UserUnitTest')
+data.setCell(46, 3, 9);
+data.setCell(47, 0, 47)
+data.setCell(47, 1, 'nullTimeOfSessionBoth')
+data.setCell(47, 2, 'com.qa.hwa.dto.GameSessionDTOUnitTest')
+data.setCell(47, 3, 9);
+data.setCell(48, 0, 48)
+data.setCell(48, 1, 'hashCodeTest')
+data.setCell(48, 2, 'com.qa.hwa.dto.GameSessionDTOUnitTest')
+data.setCell(48, 3, 9);
+data.setCell(49, 0, 49)
+data.setCell(49, 1, 'nullTotalTimePlayed')
+data.setCell(49, 2, 'com.qa.hwa.domain.UserUnitTest')
+data.setCell(49, 3, 9);
+data.setCell(50, 0, 50)
+data.setCell(50, 1, 'emptyConstructor')
+data.setCell(50, 2, 'com.qa.hwa.domain.GameSessionUnitTest')
+data.setCell(50, 3, 9);
+data.setCell(51, 0, 51)
+data.setCell(51, 1, 'nullIdOnBoth')
+data.setCell(51, 2, 'com.qa.hwa.domain.GameSessionUnitTest')
+data.setCell(51, 3, 9);
+data.setCell(52, 0, 52)
+data.setCell(52, 1, 'otherTotalTimePlayedDifferent')
+data.setCell(52, 2, 'com.qa.hwa.domain.UserUnitTest')
+data.setCell(52, 3, 9);
+data.setCell(53, 0, 53)
+data.setCell(53, 1, 'gettersAndSettersTest')
+data.setCell(53, 2, 'com.qa.hwa.domain.GameSessionUnitTest')
+data.setCell(53, 3, 9);
+data.setCell(54, 0, 54)
+data.setCell(54, 1, 'otherTimeRemainingDifferent')
+data.setCell(54, 2, 'com.qa.hwa.domain.UserUnitTest')
+data.setCell(54, 3, 9);
+data.setCell(55, 0, 55)
+data.setCell(55, 1, 'otherGameNameDifferent')
+data.setCell(55, 2, 'com.qa.hwa.dto.GameSessionDTOUnitTest')
+data.setCell(55, 3, 9);
+data.setCell(56, 0, 56)
+data.setCell(56, 1, 'nullTimePlayed')
+data.setCell(56, 2, 'com.qa.hwa.dto.GameSessionDTOUnitTest')
+data.setCell(56, 3, 9);
+data.setCell(57, 0, 57)
+data.setCell(57, 1, 'constructorUserWithId')
+data.setCell(57, 2, 'com.qa.hwa.domain.UserUnitTest')
+data.setCell(57, 3, 9);
+data.setCell(58, 0, 58)
+data.setCell(58, 1, 'hashCodeTestWithNull')
+data.setCell(58, 2, 'com.qa.hwa.domain.UserUnitTest')
+data.setCell(58, 3, 9);
+data.setCell(59, 0, 59)
+data.setCell(59, 1, 'nullId')
+data.setCell(59, 2, 'com.qa.hwa.domain.GameSessionUnitTest')
+data.setCell(59, 3, 9);
+data.setCell(60, 0, 60)
+data.setCell(60, 1, 'otherIdDifferent')
+data.setCell(60, 2, 'com.qa.hwa.domain.UserUnitTest')
+data.setCell(60, 3, 9);
+data.setCell(61, 0, 61)
+data.setCell(61, 1, 'nullTimePlayedOnBoth')
+data.setCell(61, 2, 'com.qa.hwa.dto.GameSessionDTOUnitTest')
+data.setCell(61, 3, 9);
+data.setCell(62, 0, 62)
+data.setCell(62, 1, 'hashCodeTest')
+data.setCell(62, 2, 'com.qa.hwa.domain.UserUnitTest')
+data.setCell(62, 3, 8);
+data.setCell(63, 0, 63)
+data.setCell(63, 1, 'nullIdOnBoth')
+data.setCell(63, 2, 'com.qa.hwa.dto.GameSessionDTOUnitTest')
+data.setCell(63, 3, 8);
+data.setCell(64, 0, 64)
+data.setCell(64, 1, 'nullTotalTimePlayedOnBoth')
+data.setCell(64, 2, 'com.qa.hwa.domain.UserUnitTest')
+data.setCell(64, 3, 8);
+data.setCell(65, 0, 65)
+data.setCell(65, 1, 'otherTimePlayedDifferent')
+data.setCell(65, 2, 'com.qa.hwa.dto.GameSessionDTOUnitTest')
+data.setCell(65, 3, 8);
+data.setCell(66, 0, 66)
+data.setCell(66, 1, 'hashCodeTestWithNull')
+data.setCell(66, 2, 'com.qa.hwa.dto.GameSessionDTOUnitTest')
+data.setCell(66, 3, 8);
+data.setCell(67, 0, 67)
+data.setCell(67, 1, 'otherFreeTimeDifferent')
+data.setCell(67, 2, 'com.qa.hwa.domain.UserUnitTest')
+data.setCell(67, 3, 8);
+data.setCell(68, 0, 68)
+data.setCell(68, 1, 'otherTimeOfSessionDifferent')
+data.setCell(68, 2, 'com.qa.hwa.dto.GameSessionDTOUnitTest')
+data.setCell(68, 3, 8);
+data.setCell(69, 0, 69)
+data.setCell(69, 1, 'nullTimeRemaining')
+data.setCell(69, 2, 'com.qa.hwa.domain.UserUnitTest')
+data.setCell(69, 3, 8);
+data.setCell(70, 0, 70)
+data.setCell(70, 1, 'checkEquality')
+data.setCell(70, 2, 'com.qa.hwa.dto.GameSessionDTOUnitTest')
+data.setCell(70, 3, 8);
+data.setCell(71, 0, 71)
+data.setCell(71, 1, 'checkEquality')
+data.setCell(71, 2, 'com.qa.hwa.domain.GameSessionUnitTest')
+data.setCell(71, 3, 8);
+data.setCell(72, 0, 72)
+data.setCell(72, 1, 'nullTimeOfSession')
+data.setCell(72, 2, 'com.qa.hwa.dto.GameSessionDTOUnitTest')
+data.setCell(72, 3, 8);
+data.setCell(73, 0, 73)
+data.setCell(73, 1, 'otherIdDifferent')
+data.setCell(73, 2, 'com.qa.hwa.dto.GameSessionDTOUnitTest')
+data.setCell(73, 3, 8);
+data.setCell(74, 0, 74)
+data.setCell(74, 1, 'notEqualsWithDifferentObject')
+data.setCell(74, 2, 'com.qa.hwa.domain.GameSessionUnitTest')
+data.setCell(74, 3, 8);
+data.setCell(75, 0, 75)
+data.setCell(75, 1, 'notEqualsWithNull')
+data.setCell(75, 2, 'com.qa.hwa.domain.GameSessionUnitTest')
+data.setCell(75, 3, 8);
+data.setCell(76, 0, 76)
+data.setCell(76, 1, 'usernameNotEqual')
+data.setCell(76, 2, 'com.qa.hwa.dto.GameSessionDTOUnitTest')
+data.setCell(76, 3, 8);
+data.setCell(77, 0, 77)
+data.setCell(77, 1, 'checkEqualityBetweenDifferentObjects')
+data.setCell(77, 2, 'com.qa.hwa.domain.GameSessionUnitTest')
+data.setCell(77, 3, 8);
+data.setCell(78, 0, 78)
+data.setCell(78, 1, 'notEqualsWithDifferentObject')
+data.setCell(78, 2, 'com.qa.hwa.dto.GameSessionDTOUnitTest')
+data.setCell(78, 3, 8);
+data.setCell(79, 0, 79)
+data.setCell(79, 1, 'checkEqualityBetweenDifferentObjectsNullUsername')
+data.setCell(79, 2, 'com.qa.hwa.domain.GameSessionUnitTest')
+data.setCell(79, 3, 8);
+data.setCell(80, 0, 80)
+data.setCell(80, 1, 'nullTimePlayedOnBoth')
+data.setCell(80, 2, 'com.qa.hwa.domain.GameSessionUnitTest')
+data.setCell(80, 3, 8);
+data.setCell(81, 0, 81)
+data.setCell(81, 1, 'emptyConstructor')
+data.setCell(81, 2, 'com.qa.hwa.domain.UserUnitTest')
+data.setCell(81, 3, 8);
+data.setCell(82, 0, 82)
+data.setCell(82, 1, 'emptyConstructor')
+data.setCell(82, 2, 'com.qa.hwa.dto.GameSessionDTOUnitTest')
+data.setCell(82, 3, 8);
+data.setCell(83, 0, 83)
+data.setCell(83, 1, 'constructorWithoutId')
+data.setCell(83, 2, 'com.qa.hwa.domain.GameSessionUnitTest')
+data.setCell(83, 3, 8);
+data.setCell(84, 0, 84)
+data.setCell(84, 1, 'nullId')
+data.setCell(84, 2, 'com.qa.hwa.dto.GameSessionDTOUnitTest')
+data.setCell(84, 3, 8);
+data.setCell(85, 0, 85)
+data.setCell(85, 1, 'nullGameNameOnBoth')
+data.setCell(85, 2, 'com.qa.hwa.dto.GameSessionDTOUnitTest')
+data.setCell(85, 3, 8);
+data.setCell(86, 0, 86)
+data.setCell(86, 1, 'constructorUserWithId')
+data.setCell(86, 2, 'com.qa.hwa.dto.GameSessionDTOUnitTest')
+data.setCell(86, 3, 8);
+data.setCell(87, 0, 87)
+data.setCell(87, 1, 'gettersAndSettersTest')
+data.setCell(87, 2, 'com.qa.hwa.dto.GameSessionDTOUnitTest')
+data.setCell(87, 3, 8);
+data.setCell(88, 0, 88)
+data.setCell(88, 1, 'nullIdOnBoth')
+data.setCell(88, 2, 'com.qa.hwa.domain.UserUnitTest')
+data.setCell(88, 3, 8);
+data.setCell(89, 0, 89)
+data.setCell(89, 1, 'nullGameName')
+data.setCell(89, 2, 'com.qa.hwa.domain.GameSessionUnitTest')
+data.setCell(89, 3, 7);
+data.setCell(90, 0, 90)
+data.setCell(90, 1, 'nullGameNameOnBoth')
+data.setCell(90, 2, 'com.qa.hwa.domain.GameSessionUnitTest')
+data.setCell(90, 3, 7);
+data.setCell(91, 0, 91)
+data.setCell(91, 1, 'usernameNullButOtherNameNotNull')
+data.setCell(91, 2, 'com.qa.hwa.domain.GameSessionUnitTest')
+data.setCell(91, 3, 7);
+data.setCell(92, 0, 92)
+data.setCell(92, 1, 'nullTimeRemainingOnBoth')
+data.setCell(92, 2, 'com.qa.hwa.domain.UserUnitTest')
+data.setCell(92, 3, 6);
+data.setCell(93, 0, 93)
+data.setCell(93, 1, 'notEqualsWithNull')
+data.setCell(93, 2, 'com.qa.hwa.domain.UserUnitTest')
+data.setCell(93, 3, 6);
+data.setCell(94, 0, 94)
+data.setCell(94, 1, 'nullId')
+data.setCell(94, 2, 'com.qa.hwa.domain.UserUnitTest')
+data.setCell(94, 3, 6);
+data.setCell(95, 0, 95)
+data.setCell(95, 1, 'notEqualsWithNull')
+data.setCell(95, 2, 'com.qa.hwa.dto.UserDTOUnitTest')
+data.setCell(95, 3, 6);
+data.setCell(96, 0, 96)
+data.setCell(96, 1, 'deleteUserByExistingId')
+data.setCell(96, 2, 'com.qa.hwa.service.UserServiceUnitTest')
+data.setCell(96, 3, 6);
+data.setCell(97, 0, 97)
+data.setCell(97, 1, 'checkEquality')
+data.setCell(97, 2, 'com.qa.hwa.domain.UserUnitTest')
+data.setCell(97, 3, 6);
+data.setCell(98, 0, 98)
+data.setCell(98, 1, 'notEqualsWithDifferentObject')
+data.setCell(98, 2, 'com.qa.hwa.domain.UserUnitTest')
+data.setCell(98, 3, 6);
+data.setCell(99, 0, 99)
+data.setCell(99, 1, 'checkEqualityBetweenDifferentObjectsNullUsername')
+data.setCell(99, 2, 'com.qa.hwa.domain.UserUnitTest')
+data.setCell(99, 3, 6);
+data.setCell(100, 0, 100)
+data.setCell(100, 1, 'nullFreeTimeOnBoth')
+data.setCell(100, 2, 'com.qa.hwa.domain.UserUnitTest')
+data.setCell(100, 3, 6);
+data.setCell(101, 0, 101)
+data.setCell(101, 1, 'hashCodeTest')
+data.setCell(101, 2, 'com.qa.hwa.dto.UserDTOUnitTest')
+data.setCell(101, 3, 6);
+data.setCell(102, 0, 102)
+data.setCell(102, 1, 'usernameNotEqual')
+data.setCell(102, 2, 'com.qa.hwa.dto.UserDTOUnitTest')
+data.setCell(102, 3, 6);
+data.setCell(103, 0, 103)
+data.setCell(103, 1, 'gettersAndSettersTest')
+data.setCell(103, 2, 'com.qa.hwa.domain.UserUnitTest')
+data.setCell(103, 3, 6);
+data.setCell(104, 0, 104)
+data.setCell(104, 1, 'emptyConstructor')
+data.setCell(104, 2, 'com.qa.hwa.dto.UserDTOUnitTest')
+data.setCell(104, 3, 5);
+data.setCell(105, 0, 105)
+data.setCell(105, 1, 'nullTotalTimePlayed')
+data.setCell(105, 2, 'com.qa.hwa.dto.UserDTOUnitTest')
+data.setCell(105, 3, 5);
+data.setCell(106, 0, 106)
+data.setCell(106, 1, 'nullTimeRemainingOnBoth')
+data.setCell(106, 2, 'com.qa.hwa.dto.UserDTOUnitTest')
+data.setCell(106, 3, 5);
+data.setCell(107, 0, 107)
+data.setCell(107, 1, 'otherTotalTimePlayedDifferent')
+data.setCell(107, 2, 'com.qa.hwa.dto.UserDTOUnitTest')
+data.setCell(107, 3, 5);
+data.setCell(108, 0, 108)
+data.setCell(108, 1, 'otherFreeTimeDifferent')
+data.setCell(108, 2, 'com.qa.hwa.dto.UserDTOUnitTest')
+data.setCell(108, 3, 5);
+data.setCell(109, 0, 109)
+data.setCell(109, 1, 'usernameNullButOtherNameNotNull')
+data.setCell(109, 2, 'com.qa.hwa.domain.UserUnitTest')
+data.setCell(109, 3, 5);
+data.setCell(110, 0, 110)
+data.setCell(110, 1, 'gettersAndSettersTest')
+data.setCell(110, 2, 'com.qa.hwa.dto.UserDTOUnitTest')
+data.setCell(110, 3, 5);
+data.setCell(111, 0, 111)
+data.setCell(111, 1, 'constructorWithoutId')
+data.setCell(111, 2, 'com.qa.hwa.dto.UserDTOUnitTest')
+data.setCell(111, 3, 5);
+data.setCell(112, 0, 112)
+data.setCell(112, 1, 'nullFreeTime')
+data.setCell(112, 2, 'com.qa.hwa.domain.UserUnitTest')
+data.setCell(112, 3, 5);
+data.setCell(113, 0, 113)
+data.setCell(113, 1, 'checkEqualityBetweenDifferentObjects')
+data.setCell(113, 2, 'com.qa.hwa.domain.UserUnitTest')
+data.setCell(113, 3, 5);
+data.setCell(114, 0, 114)
+data.setCell(114, 1, 'checkEqualityBetweenDifferentObjects')
+data.setCell(114, 2, 'com.qa.hwa.dto.UserDTOUnitTest')
+data.setCell(114, 3, 5);
+data.setCell(115, 0, 115)
+data.setCell(115, 1, 'hashCodeTestWithNull')
+data.setCell(115, 2, 'com.qa.hwa.dto.UserDTOUnitTest')
+data.setCell(115, 3, 5);
+data.setCell(116, 0, 116)
+data.setCell(116, 1, 'constructorUserWithId')
+data.setCell(116, 2, 'com.qa.hwa.dto.UserDTOUnitTest')
+data.setCell(116, 3, 5);
+data.setCell(117, 0, 117)
+data.setCell(117, 1, 'otherIdDifferent')
+data.setCell(117, 2, 'com.qa.hwa.dto.UserDTOUnitTest')
+data.setCell(117, 3, 5);
+data.setCell(118, 0, 118)
+data.setCell(118, 1, 'nullFreeTime')
+data.setCell(118, 2, 'com.qa.hwa.dto.UserDTOUnitTest')
+data.setCell(118, 3, 5);
+data.setCell(119, 0, 119)
+data.setCell(119, 1, 'nullTotalTimePlayedOnBoth')
+data.setCell(119, 2, 'com.qa.hwa.dto.UserDTOUnitTest')
+data.setCell(119, 3, 5);
+data.setCell(120, 0, 120)
+data.setCell(120, 1, 'checkEqualityBetweenDifferentObjectsNullUsername')
+data.setCell(120, 2, 'com.qa.hwa.dto.UserDTOUnitTest')
+data.setCell(120, 3, 5);
+data.setCell(121, 0, 121)
+data.setCell(121, 1, 'otherTimeRemainingDifferent')
+data.setCell(121, 2, 'com.qa.hwa.dto.UserDTOUnitTest')
+data.setCell(121, 3, 5);
+data.setCell(122, 0, 122)
+data.setCell(122, 1, 'nullIdOnBoth')
+data.setCell(122, 2, 'com.qa.hwa.dto.UserDTOUnitTest')
+data.setCell(122, 3, 5);
+data.setCell(123, 0, 123)
+data.setCell(123, 1, 'checkEquality')
+data.setCell(123, 2, 'com.qa.hwa.dto.UserDTOUnitTest')
+data.setCell(123, 3, 5);
+data.setCell(124, 0, 124)
+data.setCell(124, 1, 'constructorWithoutId')
+data.setCell(124, 2, 'com.qa.hwa.domain.UserUnitTest')
+data.setCell(124, 3, 5);
+data.setCell(125, 0, 125)
+data.setCell(125, 1, 'nullId')
+data.setCell(125, 2, 'com.qa.hwa.dto.UserDTOUnitTest')
+data.setCell(125, 3, 4);
+data.setCell(126, 0, 126)
+data.setCell(126, 1, 'notEqualsWithDifferentObject')
+data.setCell(126, 2, 'com.qa.hwa.dto.UserDTOUnitTest')
+data.setCell(126, 3, 4);
+data.setCell(127, 0, 127)
+data.setCell(127, 1, 'nullFreeTimeOnBoth')
+data.setCell(127, 2, 'com.qa.hwa.dto.UserDTOUnitTest')
+data.setCell(127, 3, 4);
+data.setCell(128, 0, 128)
+data.setCell(128, 1, 'usernameNullButOtherNameNotNull')
+data.setCell(128, 2, 'com.qa.hwa.dto.UserDTOUnitTest')
+data.setCell(128, 3, 4);
+data.setCell(129, 0, 129)
+data.setCell(129, 1, 'nullTimeRemaining')
+data.setCell(129, 2, 'com.qa.hwa.dto.UserDTOUnitTest')
+data.setCell(129, 3, 4);
+data.setCell(130, 0, 130)
+data.setCell(130, 1, 'updateGameSessionTest')
+data.setCell(130, 2, 'com.qa.hwa.service.GameSessionServiceIntegrationTest')
+data.setCell(130, 3, 0);
+data.setCell(131, 0, 131)
+data.setCell(131, 1, 'createGameSessionTest')
+data.setCell(131, 2, 'com.qa.hwa.service.GameSessionServiceIntegrationTest')
+data.setCell(131, 3, 0);
+data.setCell(132, 0, 132)
+data.setCell(132, 1, 'readAllGameSessionsTest')
+data.setCell(132, 2, 'com.qa.hwa.service.GameSessionServiceIntegrationTest')
+data.setCell(132, 3, 0);
+data.setCell(133, 0, 133)
+data.setCell(133, 1, 'createUsersTest')
+data.setCell(133, 2, 'com.qa.hwa.rest.UserControllerIntegrationTest')
+data.setCell(133, 3, 0);
+data.setCell(134, 0, 134)
+data.setCell(134, 1, 'readAllUsersTest')
+data.setCell(134, 2, 'com.qa.hwa.service.UserServiceIntegrationTest')
+data.setCell(134, 3, 0);
+data.setCell(135, 0, 135)
+data.setCell(135, 1, 'checkEqualityBetweenDifferentObjectsNullUsername')
+data.setCell(135, 2, 'com.qa.hwa.dto.GameSessionDTOUnitTest')
+data.setCell(135, 3, 0);
+data.setCell(136, 0, 136)
+data.setCell(136, 1, 'updateUserTest')
+data.setCell(136, 2, 'com.qa.hwa.rest.UserControllerIntegrationTest')
+data.setCell(136, 3, 0);
+data.setCell(137, 0, 137)
+data.setCell(137, 1, 'getUserByIdTest')
+data.setCell(137, 2, 'com.qa.hwa.rest.UserControllerIntegrationTest')
+data.setCell(137, 3, 0);
+data.setCell(138, 0, 138)
+data.setCell(138, 1, 'updateUserTest')
+data.setCell(138, 2, 'com.qa.hwa.service.UserServiceIntegrationTest')
+data.setCell(138, 3, 0);
+data.setCell(139, 0, 139)
+data.setCell(139, 1, 'deleteUserTest')
+data.setCell(139, 2, 'com.qa.hwa.rest.UserControllerIntegrationTest')
+data.setCell(139, 3, 0);
+data.setCell(140, 0, 140)
+data.setCell(140, 1, 'findUserByIdTest')
+data.setCell(140, 2, 'com.qa.hwa.service.UserServiceIntegrationTest')
+data.setCell(140, 3, 0);
+data.setCell(141, 0, 141)
+data.setCell(141, 1, 'createUserTest')
+data.setCell(141, 2, 'com.qa.hwa.service.UserServiceIntegrationTest')
+data.setCell(141, 3, 0);
+data.setCell(142, 0, 142)
+data.setCell(142, 1, 'getAllGameSessionsTest')
+data.setCell(142, 2, 'com.qa.hwa.rest.GameSessionControllerIntegrationTest')
+data.setCell(142, 3, 0);
+data.setCell(143, 0, 143)
+data.setCell(143, 1, 'usernameNullButOtherNameNotNull')
+data.setCell(143, 2, 'com.qa.hwa.dto.GameSessionDTOUnitTest')
+data.setCell(143, 3, 0);
+data.setCell(144, 0, 144)
+data.setCell(144, 1, 'getAllUsersTest')
+data.setCell(144, 2, 'com.qa.hwa.rest.UserControllerIntegrationTest')
+data.setCell(144, 3, 0);
+data.setCell(145, 0, 145)
+data.setCell(145, 1, 'findUserByUsernameTest')
+data.setCell(145, 2, 'com.qa.hwa.service.GameSessionServiceIntegrationTest')
+data.setCell(145, 3, 0);
+data.setCell(146, 0, 146)
+data.setCell(146, 1, 'createSessionsTest')
+data.setCell(146, 2, 'com.qa.hwa.rest.GameSessionControllerIntegrationTest')
+data.setCell(146, 3, 0);
+data.setCell(147, 0, 147)
+data.setCell(147, 1, 'updateGameSessionTest')
+data.setCell(147, 2, 'com.qa.hwa.rest.GameSessionControllerIntegrationTest')
+data.setCell(147, 3, 0);
+data.setCell(148, 0, 148)
+data.setCell(148, 1, 'getAUsersGameSessionsTest')
+data.setCell(148, 2, 'com.qa.hwa.rest.GameSessionControllerIntegrationTest')
+data.setCell(148, 3, 0);
+data.setCell(149, 0, 149)
+data.setCell(149, 1, 'readAUsersGameSessionsTest')
+data.setCell(149, 2, 'com.qa.hwa.service.GameSessionServiceUnitTest')
+data.setCell(149, 3, 0);
+data.setCell(150, 0, 150)
+data.setCell(150, 1, 'readAUsersGameSessionsTest')
+data.setCell(150, 2, 'com.qa.hwa.service.GameSessionServiceIntegrationTest')
+data.setCell(150, 3, 0);
+window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 22 seconds</span>
+              <div id="times-div-Surefire_suite">
+              </div> <!-- times-div-Surefire_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.hwa.AppTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">shouldAnswerWithTrue</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.hwa.domain.GameSessionUnitTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">usernameNullButOtherNameNotNull</span>
+                <span class="method-start">9715 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullGameName</span>
+                <span class="method-start">9716 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">constructorWithoutId</span>
+                <span class="method-start">9716 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullTimePlayedOnBoth</span>
+                <span class="method-start">9717 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEqualityBetweenDifferentObjects</span>
+                <span class="method-start">9717 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullGameNameOnBoth</span>
+                <span class="method-start">9718 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEquality</span>
+                <span class="method-start">9718 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">notEqualsWithNull</span>
+                <span class="method-start">9718 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEqualityBetweenDifferentObjectsNullUsername</span>
+                <span class="method-start">9718 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullTimePlayed</span>
+                <span class="method-start">9718 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">gettersAndSettersTest</span>
+                <span class="method-start">9718 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullId</span>
+                <span class="method-start">9718 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">notEqualsWithDifferentObject</span>
+                <span class="method-start">9719 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullIdOnBoth</span>
+                <span class="method-start">9719 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">emptyConstructor</span>
+                <span class="method-start">9719 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">constructorUserWithId</span>
+                <span class="method-start">9719 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullTimeOfSession</span>
+                <span class="method-start">9719 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">otherGameNameDifferent</span>
+                <span class="method-start">9719 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">hashCodeTest</span>
+                <span class="method-start">9720 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">otherTimeOfSessionDifferent</span>
+                <span class="method-start">9720 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullTimeOfSessionBoth</span>
+                <span class="method-start">9720 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">usernameNotEqual</span>
+                <span class="method-start">9720 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">hashCodeTestWithNull</span>
+                <span class="method-start">9720 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">otherTimePlayedDifferent</span>
+                <span class="method-start">9720 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">otherIdDifferent</span>
+                <span class="method-start">9721 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.hwa.domain.UserUnitTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">usernameNullButOtherNameNotNull</span>
+                <span class="method-start">9735 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullTimeRemainingOnBoth</span>
+                <span class="method-start">9735 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullFreeTime</span>
+                <span class="method-start">9736 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">constructorWithoutId</span>
+                <span class="method-start">9736 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEqualityBetweenDifferentObjects</span>
+                <span class="method-start">9736 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEquality</span>
+                <span class="method-start">9736 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">notEqualsWithNull</span>
+                <span class="method-start">9736 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEqualityBetweenDifferentObjectsNullUsername</span>
+                <span class="method-start">9737 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">gettersAndSettersTest</span>
+                <span class="method-start">9737 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullId</span>
+                <span class="method-start">9737 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">notEqualsWithDifferentObject</span>
+                <span class="method-start">9737 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullFreeTimeOnBoth</span>
+                <span class="method-start">9737 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullIdOnBoth</span>
+                <span class="method-start">9737 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">emptyConstructor</span>
+                <span class="method-start">9737 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullTimeRemaining</span>
+                <span class="method-start">9737 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">otherFreeTimeDifferent</span>
+                <span class="method-start">9738 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">constructorUserWithId</span>
+                <span class="method-start">9738 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">otherTotalTimePlayedDifferent</span>
+                <span class="method-start">9738 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">otherTimeRemainingDifferent</span>
+                <span class="method-start">9738 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullTotalTimePlayed</span>
+                <span class="method-start">9738 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">hashCodeTest</span>
+                <span class="method-start">9739 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">usernameNotEqual</span>
+                <span class="method-start">9739 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">hashCodeTestWithNull</span>
+                <span class="method-start">9739 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">otherIdDifferent</span>
+                <span class="method-start">9739 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullTotalTimePlayedOnBoth</span>
+                <span class="method-start">9740 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.hwa.dto.GameSessionDTOUnitTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">usernameNullButOtherNameNotNull</span>
+                <span class="method-start">9754 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullGameName</span>
+                <span class="method-start">9754 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">constructorWithoutId</span>
+                <span class="method-start">9755 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullTimePlayedOnBoth</span>
+                <span class="method-start">9756 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEqualityBetweenDifferentObjects</span>
+                <span class="method-start">9756 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullGameNameOnBoth</span>
+                <span class="method-start">9757 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEquality</span>
+                <span class="method-start">9757 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">notEqualsWithNull</span>
+                <span class="method-start">9757 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEqualityBetweenDifferentObjectsNullUsername</span>
+                <span class="method-start">9757 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullTimePlayed</span>
+                <span class="method-start">9757 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">gettersAndSettersTest</span>
+                <span class="method-start">9758 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullId</span>
+                <span class="method-start">9758 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">notEqualsWithDifferentObject</span>
+                <span class="method-start">9758 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullIdOnBoth</span>
+                <span class="method-start">9759 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">emptyConstructor</span>
+                <span class="method-start">9759 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">constructorUserWithId</span>
+                <span class="method-start">9759 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullTimeOfSession</span>
+                <span class="method-start">9759 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">otherGameNameDifferent</span>
+                <span class="method-start">9759 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">hashCodeTest</span>
+                <span class="method-start">9759 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">otherTimeOfSessionDifferent</span>
+                <span class="method-start">9760 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullTimeOfSessionBoth</span>
+                <span class="method-start">9760 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">usernameNotEqual</span>
+                <span class="method-start">9761 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">hashCodeTestWithNull</span>
+                <span class="method-start">9761 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">otherTimePlayedDifferent</span>
+                <span class="method-start">9761 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">otherIdDifferent</span>
+                <span class="method-start">9761 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.hwa.dto.UserDTOUnitTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">usernameNullButOtherNameNotNull</span>
+                <span class="method-start">9771 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullTimeRemainingOnBoth</span>
+                <span class="method-start">9771 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullFreeTime</span>
+                <span class="method-start">9771 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">constructorWithoutId</span>
+                <span class="method-start">9771 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEqualityBetweenDifferentObjects</span>
+                <span class="method-start">9771 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEquality</span>
+                <span class="method-start">9771 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">notEqualsWithNull</span>
+                <span class="method-start">9771 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEqualityBetweenDifferentObjectsNullUsername</span>
+                <span class="method-start">9772 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">gettersAndSettersTest</span>
+                <span class="method-start">9772 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullId</span>
+                <span class="method-start">9773 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">notEqualsWithDifferentObject</span>
+                <span class="method-start">9773 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullFreeTimeOnBoth</span>
+                <span class="method-start">9773 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullIdOnBoth</span>
+                <span class="method-start">9773 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">emptyConstructor</span>
+                <span class="method-start">9773 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullTimeRemaining</span>
+                <span class="method-start">9774 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">otherFreeTimeDifferent</span>
+                <span class="method-start">9774 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">constructorUserWithId</span>
+                <span class="method-start">9774 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">otherTotalTimePlayedDifferent</span>
+                <span class="method-start">9774 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">otherTimeRemainingDifferent</span>
+                <span class="method-start">9774 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullTotalTimePlayed</span>
+                <span class="method-start">9774 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">hashCodeTest</span>
+                <span class="method-start">9774 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">usernameNotEqual</span>
+                <span class="method-start">9774 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">hashCodeTestWithNull</span>
+                <span class="method-start">9775 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">otherIdDifferent</span>
+                <span class="method-start">9775 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">nullTotalTimePlayedOnBoth</span>
+                <span class="method-start">9775 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.hwa.rest.GameSessionControllerIntegrationTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">deleteGameSessionTest</span>
+                <span class="method-start">9920 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateGameSessionTest</span>
+                <span class="method-start">9920 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getAllGameSessionsTest</span>
+                <span class="method-start">9921 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getAUsersGameSessionsTest</span>
+                <span class="method-start">9921 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">createSessionsTest</span>
+                <span class="method-start">9921 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.hwa.rest.GameSessionControllerUnitTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">createGameSessionTest</span>
+                <span class="method-start">13847 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateGameSessionTest</span>
+                <span class="method-start">13848 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getAllGameSessionsTest</span>
+                <span class="method-start">13848 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteUserTestFalse</span>
+                <span class="method-start">13848 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteUserTestTrue</span>
+                <span class="method-start">13848 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getAUsersGameSessionsTest</span>
+                <span class="method-start">13848 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.hwa.rest.UserControllerIntegrationTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">getAllUsersTest</span>
+                <span class="method-start">14163 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">createUsersTest</span>
+                <span class="method-start">14163 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateUserTest</span>
+                <span class="method-start">14166 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteUserTest</span>
+                <span class="method-start">14166 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getUserByIdTest</span>
+                <span class="method-start">14167 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.hwa.rest.UserControllerUnitTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">getAllUsersTest</span>
+                <span class="method-start">14171 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteUserTestFalse</span>
+                <span class="method-start">14172 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateUserTest</span>
+                <span class="method-start">14172 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">createUserTest</span>
+                <span class="method-start">14172 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteUserTestTrue</span>
+                <span class="method-start">14172 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getUserByUsernameTest</span>
+                <span class="method-start">14173 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getUserByIdTest</span>
+                <span class="method-start">14173 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.hwa.service.GameSessionServiceIntegrationTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">readAUsersGameSessionsTest</span>
+                <span class="method-start">14335 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteGameSessionTest</span>
+                <span class="method-start">14335 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">createGameSessionTest</span>
+                <span class="method-start">14335 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateGameSessionTest</span>
+                <span class="method-start">14335 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">readAllGameSessionsTest</span>
+                <span class="method-start">14335 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">findUserByUsernameTest</span>
+                <span class="method-start">14335 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.hwa.service.GameSessionServiceUnitTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">readAUsersGameSessionsTest</span>
+                <span class="method-start">17578 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">createGameSessionTest</span>
+                <span class="method-start">17578 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">readUserByUsernameTest</span>
+                <span class="method-start">17578 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">readUserByNonExistingUsernameTest</span>
+                <span class="method-start">17578 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateGameSessionTest</span>
+                <span class="method-start">17578 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteSessionByNonExistingId</span>
+                <span class="method-start">17578 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">readAllSessionsTest</span>
+                <span class="method-start">17578 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteSessionByExistingId</span>
+                <span class="method-start">17578 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.hwa.service.UserServiceIntegrationTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">readAllUsersTest</span>
+                <span class="method-start">17880 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">findUserByIdTest</span>
+                <span class="method-start">17880 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateUserTest</span>
+                <span class="method-start">17880 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">createUserTest</span>
+                <span class="method-start">17880 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteUserTest</span>
+                <span class="method-start">17880 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.hwa.service.UserServiceUnitTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">deleteUserByExistingId</span>
+                <span class="method-start">18360 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">readUserByUsernameTest</span>
+                <span class="method-start">18360 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteUserByNonExistingId</span>
+                <span class="method-start">18360 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">readUserByNonExistingUsernameTest</span>
+                <span class="method-start">18360 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">readAllUsersTest</span>
+                <span class="method-start">18360 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">findUserByIdTest</span>
+                <span class="method-start">18360 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateUserTest</span>
+                <span class="method-start">18360 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">createUserTest</span>
+                <span class="method-start">18360 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

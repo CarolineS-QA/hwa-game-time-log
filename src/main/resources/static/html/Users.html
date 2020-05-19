@@ -14,29 +14,42 @@
 </head>
 <body>
  <!-- Nav bar -->
- <nav class="sticky">
-    <a href="../index.html"><img id="GameTimeLogFullLogo" src="../img/logo-via-logohub.png" alt="Game Time Log Logo"></a>
-    <a href="../index.html">HOME</a>
-    <a href="./Users.html">USERS</a>
-    <a href="./GameSessions.html">GAME SESSIONS</a>
-    <a href="./AboutTheApp.html">ABOUT THIS APP</a>
-    <a href="https://github.com/CarolineS-QA">CONTACT ME</a>
-    <a href="https://github.com/CarolineS-QA/hwa-game-time-log">Check out the source code on <img id="GitHubLogoTxt" src="../img/GitHub_Logo.png" alt="Git Hub Logo"><img id="GitHubLogoIcon" src="../img/GitHub-Mark-64px.png" alt="Git Hub Mark"></a>
+ <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="../index.html"><img id="GameTimeLogFullLogo" src="../img/logo-via-logohub.png" alt="Game Time Log Logo"></a>
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+            <a href="../index.html">HOME</a>
+        </li>
+        <li class="nav-item">
+            <a href="./Users.html">USERS</a>
+        </li>
+        <li class="nav-item">
+            <a href="./GameSessions.html">GAME SESSIONS</a>
+        </li>
+        <li class="nav-item">
+            <a href="./AboutTheApp.html">ABOUT THIS APP</a>
+        </li>
+        <li class="nav-item">
+            <a href="https://github.com/CarolineS-QA">CONTACT ME</a>
+        </li>
+    </ul>
  </nav>
-<br><br><br><br><br>
+<br>
  <!-- Start of main page content -->
  <header>
     <noscript>If you have no JS enabled you will see this!</noscript>
     <h1>GameTimeLog - User Landing</h1>
+    <br>
  </header>
  <main>
-    <section id="ToCreateAUser">
+    <section id="ToCreateAUser" class="jumbotron">
         <div id="Intro">
-            <p>Welcome!</p>
-            <p>If you don't have a user yet, create one <a href="./UserCreation.html">here</a></p>
+            <p class="display-4">Welcome!</p>
+            <hr class="my-4">
+            <p>If you don't have a user yet, create one <a href="./UserCreation.html">here</a>.</p>
         </div>
     </section>
-     <section id="readYourUser">
+     <section id="readYourUser" class="container">
         <form id="UserForm" method="GET" action="Users.html">
             <fieldset>
                 <legend>See Your User Details</legend>
@@ -46,19 +59,18 @@
                         <input id="username" name="username" type ="text" />
                     </li>
                 </ul>
-                <button id='bSubmitUsername' type='submit'>Submit</button>
+                <button id='bSubmitUsername' type='submit' class="btn btn-outline-success">Read</button>
             </fieldset>
         </form>
         <div id="readYourUserResponse"></div>
      </section>
-
-     <section id="updateYourUser">
+     <br>
+     <section id="updateYourUser" class="container">
          <form id="UpdateUserForm" method="GET" action="Users.html">
              <fieldset>
                  <legend>Manage your User's Time</legend>
                  <ul>
                      <!-- I don't want users changing their usernames. -->
-
                      <li>
                          <label for="userIdUpdate">Please confirm your userId: </label>
                          <input id="userIdUpdate" name="userIdUpdate" type="number" />
@@ -86,42 +98,47 @@
                          <input id="totalTimePlayedMinutes" type="number" />
                      </li>
                  </ul>
-                 <button id='bSubmitUpdate' type='submit'>Submit</button>
+                 <button id='bResetUpdateUser' type='reset' class="btn btn-secondary">Reset</button>
+                 <button id='bSubmitUpdate' type='submit' class="btn btn-outline-success">Update</button>
              </fieldset>
          </form>
         <div id="updateYourUserResponse"></div>
-        <div id="ToYourGameSessions">
-            <h5>Track your game sessions!</h5>
-            <p>Head over to the <a href="./GameSessions.html">Game Sessions</a> Page to manage them.</p>
+        <div class="card" id="ToYourGameSessions">
+             <h5 class="card-header">Track your game sessions!</h5>
+             <div class="card-body">
+                 <p class="card-text">Head over to the <a href="./GameSessions.html"><button type="button" class="btn btn-outline-success btn-sm">Game Sessions</button></a> page to manage them.</p>
+            </div>
         </div>
      </section>
+     <br>
         <!--Warning!-->
-     <section id="deleteUserSection">
-         <h4>Warning! </h4>
-         <p>Deleting your user will remove all your game sessions.</p>
+     <section id="deleteUserSection" class="container">
+         <h3 class="alert alert-danger" role="alert">Warning! Deleting your user will remove all your game sessions.</h3>
         <form id="DeleteForm" method="POST" action="Users.html">
             <fieldset>
                 <legend>Delete your User Account</legend>
-                <ul>
-                    <li>
-                        <label for="userIdDelete">Please enter your UserId: </label>
-                        <input id="userIdDelete" name="userIdDelete" type ="number" />
-                    </li>
-                </ul>
-                <button id='bSubmitDelete' type='submit'>Delete</button>
+                    <label for="userIdDelete">Please enter your UserId: </label>
+                    <input id="userIdDelete" name="userIdDelete" type ="number" />
+                <button id='bSubmitDelete' type='submit' class="btn btn-outline-danger">Delete</button>
             </fieldset>
         </form>
         <div id="deleteUserResponse"></div>
      </section>
-
-     <section>
-         <a href="./AllGameSessions.html">See what has been played</a><!-- recently, All game sessions -->
-         <a href="./AllUsers.html">See who else is using GameTimeLog!</a>
+    <br>
+     <section class="container">
+         <a href="./AllGameSessions.html"><button type="button" class="btn btn-secondary">See recent Game Sessions</button></a><!-- recently, All game sessions -->
+         <a href="./AllUsers.html"><button type="button" class="btn btn-secondary">See who else is using GameTimeLog!</button></a>
      </section>
  </main>
 <!--Footer-->
- <footer></footer>
+ <footer>
+    <br><br><br><br>
+    <p>Copyright (c) Caroline Strasenburgh 2020</p>
+    <a href="https://github.com/CarolineS-QA/hwa-game-time-log">Find the source code on: <img id="GitHubLogoTxt" src="../img/GitHub_Logo.png" alt="Git Hub Logo"><img id="GitHubLogoIcon" src="../img/GitHub-Mark-64px.png" alt="Git Hub Mark"></a>
+ </footer>
 <!--Scripts-->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
  <script src="../js/bootstrap.min.js"></script>
 <script src="../js/userRUD.js"></script>
  </body>

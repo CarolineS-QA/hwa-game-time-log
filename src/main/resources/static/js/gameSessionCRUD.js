@@ -106,7 +106,7 @@ function buildUserSessionsDisplay(placeholder, data){
 
     data.forEach(session => {
         const card = document.createElement('div');
-        card.setAttribute('session', 'card');
+        card.setAttribute('class', 'card');
 
         const idAndGameText = document.createElement('p');
         idAndGameText.textContent = `Game: ${session.gameName}     //    Session Id: ${session.sessionId}`;

@@ -2,10 +2,14 @@
 nav.a {
     background-color: #111144;
     color: white;
-    text-align: center;
+    text-align: right;
     padding: 10px;
     float: right;
     display: block;
+}
+
+li.nav-item{
+    margin-left: 15px;
 }
 
 img#GitHubLogoTxt {
@@ -18,6 +22,16 @@ img#GameTimeLogFullLogo{
     height: 80px;
 }
 
+footer, header {
+    text-align: center;
+    align-content: center;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: lightsteelblue;
+}
+
 /* for 'cards' on get All Users/GameSessions
 from: https://github.com/taniarascia/sandbox/tree/master/ghibli */
 @media screen and (min-width: 900px) {
@@ -25,11 +39,14 @@ from: https://github.com/taniarascia/sandbox/tree/master/ghibli */
         flex: 1 1 calc(33% - 2rem);
     }
 }
+
+/*
 @media screen and (min-width: 600px) {
     .card {
         flex: 1 1 calc(50% - 2rem);
     }
 }
+*/
 
 .card:hover {
     box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
@@ -45,4 +62,33 @@ from: https://github.com/taniarascia/sandbox/tree/master/ghibli */
     border-radius: 12px;
     overflow: hidden;
     transition: all .2s linear;
+}
+
+/* additonal formatting for forms*/
+#ToYourGameSessions.card {
+    text-align: center;
+    max-width: 500px;
+    
+}
+#ToYourGameSessions.card:hover {
+    box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+    transform: translate3D(0, 0px, 0);
+}
+
+#closeAppSection{
+    text-align: center;
+}
+
+#userDetails {
+    margin-left: 30%;
+    margin-right: 30%;
+    border-width: 2px;
+    border-color: #111144;
+    box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+    text-align: center;
+    padding: 20px;
+}
+
+legend#userDetails {
+    text-align: center;
 }

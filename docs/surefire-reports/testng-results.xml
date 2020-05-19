@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="151" passed="130" failed="0" skipped="21">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-05-18T14:26:01Z" name="Surefire suite" finished-at="2020-05-18T14:26:19Z" duration-ms="18477">
+    <groups>
+    </groups>
+    <test started-at="2020-05-18T14:26:01Z" name="Surefire test" finished-at="2020-05-18T14:26:19Z" duration-ms="18477">
+      <class name="com.qa.hwa.rest.GameSessionControllerIntegrationTest">
+        <test-method signature="deleteGameSessionTest() throws java.lang.Exception" started-at="2020-05-18T15:26:11Z" name="deleteGameSessionTest" finished-at="2020-05-18T15:26:14Z" duration-ms="3913" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteGameSessionTest -->
+        <test-method signature="updateGameSessionTest() throws java.lang.Exception" started-at="2020-05-18T15:26:11Z" name="updateGameSessionTest" finished-at="2020-05-18T15:26:11Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateGameSessionTest -->
+        <test-method signature="getAllGameSessionsTest() throws java.lang.Exception" started-at="2020-05-18T15:26:11Z" name="getAllGameSessionsTest" finished-at="2020-05-18T15:26:11Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllGameSessionsTest -->
+        <test-method signature="getAUsersGameSessionsTest() throws java.lang.Exception" started-at="2020-05-18T15:26:11Z" name="getAUsersGameSessionsTest" finished-at="2020-05-18T15:26:11Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAUsersGameSessionsTest -->
+        <test-method signature="createSessionsTest() throws java.lang.Exception" started-at="2020-05-18T15:26:11Z" name="createSessionsTest" finished-at="2020-05-18T15:26:11Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createSessionsTest -->
+      </class> <!-- com.qa.hwa.rest.GameSessionControllerIntegrationTest -->
+      <class name="com.qa.hwa.AppTest">
+        <test-method signature="shouldAnswerWithTrue()" started-at="2020-05-18T15:26:01Z" name="shouldAnswerWithTrue" finished-at="2020-05-18T15:26:10Z" duration-ms="9711" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldAnswerWithTrue -->
+      </class> <!-- com.qa.hwa.AppTest -->
+      <class name="com.qa.hwa.service.UserServiceUnitTest">
+        <test-method signature="deleteUserByNonExistingId()" started-at="2020-05-18T15:26:19Z" name="deleteUserByNonExistingId" finished-at="2020-05-18T15:26:19Z" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteUserByNonExistingId -->
+        <test-method signature="deleteUserByExistingId()" started-at="2020-05-18T15:26:19Z" name="deleteUserByExistingId" finished-at="2020-05-18T15:26:19Z" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteUserByExistingId -->
+        <test-method signature="updateUserTest()" started-at="2020-05-18T15:26:19Z" name="updateUserTest" finished-at="2020-05-18T15:26:19Z" duration-ms="39" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateUserTest -->
+        <test-method signature="readAllUsersTest()" started-at="2020-05-18T15:26:19Z" name="readAllUsersTest" finished-at="2020-05-18T15:26:19Z" duration-ms="25" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readAllUsersTest -->
+        <test-method signature="findUserByIdTest()" started-at="2020-05-18T15:26:19Z" name="findUserByIdTest" finished-at="2020-05-18T15:26:19Z" duration-ms="32" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findUserByIdTest -->
+        <test-method signature="readUserByUsernameTest()" started-at="2020-05-18T15:26:19Z" name="readUserByUsernameTest" finished-at="2020-05-18T15:26:19Z" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readUserByUsernameTest -->
+        <test-method signature="createUserTest()" started-at="2020-05-18T15:26:19Z" name="createUserTest" finished-at="2020-05-18T15:26:19Z" duration-ms="50" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createUserTest -->
+        <test-method signature="readUserByNonExistingUsernameTest()" started-at="2020-05-18T15:26:19Z" name="readUserByNonExistingUsernameTest" finished-at="2020-05-18T15:26:19Z" duration-ms="20" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readUserByNonExistingUsernameTest -->
+      </class> <!-- com.qa.hwa.service.UserServiceUnitTest -->
+      <class name="com.qa.hwa.rest.GameSessionControllerUnitTest">
+        <test-method signature="createGameSessionTest()" started-at="2020-05-18T15:26:14Z" name="createGameSessionTest" finished-at="2020-05-18T15:26:15Z" duration-ms="232" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createGameSessionTest -->
+        <test-method signature="updateGameSessionTest()" started-at="2020-05-18T15:26:14Z" name="updateGameSessionTest" finished-at="2020-05-18T15:26:15Z" duration-ms="244" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateGameSessionTest -->
+        <test-method signature="deleteUserTestTrue()" started-at="2020-05-18T15:26:14Z" name="deleteUserTestTrue" finished-at="2020-05-18T15:26:15Z" duration-ms="264" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteUserTestTrue -->
+        <test-method signature="getAllGameSessionsTest()" started-at="2020-05-18T15:26:14Z" name="getAllGameSessionsTest" finished-at="2020-05-18T15:26:15Z" duration-ms="251" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllGameSessionsTest -->
+        <test-method signature="getAUsersGameSessionsTest()" started-at="2020-05-18T15:26:14Z" name="getAUsersGameSessionsTest" finished-at="2020-05-18T15:26:15Z" duration-ms="275" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAUsersGameSessionsTest -->
+        <test-method signature="deleteUserTestFalse()" started-at="2020-05-18T15:26:14Z" name="deleteUserTestFalse" finished-at="2020-05-18T15:26:15Z" duration-ms="258" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteUserTestFalse -->
+      </class> <!-- com.qa.hwa.rest.GameSessionControllerUnitTest -->
+      <class name="com.qa.hwa.dto.UserDTOUnitTest">
+        <test-method signature="nullTimeRemainingOnBoth()" started-at="2020-05-18T15:26:10Z" name="nullTimeRemainingOnBoth" finished-at="2020-05-18T15:26:10Z" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullTimeRemainingOnBoth -->
+        <test-method signature="constructorWithoutId()" started-at="2020-05-18T15:26:10Z" name="constructorWithoutId" finished-at="2020-05-18T15:26:10Z" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constructorWithoutId -->
+        <test-method signature="notEqualsWithNull()" started-at="2020-05-18T15:26:10Z" name="notEqualsWithNull" finished-at="2020-05-18T15:26:10Z" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- notEqualsWithNull -->
+        <test-method signature="checkEqualityBetweenDifferentObjects()" started-at="2020-05-18T15:26:10Z" name="checkEqualityBetweenDifferentObjects" finished-at="2020-05-18T15:26:10Z" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjects -->
+        <test-method signature="usernameNullButOtherNameNotNull()" started-at="2020-05-18T15:26:10Z" name="usernameNullButOtherNameNotNull" finished-at="2020-05-18T15:26:10Z" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- usernameNullButOtherNameNotNull -->
+        <test-method signature="nullFreeTime()" started-at="2020-05-18T15:26:10Z" name="nullFreeTime" finished-at="2020-05-18T15:26:10Z" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullFreeTime -->
+        <test-method signature="checkEquality()" started-at="2020-05-18T15:26:10Z" name="checkEquality" finished-at="2020-05-18T15:26:10Z" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEquality -->
+        <test-method signature="gettersAndSettersTest()" started-at="2020-05-18T15:26:10Z" name="gettersAndSettersTest" finished-at="2020-05-18T15:26:10Z" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gettersAndSettersTest -->
+        <test-method signature="checkEqualityBetweenDifferentObjectsNullUsername()" started-at="2020-05-18T15:26:10Z" name="checkEqualityBetweenDifferentObjectsNullUsername" finished-at="2020-05-18T15:26:10Z" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjectsNullUsername -->
+        <test-method signature="emptyConstructor()" started-at="2020-05-18T15:26:10Z" name="emptyConstructor" finished-at="2020-05-18T15:26:10Z" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emptyConstructor -->
+        <test-method signature="nullId()" started-at="2020-05-18T15:26:10Z" name="nullId" finished-at="2020-05-18T15:26:10Z" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullId -->
+        <test-method signature="notEqualsWithDifferentObject()" started-at="2020-05-18T15:26:10Z" name="notEqualsWithDifferentObject" finished-at="2020-05-18T15:26:10Z" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- notEqualsWithDifferentObject -->
+        <test-method signature="nullFreeTimeOnBoth()" started-at="2020-05-18T15:26:10Z" name="nullFreeTimeOnBoth" finished-at="2020-05-18T15:26:10Z" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullFreeTimeOnBoth -->
+        <test-method signature="nullIdOnBoth()" started-at="2020-05-18T15:26:10Z" name="nullIdOnBoth" finished-at="2020-05-18T15:26:10Z" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullIdOnBoth -->
+        <test-method signature="nullTotalTimePlayed()" started-at="2020-05-18T15:26:10Z" name="nullTotalTimePlayed" finished-at="2020-05-18T15:26:10Z" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullTotalTimePlayed -->
+        <test-method signature="otherTotalTimePlayedDifferent()" started-at="2020-05-18T15:26:10Z" name="otherTotalTimePlayedDifferent" finished-at="2020-05-18T15:26:10Z" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherTotalTimePlayedDifferent -->
+        <test-method signature="otherFreeTimeDifferent()" started-at="2020-05-18T15:26:10Z" name="otherFreeTimeDifferent" finished-at="2020-05-18T15:26:10Z" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherFreeTimeDifferent -->
+        <test-method signature="constructorUserWithId()" started-at="2020-05-18T15:26:10Z" name="constructorUserWithId" finished-at="2020-05-18T15:26:10Z" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constructorUserWithId -->
+        <test-method signature="hashCodeTest()" started-at="2020-05-18T15:26:10Z" name="hashCodeTest" finished-at="2020-05-18T15:26:10Z" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTest -->
+        <test-method signature="usernameNotEqual()" started-at="2020-05-18T15:26:10Z" name="usernameNotEqual" finished-at="2020-05-18T15:26:10Z" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- usernameNotEqual -->
+        <test-method signature="otherTimeRemainingDifferent()" started-at="2020-05-18T15:26:10Z" name="otherTimeRemainingDifferent" finished-at="2020-05-18T15:26:10Z" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherTimeRemainingDifferent -->
+        <test-method signature="nullTimeRemaining()" started-at="2020-05-18T15:26:10Z" name="nullTimeRemaining" finished-at="2020-05-18T15:26:10Z" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullTimeRemaining -->
+        <test-method signature="hashCodeTestWithNull()" started-at="2020-05-18T15:26:10Z" name="hashCodeTestWithNull" finished-at="2020-05-18T15:26:10Z" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTestWithNull -->
+        <test-method signature="otherIdDifferent()" started-at="2020-05-18T15:26:10Z" name="otherIdDifferent" finished-at="2020-05-18T15:26:10Z" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherIdDifferent -->
+        <test-method signature="nullTotalTimePlayedOnBoth()" started-at="2020-05-18T15:26:10Z" name="nullTotalTimePlayedOnBoth" finished-at="2020-05-18T15:26:10Z" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullTotalTimePlayedOnBoth -->
+      </class> <!-- com.qa.hwa.dto.UserDTOUnitTest -->
+      <class name="com.qa.hwa.dto.GameSessionDTOUnitTest">
+        <test-method signature="usernameNullButOtherNameNotNull()" started-at="2020-05-18T15:26:10Z" name="usernameNullButOtherNameNotNull" finished-at="2020-05-18T15:26:10Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- usernameNullButOtherNameNotNull -->
+        <test-method signature="nullGameName()" started-at="2020-05-18T15:26:10Z" name="nullGameName" finished-at="2020-05-18T15:26:10Z" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullGameName -->
+        <test-method signature="constructorWithoutId()" started-at="2020-05-18T15:26:10Z" name="constructorWithoutId" finished-at="2020-05-18T15:26:10Z" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constructorWithoutId -->
+        <test-method signature="checkEqualityBetweenDifferentObjects()" started-at="2020-05-18T15:26:10Z" name="checkEqualityBetweenDifferentObjects" finished-at="2020-05-18T15:26:10Z" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjects -->
+        <test-method signature="nullTimePlayedOnBoth()" started-at="2020-05-18T15:26:10Z" name="nullTimePlayedOnBoth" finished-at="2020-05-18T15:26:10Z" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullTimePlayedOnBoth -->
+        <test-method signature="notEqualsWithNull()" started-at="2020-05-18T15:26:10Z" name="notEqualsWithNull" finished-at="2020-05-18T15:26:10Z" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- notEqualsWithNull -->
+        <test-method signature="checkEquality()" started-at="2020-05-18T15:26:10Z" name="checkEquality" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEquality -->
+        <test-method signature="nullTimePlayed()" started-at="2020-05-18T15:26:10Z" name="nullTimePlayed" finished-at="2020-05-18T15:26:10Z" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullTimePlayed -->
+        <test-method signature="checkEqualityBetweenDifferentObjectsNullUsername()" started-at="2020-05-18T15:26:10Z" name="checkEqualityBetweenDifferentObjectsNullUsername" finished-at="2020-05-18T15:26:10Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjectsNullUsername -->
+        <test-method signature="nullGameNameOnBoth()" started-at="2020-05-18T15:26:10Z" name="nullGameNameOnBoth" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullGameNameOnBoth -->
+        <test-method signature="notEqualsWithDifferentObject()" started-at="2020-05-18T15:26:10Z" name="notEqualsWithDifferentObject" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- notEqualsWithDifferentObject -->
+        <test-method signature="nullId()" started-at="2020-05-18T15:26:10Z" name="nullId" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullId -->
+        <test-method signature="gettersAndSettersTest()" started-at="2020-05-18T15:26:10Z" name="gettersAndSettersTest" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gettersAndSettersTest -->
+        <test-method signature="nullIdOnBoth()" started-at="2020-05-18T15:26:10Z" name="nullIdOnBoth" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullIdOnBoth -->
+        <test-method signature="hashCodeTest()" started-at="2020-05-18T15:26:10Z" name="hashCodeTest" finished-at="2020-05-18T15:26:10Z" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTest -->
+        <test-method signature="nullTimeOfSession()" started-at="2020-05-18T15:26:10Z" name="nullTimeOfSession" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullTimeOfSession -->
+        <test-method signature="otherGameNameDifferent()" started-at="2020-05-18T15:26:10Z" name="otherGameNameDifferent" finished-at="2020-05-18T15:26:10Z" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherGameNameDifferent -->
+        <test-method signature="emptyConstructor()" started-at="2020-05-18T15:26:10Z" name="emptyConstructor" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emptyConstructor -->
+        <test-method signature="constructorUserWithId()" started-at="2020-05-18T15:26:10Z" name="constructorUserWithId" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constructorUserWithId -->
+        <test-method signature="otherTimeOfSessionDifferent()" started-at="2020-05-18T15:26:10Z" name="otherTimeOfSessionDifferent" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherTimeOfSessionDifferent -->
+        <test-method signature="nullTimeOfSessionBoth()" started-at="2020-05-18T15:26:10Z" name="nullTimeOfSessionBoth" finished-at="2020-05-18T15:26:10Z" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullTimeOfSessionBoth -->
+        <test-method signature="otherTimePlayedDifferent()" started-at="2020-05-18T15:26:10Z" name="otherTimePlayedDifferent" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherTimePlayedDifferent -->
+        <test-method signature="hashCodeTestWithNull()" started-at="2020-05-18T15:26:10Z" name="hashCodeTestWithNull" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTestWithNull -->
+        <test-method signature="otherIdDifferent()" started-at="2020-05-18T15:26:10Z" name="otherIdDifferent" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherIdDifferent -->
+        <test-method signature="usernameNotEqual()" started-at="2020-05-18T15:26:10Z" name="usernameNotEqual" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- usernameNotEqual -->
+      </class> <!-- com.qa.hwa.dto.GameSessionDTOUnitTest -->
+      <class name="com.qa.hwa.domain.GameSessionUnitTest">
+        <test-method signature="usernameNullButOtherNameNotNull()" started-at="2020-05-18T15:26:10Z" name="usernameNullButOtherNameNotNull" finished-at="2020-05-18T15:26:10Z" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- usernameNullButOtherNameNotNull -->
+        <test-method signature="nullGameName()" started-at="2020-05-18T15:26:10Z" name="nullGameName" finished-at="2020-05-18T15:26:10Z" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullGameName -->
+        <test-method signature="constructorWithoutId()" started-at="2020-05-18T15:26:10Z" name="constructorWithoutId" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constructorWithoutId -->
+        <test-method signature="checkEqualityBetweenDifferentObjects()" started-at="2020-05-18T15:26:10Z" name="checkEqualityBetweenDifferentObjects" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjects -->
+        <test-method signature="nullTimePlayedOnBoth()" started-at="2020-05-18T15:26:10Z" name="nullTimePlayedOnBoth" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullTimePlayedOnBoth -->
+        <test-method signature="nullTimePlayed()" started-at="2020-05-18T15:26:10Z" name="nullTimePlayed" finished-at="2020-05-18T15:26:10Z" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullTimePlayed -->
+        <test-method signature="checkEquality()" started-at="2020-05-18T15:26:10Z" name="checkEquality" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEquality -->
+        <test-method signature="gettersAndSettersTest()" started-at="2020-05-18T15:26:10Z" name="gettersAndSettersTest" finished-at="2020-05-18T15:26:10Z" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gettersAndSettersTest -->
+        <test-method signature="notEqualsWithNull()" started-at="2020-05-18T15:26:10Z" name="notEqualsWithNull" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- notEqualsWithNull -->
+        <test-method signature="nullGameNameOnBoth()" started-at="2020-05-18T15:26:10Z" name="nullGameNameOnBoth" finished-at="2020-05-18T15:26:10Z" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullGameNameOnBoth -->
+        <test-method signature="checkEqualityBetweenDifferentObjectsNullUsername()" started-at="2020-05-18T15:26:10Z" name="checkEqualityBetweenDifferentObjectsNullUsername" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjectsNullUsername -->
+        <test-method signature="nullId()" started-at="2020-05-18T15:26:10Z" name="nullId" finished-at="2020-05-18T15:26:10Z" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullId -->
+        <test-method signature="nullTimeOfSession()" started-at="2020-05-18T15:26:10Z" name="nullTimeOfSession" finished-at="2020-05-18T15:26:10Z" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullTimeOfSession -->
+        <test-method signature="emptyConstructor()" started-at="2020-05-18T15:26:10Z" name="emptyConstructor" finished-at="2020-05-18T15:26:10Z" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emptyConstructor -->
+        <test-method signature="nullIdOnBoth()" started-at="2020-05-18T15:26:10Z" name="nullIdOnBoth" finished-at="2020-05-18T15:26:10Z" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullIdOnBoth -->
+        <test-method signature="notEqualsWithDifferentObject()" started-at="2020-05-18T15:26:10Z" name="notEqualsWithDifferentObject" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- notEqualsWithDifferentObject -->
+        <test-method signature="otherGameNameDifferent()" started-at="2020-05-18T15:26:10Z" name="otherGameNameDifferent" finished-at="2020-05-18T15:26:10Z" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherGameNameDifferent -->
+        <test-method signature="constructorUserWithId()" started-at="2020-05-18T15:26:10Z" name="constructorUserWithId" finished-at="2020-05-18T15:26:10Z" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constructorUserWithId -->
+        <test-method signature="hashCodeTestWithNull()" started-at="2020-05-18T15:26:10Z" name="hashCodeTestWithNull" finished-at="2020-05-18T15:26:10Z" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTestWithNull -->
+        <test-method signature="nullTimeOfSessionBoth()" started-at="2020-05-18T15:26:10Z" name="nullTimeOfSessionBoth" finished-at="2020-05-18T15:26:10Z" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullTimeOfSessionBoth -->
+        <test-method signature="otherTimePlayedDifferent()" started-at="2020-05-18T15:26:10Z" name="otherTimePlayedDifferent" finished-at="2020-05-18T15:26:10Z" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherTimePlayedDifferent -->
+        <test-method signature="hashCodeTest()" started-at="2020-05-18T15:26:10Z" name="hashCodeTest" finished-at="2020-05-18T15:26:10Z" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTest -->
+        <test-method signature="usernameNotEqual()" started-at="2020-05-18T15:26:10Z" name="usernameNotEqual" finished-at="2020-05-18T15:26:10Z" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- usernameNotEqual -->
+        <test-method signature="otherTimeOfSessionDifferent()" started-at="2020-05-18T15:26:10Z" name="otherTimeOfSessionDifferent" finished-at="2020-05-18T15:26:10Z" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherTimeOfSessionDifferent -->
+        <test-method signature="otherIdDifferent()" started-at="2020-05-18T15:26:10Z" name="otherIdDifferent" finished-at="2020-05-18T15:26:10Z" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherIdDifferent -->
+      </class> <!-- com.qa.hwa.domain.GameSessionUnitTest -->
+      <class name="com.qa.hwa.rest.UserControllerIntegrationTest">
+        <test-method signature="createUsersTest() throws java.lang.Exception" started-at="2020-05-18T15:26:15Z" name="createUsersTest" finished-at="2020-05-18T15:26:15Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createUsersTest -->
+        <test-method signature="getAllUsersTest() throws java.lang.Exception" started-at="2020-05-18T15:26:15Z" name="getAllUsersTest" finished-at="2020-05-18T15:26:15Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllUsersTest -->
+        <test-method signature="updateUserTest() throws java.lang.Exception" started-at="2020-05-18T15:26:15Z" name="updateUserTest" finished-at="2020-05-18T15:26:15Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateUserTest -->
+        <test-method signature="deleteUserTest() throws java.lang.Exception" started-at="2020-05-18T15:26:15Z" name="deleteUserTest" finished-at="2020-05-18T15:26:15Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteUserTest -->
+        <test-method signature="getUserByIdTest() throws java.lang.Exception" started-at="2020-05-18T15:26:15Z" name="getUserByIdTest" finished-at="2020-05-18T15:26:15Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserByIdTest -->
+      </class> <!-- com.qa.hwa.rest.UserControllerIntegrationTest -->
+      <class name="com.qa.hwa.service.UserServiceIntegrationTest">
+        <test-method signature="deleteUserTest()" started-at="2020-05-18T15:26:18Z" name="deleteUserTest" finished-at="2020-05-18T15:26:19Z" duration-ms="475" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteUserTest -->
+        <test-method signature="readAllUsersTest()" started-at="2020-05-18T15:26:18Z" name="readAllUsersTest" finished-at="2020-05-18T15:26:18Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readAllUsersTest -->
+        <test-method signature="updateUserTest()" started-at="2020-05-18T15:26:18Z" name="updateUserTest" finished-at="2020-05-18T15:26:18Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateUserTest -->
+        <test-method signature="createUserTest()" started-at="2020-05-18T15:26:18Z" name="createUserTest" finished-at="2020-05-18T15:26:18Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createUserTest -->
+        <test-method signature="findUserByIdTest()" started-at="2020-05-18T15:26:18Z" name="findUserByIdTest" finished-at="2020-05-18T15:26:18Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findUserByIdTest -->
+      </class> <!-- com.qa.hwa.service.UserServiceIntegrationTest -->
+      <class name="com.qa.hwa.service.GameSessionServiceUnitTest">
+        <test-method signature="readUserByNonExistingUsernameTest()" started-at="2020-05-18T15:26:18Z" name="readUserByNonExistingUsernameTest" finished-at="2020-05-18T15:26:18Z" duration-ms="269" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readUserByNonExistingUsernameTest -->
+        <test-method signature="readAUsersGameSessionsTest()" started-at="2020-05-18T15:26:18Z" name="readAUsersGameSessionsTest" finished-at="2020-05-18T15:26:18Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readAUsersGameSessionsTest -->
+        <test-method signature="deleteSessionByExistingId()" started-at="2020-05-18T15:26:18Z" name="deleteSessionByExistingId" finished-at="2020-05-18T15:26:18Z" duration-ms="294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteSessionByExistingId -->
+        <test-method signature="createGameSessionTest()" started-at="2020-05-18T15:26:18Z" name="createGameSessionTest" finished-at="2020-05-18T15:26:18Z" duration-ms="259" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createGameSessionTest -->
+        <test-method signature="readAllSessionsTest()" started-at="2020-05-18T15:26:18Z" name="readAllSessionsTest" finished-at="2020-05-18T15:26:18Z" duration-ms="289" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readAllSessionsTest -->
+        <test-method signature="updateGameSessionTest()" started-at="2020-05-18T15:26:18Z" name="updateGameSessionTest" finished-at="2020-05-18T15:26:18Z" duration-ms="279" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateGameSessionTest -->
+        <test-method signature="readUserByUsernameTest()" started-at="2020-05-18T15:26:18Z" name="readUserByUsernameTest" finished-at="2020-05-18T15:26:18Z" duration-ms="265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readUserByUsernameTest -->
+        <test-method signature="deleteSessionByNonExistingId()" started-at="2020-05-18T15:26:18Z" name="deleteSessionByNonExistingId" finished-at="2020-05-18T15:26:18Z" duration-ms="282" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteSessionByNonExistingId -->
+      </class> <!-- com.qa.hwa.service.GameSessionServiceUnitTest -->
+      <class name="com.qa.hwa.domain.UserUnitTest">
+        <test-method signature="nullTimeRemainingOnBoth()" started-at="2020-05-18T15:26:10Z" name="nullTimeRemainingOnBoth" finished-at="2020-05-18T15:26:10Z" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullTimeRemainingOnBoth -->
+        <test-method signature="usernameNullButOtherNameNotNull()" started-at="2020-05-18T15:26:10Z" name="usernameNullButOtherNameNotNull" finished-at="2020-05-18T15:26:10Z" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- usernameNullButOtherNameNotNull -->
+        <test-method signature="notEqualsWithNull()" started-at="2020-05-18T15:26:10Z" name="notEqualsWithNull" finished-at="2020-05-18T15:26:10Z" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- notEqualsWithNull -->
+        <test-method signature="nullFreeTime()" started-at="2020-05-18T15:26:10Z" name="nullFreeTime" finished-at="2020-05-18T15:26:10Z" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullFreeTime -->
+        <test-method signature="checkEqualityBetweenDifferentObjects()" started-at="2020-05-18T15:26:10Z" name="checkEqualityBetweenDifferentObjects" finished-at="2020-05-18T15:26:10Z" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjects -->
+        <test-method signature="checkEquality()" started-at="2020-05-18T15:26:10Z" name="checkEquality" finished-at="2020-05-18T15:26:10Z" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEquality -->
+        <test-method signature="constructorWithoutId()" started-at="2020-05-18T15:26:10Z" name="constructorWithoutId" finished-at="2020-05-18T15:26:10Z" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constructorWithoutId -->
+        <test-method signature="nullId()" started-at="2020-05-18T15:26:10Z" name="nullId" finished-at="2020-05-18T15:26:10Z" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullId -->
+        <test-method signature="nullTimeRemaining()" started-at="2020-05-18T15:26:10Z" name="nullTimeRemaining" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullTimeRemaining -->
+        <test-method signature="notEqualsWithDifferentObject()" started-at="2020-05-18T15:26:10Z" name="notEqualsWithDifferentObject" finished-at="2020-05-18T15:26:10Z" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- notEqualsWithDifferentObject -->
+        <test-method signature="checkEqualityBetweenDifferentObjectsNullUsername()" started-at="2020-05-18T15:26:10Z" name="checkEqualityBetweenDifferentObjectsNullUsername" finished-at="2020-05-18T15:26:10Z" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjectsNullUsername -->
+        <test-method signature="nullFreeTimeOnBoth()" started-at="2020-05-18T15:26:10Z" name="nullFreeTimeOnBoth" finished-at="2020-05-18T15:26:10Z" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullFreeTimeOnBoth -->
+        <test-method signature="emptyConstructor()" started-at="2020-05-18T15:26:10Z" name="emptyConstructor" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emptyConstructor -->
+        <test-method signature="gettersAndSettersTest()" started-at="2020-05-18T15:26:10Z" name="gettersAndSettersTest" finished-at="2020-05-18T15:26:10Z" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gettersAndSettersTest -->
+        <test-method signature="nullIdOnBoth()" started-at="2020-05-18T15:26:10Z" name="nullIdOnBoth" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullIdOnBoth -->
+        <test-method signature="otherFreeTimeDifferent()" started-at="2020-05-18T15:26:10Z" name="otherFreeTimeDifferent" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherFreeTimeDifferent -->
+        <test-method signature="nullTotalTimePlayed()" started-at="2020-05-18T15:26:10Z" name="nullTotalTimePlayed" finished-at="2020-05-18T15:26:10Z" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullTotalTimePlayed -->
+        <test-method signature="otherTotalTimePlayedDifferent()" started-at="2020-05-18T15:26:10Z" name="otherTotalTimePlayedDifferent" finished-at="2020-05-18T15:26:10Z" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherTotalTimePlayedDifferent -->
+        <test-method signature="otherTimeRemainingDifferent()" started-at="2020-05-18T15:26:10Z" name="otherTimeRemainingDifferent" finished-at="2020-05-18T15:26:10Z" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherTimeRemainingDifferent -->
+        <test-method signature="constructorUserWithId()" started-at="2020-05-18T15:26:10Z" name="constructorUserWithId" finished-at="2020-05-18T15:26:10Z" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constructorUserWithId -->
+        <test-method signature="hashCodeTest()" started-at="2020-05-18T15:26:10Z" name="hashCodeTest" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTest -->
+        <test-method signature="usernameNotEqual()" started-at="2020-05-18T15:26:10Z" name="usernameNotEqual" finished-at="2020-05-18T15:26:10Z" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- usernameNotEqual -->
+        <test-method signature="hashCodeTestWithNull()" started-at="2020-05-18T15:26:10Z" name="hashCodeTestWithNull" finished-at="2020-05-18T15:26:10Z" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTestWithNull -->
+        <test-method signature="otherIdDifferent()" started-at="2020-05-18T15:26:10Z" name="otherIdDifferent" finished-at="2020-05-18T15:26:10Z" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherIdDifferent -->
+        <test-method signature="nullTotalTimePlayedOnBoth()" started-at="2020-05-18T15:26:10Z" name="nullTotalTimePlayedOnBoth" finished-at="2020-05-18T15:26:10Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullTotalTimePlayedOnBoth -->
+      </class> <!-- com.qa.hwa.domain.UserUnitTest -->
+      <class name="com.qa.hwa.service.GameSessionServiceIntegrationTest">
+        <test-method signature="readAllGameSessionsTest()" started-at="2020-05-18T15:26:15Z" name="readAllGameSessionsTest" finished-at="2020-05-18T15:26:15Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readAllGameSessionsTest -->
+        <test-method signature="readAUsersGameSessionsTest()" started-at="2020-05-18T15:26:15Z" name="readAUsersGameSessionsTest" finished-at="2020-05-18T15:26:15Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readAUsersGameSessionsTest -->
+        <test-method signature="findUserByUsernameTest()" started-at="2020-05-18T15:26:15Z" name="findUserByUsernameTest" finished-at="2020-05-18T15:26:15Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findUserByUsernameTest -->
+        <test-method signature="updateGameSessionTest()" started-at="2020-05-18T15:26:15Z" name="updateGameSessionTest" finished-at="2020-05-18T15:26:15Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateGameSessionTest -->
+        <test-method signature="createGameSessionTest()" started-at="2020-05-18T15:26:15Z" name="createGameSessionTest" finished-at="2020-05-18T15:26:15Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createGameSessionTest -->
+        <test-method signature="deleteGameSessionTest()" started-at="2020-05-18T15:26:15Z" name="deleteGameSessionTest" finished-at="2020-05-18T15:26:18Z" duration-ms="3231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteGameSessionTest -->
+      </class> <!-- com.qa.hwa.service.GameSessionServiceIntegrationTest -->
+      <class name="com.qa.hwa.rest.UserControllerUnitTest">
+        <test-method signature="getAllUsersTest()" started-at="2020-05-18T15:26:15Z" name="getAllUsersTest" finished-at="2020-05-18T15:26:15Z" duration-ms="80" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllUsersTest -->
+        <test-method signature="createUserTest()" started-at="2020-05-18T15:26:15Z" name="createUserTest" finished-at="2020-05-18T15:26:15Z" duration-ms="97" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createUserTest -->
+        <test-method signature="deleteUserTestTrue()" started-at="2020-05-18T15:26:15Z" name="deleteUserTestTrue" finished-at="2020-05-18T15:26:15Z" duration-ms="102" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteUserTestTrue -->
+        <test-method signature="deleteUserTestFalse()" started-at="2020-05-18T15:26:15Z" name="deleteUserTestFalse" finished-at="2020-05-18T15:26:15Z" duration-ms="84" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteUserTestFalse -->
+        <test-method signature="updateUserTest()" started-at="2020-05-18T15:26:15Z" name="updateUserTest" finished-at="2020-05-18T15:26:15Z" duration-ms="93" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateUserTest -->
+        <test-method signature="getUserByUsernameTest()" started-at="2020-05-18T15:26:15Z" name="getUserByUsernameTest" finished-at="2020-05-18T15:26:15Z" duration-ms="111" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserByUsernameTest -->
+        <test-method signature="getUserByIdTest()" started-at="2020-05-18T15:26:15Z" name="getUserByIdTest" finished-at="2020-05-18T15:26:15Z" duration-ms="122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserByIdTest -->
+      </class> <!-- com.qa.hwa.rest.UserControllerUnitTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

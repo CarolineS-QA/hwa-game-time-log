@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" junit="true" name="Failed suite [Surefire suite]" verbose="0">
+  <test junit="true" name="Surefire test(failed)">
+    <classes>
+      <class name="org.junit.runner.Description">
+        <methods>
+          <include name="getAUsersGameSessionsTest"/>
+          <include name="findUserByIdTest"/>
+          <include name="deleteUserTest"/>
+          <include name="updateUserTest"/>
+          <include name="getAllGameSessionsTest"/>
+          <include name="readAUsersGameSessionsTest"/>
+          <include name="updateGameSessionTest"/>
+          <include name="readAUsersGameSessionsTest"/>
+          <include name="updateUserTest"/>
+          <include name="getAllUsersTest"/>
+          <include name="findUserByUsernameTest"/>
+          <include name="readAllUsersTest"/>
+          <include name="createUserTest"/>
+          <include name="createSessionsTest"/>
+          <include name="checkEqualityBetweenDifferentObjectsNullUsername"/>
+          <include name="getUserByIdTest"/>
+          <include name="readAllGameSessionsTest"/>
+          <include name="createUsersTest"/>
+          <include name="createGameSessionTest"/>
+          <include name="updateGameSessionTest"/>
+          <include name="usernameNullButOtherNameNotNull"/>
+        </methods>
+      </class> <!-- org.junit.runner.Description -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->

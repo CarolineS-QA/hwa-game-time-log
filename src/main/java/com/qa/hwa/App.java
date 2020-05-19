@@ -5,15 +5,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Add bean definitions here?
+ * add instance of appContext in main?
  * .close() of SpringApplication - need to set conditions...
+ * SpringApplication.exit(appContext, 0);
  */
 @SpringBootApplication
 public class App 
 {
     public static void main( String[] args ){
         SpringApplication.run(App.class);
-        //add instance of appContext here....
-        //conditions for shutdown?
-        //SpringApplication.exit(appContext, 0);
     }
 }
