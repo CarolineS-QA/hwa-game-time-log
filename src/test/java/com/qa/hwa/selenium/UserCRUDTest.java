@@ -1,5 +1,6 @@
 package com.qa.hwa.selenium;
 
+import com.qa.hwa.App;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -20,6 +21,7 @@ public class UserCRUDTest {
     WebDriver driver;
     ExtentReports report;
     ExtentTest test;
+    App app;
 
     @BeforeTest
     public void startReport(){
@@ -38,6 +40,7 @@ public class UserCRUDTest {
         driver = new ChromeDriver();
     }
 
+    @Ignore
     @Test
     public void createUserPageTest() throws InterruptedException, IOException {
         test = report.startTest("Verifying Navigation to Create User Page");
@@ -45,6 +48,10 @@ public class UserCRUDTest {
         test.log(LogStatus.INFO, "Started chrome browser and made it fullscreen");
         driver.get("http://localhost:8181/");
         test.log(LogStatus.INFO, "Navigating to the application web interface");
+        File webAppPic = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(webAppPic, new File(System.getProperty("user.dir") + "/test-output/webAppHome.jpg"));
+        test.log(LogStatus.PASS, "'GameTimeLog - Create a User' is shown in the header", "<img src=webAppHome.jpg>");
+        sleep(2000);
         WebElement createUserLink = driver.findElement(By.id("userCreation"));
         createUserLink.click();
         test.log(LogStatus.INFO, "Click on the userCreation link");
