@@ -217,7 +217,7 @@ Example of getting some data out of the system or using it for a little demo:
 ![Postman createUser](https://i.imgur.com/FKdR2Rf.png)
 
 Should response with:
-`
+```
 {
     "userId": 1,
     "username": "testGamer",
@@ -226,10 +226,10 @@ Should response with:
     "timeRemaining": 24.000000000,
     "gameSessions": []
 }
-`
+```
 
 JSON for sending /createGameSession
-`
+```
 {
 	"gameName": "Hello World",
 	"user":
@@ -240,9 +240,9 @@ JSON for sending /createGameSession
 	"timePlayed": 7,
 	"timeOfSession": "2007-12-03T10:15:30"
 }
-`
+```
 Responds with:
-`
+```
 {
     "sessionId": 1,
     "user": "testGamer",
@@ -250,11 +250,12 @@ Responds with:
     "timeOfSession": "2007-12-03T10:15:30",
     "timePlayed": 7.000000000
 }
-`
+```
 
 If you /getUserByUsername/testGamer
 
-`{
+```
+{
      "userId": 1,
      "username": "testGamer",
      "totalTimePlayed": 0.0,
@@ -269,9 +270,10 @@ If you /getUserByUsername/testGamer
              "timePlayed": 7.000000000
          }
      ]
- }`
+ }
+ ```
 
-In development localhost:8181 page:
+On development localhost:8181 page:
 ![Development web interface](https://i.imgur.com/vZhjC1V.png)
 
 Remember you can `Ctrl + Shift + I` to inspect and reach the developer's console.
