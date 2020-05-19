@@ -11,7 +11,6 @@
   <name>CarolineStrasenburgh-SoftwareMarch16</name>
   <!-- change it to the project's website <url>http://www.example.com</url> -->
 
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
@@ -85,6 +84,12 @@
       <artifactId>maven-surefire-plugin</artifactId>
       <version>2.19.1</version>
     </dependency>
+
+      <dependency>
+        <groupId>com.google.code.gson</groupId>
+        <artifactId>gson</artifactId>
+      </dependency>
+
     <!--Extend reports and testng-->
     <dependency>
       <groupId>org.apache.poi</groupId>
@@ -138,12 +143,6 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.22.1</version>
         </plugin>
-<!-- Maven Quickstart version of the jar plugin
-        <plugin>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>3.0.2</version>
-        </plugin>
--->
         <!-- Creates a jar for the code (does not contain other dependencies which are needed for the project to run out of the box) -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
