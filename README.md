@@ -45,7 +45,7 @@ Kanban Board for QA Project: [github boards](https://github.com/CarolineS-QA/hwa
 
 Presentation about the project: [on google slides](https://docs.google.com/presentation/d/1wznZu-mg9XHuvzp51Q3ZPYwYu3qjcSRW8Uu_N3bzJ_g/edit?usp=sharing)
 
-Please see the `docs` folder for other documentation.
+Please see the `docs` folder for the other documentation that is not linked in the 'design' column of the Kanban Board.
 
 **[Back to top](#table-of-contents)**
 
