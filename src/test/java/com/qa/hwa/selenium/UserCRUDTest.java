@@ -35,12 +35,11 @@ public class UserCRUDTest {
 
     @BeforeMethod
     public void setUp(){
-        //System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
         driver = new ChromeDriver();
     }
 
     @Test
-    public void CreateUserPageTest() throws InterruptedException, IOException {
+    public void createUserPageTest() throws InterruptedException, IOException {
         test = report.startTest("Verifying Navigation to Create User Page");
         driver.manage().window().maximize();
         test.log(LogStatus.INFO, "Started chrome browser and made it fullscreen");
