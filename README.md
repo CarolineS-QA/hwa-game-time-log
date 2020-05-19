@@ -24,7 +24,7 @@ This application aims to be a "Game Time Log" where users can perform CRUD funct
 
 ## About the Project
 
-MVP: A functional ‘front-end’ web app (and integrated APIs) which connects to a back-end written in Java, and a relational database.
+MVP: A functional ‘front-end’ web app (and integrated APIs) which connects to a back-end written in Java, and a relational database. I chose to make a "Game Time Log" because I wanted an app to help manage the time I spent playing games, so that I could spend some time each week playing a new game, instead of the same old games.
 <details>
 <summary>Technology used in the project...</summary>
     
@@ -52,7 +52,7 @@ Please see the `docs` folder for the other documentation that is not linked in t
 ## Project Status 
 Current release: v0.2.2 - in development
 
-**Test Coverage:** For src/main/java: 97% // Sonarqube: 0% // Overall: 98%%
+**Test Coverage:** For src/main/java: 97% // Sonarqube: 0% // Overall: 98%
 
 For test reports please see the `docs` folder.
 
@@ -73,15 +73,15 @@ What things you need to install the software and where to find them.
 
 ```
 Java SE 8 (or later) to run the jar file.
-Maven to create the jar-file. 
-One of the following:
-1. mySQL on your local machine,
-2. the IP and login details for my GCP instance,
-3. or your own GCP instance with SQL set up.
+Maven to create the jar-file and run.
 
-You can use the command line to run the jar file program but git & git bash are nice to have.
+If my GCP instance is no longer live...
+A relational database to configure the application to.
+(a GCP instance will require the least application config, however you can also use mySQL or h2)
 
-For the front end it's preferred that you use a Chrome browser.
+You can use the command line to run the program but git & git bash are nice to have.
+
+For the front end it's preferred that you have a Chrome browser (if you want to make use of my app shortcut).
 ```
 **To Develop**
 
@@ -90,8 +90,8 @@ When you open the project in an IDE to develop, the pom.xml file should allow yo
 ```
 The main IDE that I used for this project was IntelliJ Ultimate
 Postman was used to test my API calls before writing them in JavaScript
-In addition I used Visual Studio Code for the front-end.
-As part of the CI pipeline for this project I used Jenkins.
+I also used Visual Studio Code for the front-end
+As part of the CI pipeline for this project I used Jenkins
 ```
 
 **Links for Dependencies**
@@ -101,9 +101,9 @@ mySQL [here](https://dev.mysql.com/downloads/installer/),
 Git & Git Bash [here](https://git-scm.com/downloads),
 IntelliJ Ultimate [here](https://www.jetbrains.com/idea/download/#section=windows),
 Visual Studio Code [here](https://code.visualstudio.com/Download),
-Jenkins [here](https://jenkins.io/download/)
-Postman [here](https://www.postman.com/downloads/)
-Google Chrome [here](https://www.google.com/chrome/)
+Jenkins [here](https://jenkins.io/download/),
+Postman [here](https://www.postman.com/downloads/),
+Google Chrome [here](https://www.google.com/chrome/).
 
 ### Getting the Source
 
@@ -127,11 +127,11 @@ How to build my project:
 
 ``` mvn clean package ```
 
-``` java -jar target/CarolineStrasenburgh-SoftwareMarch16-HWA-GTL.jar ```
+``` mvn spring-boot:run ```
 
-You can double check the file name (you want the jar-with-dependencies) with ``` ls target/ ```
+As a Spring app, running the jar with `java -jar FileName.jar` won't work (at least not without some config).
 
-Note: You will need a GCP instance or mySQL on your machine set up to connect to, and configured before running the above commands. When you execute the jar the program will run, which will launch the Spring boot application. You can then navigate to `localhost:8181` to reach the home page of the web interface. The app will run until you trigger the `/shutdown` API call (button on the home page).
+Note: If my GCP instance is no longer active, you will need a database on your machine set up to connect to, and configured in `application.properties` before running the above commands. When you run the second command the program will run, launching the Spring boot application. You can then navigate to `localhost:8181` via a browser or my shortcut provided in this repo, to reach the home page of the web interface. The app will run until you trigger the `/shutdownAppContext` API call (click the red button on the home page).
 
 ### Running the tests
 
@@ -139,6 +139,7 @@ The easiest way to run all my existing tests is to right click on `test/java/com
 
 ![Run All Tests](https://i.imgur.com/0YNyoqs.png)
 
+**[Back to top](#table-of-contents)**
 #### Unit Tests 
 JUnit is used for unit tests. A unit test will test individual methods within a class for functionality. Below is a simple Unit Test for my UserDTO class:
 
@@ -162,6 +163,7 @@ In IntelliJ, as you write tests annotated with @Test, it gives you the option to
 ![Run All Unit Tests in a class](https://i.imgur.com/B6wd2Pu.png)
 ![Run a specific Unit Test](https://i.imgur.com/dbfsorJ.png)
 
+**[Back to top](#table-of-contents)**
 #### Integration Tests 
 Mockito is used for intergration testing, but can also be applied to certain unit tests. It tests how different classes interact with each other. By 'mocking' the functions that a method/class relies on we can see how the code we are testing works by assuming the parts it relies on work too.
 
@@ -186,7 +188,16 @@ In IntelliJ, as you write tests annotated with @Test, it gives you the option to
 ![Run all integration Tests](https://i.imgur.com/WrgkrWh.png)
 ![Run a single integration Test](https://i.imgur.com/pljXWW1.png)
 
-#### Other tests (static analysis)
+**[Back to top](#table-of-contents)**
+
+#### User acceptance Tests (with Selenium)
+Selenium uses the `chromedriver.exe` included in this repository to run automated tests mocking use of the front-end. I have included the `extent-report.xml` and dependencies required to get easy to read test reports in the form of html files.
+
+Checkout my `selenium-tests` branch for examples of the tests in this project - it's not included in the master because it doesn't agree with Jenkins just yet...
+
+Or take a look at my [selenium-testing](https://github.com/CarolineS-QA/selenium-testing) repo which has other examples.
+
+#### Static analysis
 Sonarqube is used for static analysis. I used it to see how well my code conformed to an industry standard, the amount of coverage for my tests, and also highlighting bugs and security warnings.
 
 ```
@@ -202,15 +213,18 @@ Installing Demo
 
 How to get a development environment running:
 
-* Clone the repo to your machine.
-* Open as an existing project in the IDE of your choice
-* You'll probably want to check the **application.properties** file in `src/main/resources`
+* Clone the repo to your machine. (fork it first if you want to make changes for yourself).
+* Open git bash (git should already be initalised if you clone it otherwise use `git init`).
+* It's recommended that you start making changes on a new branch `git checkout -b NAME-OF-YOUR-BRANCH`
+* Open as an existing maven project in the IDE of your choice
+* You'll probably want to check the **application.properties** file in `src/main/resources` first
 * You can change the database connection details and port the web app is hosted on here
+* Once configured, you can start developing!
 * Find the `App` file in `src/main/java/com.qa.hwa`
 * There should be an option to `run` the application
 * When the application is running, you can open your browser to `localhost:PORT` or test the API calls in postman.
 
-Example of getting some data out of the system or using it for a little demo:
+Example of getting some data out of the system with Postman:
 
 ![Postman createUser](https://i.imgur.com/FKdR2Rf.png)
 
@@ -325,6 +339,8 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgements
 
+* Chris [[Christian-QA](https://github.com/Christian-QA)
+for giving me the correct command to run the app via command line!
 * Felix [[Femarleycode](https://github.com/Femarleycode)]
 for his advice regarding the risk assessment.
 * Savannah [[savannahvaith](https://github.com/savannahvaith)]
