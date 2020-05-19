@@ -10,6 +10,7 @@
 
   <name>CarolineStrasenburgh-SoftwareMarch16</name>
   <!-- change it to the project's website <url>http://www.example.com</url> -->
+  <packaging>jar</packaging>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
