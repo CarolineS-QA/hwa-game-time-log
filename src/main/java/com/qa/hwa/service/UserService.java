@@ -55,7 +55,6 @@ public class UserService {
 
     public UserDTO updateUser(Long id, User user){
         User update = this.usersRepo.findById(id).orElseThrow(UserNotFoundException::new);
-        //update.setUsername(user.getUsername());
         update.setTotalTimePlayed(user.getTotalTimePlayed());
         update.setFreeTime(user.getFreeTime());
         update.setTimeRemaining(user.getTimeRemaining());

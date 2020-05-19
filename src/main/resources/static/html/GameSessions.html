@@ -72,7 +72,7 @@
         </form>
         <div id="readYourGameSessionsResponse"></div>
     </section>
-
+    <br>
     <section id="CreateAGameSession" class="container">
         <p>Add a game session to start tracking!</p>
             <form id="GameSessionDetails" method="POST" action="GameSessions.html">
@@ -106,7 +106,7 @@
             </form>
         <div id="createdGameSessionResponse"></div>
     </section>
-
+    <br>
     <section id="UpdateAGameSession" class="container">
         <form id="updateGSessionDetails" method="POST" action="GameSessions.html">
             <fieldset>
@@ -136,10 +136,10 @@
         </form>
         <div id="updateYourGameSessionResponse"></div>
     </section>
-
+    <br>
         <!--Warning!-->
     <section id="deleteGameSessionSection" class="container">
-        <h3>Warning! Once you delete a game session you cannot recover it.</h3>
+        <h3 class="alert alert-warning" role="alert">Warning! Once you delete a game session you cannot recover it.</h3>
         <form id="DeleteGameSessionForm" method="POST" action="/deleteGameSession/{id}">
             <fieldset>
                 <legend>Delete a Game Session</legend>

@@ -45,7 +45,7 @@ Kanban Board for QA Project: [github boards](https://github.com/CarolineS-QA/hwa
 
 Presentation about the project: [on google slides](https://docs.google.com/presentation/d/1wznZu-mg9XHuvzp51Q3ZPYwYu3qjcSRW8Uu_N3bzJ_g/edit?usp=sharing)
 
-Please see the `docs` folder for other documentation.
+Please see the `docs` folder for the other documentation that is not linked in the 'design' column of the Kanban Board.
 
 **[Back to top](#table-of-contents)**
 
@@ -56,10 +56,13 @@ Current release: v0.2.0 - in development
 
 For test reports please see the `docs` folder.
 
-Trainer's Nexus&Sonar (master) [![Build Status](http://localhost:8080/buildStatus/icon?job=hwa-gtl-sonar-nexus)](http://localhost:8080/job/hwa-gtl-sonar-nexus/)
-My Sonar (dev) [![Build Status](http://localhost:8080/buildStatus/icon?job=hwa-gtl-sonar)](http://localhost:8080/job/hwa-gtl-sonar/)
+Jenkins Status (CI Pipeline):
 
-Not currently built successfully on CI Pipeline.
+Trainer's Nexus&Sonar (master): [![Build Status](http://localhost:8080/buildStatus/icon?job=hwa-gtl-sonar-nexus)](http://localhost:8080/job/hwa-gtl-sonar-nexus/)
+
+My Sonar (dev): [![Build Status](http://localhost:8080/buildStatus/icon?job=hwa-gtl-sonar)](http://localhost:8080/job/hwa-gtl-sonar/)
+
+
 
 **[Back to top](#table-of-contents)**
 
@@ -189,7 +192,8 @@ In IntelliJ, as you write tests annotated with @Test, it gives you the option to
 Sonarqube is used for static analysis. I used it to see how well my code conformed to an industry standard, the amount of coverage for my tests, and also highlighting bugs and security warnings.
 
 ```
-mvn clean package sonar:sonar -Dsonar.host.url=http://YourVMForSonarQubeIP:PORT/ -Dsonar.login.admin=admin -Dsonar.password=admin
+mvn clean package
+sonar:sonar -Dsonar.host.url=http://YourVMForSonarQubeIP:PORT/ -Dsonar.login.admin=admin -Dsonar.password=admin
 ```
 ![SonarQube example](https://i.imgur.com/f7agBSC.png)
 
@@ -211,6 +215,63 @@ How to get a development environment running:
 Example of getting some data out of the system or using it for a little demo:
 
 ![Postman createUser](https://i.imgur.com/FKdR2Rf.png)
+
+Should response with:
+`
+{
+    "userId": 1,
+    "username": "testGamer",
+    "totalTimePlayed": 0.0,
+    "freeTime": 24.000000000,
+    "timeRemaining": 24.000000000,
+    "gameSessions": []
+}
+`
+
+JSON for sending /createGameSession
+`
+{
+	"gameName": "Hello World",
+	"user":
+	{
+		"userId": 1,
+		"username": "testGamer"
+	},
+	"timePlayed": 7,
+	"timeOfSession": "2007-12-03T10:15:30"
+}
+`
+Responds with:
+`
+{
+    "sessionId": 1,
+    "user": "testGamer",
+    "gameName": "Hello World",
+    "timeOfSession": "2007-12-03T10:15:30",
+    "timePlayed": 7.000000000
+}
+`
+
+If you /getUserByUsername/testGamer
+
+`{
+     "userId": 1,
+     "username": "testGamer",
+     "totalTimePlayed": 0.0,
+     "freeTime": 24.000000000,
+     "timeRemaining": 24.000000000,
+     "gameSessions": [
+         {
+             "sessionId": 1,
+             "user": "testGamer",
+             "gameName": "Hello World",
+             "timeOfSession": "2007-12-03T10:15:30",
+             "timePlayed": 7.000000000
+         }
+     ]
+ }`
+
+In development localhost:8181 page:
 ![Development web interface](https://i.imgur.com/vZhjC1V.png)
 
 Remember you can `Ctrl + Shift + I` to inspect and reach the developer's console.
