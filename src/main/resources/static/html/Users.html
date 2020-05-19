@@ -64,14 +64,13 @@
         </form>
         <div id="readYourUserResponse"></div>
      </section>
-
+     <br>
      <section id="updateYourUser" class="container">
          <form id="UpdateUserForm" method="GET" action="Users.html">
              <fieldset>
                  <legend>Manage your User's Time</legend>
                  <ul>
                      <!-- I don't want users changing their usernames. -->
-
                      <li>
                          <label for="userIdUpdate">Please confirm your userId: </label>
                          <input id="userIdUpdate" name="userIdUpdate" type="number" />
@@ -104,19 +103,17 @@
              </fieldset>
          </form>
         <div id="updateYourUserResponse"></div>
-
         <div class="card" id="ToYourGameSessions">
              <h5 class="card-header">Track your game sessions!</h5>
              <div class="card-body">
                  <p class="card-text">Head over to the <a href="./GameSessions.html"><button type="button" class="btn btn-outline-success btn-sm">Game Sessions</button></a> page to manage them.</p>
             </div>
         </div>
-
      </section>
+     <br>
         <!--Warning!-->
      <section id="deleteUserSection" class="container">
-         <h4>Warning! </h4>
-         <p>Deleting your user will remove all your game sessions.</p>
+         <h3 class="alert alert-danger" role="alert">Warning! Deleting your user will remove all your game sessions.</h3>
         <form id="DeleteForm" method="POST" action="Users.html">
             <fieldset>
                 <legend>Delete your User Account</legend>
