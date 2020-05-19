@@ -40,7 +40,6 @@ public class UserCRUDTest {
         driver = new ChromeDriver();
     }
 
-    @Ignore
     @Test
     public void createUserPageTest() throws InterruptedException, IOException {
         test = report.startTest("Verifying Navigation to Create User Page");
