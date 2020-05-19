@@ -10,7 +10,7 @@ public class GameSessionDTO {
     private Long sessionId;
     private User user;
     private String gameName;
-    private Duration TimePlayed;
+    private Duration timePlayed;
     private LocalDateTime timeOfSession;
 
     public GameSessionDTO(){}
@@ -18,7 +18,7 @@ public class GameSessionDTO {
     public GameSessionDTO(User user, String gameName, Duration timePlayed, LocalDateTime timeOfSession) {
         this.user = user;
         this.gameName = gameName;
-        TimePlayed = timePlayed;
+        this.timePlayed = timePlayed;
         this.timeOfSession = timeOfSession;
     }
 
@@ -26,7 +26,7 @@ public class GameSessionDTO {
         this.sessionId = sessionId;
         this.user = user;
         this.gameName = gameName;
-        TimePlayed = timePlayed;
+        this.timePlayed = timePlayed;
         this.timeOfSession = timeOfSession;
     }
 
@@ -55,11 +55,11 @@ public class GameSessionDTO {
     }
 
     public Duration getTimePlayed() {
-        return TimePlayed;
+        return timePlayed;
     }
 
     public void setTimePlayed(Duration timePlayed) {
-        TimePlayed = timePlayed;
+        this.timePlayed = timePlayed;
     }
 
     public LocalDateTime getTimeOfSession() {

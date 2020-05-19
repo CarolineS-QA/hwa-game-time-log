@@ -88,16 +88,6 @@ public class User {
         this.gameSessions = gameSessions;
     }
 
-//    public void addGameSession(GameSession session) {
-//        gameSessions.add(session);
-//        session.setUser(this);
-//    }
-//
-//    public void removeGameSession(GameSession session) {
-//        gameSessions.remove(session);
-//        session.setUser(null);
-//    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
