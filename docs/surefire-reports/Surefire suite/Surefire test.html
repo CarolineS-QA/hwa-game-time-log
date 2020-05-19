@@ -1,0 +1,842 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>130/0/21</td>
+</tr><tr>
+<td>Started on:</td><td>Mon May 18 15:26:01 BST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>18 seconds (18477 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.qa.hwa.domain.GameSessionUnitTest.checkEquality()'><b>checkEquality</b><br>Test class: com.qa.hwa.domain.GameSessionUnitTest</td>
+<td></td>
+<td>0</td>
+<td>checkEquality(com.qa.hwa.domain.GameSessionUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.UserUnitTest.checkEquality()'><b>checkEquality</b><br>Test class: com.qa.hwa.domain.UserUnitTest</td>
+<td></td>
+<td>0</td>
+<td>checkEquality(com.qa.hwa.domain.UserUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.GameSessionDTOUnitTest.checkEquality()'><b>checkEquality</b><br>Test class: com.qa.hwa.dto.GameSessionDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>checkEquality(com.qa.hwa.dto.GameSessionDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.UserDTOUnitTest.checkEquality()'><b>checkEquality</b><br>Test class: com.qa.hwa.dto.UserDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>checkEquality(com.qa.hwa.dto.UserDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.GameSessionUnitTest.checkEqualityBetweenDifferentObjects()'><b>checkEqualityBetweenDifferentObjects</b><br>Test class: com.qa.hwa.domain.GameSessionUnitTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjects(com.qa.hwa.domain.GameSessionUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.UserUnitTest.checkEqualityBetweenDifferentObjects()'><b>checkEqualityBetweenDifferentObjects</b><br>Test class: com.qa.hwa.domain.UserUnitTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjects(com.qa.hwa.domain.UserUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.GameSessionDTOUnitTest.checkEqualityBetweenDifferentObjects()'><b>checkEqualityBetweenDifferentObjects</b><br>Test class: com.qa.hwa.dto.GameSessionDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjects(com.qa.hwa.dto.GameSessionDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.UserDTOUnitTest.checkEqualityBetweenDifferentObjects()'><b>checkEqualityBetweenDifferentObjects</b><br>Test class: com.qa.hwa.dto.UserDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjects(com.qa.hwa.dto.UserDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.GameSessionUnitTest.checkEqualityBetweenDifferentObjectsNullUsername()'><b>checkEqualityBetweenDifferentObjectsNullUsername</b><br>Test class: com.qa.hwa.domain.GameSessionUnitTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjectsNullUsername(com.qa.hwa.domain.GameSessionUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.UserUnitTest.checkEqualityBetweenDifferentObjectsNullUsername()'><b>checkEqualityBetweenDifferentObjectsNullUsername</b><br>Test class: com.qa.hwa.domain.UserUnitTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjectsNullUsername(com.qa.hwa.domain.UserUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.UserDTOUnitTest.checkEqualityBetweenDifferentObjectsNullUsername()'><b>checkEqualityBetweenDifferentObjectsNullUsername</b><br>Test class: com.qa.hwa.dto.UserDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjectsNullUsername(com.qa.hwa.dto.UserDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.GameSessionUnitTest.constructorUserWithId()'><b>constructorUserWithId</b><br>Test class: com.qa.hwa.domain.GameSessionUnitTest</td>
+<td></td>
+<td>0</td>
+<td>constructorUserWithId(com.qa.hwa.domain.GameSessionUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.UserUnitTest.constructorUserWithId()'><b>constructorUserWithId</b><br>Test class: com.qa.hwa.domain.UserUnitTest</td>
+<td></td>
+<td>0</td>
+<td>constructorUserWithId(com.qa.hwa.domain.UserUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.GameSessionDTOUnitTest.constructorUserWithId()'><b>constructorUserWithId</b><br>Test class: com.qa.hwa.dto.GameSessionDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>constructorUserWithId(com.qa.hwa.dto.GameSessionDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.UserDTOUnitTest.constructorUserWithId()'><b>constructorUserWithId</b><br>Test class: com.qa.hwa.dto.UserDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>constructorUserWithId(com.qa.hwa.dto.UserDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.GameSessionUnitTest.constructorWithoutId()'><b>constructorWithoutId</b><br>Test class: com.qa.hwa.domain.GameSessionUnitTest</td>
+<td></td>
+<td>0</td>
+<td>constructorWithoutId(com.qa.hwa.domain.GameSessionUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.UserUnitTest.constructorWithoutId()'><b>constructorWithoutId</b><br>Test class: com.qa.hwa.domain.UserUnitTest</td>
+<td></td>
+<td>0</td>
+<td>constructorWithoutId(com.qa.hwa.domain.UserUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.GameSessionDTOUnitTest.constructorWithoutId()'><b>constructorWithoutId</b><br>Test class: com.qa.hwa.dto.GameSessionDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>constructorWithoutId(com.qa.hwa.dto.GameSessionDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.UserDTOUnitTest.constructorWithoutId()'><b>constructorWithoutId</b><br>Test class: com.qa.hwa.dto.UserDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>constructorWithoutId(com.qa.hwa.dto.UserDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.rest.GameSessionControllerUnitTest.createGameSessionTest()'><b>createGameSessionTest</b><br>Test class: com.qa.hwa.rest.GameSessionControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>createGameSessionTest(com.qa.hwa.rest.GameSessionControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.GameSessionServiceUnitTest.createGameSessionTest()'><b>createGameSessionTest</b><br>Test class: com.qa.hwa.service.GameSessionServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>createGameSessionTest(com.qa.hwa.service.GameSessionServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.rest.UserControllerUnitTest.createUserTest()'><b>createUserTest</b><br>Test class: com.qa.hwa.rest.UserControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>createUserTest(com.qa.hwa.rest.UserControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.UserServiceUnitTest.createUserTest()'><b>createUserTest</b><br>Test class: com.qa.hwa.service.UserServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>createUserTest(com.qa.hwa.service.UserServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.rest.GameSessionControllerIntegrationTest.deleteGameSessionTest()'><b>deleteGameSessionTest</b><br>Test class: com.qa.hwa.rest.GameSessionControllerIntegrationTest</td>
+<td></td>
+<td>3</td>
+<td>deleteGameSessionTest(com.qa.hwa.rest.GameSessionControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.GameSessionServiceIntegrationTest.deleteGameSessionTest()'><b>deleteGameSessionTest</b><br>Test class: com.qa.hwa.service.GameSessionServiceIntegrationTest</td>
+<td></td>
+<td>3</td>
+<td>deleteGameSessionTest(com.qa.hwa.service.GameSessionServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.GameSessionServiceUnitTest.deleteSessionByExistingId()'><b>deleteSessionByExistingId</b><br>Test class: com.qa.hwa.service.GameSessionServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteSessionByExistingId(com.qa.hwa.service.GameSessionServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.GameSessionServiceUnitTest.deleteSessionByNonExistingId()'><b>deleteSessionByNonExistingId</b><br>Test class: com.qa.hwa.service.GameSessionServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteSessionByNonExistingId(com.qa.hwa.service.GameSessionServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.UserServiceUnitTest.deleteUserByExistingId()'><b>deleteUserByExistingId</b><br>Test class: com.qa.hwa.service.UserServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteUserByExistingId(com.qa.hwa.service.UserServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.UserServiceUnitTest.deleteUserByNonExistingId()'><b>deleteUserByNonExistingId</b><br>Test class: com.qa.hwa.service.UserServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteUserByNonExistingId(com.qa.hwa.service.UserServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.UserServiceIntegrationTest.deleteUserTest()'><b>deleteUserTest</b><br>Test class: com.qa.hwa.service.UserServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>deleteUserTest(com.qa.hwa.service.UserServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.rest.GameSessionControllerUnitTest.deleteUserTestFalse()'><b>deleteUserTestFalse</b><br>Test class: com.qa.hwa.rest.GameSessionControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteUserTestFalse(com.qa.hwa.rest.GameSessionControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.rest.UserControllerUnitTest.deleteUserTestFalse()'><b>deleteUserTestFalse</b><br>Test class: com.qa.hwa.rest.UserControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteUserTestFalse(com.qa.hwa.rest.UserControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.rest.GameSessionControllerUnitTest.deleteUserTestTrue()'><b>deleteUserTestTrue</b><br>Test class: com.qa.hwa.rest.GameSessionControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteUserTestTrue(com.qa.hwa.rest.GameSessionControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.rest.UserControllerUnitTest.deleteUserTestTrue()'><b>deleteUserTestTrue</b><br>Test class: com.qa.hwa.rest.UserControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteUserTestTrue(com.qa.hwa.rest.UserControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.GameSessionUnitTest.emptyConstructor()'><b>emptyConstructor</b><br>Test class: com.qa.hwa.domain.GameSessionUnitTest</td>
+<td></td>
+<td>0</td>
+<td>emptyConstructor(com.qa.hwa.domain.GameSessionUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.UserUnitTest.emptyConstructor()'><b>emptyConstructor</b><br>Test class: com.qa.hwa.domain.UserUnitTest</td>
+<td></td>
+<td>0</td>
+<td>emptyConstructor(com.qa.hwa.domain.UserUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.GameSessionDTOUnitTest.emptyConstructor()'><b>emptyConstructor</b><br>Test class: com.qa.hwa.dto.GameSessionDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>emptyConstructor(com.qa.hwa.dto.GameSessionDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.UserDTOUnitTest.emptyConstructor()'><b>emptyConstructor</b><br>Test class: com.qa.hwa.dto.UserDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>emptyConstructor(com.qa.hwa.dto.UserDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.UserServiceUnitTest.findUserByIdTest()'><b>findUserByIdTest</b><br>Test class: com.qa.hwa.service.UserServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>findUserByIdTest(com.qa.hwa.service.UserServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.rest.GameSessionControllerUnitTest.getAUsersGameSessionsTest()'><b>getAUsersGameSessionsTest</b><br>Test class: com.qa.hwa.rest.GameSessionControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>getAUsersGameSessionsTest(com.qa.hwa.rest.GameSessionControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.rest.GameSessionControllerUnitTest.getAllGameSessionsTest()'><b>getAllGameSessionsTest</b><br>Test class: com.qa.hwa.rest.GameSessionControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>getAllGameSessionsTest(com.qa.hwa.rest.GameSessionControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.rest.UserControllerUnitTest.getAllUsersTest()'><b>getAllUsersTest</b><br>Test class: com.qa.hwa.rest.UserControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>getAllUsersTest(com.qa.hwa.rest.UserControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.rest.UserControllerUnitTest.getUserByIdTest()'><b>getUserByIdTest</b><br>Test class: com.qa.hwa.rest.UserControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>getUserByIdTest(com.qa.hwa.rest.UserControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.rest.UserControllerUnitTest.getUserByUsernameTest()'><b>getUserByUsernameTest</b><br>Test class: com.qa.hwa.rest.UserControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>getUserByUsernameTest(com.qa.hwa.rest.UserControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.GameSessionUnitTest.gettersAndSettersTest()'><b>gettersAndSettersTest</b><br>Test class: com.qa.hwa.domain.GameSessionUnitTest</td>
+<td></td>
+<td>0</td>
+<td>gettersAndSettersTest(com.qa.hwa.domain.GameSessionUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.UserUnitTest.gettersAndSettersTest()'><b>gettersAndSettersTest</b><br>Test class: com.qa.hwa.domain.UserUnitTest</td>
+<td></td>
+<td>0</td>
+<td>gettersAndSettersTest(com.qa.hwa.domain.UserUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.GameSessionDTOUnitTest.gettersAndSettersTest()'><b>gettersAndSettersTest</b><br>Test class: com.qa.hwa.dto.GameSessionDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>gettersAndSettersTest(com.qa.hwa.dto.GameSessionDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.UserDTOUnitTest.gettersAndSettersTest()'><b>gettersAndSettersTest</b><br>Test class: com.qa.hwa.dto.UserDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>gettersAndSettersTest(com.qa.hwa.dto.UserDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.GameSessionUnitTest.hashCodeTest()'><b>hashCodeTest</b><br>Test class: com.qa.hwa.domain.GameSessionUnitTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTest(com.qa.hwa.domain.GameSessionUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.UserUnitTest.hashCodeTest()'><b>hashCodeTest</b><br>Test class: com.qa.hwa.domain.UserUnitTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTest(com.qa.hwa.domain.UserUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.GameSessionDTOUnitTest.hashCodeTest()'><b>hashCodeTest</b><br>Test class: com.qa.hwa.dto.GameSessionDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTest(com.qa.hwa.dto.GameSessionDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.UserDTOUnitTest.hashCodeTest()'><b>hashCodeTest</b><br>Test class: com.qa.hwa.dto.UserDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTest(com.qa.hwa.dto.UserDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.GameSessionUnitTest.hashCodeTestWithNull()'><b>hashCodeTestWithNull</b><br>Test class: com.qa.hwa.domain.GameSessionUnitTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTestWithNull(com.qa.hwa.domain.GameSessionUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.UserUnitTest.hashCodeTestWithNull()'><b>hashCodeTestWithNull</b><br>Test class: com.qa.hwa.domain.UserUnitTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTestWithNull(com.qa.hwa.domain.UserUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.GameSessionDTOUnitTest.hashCodeTestWithNull()'><b>hashCodeTestWithNull</b><br>Test class: com.qa.hwa.dto.GameSessionDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTestWithNull(com.qa.hwa.dto.GameSessionDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.UserDTOUnitTest.hashCodeTestWithNull()'><b>hashCodeTestWithNull</b><br>Test class: com.qa.hwa.dto.UserDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTestWithNull(com.qa.hwa.dto.UserDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.GameSessionUnitTest.notEqualsWithDifferentObject()'><b>notEqualsWithDifferentObject</b><br>Test class: com.qa.hwa.domain.GameSessionUnitTest</td>
+<td></td>
+<td>0</td>
+<td>notEqualsWithDifferentObject(com.qa.hwa.domain.GameSessionUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.UserUnitTest.notEqualsWithDifferentObject()'><b>notEqualsWithDifferentObject</b><br>Test class: com.qa.hwa.domain.UserUnitTest</td>
+<td></td>
+<td>0</td>
+<td>notEqualsWithDifferentObject(com.qa.hwa.domain.UserUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.GameSessionDTOUnitTest.notEqualsWithDifferentObject()'><b>notEqualsWithDifferentObject</b><br>Test class: com.qa.hwa.dto.GameSessionDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>notEqualsWithDifferentObject(com.qa.hwa.dto.GameSessionDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.UserDTOUnitTest.notEqualsWithDifferentObject()'><b>notEqualsWithDifferentObject</b><br>Test class: com.qa.hwa.dto.UserDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>notEqualsWithDifferentObject(com.qa.hwa.dto.UserDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.GameSessionUnitTest.notEqualsWithNull()'><b>notEqualsWithNull</b><br>Test class: com.qa.hwa.domain.GameSessionUnitTest</td>
+<td></td>
+<td>0</td>
+<td>notEqualsWithNull(com.qa.hwa.domain.GameSessionUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.UserUnitTest.notEqualsWithNull()'><b>notEqualsWithNull</b><br>Test class: com.qa.hwa.domain.UserUnitTest</td>
+<td></td>
+<td>0</td>
+<td>notEqualsWithNull(com.qa.hwa.domain.UserUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.GameSessionDTOUnitTest.notEqualsWithNull()'><b>notEqualsWithNull</b><br>Test class: com.qa.hwa.dto.GameSessionDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>notEqualsWithNull(com.qa.hwa.dto.GameSessionDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.UserDTOUnitTest.notEqualsWithNull()'><b>notEqualsWithNull</b><br>Test class: com.qa.hwa.dto.UserDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>notEqualsWithNull(com.qa.hwa.dto.UserDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.UserUnitTest.nullFreeTime()'><b>nullFreeTime</b><br>Test class: com.qa.hwa.domain.UserUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullFreeTime(com.qa.hwa.domain.UserUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.UserDTOUnitTest.nullFreeTime()'><b>nullFreeTime</b><br>Test class: com.qa.hwa.dto.UserDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullFreeTime(com.qa.hwa.dto.UserDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.UserUnitTest.nullFreeTimeOnBoth()'><b>nullFreeTimeOnBoth</b><br>Test class: com.qa.hwa.domain.UserUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullFreeTimeOnBoth(com.qa.hwa.domain.UserUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.UserDTOUnitTest.nullFreeTimeOnBoth()'><b>nullFreeTimeOnBoth</b><br>Test class: com.qa.hwa.dto.UserDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullFreeTimeOnBoth(com.qa.hwa.dto.UserDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.GameSessionUnitTest.nullGameName()'><b>nullGameName</b><br>Test class: com.qa.hwa.domain.GameSessionUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullGameName(com.qa.hwa.domain.GameSessionUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.GameSessionDTOUnitTest.nullGameName()'><b>nullGameName</b><br>Test class: com.qa.hwa.dto.GameSessionDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullGameName(com.qa.hwa.dto.GameSessionDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.GameSessionUnitTest.nullGameNameOnBoth()'><b>nullGameNameOnBoth</b><br>Test class: com.qa.hwa.domain.GameSessionUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullGameNameOnBoth(com.qa.hwa.domain.GameSessionUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.GameSessionDTOUnitTest.nullGameNameOnBoth()'><b>nullGameNameOnBoth</b><br>Test class: com.qa.hwa.dto.GameSessionDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullGameNameOnBoth(com.qa.hwa.dto.GameSessionDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.GameSessionUnitTest.nullId()'><b>nullId</b><br>Test class: com.qa.hwa.domain.GameSessionUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullId(com.qa.hwa.domain.GameSessionUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.UserUnitTest.nullId()'><b>nullId</b><br>Test class: com.qa.hwa.domain.UserUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullId(com.qa.hwa.domain.UserUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.GameSessionDTOUnitTest.nullId()'><b>nullId</b><br>Test class: com.qa.hwa.dto.GameSessionDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullId(com.qa.hwa.dto.GameSessionDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.UserDTOUnitTest.nullId()'><b>nullId</b><br>Test class: com.qa.hwa.dto.UserDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullId(com.qa.hwa.dto.UserDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.GameSessionUnitTest.nullIdOnBoth()'><b>nullIdOnBoth</b><br>Test class: com.qa.hwa.domain.GameSessionUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullIdOnBoth(com.qa.hwa.domain.GameSessionUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.UserUnitTest.nullIdOnBoth()'><b>nullIdOnBoth</b><br>Test class: com.qa.hwa.domain.UserUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullIdOnBoth(com.qa.hwa.domain.UserUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.GameSessionDTOUnitTest.nullIdOnBoth()'><b>nullIdOnBoth</b><br>Test class: com.qa.hwa.dto.GameSessionDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullIdOnBoth(com.qa.hwa.dto.GameSessionDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.UserDTOUnitTest.nullIdOnBoth()'><b>nullIdOnBoth</b><br>Test class: com.qa.hwa.dto.UserDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullIdOnBoth(com.qa.hwa.dto.UserDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.GameSessionUnitTest.nullTimeOfSession()'><b>nullTimeOfSession</b><br>Test class: com.qa.hwa.domain.GameSessionUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullTimeOfSession(com.qa.hwa.domain.GameSessionUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.GameSessionDTOUnitTest.nullTimeOfSession()'><b>nullTimeOfSession</b><br>Test class: com.qa.hwa.dto.GameSessionDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullTimeOfSession(com.qa.hwa.dto.GameSessionDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.GameSessionUnitTest.nullTimeOfSessionBoth()'><b>nullTimeOfSessionBoth</b><br>Test class: com.qa.hwa.domain.GameSessionUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullTimeOfSessionBoth(com.qa.hwa.domain.GameSessionUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.GameSessionDTOUnitTest.nullTimeOfSessionBoth()'><b>nullTimeOfSessionBoth</b><br>Test class: com.qa.hwa.dto.GameSessionDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullTimeOfSessionBoth(com.qa.hwa.dto.GameSessionDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.GameSessionUnitTest.nullTimePlayed()'><b>nullTimePlayed</b><br>Test class: com.qa.hwa.domain.GameSessionUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullTimePlayed(com.qa.hwa.domain.GameSessionUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.GameSessionDTOUnitTest.nullTimePlayed()'><b>nullTimePlayed</b><br>Test class: com.qa.hwa.dto.GameSessionDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullTimePlayed(com.qa.hwa.dto.GameSessionDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.GameSessionUnitTest.nullTimePlayedOnBoth()'><b>nullTimePlayedOnBoth</b><br>Test class: com.qa.hwa.domain.GameSessionUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullTimePlayedOnBoth(com.qa.hwa.domain.GameSessionUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.GameSessionDTOUnitTest.nullTimePlayedOnBoth()'><b>nullTimePlayedOnBoth</b><br>Test class: com.qa.hwa.dto.GameSessionDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullTimePlayedOnBoth(com.qa.hwa.dto.GameSessionDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.UserUnitTest.nullTimeRemaining()'><b>nullTimeRemaining</b><br>Test class: com.qa.hwa.domain.UserUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullTimeRemaining(com.qa.hwa.domain.UserUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.UserDTOUnitTest.nullTimeRemaining()'><b>nullTimeRemaining</b><br>Test class: com.qa.hwa.dto.UserDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullTimeRemaining(com.qa.hwa.dto.UserDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.UserUnitTest.nullTimeRemainingOnBoth()'><b>nullTimeRemainingOnBoth</b><br>Test class: com.qa.hwa.domain.UserUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullTimeRemainingOnBoth(com.qa.hwa.domain.UserUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.UserDTOUnitTest.nullTimeRemainingOnBoth()'><b>nullTimeRemainingOnBoth</b><br>Test class: com.qa.hwa.dto.UserDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullTimeRemainingOnBoth(com.qa.hwa.dto.UserDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.UserUnitTest.nullTotalTimePlayed()'><b>nullTotalTimePlayed</b><br>Test class: com.qa.hwa.domain.UserUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullTotalTimePlayed(com.qa.hwa.domain.UserUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.UserDTOUnitTest.nullTotalTimePlayed()'><b>nullTotalTimePlayed</b><br>Test class: com.qa.hwa.dto.UserDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullTotalTimePlayed(com.qa.hwa.dto.UserDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.UserUnitTest.nullTotalTimePlayedOnBoth()'><b>nullTotalTimePlayedOnBoth</b><br>Test class: com.qa.hwa.domain.UserUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullTotalTimePlayedOnBoth(com.qa.hwa.domain.UserUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.UserDTOUnitTest.nullTotalTimePlayedOnBoth()'><b>nullTotalTimePlayedOnBoth</b><br>Test class: com.qa.hwa.dto.UserDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>nullTotalTimePlayedOnBoth(com.qa.hwa.dto.UserDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.UserUnitTest.otherFreeTimeDifferent()'><b>otherFreeTimeDifferent</b><br>Test class: com.qa.hwa.domain.UserUnitTest</td>
+<td></td>
+<td>0</td>
+<td>otherFreeTimeDifferent(com.qa.hwa.domain.UserUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.UserDTOUnitTest.otherFreeTimeDifferent()'><b>otherFreeTimeDifferent</b><br>Test class: com.qa.hwa.dto.UserDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>otherFreeTimeDifferent(com.qa.hwa.dto.UserDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.GameSessionUnitTest.otherGameNameDifferent()'><b>otherGameNameDifferent</b><br>Test class: com.qa.hwa.domain.GameSessionUnitTest</td>
+<td></td>
+<td>0</td>
+<td>otherGameNameDifferent(com.qa.hwa.domain.GameSessionUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.GameSessionDTOUnitTest.otherGameNameDifferent()'><b>otherGameNameDifferent</b><br>Test class: com.qa.hwa.dto.GameSessionDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>otherGameNameDifferent(com.qa.hwa.dto.GameSessionDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.GameSessionUnitTest.otherIdDifferent()'><b>otherIdDifferent</b><br>Test class: com.qa.hwa.domain.GameSessionUnitTest</td>
+<td></td>
+<td>0</td>
+<td>otherIdDifferent(com.qa.hwa.domain.GameSessionUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.UserUnitTest.otherIdDifferent()'><b>otherIdDifferent</b><br>Test class: com.qa.hwa.domain.UserUnitTest</td>
+<td></td>
+<td>0</td>
+<td>otherIdDifferent(com.qa.hwa.domain.UserUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.GameSessionDTOUnitTest.otherIdDifferent()'><b>otherIdDifferent</b><br>Test class: com.qa.hwa.dto.GameSessionDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>otherIdDifferent(com.qa.hwa.dto.GameSessionDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.UserDTOUnitTest.otherIdDifferent()'><b>otherIdDifferent</b><br>Test class: com.qa.hwa.dto.UserDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>otherIdDifferent(com.qa.hwa.dto.UserDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.GameSessionUnitTest.otherTimeOfSessionDifferent()'><b>otherTimeOfSessionDifferent</b><br>Test class: com.qa.hwa.domain.GameSessionUnitTest</td>
+<td></td>
+<td>0</td>
+<td>otherTimeOfSessionDifferent(com.qa.hwa.domain.GameSessionUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.GameSessionDTOUnitTest.otherTimeOfSessionDifferent()'><b>otherTimeOfSessionDifferent</b><br>Test class: com.qa.hwa.dto.GameSessionDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>otherTimeOfSessionDifferent(com.qa.hwa.dto.GameSessionDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.GameSessionUnitTest.otherTimePlayedDifferent()'><b>otherTimePlayedDifferent</b><br>Test class: com.qa.hwa.domain.GameSessionUnitTest</td>
+<td></td>
+<td>0</td>
+<td>otherTimePlayedDifferent(com.qa.hwa.domain.GameSessionUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.GameSessionDTOUnitTest.otherTimePlayedDifferent()'><b>otherTimePlayedDifferent</b><br>Test class: com.qa.hwa.dto.GameSessionDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>otherTimePlayedDifferent(com.qa.hwa.dto.GameSessionDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.UserUnitTest.otherTimeRemainingDifferent()'><b>otherTimeRemainingDifferent</b><br>Test class: com.qa.hwa.domain.UserUnitTest</td>
+<td></td>
+<td>0</td>
+<td>otherTimeRemainingDifferent(com.qa.hwa.domain.UserUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.UserDTOUnitTest.otherTimeRemainingDifferent()'><b>otherTimeRemainingDifferent</b><br>Test class: com.qa.hwa.dto.UserDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>otherTimeRemainingDifferent(com.qa.hwa.dto.UserDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.UserUnitTest.otherTotalTimePlayedDifferent()'><b>otherTotalTimePlayedDifferent</b><br>Test class: com.qa.hwa.domain.UserUnitTest</td>
+<td></td>
+<td>0</td>
+<td>otherTotalTimePlayedDifferent(com.qa.hwa.domain.UserUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.UserDTOUnitTest.otherTotalTimePlayedDifferent()'><b>otherTotalTimePlayedDifferent</b><br>Test class: com.qa.hwa.dto.UserDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>otherTotalTimePlayedDifferent(com.qa.hwa.dto.UserDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.GameSessionServiceUnitTest.readAllSessionsTest()'><b>readAllSessionsTest</b><br>Test class: com.qa.hwa.service.GameSessionServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>readAllSessionsTest(com.qa.hwa.service.GameSessionServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.UserServiceUnitTest.readAllUsersTest()'><b>readAllUsersTest</b><br>Test class: com.qa.hwa.service.UserServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>readAllUsersTest(com.qa.hwa.service.UserServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.GameSessionServiceUnitTest.readUserByNonExistingUsernameTest()'><b>readUserByNonExistingUsernameTest</b><br>Test class: com.qa.hwa.service.GameSessionServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>readUserByNonExistingUsernameTest(com.qa.hwa.service.GameSessionServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.UserServiceUnitTest.readUserByNonExistingUsernameTest()'><b>readUserByNonExistingUsernameTest</b><br>Test class: com.qa.hwa.service.UserServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>readUserByNonExistingUsernameTest(com.qa.hwa.service.UserServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.GameSessionServiceUnitTest.readUserByUsernameTest()'><b>readUserByUsernameTest</b><br>Test class: com.qa.hwa.service.GameSessionServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>readUserByUsernameTest(com.qa.hwa.service.GameSessionServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.UserServiceUnitTest.readUserByUsernameTest()'><b>readUserByUsernameTest</b><br>Test class: com.qa.hwa.service.UserServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>readUserByUsernameTest(com.qa.hwa.service.UserServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.AppTest.shouldAnswerWithTrue()'><b>shouldAnswerWithTrue</b><br>Test class: com.qa.hwa.AppTest</td>
+<td></td>
+<td>9</td>
+<td>shouldAnswerWithTrue(com.qa.hwa.AppTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.rest.GameSessionControllerUnitTest.updateGameSessionTest()'><b>updateGameSessionTest</b><br>Test class: com.qa.hwa.rest.GameSessionControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>updateGameSessionTest(com.qa.hwa.rest.GameSessionControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.GameSessionServiceUnitTest.updateGameSessionTest()'><b>updateGameSessionTest</b><br>Test class: com.qa.hwa.service.GameSessionServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>updateGameSessionTest(com.qa.hwa.service.GameSessionServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.rest.UserControllerUnitTest.updateUserTest()'><b>updateUserTest</b><br>Test class: com.qa.hwa.rest.UserControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>updateUserTest(com.qa.hwa.rest.UserControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.UserServiceUnitTest.updateUserTest()'><b>updateUserTest</b><br>Test class: com.qa.hwa.service.UserServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>updateUserTest(com.qa.hwa.service.UserServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.GameSessionUnitTest.usernameNotEqual()'><b>usernameNotEqual</b><br>Test class: com.qa.hwa.domain.GameSessionUnitTest</td>
+<td></td>
+<td>0</td>
+<td>usernameNotEqual(com.qa.hwa.domain.GameSessionUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.UserUnitTest.usernameNotEqual()'><b>usernameNotEqual</b><br>Test class: com.qa.hwa.domain.UserUnitTest</td>
+<td></td>
+<td>0</td>
+<td>usernameNotEqual(com.qa.hwa.domain.UserUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.GameSessionDTOUnitTest.usernameNotEqual()'><b>usernameNotEqual</b><br>Test class: com.qa.hwa.dto.GameSessionDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>usernameNotEqual(com.qa.hwa.dto.GameSessionDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.UserDTOUnitTest.usernameNotEqual()'><b>usernameNotEqual</b><br>Test class: com.qa.hwa.dto.UserDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>usernameNotEqual(com.qa.hwa.dto.UserDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.GameSessionUnitTest.usernameNullButOtherNameNotNull()'><b>usernameNullButOtherNameNotNull</b><br>Test class: com.qa.hwa.domain.GameSessionUnitTest</td>
+<td></td>
+<td>0</td>
+<td>usernameNullButOtherNameNotNull(com.qa.hwa.domain.GameSessionUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.domain.UserUnitTest.usernameNullButOtherNameNotNull()'><b>usernameNullButOtherNameNotNull</b><br>Test class: com.qa.hwa.domain.UserUnitTest</td>
+<td></td>
+<td>0</td>
+<td>usernameNullButOtherNameNotNull(com.qa.hwa.domain.UserUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.UserDTOUnitTest.usernameNullButOtherNameNotNull()'><b>usernameNullButOtherNameNotNull</b><br>Test class: com.qa.hwa.dto.UserDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>usernameNullButOtherNameNotNull(com.qa.hwa.dto.UserDTOUnitTest)</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.qa.hwa.dto.GameSessionDTOUnitTest.checkEqualityBetweenDifferentObjectsNullUsername()'><b>checkEqualityBetweenDifferentObjectsNullUsername</b><br>Test class: com.qa.hwa.dto.GameSessionDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjectsNullUsername(com.qa.hwa.dto.GameSessionDTOUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.GameSessionServiceIntegrationTest.createGameSessionTest()'><b>createGameSessionTest</b><br>Test class: com.qa.hwa.service.GameSessionServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>createGameSessionTest(com.qa.hwa.service.GameSessionServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.rest.GameSessionControllerIntegrationTest.createSessionsTest()'><b>createSessionsTest</b><br>Test class: com.qa.hwa.rest.GameSessionControllerIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>createSessionsTest(com.qa.hwa.rest.GameSessionControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.UserServiceIntegrationTest.createUserTest()'><b>createUserTest</b><br>Test class: com.qa.hwa.service.UserServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>createUserTest(com.qa.hwa.service.UserServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.rest.UserControllerIntegrationTest.createUsersTest()'><b>createUsersTest</b><br>Test class: com.qa.hwa.rest.UserControllerIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>createUsersTest(com.qa.hwa.rest.UserControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.rest.UserControllerIntegrationTest.deleteUserTest()'><b>deleteUserTest</b><br>Test class: com.qa.hwa.rest.UserControllerIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>deleteUserTest(com.qa.hwa.rest.UserControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.UserServiceIntegrationTest.findUserByIdTest()'><b>findUserByIdTest</b><br>Test class: com.qa.hwa.service.UserServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>findUserByIdTest(com.qa.hwa.service.UserServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.GameSessionServiceIntegrationTest.findUserByUsernameTest()'><b>findUserByUsernameTest</b><br>Test class: com.qa.hwa.service.GameSessionServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>findUserByUsernameTest(com.qa.hwa.service.GameSessionServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.rest.GameSessionControllerIntegrationTest.getAUsersGameSessionsTest()'><b>getAUsersGameSessionsTest</b><br>Test class: com.qa.hwa.rest.GameSessionControllerIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>getAUsersGameSessionsTest(com.qa.hwa.rest.GameSessionControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.rest.GameSessionControllerIntegrationTest.getAllGameSessionsTest()'><b>getAllGameSessionsTest</b><br>Test class: com.qa.hwa.rest.GameSessionControllerIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>getAllGameSessionsTest(com.qa.hwa.rest.GameSessionControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.rest.UserControllerIntegrationTest.getAllUsersTest()'><b>getAllUsersTest</b><br>Test class: com.qa.hwa.rest.UserControllerIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>getAllUsersTest(com.qa.hwa.rest.UserControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.rest.UserControllerIntegrationTest.getUserByIdTest()'><b>getUserByIdTest</b><br>Test class: com.qa.hwa.rest.UserControllerIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>getUserByIdTest(com.qa.hwa.rest.UserControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.GameSessionServiceIntegrationTest.readAUsersGameSessionsTest()'><b>readAUsersGameSessionsTest</b><br>Test class: com.qa.hwa.service.GameSessionServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>readAUsersGameSessionsTest(com.qa.hwa.service.GameSessionServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.GameSessionServiceUnitTest.readAUsersGameSessionsTest()'><b>readAUsersGameSessionsTest</b><br>Test class: com.qa.hwa.service.GameSessionServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>readAUsersGameSessionsTest(com.qa.hwa.service.GameSessionServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.GameSessionServiceIntegrationTest.readAllGameSessionsTest()'><b>readAllGameSessionsTest</b><br>Test class: com.qa.hwa.service.GameSessionServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>readAllGameSessionsTest(com.qa.hwa.service.GameSessionServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.UserServiceIntegrationTest.readAllUsersTest()'><b>readAllUsersTest</b><br>Test class: com.qa.hwa.service.UserServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>readAllUsersTest(com.qa.hwa.service.UserServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.rest.GameSessionControllerIntegrationTest.updateGameSessionTest()'><b>updateGameSessionTest</b><br>Test class: com.qa.hwa.rest.GameSessionControllerIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>updateGameSessionTest(com.qa.hwa.rest.GameSessionControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.GameSessionServiceIntegrationTest.updateGameSessionTest()'><b>updateGameSessionTest</b><br>Test class: com.qa.hwa.service.GameSessionServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>updateGameSessionTest(com.qa.hwa.service.GameSessionServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.rest.UserControllerIntegrationTest.updateUserTest()'><b>updateUserTest</b><br>Test class: com.qa.hwa.rest.UserControllerIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>updateUserTest(com.qa.hwa.rest.UserControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.service.UserServiceIntegrationTest.updateUserTest()'><b>updateUserTest</b><br>Test class: com.qa.hwa.service.UserServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>updateUserTest(com.qa.hwa.service.UserServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.hwa.dto.GameSessionDTOUnitTest.usernameNullButOtherNameNotNull()'><b>usernameNullButOtherNameNotNull</b><br>Test class: com.qa.hwa.dto.GameSessionDTOUnitTest</td>
+<td></td>
+<td>0</td>
+<td>usernameNullButOtherNameNotNull(com.qa.hwa.dto.GameSessionDTOUnitTest)</td></tr>
+</table><p>
+</body>
+</html>
