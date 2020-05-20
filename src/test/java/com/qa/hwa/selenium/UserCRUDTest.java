@@ -49,7 +49,7 @@ public class UserCRUDTest {
     }
 
     @Test
-    public void createUserPageNavTest() throws InterruptedException, IOException {
+    public void createUserTest() throws InterruptedException, IOException {
         test = report.startTest("Verifying Navigation to Create User Page");
         navigateToWebInterface();
         sleep(5000);
@@ -67,6 +67,26 @@ public class UserCRUDTest {
         FileUtils.copyFile(userCreationPic, new File(System.getProperty("user.dir") + "/test-output/userCreationPage.jpg"));
         test.log(LogStatus.PASS, "'GameTimeLog - Create a User' is shown in the header", "<img src=userCreationPage.jpg>");
         sleep(2000);
+        WebElement userInput = driver.findElement(By.name("username"));
+        WebElement hoursInput = driver.findElement(By.name("freeTimeHours"));
+        WebElement minsInput = driver.findElement(By.name("freeTimeMinutes"));
+        WebElement button = driver.findElement(By.name("bSubmit"));
+        userInput.sendKeys("Nick9000");
+        hoursInput.sendKeys("15");
+        minsInput.sendKeys("30");
+        sleep(1000);
+        button.click();
+        test.log(LogStatus.INFO, "Click on the submit button");
+        sleep(1000);
+        driver.switchTo().alert().accept();
+        test.log(LogStatus.INFO, "Accept the alert pop up.");
+        WebElement userHeader = driver.findElement(By.id("pageHeader"));
+        assertEquals(userHeader.getText(), "GameTimeLog - User Landing");
+        File userCreateRedirectPic = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(userCreateRedirectPic, new File(System.getProperty("user.dir") + "/test-output/userLandingPage.jpg"));
+        test.log(LogStatus.PASS, "'GameTimeLog - User Landing' is shown in the header", "<img src=userLandingPage.jpg>");
+        sleep(2000);
+
     }
 
     @AfterMethod
