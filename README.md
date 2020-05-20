@@ -318,6 +318,10 @@ Spring:
 - [https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-documentation](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-documentation)
 - [https://vladmihalcea.com/jpa-hibernate-synchronize-bidirectional-entity-associations/](https://vladmihalcea.com/jpa-hibernate-synchronize-bidirectional-entity-associations/)
 
+Front-end:
+- [Get started with Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+- [https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/](https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/)
+
 **[Back to top](#table-of-contents)**
 ## Contributing
 
@@ -346,9 +350,9 @@ for his advice regarding the risk assessment.
 * Savannah [[savannahvaith](https://github.com/savannahvaith)]
 for my JavaScript training.
 * Jordan [[JHarry444](https://github.com/JHarry444)]
-for his help with Spring during the project.
+for his help with Spring (example repo [here](https://github.com/JHarry444/SpringDucks))during the project.
 * Tadas [[tvaidotas](https://github.com/tvaidotas)]
-for his initial introduction of Spring and Selenium testing.
+for his initial introduction of Spring (example repo [here](https://github.com/tvaidotas/SpringNotes))and Selenium testing.
 * Nick [[nickstewarttds](https://github.com/nickrstewarttds)]
 as my main trainer and moral support.
 * Embedded Artistry [[embeddedartistry](https://github.com/embeddedartistry)] for their documentation templates [embedded-resources/docs](https://github.com/embeddedartistry/embedded-resources/tree/master/docs)
