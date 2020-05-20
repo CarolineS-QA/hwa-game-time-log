@@ -350,9 +350,9 @@ for his advice regarding the risk assessment.
 * Savannah [[savannahvaith](https://github.com/savannahvaith)]
 for my JavaScript training.
 * Jordan [[JHarry444](https://github.com/JHarry444)]
-for his help with Spring (example repo [here](https://github.com/JHarry444/SpringDucks))during the project.
+for his help with Spring (example repo [here](https://github.com/JHarry444/SpringDucks)) during the project.
 * Tadas [[tvaidotas](https://github.com/tvaidotas)]
-for his initial introduction of Spring (example repo [here](https://github.com/tvaidotas/SpringNotes))and Selenium testing.
+for his initial introduction of Spring (example repo [here](https://github.com/tvaidotas/SpringNotes)) and Selenium testing.
 * Nick [[nickstewarttds](https://github.com/nickrstewarttds)]
 as my main trainer and moral support.
 * Embedded Artistry [[embeddedartistry](https://github.com/embeddedartistry)] for their documentation templates [embedded-resources/docs](https://github.com/embeddedartistry/embedded-resources/tree/master/docs)
