@@ -41,17 +41,21 @@ public class UserCRUDTest {
         driver = new ChromeDriver();
     }
 
-    @Test
-    public void createUserPageTest() throws InterruptedException, IOException {
-        test = report.startTest("Verifying Navigation to Create User Page");
+    public void navigateToWebInterface(){
         driver.manage().window().maximize();
         test.log(LogStatus.INFO, "Started chrome browser and made it fullscreen");
-        sleep(5000);
         driver.get("http://localhost:8180/");
         test.log(LogStatus.INFO, "Navigating to the application web interface");
+    }
+
+    @Test
+    public void createUserPageNavTest() throws InterruptedException, IOException {
+        test = report.startTest("Verifying Navigation to Create User Page");
+        navigateToWebInterface();
+        sleep(5000);
         File webAppPic = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(webAppPic, new File(System.getProperty("user.dir") + "/test-output/webAppHome.jpg"));
-        test.log(LogStatus.PASS, "'GameTimeLog - Create a User' is shown in the header", "<img src=webAppHome.jpg>");
+        test.log(LogStatus.INFO, "Navigated to the web interface", "<img src=webAppHome.jpg>");
         sleep(2000);
         WebElement createUserLink = driver.findElement(By.id("userCreation"));
         createUserLink.click();
