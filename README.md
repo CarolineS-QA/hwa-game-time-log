@@ -325,7 +325,7 @@ Front-end:
 **[Back to top](#table-of-contents)**
 ## Contributing
 
-Currently not accepting contributions due to the nature of this project being part of my Academy training. However, after June 8th 2020 I will be open to contributions.
+Currently not accepting contributions due to the nature of this project being an individual project and part of my Academy training. However, soon I may be open to contributions.
 
 Please review [CONTRIBUTING.md](docs/CONTRIBUTING.md) for details on our code of conduct and development process (this is currently in development).
 
