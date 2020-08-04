@@ -1,6 +1,6 @@
 # Hobby Web App: GameTimeLog
 
-My second individual project with QA, started as an Academy Trainee.
+My second individual project with QA, started as an Academy Trainee. This project's state during my time in the Academy can be found in a fork to my personal account [here](https://github.com/Chas3-Mahat/hwa-game-time-log). 
 
 This application aims to be a "Game Time Log" where users can perform CRUD functions on themselves and records of their game sessions. It is currently for demo purposes only, showcasing my knowledge of Spring & connecting a working back-end to a front-end via API calls.
 
@@ -14,8 +14,8 @@ This application aims to be a "Game Time Log" where users can perform CRUD funct
     1. [Installation](#installation)
     1. [Usage](#usage)
 1. [Release Process](#release-process)
-    1. [Versioning](#versioning)
-    <!--1. [Payload](#payload) [new line] 1.[How to Get Help](#how-to-get-help)-->
+    1. [Versioning](#versioning)<!--1. [Payload](#payload) [new line] )-->
+    1. [How to Get Help](#how-to-get-help)
 1. [Further Reading](#further-reading)
 1. [Contributing](#contributing)
 1. [License](#license)
@@ -309,7 +309,8 @@ We use [SemVer](http://semver.org/) for versioning. For a list of available vers
 **[Back to top](#table-of-contents)**
 
 <!-- ### Payload -->
-<!-- ## How to get help -->
+## How to get help
+If you have questions related to this project you can email me at carstracode@gmail.com
 
 ## Further Reading
 
