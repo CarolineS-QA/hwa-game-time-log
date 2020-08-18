@@ -36,7 +36,7 @@ public class UserService {
         return this.usersRepo.findAll().stream().map(this::mapToDTO).collect(Collectors.toList());
     }
 
-    public UserDTO readUserByUsername(String username){
+    public UserDTO readUserByUsername(String username) throws UserNotFoundException {
         if (this.usersRepo.findUserByUsername(username) == null){
             throw new UserNotFoundException();
         }
@@ -48,12 +48,12 @@ public class UserService {
         return this.mapToDTO(tempUser);
     }
 
-    public UserDTO findUserById(Long id){
+    public UserDTO findUserById(Long id) throws UserNotFoundException {
         return this.mapToDTO(this.usersRepo.findById(id)
                 .orElseThrow(UserNotFoundException::new));
     }
 
-    public UserDTO updateUser(Long id, User user){
+    public UserDTO updateUser(Long id, User user) throws UserNotFoundException {
         User update = this.usersRepo.findById(id).orElseThrow(UserNotFoundException::new);
         update.setTotalTimePlayed(user.getTotalTimePlayed());
         update.setFreeTime(user.getFreeTime());
@@ -62,7 +62,7 @@ public class UserService {
         return this.mapToDTO(tempUser);
     }
 
-    public boolean deleteUser(Long id){
+    public boolean deleteUser(Long id) throws UserNotFoundException {
         if(!this.usersRepo.existsById(id)){
             throw new UserNotFoundException();
         }
