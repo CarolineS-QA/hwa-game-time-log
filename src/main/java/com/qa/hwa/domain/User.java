@@ -1,24 +1,34 @@
 package com.qa.hwa.domain;
 
-import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 
-@Entity
+@Document(collection = "gamers")
 public class User {
 
+    //MongoDB document '_id' field is handled during document creation
+    //@Field("_id")
+    //@JsonIgnore
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
-    @Column (unique = true)
+    //would like this to be unique
     private String username;
-    private Duration totalTimePlayed;
+    // recommended time avaliable in a week, resetting on a weekly basis
     private Duration freeTime;
+    // based off of game sessions
+    private Duration totalTimePlayed;
+    // equal to freeTime minus totalTimePlayed
     private Duration timeRemaining;
-    @OneToMany(mappedBy = "user", orphanRemoval = true, cascade = CascadeType.PERSIST)
+    // MongoDB has no problems storing nested objects / lists
+    // but relationships seem limited to parental unless a separate document stores the appropiate keys
     private List<GameSession> gameSessions = new ArrayList<>();
 
     public User(){}

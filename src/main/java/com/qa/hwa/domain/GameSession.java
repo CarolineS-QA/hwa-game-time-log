@@ -1,21 +1,23 @@
 package com.qa.hwa.domain;
 
-import javax.persistence.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-@Entity
+@Document(collection = "sessions")
 public class GameSession {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long sessionId;
-    @ManyToOne (targetEntity = User.class, fetch = FetchType.LAZY)
-    //@JoinColumn (/*name = "fk_user",*/ referencedColumnName = "user_id")
+    // Relationships in MongoDB are harder to define than mySQL
+    // might not need to be of type User
     private User user;
     private String gameName;
     private Duration timePlayed;
+    //timestamp for tracking purposes
     private LocalDateTime timeOfSession;
 
     public GameSession(){}
