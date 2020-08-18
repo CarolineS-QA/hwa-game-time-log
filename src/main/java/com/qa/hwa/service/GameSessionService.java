@@ -39,25 +39,25 @@ public class GameSessionService {
         return this.sessionsRepo.findAll().stream().map(this::mapToDTO).collect(Collectors.toList());
     }
 
-    public User readUserByUsername(String username){
+    public User readUserByUsername(String username) throws UserNotFoundException {
         if (this.usersRepo.findUserByUsername(username) == null){
             throw new UserNotFoundException();
         }
         return this.usersRepo.findUserByUsername(username);
     }
 
-    public List<GameSessionDTO> readAUsersGameSessions(String username){
+    public List<GameSessionDTO> readAUsersGameSessions(String username) throws UserNotFoundException {
         User user = readUserByUsername(username);
         return this.sessionsRepo.findAllByUser(user).stream().map(this::mapToDTO).collect(Collectors.toList());
     }
 
     public GameSessionDTO createGameSession(GameSession session){
-        GameSession tempGameSession = this.sessionsRepo.saveAndFlush(session);
+        GameSession tempGameSession = this.sessionsRepo.save(session);
         return this.mapToDTO(tempGameSession);
     }
 
     //Restricting the Update. So a session can't be reassigned to different user.
-    public GameSessionDTO updateGameSession(Long id, @NotNull GameSession session){
+    public GameSessionDTO updateGameSession(Long id, @NotNull GameSession session) throws GameSessionNotFoundException {
         GameSession update = this.sessionsRepo.findById(id).orElseThrow(GameSessionNotFoundException::new);
         update.setGameName(session.getGameName());
         update.setTimeOfSession(session.getTimeOfSession()); //could set this to LocalDateTime.now()
@@ -66,7 +66,7 @@ public class GameSessionService {
         return this.mapToDTO(tempGameSession);
     }
 
-    public boolean deleteGameSession(Long id){
+    public boolean deleteGameSession(Long id) throws GameSessionNotFoundException {
         if(!this.sessionsRepo.existsById(id)){
             throw new GameSessionNotFoundException();
         }
