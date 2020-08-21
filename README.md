@@ -71,27 +71,26 @@ What things you need to install the software and where to find them.
 
 **To Run**
 
-```
-Java SE 8 (or later) to run the jar file.
-Maven to create the jar-file and run.
+- Java SE 8 (or later) to run the jar file.
+- Maven to create the jar-file and run.
 
-If my GCP instance is no longer live...
-A relational database to configure the application to.
-(a GCP instance will require the least application config, however you can also use mySQL or h2)
+- A relational database to configure the application to (my GCP instance is no longer live). 
+A Google Cloud Platform instance will require the least application config, however you can also use mySQL, h2.
+Other databases will require changing the `pom.xml` as well as `application.properties`
 
-You can use the command line to run the program but git & git bash are nice to have.
+- You can use the command line to run the program but git & git bash are nice to have.
 
-For the front end it's preferred that you have a Chrome browser (if you want to make use of my app shortcut).
-```
+- For the front end it's preferred that you have a Chrome browser (if you want to make use of my app shortcut).
+
 **To Develop**
 
 When you open the project in an IDE to develop, the pom.xml file should allow your IDE to automatically download the required dependencies (libraries).
 
 ```
 The main IDE that I used for this project was IntelliJ Ultimate
-Postman was used to test my API calls before writing them in JavaScript
-I also used Visual Studio Code for the front-end
-As part of the CI pipeline for this project I used Jenkins
+Postman was used to test my API calls before writing them in JavaScript.
+I recommend Visual Studio Code for the front-end, but any text editor is fine.
+As part of the CI pipeline for this project I used Jenkins.
 ```
 
 **Links for Dependencies**
