@@ -3,6 +3,8 @@ package com.qa.hwa.service;
 import com.qa.hwa.domain.GameSession;
 import com.qa.hwa.domain.User;
 import com.qa.hwa.dto.GameSessionDTO;
+import com.qa.hwa.exceptions.GameSessionNotFoundException;
+import com.qa.hwa.exceptions.UserNotFoundException;
 import com.qa.hwa.repo.GameSessionsRepository;
 import com.qa.hwa.repo.UsersRepository;
 import org.junit.Before;
@@ -62,19 +64,19 @@ public class GameSessionServiceIntegrationTest {
         sessionsList = new ArrayList<>();
         this.player1 = new User("player1", zeroTime, zeroTime, zeroTime, sessionsList);
         this.usersRepo.deleteAll();
-        this.player1WithId = this.usersRepo.saveAndFlush(player1);
+        this.player1WithId = this.usersRepo.save(player1);
         this.testSession = new GameSession(player1, "the game", zeroTime, date);
         this.sessionsRepo.deleteAll();
         this.testSessionWithId = this.sessionsRepo.save(this.testSession);
     }
     @Ignore //Hash codes are different - same problem as create
     @Test
-    public void findUserByUsernameTest(){
+    public void findUserByUsernameTest() throws UserNotFoundException {
         assertThat(this.service.readUserByUsername(this.player1.getUsername())).isEqualTo(this.player1WithId);
     }
     @Ignore //Hash codes are different - same problem as create
     @Test
-    public void readAUsersGameSessionsTest(){
+    public void readAUsersGameSessionsTest() throws UserNotFoundException {
         assertThat(this.service.readAUsersGameSessions(player1.getUsername())).isEqualTo(
                 Stream.of(this.mapToDTO(testSessionWithId)).collect(Collectors.toList())
         );
@@ -100,7 +102,7 @@ public class GameSessionServiceIntegrationTest {
 
     @Ignore
     @Test
-    public void updateGameSessionTest(){
+    public void updateGameSessionTest() throws GameSessionNotFoundException {
         GameSession newSession = new GameSession(player1, "new game plus", zeroTime, date);
         GameSession updateSession = new GameSession(newSession.getUser(), newSession.getGameName(), newSession.getTimePlayed(), newSession.getTimeOfSession());
         updateSession.setSessionId(sessionId);
@@ -109,7 +111,7 @@ public class GameSessionServiceIntegrationTest {
     }
 
     @Test
-    public void deleteGameSessionTest(){
+    public void deleteGameSessionTest() throws GameSessionNotFoundException {
         assertThat(this.service.deleteGameSession(this.testSessionWithId.getSessionId())).isFalse();
     }
 }

@@ -3,6 +3,7 @@ package com.qa.hwa.service;
 import com.qa.hwa.domain.GameSession;
 import com.qa.hwa.domain.User;
 import com.qa.hwa.dto.UserDTO;
+import com.qa.hwa.exceptions.UserNotFoundException;
 import com.qa.hwa.repo.UsersRepository;
 import org.junit.Before;
 import org.junit.Ignore;
@@ -66,12 +67,12 @@ public class UserServiceIntegrationTest {
     }
     @Ignore
     @Test
-    public void findUserByIdTest(){
+    public void findUserByIdTest() throws UserNotFoundException {
         assertThat(this.service.findUserById(this.testUserWithId.getUserId())).isEqualTo(this.mapToDTO(this.testUserWithId));
     }
     @Ignore
     @Test
-    public void updateUserTest(){
+    public void updateUserTest() throws UserNotFoundException {
         User newUser = new User("newTestUser", zeroTime, zeroTime, zeroTime, sessionsList);
         User updateUser = new User(newUser.getUsername(), newUser.getTotalTimePlayed(), newUser.getFreeTime(), newUser.getTimeRemaining(), newUser.getGameSessions());
         updateUser.setUserId(testUserWithId.getUserId());
@@ -80,7 +81,7 @@ public class UserServiceIntegrationTest {
     }
 
     @Test
-    public void deleteUserTest(){
+    public void deleteUserTest() throws UserNotFoundException {
         assertThat(this.service.deleteUser(this.testUserWithId.getUserId())).isFalse();
     }
 }

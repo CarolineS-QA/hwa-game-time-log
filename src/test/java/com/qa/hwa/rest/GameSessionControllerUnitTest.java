@@ -3,6 +3,8 @@ package com.qa.hwa.rest;
 import com.qa.hwa.domain.GameSession;
 import com.qa.hwa.domain.User;
 import com.qa.hwa.dto.GameSessionDTO;
+import com.qa.hwa.exceptions.GameSessionNotFoundException;
+import com.qa.hwa.exceptions.UserNotFoundException;
 import com.qa.hwa.service.GameSessionService;
 import org.junit.Before;
 import org.junit.Test;
@@ -67,7 +69,7 @@ public class GameSessionControllerUnitTest {
     }
 
     @Test
-    public void getAUsersGameSessionsTest(){
+    public void getAUsersGameSessionsTest() throws UserNotFoundException {
         when(this.service.readAUsersGameSessions(player1.getUsername())).thenReturn(this.gameSessionDTOList);
         assertEquals(this.sessionController.getAUsersGameSessions(player1.getUsername()), new ResponseEntity<>(this.gameSessionDTOList, HttpStatus.OK));
         verify(this.service, times(1)).readAUsersGameSessions(player1.getUsername());
@@ -81,20 +83,20 @@ public class GameSessionControllerUnitTest {
     }
 
     @Test
-    public void updateGameSessionTest(){
+    public void updateGameSessionTest() throws GameSessionNotFoundException {
         when(this.service.updateGameSession(sessionId, testSession)).thenReturn(this.sessionDTO);
         assertEquals(this.sessionController.updateGameSession(sessionId, testSession), new ResponseEntity<>(this.sessionDTO, HttpStatus.OK));
         verify(service, times(1)).updateGameSession(sessionId, testSession);
     }
 
     @Test
-    public void deleteUserTestFalse(){
+    public void deleteUserTestFalse() throws GameSessionNotFoundException {
         this.sessionController.deleteGameSession(sessionId);
         verify(service, times(1)).deleteGameSession(sessionId);
     }
 
     @Test
-    public void deleteUserTestTrue(){
+    public void deleteUserTestTrue() throws GameSessionNotFoundException {
         when(service.deleteGameSession(3L)).thenReturn(true);
         this.sessionController.deleteGameSession(3L);
         verify(service, times(1)).deleteGameSession(3L);

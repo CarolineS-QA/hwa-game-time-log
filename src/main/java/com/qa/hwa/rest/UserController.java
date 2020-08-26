@@ -2,6 +2,7 @@ package com.qa.hwa.rest;
 
 import com.qa.hwa.domain.User;
 import com.qa.hwa.dto.UserDTO;
+import com.qa.hwa.exceptions.UserNotFoundException;
 import com.qa.hwa.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -26,7 +27,7 @@ public class UserController {
     }
 
     @GetMapping("/getUserByUsername/{username}")
-    public ResponseEntity<UserDTO> getUserByUsername(@PathVariable String username){
+    public ResponseEntity<UserDTO> getUserByUsername(@PathVariable String username) throws UserNotFoundException {
         return ResponseEntity.ok(this.service.readUserByUsername(username));
     }
 
@@ -36,17 +37,17 @@ public class UserController {
     }
 
     @GetMapping("/getUserById/{id}")
-    public ResponseEntity<UserDTO> getUserById(@PathVariable Long id){
+    public ResponseEntity<UserDTO> getUserById(@PathVariable Long id) throws UserNotFoundException {
         return ResponseEntity.ok(this.service.findUserById(id));
     }
 
     @PutMapping("/updateUser/{id}")
-    public ResponseEntity<UserDTO> updateUser(@PathVariable Long id, @RequestBody User user){
+    public ResponseEntity<UserDTO> updateUser(@PathVariable Long id, @RequestBody User user) throws UserNotFoundException {
     return ResponseEntity.ok(this.service.updateUser(id, user));
     }
 
     @DeleteMapping("/deleteUser/{id}")
-    public ResponseEntity<?> deleteUser(@PathVariable Long id){
+    public ResponseEntity<?> deleteUser(@PathVariable Long id) throws UserNotFoundException {
         return this.service.deleteUser(id)
                 ? ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build()
                 : ResponseEntity.noContent().build();

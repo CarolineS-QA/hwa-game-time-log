@@ -68,7 +68,7 @@ public class GameSessionControllerIntegrationTest {
         this.sessionsRepo.deleteAll();
         this.usersRepo.deleteAll();
         this.player1 = new User("testUser", zeroTime, zeroTime, zeroTime, null);
-        this.usersRepo.saveAndFlush(player1);
+        this.usersRepo.save(player1);
         this.testSession = new GameSession(player1, "hello world", zeroTime, date);
         this.testSessionWithId = this.sessionsRepo.save(testSession);
         this.sessionId = testSessionWithId.getSessionId();

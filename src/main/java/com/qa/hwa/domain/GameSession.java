@@ -10,7 +10,7 @@ import java.util.Objects;
 @Document(collection = "sessions")
 public class GameSession {
 
-    @Id
+    //@Id
     private Long sessionId;
     // Relationships in MongoDB are harder to define than mySQL
     // might not need to be of type User

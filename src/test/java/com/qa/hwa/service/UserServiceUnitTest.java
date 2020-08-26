@@ -70,7 +70,7 @@ public class UserServiceUnitTest {
     }
 
     @Test
-    public void readUserByUsernameTest() {
+    public void readUserByUsernameTest() throws UserNotFoundException {
         when(this.repo.findUserByUsername(username)).thenReturn(testUserWithId);
         when(this.mapper.map(testUserWithId, UserDTO.class)).thenReturn(userDTO);
         assertEquals(this.service.readUserByUsername(this.username), userDTO);
@@ -78,7 +78,7 @@ public class UserServiceUnitTest {
     }
 
     @Test(expected = UserNotFoundException.class)
-    public void readUserByNonExistingUsernameTest(){
+    public void readUserByNonExistingUsernameTest() throws UserNotFoundException {
         when(this.repo.findUserByUsername(notUsername)).thenReturn(null);
         service.readUserByUsername(notUsername);
         verify(repo, times(1)).findUserByUsername(notUsername);
@@ -92,7 +92,7 @@ public class UserServiceUnitTest {
     }
 
     @Test
-    public void findUserByIdTest() {
+    public void findUserByIdTest() throws UserNotFoundException {
         when(this.repo.findById(userId)).thenReturn(java.util.Optional.ofNullable(testUserWithId));
         when(this.mapper.map(testUserWithId, UserDTO.class)).thenReturn(userDTO);
         assertEquals(this.service.findUserById(this.userId), userDTO);
@@ -100,7 +100,7 @@ public class UserServiceUnitTest {
     }
 
     @Test
-    public void updateUserTest() {
+    public void updateUserTest() throws UserNotFoundException {
         User newUser = new User("testUser", time, time, time, sessionsList);
         User updateUser = new User(newUser.getUsername(), newUser.getTotalTimePlayed(), newUser.getFreeTime(), newUser.getTimeRemaining(), newUser.getGameSessions());
         updateUser.setUserId(userId);
@@ -117,7 +117,7 @@ public class UserServiceUnitTest {
     }
 
     @Test
-    public void deleteUserByExistingId(){
+    public void deleteUserByExistingId() throws UserNotFoundException {
         when(this.repo.existsById(userId)).thenReturn(true, false);
         assertFalse(service.deleteUser(userId));
         verify(repo, times(1)).deleteById(userId);
@@ -125,7 +125,7 @@ public class UserServiceUnitTest {
     }
 
     @Test(expected = UserNotFoundException.class)
-    public void deleteUserByNonExistingId(){
+    public void deleteUserByNonExistingId() throws UserNotFoundException {
         when(this.repo.existsById(userId)).thenReturn(false);
         service.deleteUser(userId);
         verify(repo, times(1)).existsById(userId);

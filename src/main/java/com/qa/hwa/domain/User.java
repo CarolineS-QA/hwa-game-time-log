@@ -17,7 +17,7 @@ public class User {
     //MongoDB document '_id' field is handled during document creation
     //@Field("_id")
     //@JsonIgnore
-    @Id
+    //@Id
     private Long userId;
     //would like this to be unique
     private String username;

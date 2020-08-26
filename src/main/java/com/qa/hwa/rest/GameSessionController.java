@@ -2,6 +2,8 @@ package com.qa.hwa.rest;
 
 import com.qa.hwa.domain.GameSession;
 import com.qa.hwa.dto.GameSessionDTO;
+import com.qa.hwa.exceptions.GameSessionNotFoundException;
+import com.qa.hwa.exceptions.UserNotFoundException;
 import com.qa.hwa.service.GameSessionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -26,7 +28,7 @@ public class GameSessionController {
     }
 
     @GetMapping("/getYourGameSessions/{username}")
-    public ResponseEntity<List<GameSessionDTO>> getAUsersGameSessions(@PathVariable String username){
+    public ResponseEntity<List<GameSessionDTO>> getAUsersGameSessions(@PathVariable String username) throws UserNotFoundException {
         return ResponseEntity.ok(this.service.readAUsersGameSessions(username));
     }
 
@@ -36,12 +38,12 @@ public class GameSessionController {
     }
 
     @PutMapping("/updateGameSession/{id}")
-    public ResponseEntity<GameSessionDTO> updateGameSession(@PathVariable Long id, @RequestBody GameSession session){
+    public ResponseEntity<GameSessionDTO> updateGameSession(@PathVariable Long id, @RequestBody GameSession session) throws GameSessionNotFoundException {
         return ResponseEntity.ok(this.service.updateGameSession(id, session));
     }
 
     @DeleteMapping("/deleteGameSession/{id}")
-    public ResponseEntity<?> deleteGameSession(@PathVariable Long id){
+    public ResponseEntity<?> deleteGameSession(@PathVariable Long id) throws GameSessionNotFoundException {
         return this.service.deleteGameSession(id)
                 ? ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build()
                 : ResponseEntity.noContent().build();

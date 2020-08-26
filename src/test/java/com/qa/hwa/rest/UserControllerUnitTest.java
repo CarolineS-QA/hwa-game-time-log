@@ -3,6 +3,7 @@ package com.qa.hwa.rest;
 import com.qa.hwa.domain.GameSession;
 import com.qa.hwa.domain.User;
 import com.qa.hwa.dto.UserDTO;
+import com.qa.hwa.exceptions.UserNotFoundException;
 import com.qa.hwa.service.UserService;
 import org.junit.Before;
 import org.junit.Test;
@@ -69,7 +70,7 @@ public class UserControllerUnitTest {
     }
 
     @Test
-    public void getUserByUsernameTest(){
+    public void getUserByUsernameTest() throws UserNotFoundException {
         when(this.service.readUserByUsername(username)).thenReturn(this.userDTO);
         assertEquals(this.userController.getUserByUsername(username), new ResponseEntity<>(this.userDTO, HttpStatus.OK));
         verify(service, times(1)).readUserByUsername(username);
@@ -83,28 +84,28 @@ public class UserControllerUnitTest {
     }
 
     @Test
-    public void getUserByIdTest(){
+    public void getUserByIdTest() throws UserNotFoundException {
         when(this.service.findUserById(userId)).thenReturn(this.userDTO);
         assertEquals(this.userController.getUserById(userId), new ResponseEntity<>(this.userDTO, HttpStatus.OK));
         verify(service, times(1)).findUserById(userId);
     }
 
     @Test
-    public void updateUserTest(){
+    public void updateUserTest() throws UserNotFoundException {
         when(this.service.updateUser(userId, testUser)).thenReturn(this.userDTO);
         assertEquals(this.userController.updateUser(userId, testUser), new ResponseEntity<>(this.userDTO, HttpStatus.OK));
         verify(service, times(1)).updateUser(userId, testUser);
     }
 
     @Test
-    public void deleteUserTestFalse(){
+    public void deleteUserTestFalse() throws UserNotFoundException {
         this.userController.deleteUser(userId);
         verify(service, times(1)).deleteUser(userId);
     }
 
 
     @Test
-    public void deleteUserTestTrue(){
+    public void deleteUserTestTrue() throws UserNotFoundException {
         when(service.deleteUser(3L)).thenReturn(true);
         this.userController.deleteUser(3L);
         verify(service, times(1)).deleteUser(3L);

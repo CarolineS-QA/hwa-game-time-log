@@ -84,14 +84,14 @@ public class GameSessionServiceUnitTest {
     }
 
     @Test
-    public void readUserByUsernameTest() {
+    public void readUserByUsernameTest() throws UserNotFoundException {
         when(this.usersRepo.findUserByUsername(player1.getUsername())).thenReturn(player1);
         assertEquals(this.service.readUserByUsername(player1.getUsername()), player1);
         verify(usersRepo, times(2)).findUserByUsername(player1.getUsername());
     }
 
     @Test(expected = UserNotFoundException.class)
-    public void readUserByNonExistingUsernameTest(){
+    public void readUserByNonExistingUsernameTest() throws UserNotFoundException {
         when(this.usersRepo.findUserByUsername(notUsername)).thenReturn(null);
         service.readUserByUsername(notUsername);
         verify(usersRepo, times(1)).findUserByUsername(notUsername);
@@ -99,7 +99,7 @@ public class GameSessionServiceUnitTest {
 
     @Ignore //com.qa.hwa.exceptions.UserNotFoundException @ line 44
     @Test
-    public void readAUsersGameSessionsTest() {
+    public void readAUsersGameSessionsTest() throws UserNotFoundException {
         when(service.readUserByUsername(player1.getUsername())).thenReturn(player1);
         when(this.repo.findAllByUser(player1)).thenReturn(this.gameSessionList);
         when(this.mapper.map(testSessionWithId, GameSessionDTO.class)).thenReturn(sessionDTO);
@@ -109,14 +109,14 @@ public class GameSessionServiceUnitTest {
 
     @Test
     public void createGameSessionTest() {
-        when(repo.saveAndFlush(testSession)).thenReturn(this.testSessionWithId);
+        when(repo.save(testSession)).thenReturn(this.testSessionWithId);
         when(this.mapper.map(testSessionWithId, GameSessionDTO.class)).thenReturn(sessionDTO);
         assertEquals(this.service.createGameSession(testSession), this.sessionDTO);
-        verify(repo, times(1)).saveAndFlush(this.testSession);
+        verify(repo, times(1)).save(this.testSession);
     }
 
     @Test
-    public void updateGameSessionTest() {
+    public void updateGameSessionTest() throws GameSessionNotFoundException {
         GameSession newSession = new GameSession(player1, "new game plus", zeroTime, date);
         GameSession updateSession = new GameSession(newSession.getUser(), newSession.getGameName(), newSession.getTimePlayed(), newSession.getTimeOfSession());
         updateSession.setSessionId(sessionId);
@@ -133,7 +133,7 @@ public class GameSessionServiceUnitTest {
     }
 
     @Test
-    public void deleteSessionByExistingId(){
+    public void deleteSessionByExistingId() throws GameSessionNotFoundException {
         when(this.repo.existsById(sessionId)).thenReturn(true, false);
         assertFalse(service.deleteGameSession(sessionId));
         verify(repo, times(1)).deleteById(sessionId);
@@ -141,7 +141,7 @@ public class GameSessionServiceUnitTest {
     }
 
     @Test(expected = GameSessionNotFoundException.class)
-    public void deleteSessionByNonExistingId(){
+    public void deleteSessionByNonExistingId() throws GameSessionNotFoundException {
         when(this.repo.existsById(sessionId)).thenReturn(false);
         service.deleteGameSession(sessionId);
         verify(repo, times(1)).existsById(sessionId);
